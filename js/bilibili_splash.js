@@ -1,0 +1,1 @@
+function modify(o){try{o.data.show.forEach(o=>{o.stime+=2592e3,o.etime+=2592e3})}catch{o.data.show=[]}return o}let body=$response.body;body=JSON.stringify(modify(JSON.parse(body))),$done({body:body});
