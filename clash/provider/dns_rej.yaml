@@ -41923,6 +41923,7 @@ payload:
     - .ib.snssdk.com
     - .xlog.snssdk.com
     - .log.snssdk.com
+    - .jubbie.de
     - .collector.lunalabs.io
     - .greenbids.ai
     - .track.migattenogokui.com
@@ -49691,6 +49692,7 @@ payload:
     - .solution911.com
     - .templates.buscape.com
     - .yestorrents.org
+    - .luxcdn.com
     - .vqhrqt.com
     - .marketer.lv
     - .programmatica.com
@@ -52740,7 +52742,6 @@ payload:
     - .ads.skolvarlden.se
     - .ads.ungdomar.se
     - .ads.varldenidag.se
-    - .ads.veterinaren.nu
     - .adserver.ddev.site
     - .adserver.infotorg.se
     - .adserver.so-rummet.se
@@ -52815,7 +52816,6 @@ payload:
     - .browser.covatic.io
     - .browser-http-intake.logs.datadoghq.com
     - .browser-http-intake.logs.datadoghq.eu
-    - .bulletproof-analytics.com
     - .buzzador.com
     - .c.eacla.com
     - .cargodisplayads.com
@@ -52882,7 +52882,6 @@ payload:
     - .d9v72urx9pbbc.cloudfront.net
     - .d33s3ffr7fotas.cloudfront.net
     - .dackpartner-web.s3.amazonaws.com
-    - .dakine.com.se
     - .deals.innocode.no
     - .delivered-by-madington.com
     - .di.insplanet.com
@@ -52899,7 +52898,6 @@ payload:
     - .etc-cdn-staging.ams3.digitaloceanspaces.com
     - .eum.instana.io
     - .europe-west1-bonnier-big-data.cloudfunctions.net
-    - .evtr.nordiskemedier.dk
     - .expo.ads.ramsalt.com
     - .extern.prisjakt.nu
     - .external.reseguiden.se
@@ -52935,6 +52933,7 @@ payload:
     - .investerarbrevet.se
     - .inviso.rampanel.com
     - .ion.btcswe.com
+    - .js.evtr.nordiskemedier.dk
     - .js.glitnoraffiliates.com
     - .js.hsleadflows.net
     - .js.multibrandaffiliates.com
@@ -52944,7 +52943,6 @@ payload:
     - .keenstockholm.com.se
     - .ksdarprt.reseguiden.se
     - .kyrkoskatten.se
-    - .kyrkskatt.se
     - .lanapengar.expressen.se
     - .lararforbundet.analytics.ozzi.io
     - .lasso.link
@@ -53032,7 +53030,6 @@ payload:
     - .revive.99mac.se
     - .revrelations.com
     - .richmediastudio.com
-    - .rockeringformsweden.com
     - .rockportskorsverige.com
     - .rotator.riedta.com
     - .route.carambo.la
@@ -53066,8 +53063,6 @@ payload:
     - .sgtm.inet.se
     - .skattamindre.se
     - .sleeknote.com
-    - .smetrics.aftonbladet.se
-    - .sneakersisverige.com
     - .source.advisible.com
     - .spel.expressen.se
     - .sprinklecontent.com
@@ -58644,6 +58639,7 @@ payload:
     - .elisium.cn
     - .ellingsen.cn
     - .elphhrj.xyz
+    - .eluocs.xyz
     - .endolift.cn
     - .enifdlaw.top
     - .eqqwgw.xyz
@@ -58659,6 +58655,7 @@ payload:
     - .fhtfnb.xyz
     - .fidelius.cn
     - .fmfnrf.xyz
+    - .fmssoj.icu
     - .fpjjjh.xyz
     - .fpvdrzx.xyz
     - .frtnqps358.shop
@@ -58732,6 +58729,7 @@ payload:
     - .jubnpx.xyz
     - .justapp.top
     - .jvkqkzu.cn
+    - .jyuwkba.top
     - .jzjpntr.xyz
     - .kbomku.xyz
     - .kdeh.cn
@@ -58774,6 +58772,7 @@ payload:
     - .mnifdlax.top
     - .moberg.cn
     - .mondigo.cn
+    - .mpn56e.cn
     - .mrtxtrq.xyz
     - .mtddqjk.cn
     - .mthhhuq.cn
@@ -58824,10 +58823,12 @@ payload:
     - .pkyjuc.cn
     - .pmtrkp.icu
     - .pnxtnp.xyz
+    - .polepole.cn
     - .pressit.cn
     - .prhfziq.xyz
     - .przbzr.xyz
     - .pseudonym.cn
+    - .pwhkfd.xyz
     - .pwhtip.icu
     - .pxzrlf.xyz
     - .qbhzghb.xyz
@@ -58966,6 +58967,7 @@ payload:
     - .wsdwbfs.cn
     - .wtyusie.top
     - .wwjtdjj.cn
+    - .wxfdmri.xyz
     - .xcypgd.icu
     - .xdfhidrk.xyz
     - .xdmnlxtu.xyz
