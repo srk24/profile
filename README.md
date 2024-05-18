@@ -10,25 +10,44 @@
 
 ```yaml
 rule-providers:
-  dns_rej:
+  reject:
     type: http
     behavior: domain
-    url: https://github.com/srk24/profile/raw/master/clash/provider/dns_rej.yaml
-    path: ./ruleset/dns_rej.yaml
+    url: https://github.com/srk24/profile/raw/master/clash/provider/reject.yaml
+    path: ./ruleset/reject.yaml
     interval: 86400
 ```
 
 ### Surge Domain-set 配置方式
 
 ```text
-DOMAIN-SET,https://github.com/srk24/profile/raw/master/surge/list/dns_rej.list,REJECT-TINYGIF,extended-matching
+DOMAIN-SET,https://github.com/srk24/profile/raw/master/surge/list/reject.list,REJECT-TINYGIF,extended-matching
 ```
 
 ### Quan X 配置方式
 
 ```text
 [filter_remote]
-https://github.com/srk24/profile/raw/master/quanx/list/dns_rej.snippet, tag=dns_rej, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+https://github.com/srk24/profile/raw/master/quanx/list/reject.snippet, tag=reject, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
+```
+
+### Sing-box 配置方式
+
+```json
+{
+  "route": {
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "reject",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/reject.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      }
+    ]
+  }
+}
 ```
 
 ## 致谢

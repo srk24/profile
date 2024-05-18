@@ -1,0 +1,195 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "log/sing-box.log",
+    "timestamp": false
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_direct",
+        "address": "223.5.5.5",
+        "strategy": "ipv4_only",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "dns_proxy",
+        "address": "h3://1.1.1.1/dns-query",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://refused"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "dns_direct"
+      },
+      {
+        "rule_set": ["stream", "global"],
+        "server": "dns_proxy"
+      },
+      {
+        "rule_set": "reject",
+        "server": "dns_block",
+        "disable_cache": true
+      }
+    ],
+    "final": "dns_direct"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "auto_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_timeout": "10ms"
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "listen_port": 7000,
+      "sniff": true,
+      "sniff_timeout": "10ms"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
+        ],
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "reject",
+        "outbound": "block-out"
+      },
+      {
+        "domain_keyword": ["tracker", "m-team"],
+        "outbound": "direct-out"
+      },
+      {
+        "process_name": [
+          "steam.exe",
+          "aria2c.exe",
+          "BitComet.exe",
+          "fdm.exe",
+          "NetTransport.exe",
+          "qbittorrent.exe",
+          "Thunder.exe",
+          "transmission-daemon.exe",
+          "transmission-qt.exe",
+          "uTorrent.exe",
+          "WebTorrent.exe"
+        ],
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": ["stream", "global"],
+        "outbound": "select-out"
+      },
+      {
+        "rule_set": ["domestic", "geoip_cn"],
+        "outbound": "direct-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "reject",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/anti_ad.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "apple_cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/apple_cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "stream",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/stream.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "global",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/global.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "domestic",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/domestic.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip_cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      }
+    ],
+    "final": "select-out",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "sing-box.db",
+      "cache_id": "default",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "select-out",
+      "secret": ""
+    }
+  }
+}
