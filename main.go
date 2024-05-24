@@ -43,12 +43,13 @@ func main() {
 	genSingboxFile("anti_ad.json", domain, domainSuffix, nil)
 	genSingboxBinaryFile("anti_ad.json")
 
-	domain, domainSuffix = parseFromSurgeDomainSet("https://ruleset.skk.moe/List/domainset/reject.conf")
-	genSurgeFile("dns_rej.list", domain, domainSuffix)
-	genClashFile("dns_rej.yaml", domain, domainSuffix)
-	genQuanXFile("dns_rej.snippet", domain, domainSuffix, domainKeyword)
-	genSingboxFile("dns_rej.json", domain, domainSuffix, nil)
-	genSingboxBinaryFile("dns_rej.json")
+	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/apple_cdn.conf")
+	genSingboxFile("apple_cdn.json", domain, domainSuffix, domainKeyword)
+	genSingboxBinaryFile("apple_cdn.json")
+
+	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf")
+	genSingboxFile("microsoft_cdn.json", domain, domainSuffix, domainKeyword)
+	genSingboxBinaryFile("microsoft_cdn.json")
 
 	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/stream.conf")
 	genSingboxFile("stream.json", domain, domainSuffix, domainKeyword)
@@ -66,6 +67,7 @@ func main() {
 	genSingboxFile("apple_cn.json", domain, domainSuffix, domainKeyword)
 	genSingboxBinaryFile("apple_cn.json")
 
+	genSingboxBinaryFile("process_cn.json")
 }
 
 func parseFromSurgeRuleSet(url string) (domain []string, domainSuffix []string, domainKeyword []string) {
