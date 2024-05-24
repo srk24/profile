@@ -203,13 +203,6 @@ func genSingboxFile(filename string, domain []string, domainSuffix []string, dom
 	_ = os.MkdirAll("./sing/ruleset/", 0777)
 	f, _ := os.Create("./sing/ruleset/" + filename)
 
-	// singbox 1.8 support
-	dodomainSuffix_1_8 := []string{}
-	for _, s := range domainSuffix {
-		dodomainSuffix_1_8 = append(dodomainSuffix_1_8, "."+s)
-	}
-	domainSuffix = dodomainSuffix_1_8
-
 	rule := SingRule{
 		Domain:        domain,
 		DomainSuffix:  domainSuffix,

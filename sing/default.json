@@ -10,7 +10,7 @@
       {
         "tag": "dns_direct",
         "address": "223.5.5.5",
-        "strategy": "ipv4_only",
+        "strategy": "prefer_ipv6",
         "detour": "direct-out"
       },
       {
@@ -44,10 +44,11 @@
     {
       "type": "tun",
       "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "stack": "system",
       "sniff": true,
-      "sniff_timeout": "10ms"
+      "sniff_timeout": "5ms"
     },
     {
       "type": "socks",
@@ -55,7 +56,7 @@
       "listen": "127.0.0.1",
       "listen_port": 7000,
       "sniff": true,
-      "sniff_timeout": "10ms"
+      "sniff_timeout": "5ms"
     }
   ],
   "outbounds": [
@@ -96,19 +97,7 @@
         "outbound": "direct-out"
       },
       {
-        "process_name": [
-          "steam.exe",
-          "aria2c.exe",
-          "BitComet.exe",
-          "fdm.exe",
-          "NetTransport.exe",
-          "qbittorrent.exe",
-          "Thunder.exe",
-          "transmission-daemon.exe",
-          "transmission-qt.exe",
-          "uTorrent.exe",
-          "WebTorrent.exe"
-        ],
+        "rule_set": ["process_cn"],
         "outbound": "direct-out"
       },
       {
@@ -135,14 +124,6 @@
       },
       {
         "type": "remote",
-        "tag": "apple_cn",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/apple_cn.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
         "tag": "stream",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/stream.srs",
@@ -153,7 +134,7 @@
         "type": "remote",
         "tag": "global",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/global.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
       },
@@ -161,7 +142,7 @@
         "type": "remote",
         "tag": "domestic",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/domestic.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
       },
@@ -170,6 +151,14 @@
         "tag": "geoip_cn",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "process_cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_cn.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
       }

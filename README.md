@@ -31,7 +31,7 @@ DOMAIN-SET,https://github.com/srk24/profile/raw/master/surge/list/reject.list,RE
 https://github.com/srk24/profile/raw/master/quanx/list/reject.snippet, tag=reject, update-interval=172800, opt-parser=false, inserted-resource=true, enabled=true
 ```
 
-### Sing-box 配置方式
+### Sing-box 配置方式(版本>=1.9.0)
 
 ```json
 {
