@@ -2,7 +2,7 @@
   "log": {
     "disabled": false,
     "level": "info",
-    "output": "log/sing-box.log",
+    "output": "",
     "timestamp": false
   },
   "dns": {
@@ -27,6 +27,14 @@
       {
         "outbound": "any",
         "server": "dns_direct"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "dns_direct"
+      },
+      {
+        "clash_mode": "global",
+        "server": "dns_proxy"
       },
       {
         "rule_set": ["stream", "global"],
@@ -99,6 +107,14 @@
       {
         "rule_set": ["process_cn"],
         "outbound": "direct-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct-out"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select-out"
       },
       {
         "rule_set": ["stream", "global"],
