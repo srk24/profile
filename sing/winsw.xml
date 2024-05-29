@@ -1,0 +1,19 @@
+<service>
+    <id>sing-box-svc</id>
+    <name>Sing-box Service</name>
+    <description>The service runs sing-box continuous integration system.</description>
+    <executable>./sing-box.exe</executable>
+    <arguments>run -D ./ -C ./config --disable-color</arguments>
+    <arguments>run</arguments>
+    <log mode="reset" />
+    <logpath>./log</logpath>
+    <startmode>Automatic</startmode>
+    <onfailure action="restart" delay="10 sec" />
+    <onfailure action="restart" delay="20 sec" />
+    <onfailure action="none" />
+    <priority>High</priority>
+    <prestart>
+        <executable>./sing-outbound-parser.exe</executable>
+        <arguments> -c ./sing-outbound-parser-config.json</arguments>
+    </prestart>
+</service>
