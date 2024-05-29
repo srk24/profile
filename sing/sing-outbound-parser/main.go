@@ -33,7 +33,7 @@ func main() {
 
 	var _config Config
 
-	readConfig(_config)
+	readConfig(&_config)
 
 	vData, err := download(&_config.Url)
 	if err != nil {
@@ -50,14 +50,14 @@ func main() {
 	}
 }
 
-func readConfig(_config Config) {
+func readConfig(_config *Config) {
 	if len(*config) > 0 {
 		c, _ := os.ReadFile(*config)
 		if err := json.Unmarshal(c, &_config); err != nil {
 			log.Fatalf(err.Error())
 		}
 	} else {
-		_config = Config{
+		_config = &Config{
 			Url:      *url,
 			Filename: *filename,
 		}
