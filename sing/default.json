@@ -10,7 +10,7 @@
       {
         "tag": "dns_direct",
         "address": "223.5.5.5",
-        "strategy": "prefer_ipv6",
+        "strategy": "prefer_ipv4",
         "detour": "direct-out"
       },
       {
@@ -55,16 +55,16 @@
       "inet6_address": "fdfe:dcba:9876::1/126",
       "auto_route": true,
       "stack": "system",
-      "sniff": true,
-      "sniff_timeout": "5ms"
+      "sniff": false,
+      "sniff_timeout": "10ms"
     },
     {
       "type": "socks",
       "tag": "socks-in",
       "listen": "127.0.0.1",
       "listen_port": 7000,
-      "sniff": true,
-      "sniff_timeout": "5ms"
+      "sniff": false,
+      "sniff_timeout": "10ms"
     }
   ],
   "outbounds": [
