@@ -109,6 +109,10 @@
         "outbound": "direct-out"
       },
       {
+        "rule_set": "llm",
+        "outbound": "select-out"
+      },
+      {
         "clash_mode": "direct",
         "outbound": "direct-out"
       },
@@ -143,6 +147,14 @@
         "tag": "stream",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/stream.srs",
+        "download_detour": "direct-out",
+        "update_interval": "1d"
+      },
+      {
+        "type": "remote",
+        "tag": "llm",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/llm.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
       },

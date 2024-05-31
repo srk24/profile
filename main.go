@@ -39,33 +39,20 @@ func main() {
 	genSingboxFile("reject.json", domain, domainSuffix, domainKeyword)
 	genSingboxBinaryFile("reject.json")
 
+	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://github.com/dler-io/Rules/raw/main/Surge/Surge%203/Provider/OpenAI.list")
+	genSurgeFile("llm.list", domain, domainSuffix)
+	genClashFile("llm.yaml", domain, domainSuffix)
+	genQuanXFile("llm.snippet", domain, domainSuffix, domainKeyword)
+	genSingboxFile("llm.json", domain, domainSuffix, domainKeyword)
+	genSingboxBinaryFile("llm.json")
+
 	domain, domainSuffix = parseFromSurgeDomainSet("https://anti-ad.net/surge2.txt")
 	genSingboxFile("anti_ad.json", domain, domainSuffix, nil)
 	genSingboxBinaryFile("anti_ad.json")
 
-	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/apple_cdn.conf")
-	genSingboxFile("apple_cdn.json", domain, domainSuffix, domainKeyword)
-	genSingboxBinaryFile("apple_cdn.json")
-
-	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf")
-	genSingboxFile("microsoft_cdn.json", domain, domainSuffix, domainKeyword)
-	genSingboxBinaryFile("microsoft_cdn.json")
-
 	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/stream.conf")
 	genSingboxFile("stream.json", domain, domainSuffix, domainKeyword)
 	genSingboxBinaryFile("stream.json")
-
-	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/global.conf")
-	genSingboxFile("global.json", domain, domainSuffix, domainKeyword)
-	genSingboxBinaryFile("global.json")
-
-	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/domestic.conf")
-	genSingboxFile("domestic.json", domain, domainSuffix, domainKeyword)
-	genSingboxBinaryFile("domestic.json")
-
-	domain, domainSuffix, domainKeyword = parseFromSurgeRuleSet("https://ruleset.skk.moe/List/non_ip/apple_cn.conf")
-	genSingboxFile("apple_cn.json", domain, domainSuffix, domainKeyword)
-	genSingboxBinaryFile("apple_cn.json")
 
 	genSingboxBinaryFile("process_cn.json")
 }
