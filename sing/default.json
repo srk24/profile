@@ -9,14 +9,15 @@
     "servers": [
       {
         "tag": "dns_direct",
-        "address": "223.5.5.5",
+        "address": "h3://223.5.5.5/dns-query",
         "strategy": "prefer_ipv4",
         "detour": "direct-out"
       },
       {
         "tag": "dns_proxy",
-        "address": "h3://223.5.5.5/dns-query",
-        "strategy": "ipv4_only"
+        "address": "tls://1.1.1.1",
+        "strategy": "ipv4_only",
+        "detour": "select-out"
       },
       {
         "tag": "dns_block",
@@ -25,25 +26,17 @@
     ],
     "rules": [
       {
-        "outbound": "any",
-        "server": "dns_direct"
-      },
-      {
-        "clash_mode": "direct",
-        "server": "dns_direct"
-      },
-      {
-        "clash_mode": "global",
-        "server": "dns_proxy"
-      },
-      {
-        "rule_set": ["stream", "global"],
-        "server": "dns_proxy"
-      },
-      {
         "rule_set": "reject",
         "server": "dns_block",
         "disable_cache": true
+      },
+      {
+        "rule_set": ["process_cn", "domestic"],
+        "server": "dns_direct"
+      },
+      {
+        "rule_set": ["llm", "stream", "global"],
+        "server": "dns_proxy"
       }
     ],
     "final": "dns_direct"
@@ -63,7 +56,7 @@
       "tag": "socks-in",
       "listen": "127.0.0.1",
       "listen_port": 7000,
-      "sniff": false,
+      "sniff": true,
       "sniff_timeout": "10ms"
     }
   ],
@@ -82,57 +75,6 @@
     }
   ],
   "route": {
-    "rules": [
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "protocol": "dns"
-          },
-          {
-            "port": 53
-          }
-        ],
-        "outbound": "dns-out"
-      },
-      {
-        "rule_set": "reject",
-        "outbound": "block-out"
-      },
-      {
-        "domain_keyword": ["tracker", "m-team"],
-        "outbound": "direct-out"
-      },
-      {
-        "rule_set": ["process_cn"],
-        "outbound": "direct-out"
-      },
-      {
-        "rule_set": "llm",
-        "outbound": "select-out"
-      },
-      {
-        "clash_mode": "direct",
-        "outbound": "direct-out"
-      },
-      {
-        "clash_mode": "global",
-        "outbound": "select-out"
-      },
-      {
-        "rule_set": ["stream", "global"],
-        "outbound": "select-out"
-      },
-      {
-        "rule_set": ["domestic", "geoip_cn"],
-        "outbound": "direct-out"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct-out"
-      }
-    ],
     "rule_set": [
       {
         "type": "remote",
@@ -189,6 +131,41 @@
         "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_cn.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
+      }
+    ],
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
+        ],
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": "reject",
+        "outbound": "block-out"
+      },
+      {
+        "rule_set": ["process_cn"],
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": ["llm", "stream", "global"],
+        "outbound": "select-out"
+      },
+      {
+        "rule_set": ["domestic", "geoip_cn"],
+        "outbound": "direct-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct-out"
       }
     ],
     "final": "select-out",
