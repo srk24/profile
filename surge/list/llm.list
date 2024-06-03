@@ -9,6 +9,10 @@ copilot.microsoft.com
 location.microsoft.com
 login.microsoftonline.com
 self.events.data.microsoft.com
+apis.google.com
+colab.research.google.com
+content-developerprofiles-pa.googleapis.com
+generativelanguage.googleapis.com
 .ai.com
 .chatgpt.com
 .openai.com
