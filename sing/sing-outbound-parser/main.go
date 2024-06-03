@@ -69,7 +69,10 @@ func download(downloadURL *string) ([]byte, error) {
 		log.Fatalf("url is required.")
 	}
 	log.Println("download ", *downloadURL)
-	response, err := http.Get(*downloadURL)
+	client := http.Client{
+		Timeout: 5 * time.Second,
+	}
+	response, err := client.Get(*downloadURL)
 	if err != nil {
 		return nil, err
 	}
