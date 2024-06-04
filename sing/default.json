@@ -31,11 +31,11 @@
         "disable_cache": true
       },
       {
-        "rule_set": ["process_cn", "domestic"],
+        "rule_set": ["process_direct", "domestic"],
         "server": "dns_direct"
       },
       {
-        "rule_set": ["llm", "stream", "global"],
+        "rule_set": ["llm", "global"],
         "server": "dns_proxy"
       }
     ],
@@ -86,9 +86,9 @@
       },
       {
         "type": "remote",
-        "tag": "stream",
+        "tag": "process_direct",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/stream.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_direct.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
       },
@@ -123,14 +123,6 @@
         "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
         "download_detour": "direct-out",
         "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "process_cn",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_cn.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
       }
     ],
     "rules": [
@@ -152,11 +144,11 @@
         "outbound": "block-out"
       },
       {
-        "rule_set": ["process_cn"],
+        "rule_set": ["process_direct"],
         "outbound": "direct-out"
       },
       {
-        "rule_set": ["llm", "stream", "global"],
+        "rule_set": ["llm", "global"],
         "outbound": "select-out"
       },
       {
@@ -175,14 +167,14 @@
     "cache_file": {
       "enabled": true,
       "path": ".cache",
-      "cache_id": "default",
-      "store_fakeip": true
+      "store_fakeip": true,
+      "store_rdrc": true
     },
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
       "external_ui": "ui",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "select-out",
+      "external_ui_download_detour": "direct-out",
       "secret": ""
     }
   }
