@@ -9,55 +9,52 @@
     "servers": [
       {
         "tag": "dns_direct",
-        "address": "h3://223.5.5.5/dns-query",
-        "strategy": "prefer_ipv4",
+        "address": "119.29.29.29",
         "detour": "direct-out"
       },
       {
-        "tag": "dns_proxy",
-        "address": "tls://1.1.1.1",
-        "strategy": "ipv4_only",
-        "detour": "select-out"
-      },
-      {
-        "tag": "dns_block",
-        "address": "rcode://refused"
+        "tag": "dns_fakeip",
+        "address": "fakeip"
       }
     ],
     "rules": [
-      {
-        "rule_set": "reject",
-        "server": "dns_block",
-        "disable_cache": true
-      },
       {
         "rule_set": ["process_direct", "domestic"],
         "server": "dns_direct"
       },
       {
         "rule_set": ["llm", "global"],
-        "server": "dns_proxy"
+        "server": "dns_fakeip",
+        "rewrite_ttl": 1
       }
     ],
-    "final": "dns_direct"
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "172.16.0.0/12",
+      "inet6_range": "fccc::/16"
+    },
+    "final": "dns_direct",
+    "strategy": "prefer_ipv4"
   },
   "inbounds": [
     {
       "type": "tun",
-      "inet4_address": "172.19.0.1/30",
-      "inet6_address": "fdfe:dcba:9876::1/126",
+      "tag": "tun-in",
+      "inet4_address": "192.168.100.1/30",
+      "inet6_address": "fddd::1/126",
+      "mtu": 9000,
       "auto_route": true,
-      "stack": "system",
-      "sniff": false,
+      "sniff": true,
       "sniff_timeout": "10ms"
     },
     {
-      "type": "socks",
-      "tag": "socks-in",
+      "type": "mixed",
+      "tag": "mixed-in",
       "listen": "127.0.0.1",
       "listen_port": 7000,
       "sniff": true,
-      "sniff_timeout": "10ms"
+      "sniff_timeout": "10ms",
+      "domain_strategy": "prefer_ipv4"
     }
   ],
   "outbounds": [
@@ -127,24 +124,15 @@
     ],
     "rules": [
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "protocol": "dns"
-          },
-          {
-            "port": 53
-          }
-        ],
+        "protocol": "dns",
         "outbound": "dns-out"
       },
       {
-        "rule_set": "reject",
+        "rule_set": ["reject"],
         "outbound": "block-out"
       },
       {
-        "rule_set": ["process_direct"],
+        "rule_set": ["process_direct", "domestic"],
         "outbound": "direct-out"
       },
       {
@@ -152,11 +140,8 @@
         "outbound": "select-out"
       },
       {
-        "rule_set": ["domestic", "geoip_cn"],
-        "outbound": "direct-out"
-      },
-      {
         "ip_is_private": true,
+        "rule_set": ["geoip_cn"],
         "outbound": "direct-out"
       }
     ],
