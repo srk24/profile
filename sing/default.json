@@ -105,7 +105,7 @@
         "type": "remote",
         "tag": "reject",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs",
         "download_detour": "direct-out"
       },
       {

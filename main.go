@@ -67,6 +67,12 @@ func main() {
 		"WebTorrent",
 		"WebTorrent Helper",
 	}
+	domain, domain_suffix := ParseDownloadFromV2fly("category-ads-all")
+	GenerateSurgeFile("v2fly.list", domain, domain_suffix)
+	GenerateClashFile("v2fly.yaml", domain, domain_suffix)
+	GenerateQuanXFile("v2fly.snippet", domain, domain_suffix, nil)
+	log.Println("generate adguard file down")
+
 	domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex := ParseDownloadAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
 	GenerateSurgeFile("adguard.list", domain, domain_suffix)
 	GenerateClashFile("adguard.yaml", domain, domain_suffix)
@@ -128,7 +134,7 @@ func ParseDownload(url string) (domain, domain_suffix, domain_keyword, process_n
 	scanner := bufio.NewScanner(bytes.NewReader(vData))
 	for scanner.Scan() {
 		s := strings.TrimSpace(scanner.Text())
-		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
+		if f := len(s) == 0 || strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
 			continue
 		}
 		sa := strings.Split(s, ",")
@@ -147,7 +153,7 @@ func ParseDownload(url string) (domain, domain_suffix, domain_keyword, process_n
 		}
 	}
 
-	return domain, domain_suffix, domain_keyword, process_name
+	return
 }
 
 func ParseDownloadDomainset(url string) (domain, domain_suffix []string) {
@@ -159,7 +165,7 @@ func ParseDownloadDomainset(url string) (domain, domain_suffix []string) {
 	scanner := bufio.NewScanner(bytes.NewReader(vData))
 	for scanner.Scan() {
 		s := scanner.Text()
-		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
+		if f := len(s) == 0 || strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
 			continue
 		}
 		s = strings.TrimSpace(s)
@@ -170,7 +176,7 @@ func ParseDownloadDomainset(url string) (domain, domain_suffix []string) {
 		}
 	}
 
-	return domain, domain_suffix
+	return
 }
 
 func ParseDownloadAdGuardSDNSFilter(url string) (domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex []string) {
@@ -204,7 +210,7 @@ func ParseDownloadAdGuardSDNSFilter(url string) (domain, domain_suffix, domain_r
 	for scanner.Scan() {
 		s := strings.TrimSpace(scanner.Text())
 
-		if f := len(s) == 0 || (strings.HasPrefix(s, "#") || strings.HasPrefix(s, "!") || strings.HasPrefix(s, ":") || strings.HasPrefix(s, "/")); f {
+		if f := len(s) == 0 || strings.HasPrefix(s, "#") || strings.HasPrefix(s, "!") || strings.HasPrefix(s, ":") || strings.HasPrefix(s, "/"); f {
 			continue
 		}
 
@@ -297,24 +303,53 @@ func ParseDownloadAdGuardSDNSFilter(url string) (domain, domain_suffix, domain_r
 		log.Printf("ignore adguard rule: %s", s)
 	}
 
-	return domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex
+	return
+}
+
+// https://github.com/v2fly/domain-list-community/blob/master/data/category-ads-all
+func ParseDownloadFromV2fly(name string) (domain, domain_suffix []string) {
+	url := "https://github.com/v2fly/domain-list-community/raw/master/data/" + name
+	vData, err := Download(&url)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+
+	scanner := bufio.NewScanner(bytes.NewReader(vData))
+	for scanner.Scan() {
+		s := strings.TrimSpace(scanner.Text())
+
+		if f := len(s) == 0 || strings.HasPrefix(s, "#"); f {
+			continue
+		}
+
+		if f := strings.HasPrefix(s, "include:"); f {
+			name := strings.TrimPrefix(s, "include:")
+			_domain, _domain_suffix := ParseDownloadFromV2fly(name)
+			domain = append(domain, _domain...)
+			domain_suffix = append(domain_suffix, _domain_suffix...)
+			continue
+		}
+		if f := strings.HasPrefix(s, "full:"); f {
+			d := strings.TrimPrefix(s, "full:")
+			d = strings.TrimSuffix(d, "@ads")
+			d = strings.TrimSpace(d)
+			domain = append(domain, d)
+			continue
+		}
+		if f := strings.Contains(s, ":"); !f {
+			s := strings.TrimSpace(strings.TrimSuffix(s, "@ads"))
+			domain_suffix = append(domain_suffix, s)
+			continue
+		}
+
+		log.Printf("ignore v2fly rule: %s", s)
+	}
+
+	return
 }
 
 func IsTLD(s string) bool {
 	return strings.HasSuffix(s, ".com") || strings.HasSuffix(s, ".cn") || strings.HasSuffix(s, ".net") || strings.HasSuffix(s, ".info")
-}
-
-func GetValue(s string, filter string) (data string) {
-	if strings.Contains(strings.ToLower(s), strings.ToLower(filter)) {
-		s = strings.TrimSpace(s)
-		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); !f {
-			sa := strings.Split(s, ",")
-			if len(sa) > 1 && strings.EqualFold(strings.TrimSpace(sa[0]), filter) {
-				data = strings.TrimSpace(sa[1])
-			}
-		}
-	}
-	return data
 }
 
 func GenerateSurgeFile(filename string, domain, domainSuffix []string) {
