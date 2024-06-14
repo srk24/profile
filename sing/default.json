@@ -5,6 +5,21 @@
     "output": "",
     "timestamp": false
   },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": ".cache",
+      "store_fakeip": true,
+      "store_rdrc": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "direct-out",
+      "secret": ""
+    }
+  },
   "dns": {
     "servers": [
       {
@@ -19,7 +34,8 @@
     ],
     "rules": [
       {
-        "rule_set": ["process_direct", "domestic"],
+        "domain_suffix": ["steamserver.net", "steamcontent.com"],
+        "rule_set": ["process_direct", "domestic", "steam@cn"],
         "server": "dns_direct"
       },
       {
@@ -57,6 +73,85 @@
       "domain_strategy": "prefer_ipv4"
     }
   ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "select-out",
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": ["reject"],
+        "outbound": "block-out"
+      },
+      {
+        "domain_suffix": ["steamserver.net", "steamcontent.com"],
+        "rule_set": ["process_direct", "domestic", "steam@cn"],
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": ["llm", "global"],
+        "outbound": "select-out"
+      },
+      {
+        "ip_is_private": true,
+        "rule_set": ["geoip_cn"],
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "reject",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/anti_ad.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "process_direct",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_direct.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "llm",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/llm.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "steam@cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-steam@cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "global",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "domestic",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip_cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
+        "download_detour": "direct-out"
+      }
+    ]
+  },
   "outbounds": [
     {
       "type": "direct",
@@ -70,97 +165,5 @@
       "type": "block",
       "tag": "block-out"
     }
-  ],
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "reject",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/anti_ad.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "process_direct",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_direct.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "llm",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/llm.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "global",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "domestic",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      },
-      {
-        "type": "remote",
-        "tag": "geoip_cn",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
-        "download_detour": "direct-out",
-        "update_interval": "1d"
-      }
-    ],
-    "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "rule_set": ["reject"],
-        "outbound": "block-out"
-      },
-      {
-        "rule_set": ["process_direct", "domestic"],
-        "outbound": "direct-out"
-      },
-      {
-        "rule_set": ["llm", "global"],
-        "outbound": "select-out"
-      },
-      {
-        "ip_is_private": true,
-        "rule_set": ["geoip_cn"],
-        "outbound": "direct-out"
-      }
-    ],
-    "final": "select-out",
-    "auto_detect_interface": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": ".cache",
-      "store_fakeip": true,
-      "store_rdrc": true
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "ui",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "direct-out",
-      "secret": ""
-    }
-  }
+  ]
 }
