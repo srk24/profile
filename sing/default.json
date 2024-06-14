@@ -105,7 +105,7 @@
         "type": "remote",
         "tag": "reject",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/anti_ad.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
         "download_detour": "direct-out"
       },
       {

@@ -30,11 +30,17 @@ type SingRule struct {
 	Domain        []string `json:"domain,omitempty"`
 	DomainSuffix  []string `json:"domain_suffix,omitempty"`
 	DomainKeyword []string `json:"domain_keyword,omitempty"`
+	DomainRegex   []string `json:"domain_regex,omitempty"`
 	ProcessName   []string `json:"process_name,omitempty"`
+	Invert        bool     `json:"invert,omitempty"`
+
+	Type  string     `json:"type,omitempty"`
+	Mode  string     `json:"mode,omitempty"`
+	Rules []SingRule `json:"rules,omitempty"`
 }
 
 func main() {
-	exist_process_name := []string{
+	existProcessName := []string{
 		"storedownloadd",
 		"v2ray",
 		"ss-local",
@@ -61,33 +67,39 @@ func main() {
 		"WebTorrent",
 		"WebTorrent Helper",
 	}
+	domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex := ParseDownloadAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
+	GenerateSurgeFile("adguard.list", domain, domain_suffix)
+	GenerateClashFile("adguard.yaml", domain, domain_suffix)
+	GenerateQuanXFile("adguard.snippet", domain, domain_suffix, nil)
+	GenerateSingboxFileFromAdguard("adguard.json", domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex)
+	log.Println("generate adguard file down")
 
 	domain, domain_suffix, domain_keyword, _ := ParseDownload("https://github.com/dler-io/Rules/raw/main/Surge/Surge%203/Provider/Reject.list")
 	GenerateSurgeFile("reject.list", domain, domain_suffix)
 	GenerateClashFile("reject.yaml", domain, domain_suffix)
 	GenerateQuanXFile("reject.snippet", domain, domain_suffix, domain_keyword)
 	GenerateSingboxFile("reject.json", domain, domain_suffix, domain_keyword, nil)
-	log.Println("generate file down")
+	log.Println("generate reject file down")
 
 	domain, domain_suffix, domain_keyword, _ = ParseDownload("https://github.com/dler-io/Rules/raw/main/Surge/Surge%203/Provider/OpenAI.list")
 	GenerateSurgeFile("llm.list", domain, domain_suffix)
 	GenerateClashFile("llm.yaml", domain, domain_suffix)
 	GenerateQuanXFile("llm.snippet", domain, domain_suffix, domain_keyword)
 	GenerateSingboxFile("llm.json", domain, domain_suffix, domain_keyword, nil)
-	log.Println("generate file down")
+	log.Println("generate llm file down")
 
 	_, _, _, process_name := ParseDownload("https://github.com/dler-io/Rules/raw/main/Clash/Provider/Special.yaml")
-	for _, s := range exist_process_name {
-		if slices.Contains(exist_process_name, s) {
+	for _, s := range existProcessName {
+		if slices.Contains(existProcessName, s) {
 			process_name = append(process_name, s)
 		}
 	}
 	GenerateSingboxFile("process_direct.json", nil, nil, nil, process_name)
-	log.Println("generate file down")
+	log.Println("generate process_direct file down")
 
 	domain, domain_suffix = ParseDownloadDomainset("https://anti-ad.net/surge2.txt")
 	GenerateSingboxFile("anti_ad.json", domain, domain_suffix, nil, nil)
-	log.Println("generate file down")
+	log.Println("generate anti_ad file down")
 
 }
 
@@ -116,20 +128,21 @@ func ParseDownload(url string) (domain, domain_suffix, domain_keyword, process_n
 	scanner := bufio.NewScanner(bytes.NewReader(vData))
 	for scanner.Scan() {
 		s := strings.TrimSpace(scanner.Text())
-		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); !f {
-			sa := strings.Split(s, ",")
-			if len(sa) > 1 {
-				v := strings.TrimSpace(sa[1])
-				switch strings.ToLower(strings.TrimSpace(sa[0])) {
-				case "domain":
-					domain = append(domain, v)
-				case "domain-suffix":
-					domain_suffix = append(domain_suffix, v)
-				case "domain-keyword":
-					domain_keyword = append(domain_keyword, v)
-				case "process-name":
-					process_name = append(process_name, v)
-				}
+		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
+			continue
+		}
+		sa := strings.Split(s, ",")
+		if len(sa) > 1 {
+			v := strings.TrimSpace(sa[1])
+			switch strings.ToLower(strings.TrimSpace(sa[0])) {
+			case "domain":
+				domain = append(domain, v)
+			case "domain-suffix":
+				domain_suffix = append(domain_suffix, v)
+			case "domain-keyword":
+				domain_keyword = append(domain_keyword, v)
+			case "process-name":
+				process_name = append(process_name, v)
 			}
 		}
 	}
@@ -146,17 +159,149 @@ func ParseDownloadDomainset(url string) (domain, domain_suffix []string) {
 	scanner := bufio.NewScanner(bytes.NewReader(vData))
 	for scanner.Scan() {
 		s := scanner.Text()
-		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); !f {
-			s = strings.TrimSpace(s)
-			if strings.HasPrefix(s, ".") {
-				domain_suffix = append(domain_suffix, strings.TrimPrefix(s, "."))
-			} else if len(s) > 0 {
-				domain = append(domain, s)
-			}
+		if f := strings.HasPrefix(s, "#") || strings.HasPrefix(s, ";"); f {
+			continue
+		}
+		s = strings.TrimSpace(s)
+		if strings.HasPrefix(s, ".") {
+			domain_suffix = append(domain_suffix, strings.TrimPrefix(s, "."))
+		} else if len(s) > 0 {
+			domain = append(domain, s)
 		}
 	}
 
 	return domain, domain_suffix
+}
+
+func ParseDownloadAdGuardSDNSFilter(url string) (domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex []string) {
+	vData, err := Download(&url)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+
+	prefixRe := regexp.MustCompile(`^(@@)?\|{0,2}`)
+	suffixRe := regexp.MustCompile(`\^?\|?($important)?$`)
+
+	// domain regex (no *)
+	dr1 := regexp.MustCompile(`^\|{2}[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}[\^|]\|?($important)?$`)
+	dr2 := regexp.MustCompile(`^\|[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}[\^|]\|?($important)?$`)
+
+	// domain_regex regex (include *)
+	rr1 := regexp.MustCompile(`(^\|{2}[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+[\^|]\|?($important)?$)|(^[a-zA-Z0-9.*-]+[\^|]\|?($important)?$)`) // 238
+	rr2 := regexp.MustCompile(`^\|[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+[\^|]\|?($important)?$`)
+	rr3 := regexp.MustCompile(`^\|{2}[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+$`)
+	rr4 := regexp.MustCompile(`^\|[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+$`)
+
+	// allow domain regex(no *)
+	adr1 := regexp.MustCompile(`^@@\|{2}[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}[\^|]\|?($important)?$`)
+	adr2 := regexp.MustCompile(`^@@\|[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}[\^|]\|?($important)?$`)
+
+	// allow domain_regex regex (include *)
+	arr1 := regexp.MustCompile(`(^@@\|{2}[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+[\^|]\|?($important)?$)|(^@@[a-zA-Z0-9.*-]+[\^|]\|?($important)?$)`)
+	arr2 := regexp.MustCompile(`^@@\|[a-zA-Z0-9.-]+\*+[a-zA-Z0-9.-]+[\^|]\|?($important)?$`)
+
+	scanner := bufio.NewScanner(bytes.NewReader(vData))
+	for scanner.Scan() {
+		s := strings.TrimSpace(scanner.Text())
+
+		if f := len(s) == 0 || (strings.HasPrefix(s, "#") || strings.HasPrefix(s, "!") || strings.HasPrefix(s, ":") || strings.HasPrefix(s, "/")); f {
+			continue
+		}
+
+		if f := dr1.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			domain_suffix = append(domain_suffix, s)
+			continue
+		}
+
+		if f := dr2.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			domain = append(domain, s)
+			continue
+		}
+
+		if f := rr1.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			s = ".*" + "\\." + s
+			domain_regex = append(domain_regex, s)
+			continue
+		}
+
+		if f := rr2.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			domain_regex = append(domain_regex, s)
+			continue
+		}
+
+		if f := rr3.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			s = ".*" + "\\." + s + ".*"
+			domain_regex = append(domain_regex, s)
+			continue
+		}
+
+		if f := rr4.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			s = s + ".*"
+			domain_regex = append(domain_regex, s)
+			continue
+		}
+
+		if f := adr1.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			allow_domain_suffix = append(allow_domain_suffix, s)
+			continue
+		}
+
+		if f := adr2.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			allow_domain = append(allow_domain, s)
+			continue
+		}
+
+		if f := arr1.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			s = ".*" + "\\." + s
+			allow_domain_regex = append(allow_domain_regex, s)
+			continue
+		}
+
+		if f := arr2.MatchString(s); f {
+			s = prefixRe.ReplaceAllString(s, "")
+			s = suffixRe.ReplaceAllString(s, "")
+			s = strings.ReplaceAll(s, ".", "\\.")
+			s = strings.ReplaceAll(s, "*", ".*")
+			allow_domain_regex = append(allow_domain_regex, s)
+			continue
+		}
+
+		log.Printf("ignore adguard rule: %s", s)
+	}
+
+	return domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex
+}
+
+func IsTLD(s string) bool {
+	return strings.HasSuffix(s, ".com") || strings.HasSuffix(s, ".cn") || strings.HasSuffix(s, ".net") || strings.HasSuffix(s, ".info")
 }
 
 func GetValue(s string, filter string) (data string) {
@@ -172,7 +317,7 @@ func GetValue(s string, filter string) (data string) {
 	return data
 }
 
-func GenerateSurgeFile(filename string, domain []string, domainSuffix []string) {
+func GenerateSurgeFile(filename string, domain, domainSuffix []string) {
 	_ = os.MkdirAll("./surge/list/", 0777)
 	f, _ := os.Create("./surge/list/" + filename)
 
@@ -187,7 +332,7 @@ func GenerateSurgeFile(filename string, domain []string, domainSuffix []string) 
 	defer closeFile(f)
 }
 
-func GenerateClashFile(filename string, domain []string, domainSuffix []string) {
+func GenerateClashFile(filename string, domain, domainSuffix []string) {
 	_ = os.MkdirAll("./clash/provider/", 0777)
 	f, _ := os.Create("./clash/provider/" + filename)
 
@@ -203,26 +348,28 @@ func GenerateClashFile(filename string, domain []string, domainSuffix []string) 
 	defer closeFile(f)
 }
 
-func GenerateQuanXFile(filename string, domain []string, domainSuffix []string, domainKeyword []string) {
+const QX_DEFAULT_RULE = ", direct\n"
+
+func GenerateQuanXFile(filename string, domain, domainSuffix, domainKeyword []string) {
 	_ = os.MkdirAll("./quanx/list/", 0777)
 	f, _ := os.Create("./quanx/list/" + filename)
 
 	for _, s := range domain {
-		_, _ = f.WriteString("host, " + s + ", direct\n")
+		_, _ = f.WriteString("host, " + s + QX_DEFAULT_RULE)
 	}
 
 	for _, s := range domainSuffix {
-		_, _ = f.WriteString("host-suffix, " + s + ", direct\n")
+		_, _ = f.WriteString("host-suffix, " + s + QX_DEFAULT_RULE)
 	}
 
 	for _, s := range domainKeyword {
-		_, _ = f.WriteString("host-keyword, " + s + ", direct\n")
+		_, _ = f.WriteString("host-keyword, " + s + QX_DEFAULT_RULE)
 	}
 
 	defer closeFile(f)
 }
 
-func GenerateSingboxFile(filename string, domain []string, domainSuffix []string, domainKeyword []string, processName []string) {
+func GenerateSingboxFile(filename string, domain, domainSuffix, domainKeyword, processName []string) {
 	_ = os.MkdirAll("./sing/ruleset/", 0777)
 	f, _ := os.Create("./sing/ruleset/" + filename)
 
@@ -243,22 +390,57 @@ func GenerateSingboxFile(filename string, domain []string, domainSuffix []string
 	GenerateSingboxBinaryFile(filename)
 }
 
+func GenerateSingboxFileFromAdguard(filename string, domain, domainSuffix, domainRegex, allowDomain, allowDomainSuffix, allowDomainRegex []string) {
+	_ = os.MkdirAll("./sing/ruleset/", 0777)
+	f, _ := os.Create("./sing/ruleset/" + filename)
+
+	rule := SingRule{
+		Domain:       domain,
+		DomainSuffix: domainSuffix,
+		DomainRegex:  domainRegex,
+	}
+
+	allowRule := SingRule{
+		Domain:       allowDomain,
+		DomainSuffix: allowDomainSuffix,
+		DomainRegex:  allowDomainRegex,
+		Invert:       true,
+	}
+
+	logdicRule := SingRule{
+		Type:  "logical",
+		Mode:  "and",
+		Rules: []SingRule{rule, allowRule},
+	}
+
+	data := SingRuleSet{
+		Version: 1,
+		Rules:   []SingRule{logdicRule},
+	}
+	json, _ := json.Marshal(data)
+	_, _ = f.Write(json)
+	closeFile(f)
+
+	GenerateSingboxBinaryFile(filename)
+}
+
 func GenerateSingboxBinaryFile(filename string) {
 	filename = "./sing/ruleset/" + filename
 	re := regexp.MustCompile(`\.json`)
-	_filename := strings.TrimSpace(re.ReplaceAllString(filename, ".srs"))
+	f := strings.TrimSpace(re.ReplaceAllString(filename, ".srs"))
 
-	if _, err := os.Stat(_filename); err == nil {
-		err := os.Remove(_filename)
+	if _, err := os.Stat(f); err == nil {
+		err := os.Remove(f)
 		if err != nil {
-			log.Fatalf("remove file %s failed with %s\n", _filename, err)
+			log.Fatalf("remove file %s failed with %s\n", f, err)
 		}
 	}
 
-	cmd := exec.Command("sing-box", "rule-set", "compile", "--output", _filename, filename)
-	_err := cmd.Run()
-	if _err != nil {
-		log.Fatalf("cmd.Run() failed with %s\n", _err)
+	cmd := exec.Command("sing-box", "rule-set", "compile", "--output", f, filename)
+	err := cmd.Run()
+	if err != nil {
+		log.Println("================")
+		log.Fatalf("cmd.Run() failed with %s\n", err)
 	}
 }
 
