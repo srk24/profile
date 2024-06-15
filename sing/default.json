@@ -34,7 +34,7 @@
     ],
     "rules": [
       {
-        "domain_suffix": ["steamserver.net", "steamcontent.com"],
+        "domain_suffix": ["steamserver.net"],
         "rule_set": ["process_direct", "domestic", "steam@cn"],
         "server": "dns_direct"
       },
