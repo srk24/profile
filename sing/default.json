@@ -82,6 +82,15 @@
         "outbound": "dns-out"
       },
       {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          { "domain_keyword": ["mcdn", "pcdn", "stun", "tracker", "broadcast", "p2p"] },
+          { "domain_keyword": ["bilibili", "biliapi", "bilivideo", "douyu"] }
+        ],
+        "outbound": "block-out"
+      },
+      {
         "rule_set": ["reject"],
         "outbound": "block-out"
       },
