@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -26,7 +28,7 @@ jobs:
         run: bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 
       - name: Generate Rule file
-        run: | 
+        run: |
           sing-box version
           go run main.go
 
@@ -44,4 +46,3 @@ jobs:
             git commit -m "${{ env.GEN_MSG }}"
             git push -f -u origin master
           fi
-      

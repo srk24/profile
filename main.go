@@ -67,11 +67,23 @@ func main() {
 		"WebTorrent",
 		"WebTorrent Helper",
 	}
-	domain, domain_suffix := ParseDownloadFromV2fly("category-ads-all")
-	GenerateSurgeFile("v2fly.list", domain, domain_suffix)
-	GenerateClashFile("v2fly.yaml", domain, domain_suffix)
-	GenerateQuanXFile("v2fly.snippet", domain, domain_suffix, nil)
-	log.Println("generate adguard file down")
+	domain, domain_suffix := ParseDownloadFromV2fly("category-ads-all", "@ads")
+	GenerateSurgeFile("category-ads-all.list", domain, domain_suffix)
+	GenerateClashFile("category-ads-all.yaml", domain, domain_suffix)
+	GenerateQuanXFile("category-ads-all.snippet", domain, domain_suffix, nil)
+	log.Println("generate v2fly category-ads-all file down")
+
+	domain, domain_suffix = ParseDownloadFromV2fly("geolocation-cn", "@cn")
+	GenerateSurgeFile("geolocation-cn.list", domain, domain_suffix)
+	GenerateClashFile("geolocation-cn.yaml", domain, domain_suffix)
+	GenerateQuanXFile("geolocation-cn.snippet", domain, domain_suffix, nil)
+	log.Println("generate v2fly geolocation-cn file down")
+
+	domain, domain_suffix = ParseDownloadFromV2fly("geolocation-!cn", "@!cn")
+	GenerateSurgeFile("geolocation-!cn.list", domain, domain_suffix)
+	GenerateClashFile("geolocation-!cn.yaml", domain, domain_suffix)
+	GenerateQuanXFile("geolocation-!cn.snippet", domain, domain_suffix, nil)
+	log.Println("generate v2fly geolocation-!cn file down")
 
 	domain, domain_suffix, domain_regex, allow_domain, allow_domain_suffix, allow_domain_regex := ParseDownloadAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
 	GenerateSurgeFile("adguard.list", domain, domain_suffix)
@@ -113,7 +125,7 @@ func Download(downloadURL *string) ([]byte, error) {
 	if len(*downloadURL) == 0 {
 		log.Fatalf("url is required.")
 	}
-	log.Println("download", *downloadURL)
+	// log.Println("download", *downloadURL)
 	client := http.Client{
 		Timeout: 5 * time.Second,
 	}
@@ -307,14 +319,18 @@ func ParseDownloadAdGuardSDNSFilter(url string) (domain, domain_suffix, domain_r
 }
 
 // https://github.com/v2fly/domain-list-community/blob/master/data/category-ads-all
-func ParseDownloadFromV2fly(name string) (domain, domain_suffix []string) {
-	url := "https://github.com/v2fly/domain-list-community/raw/master/data/" + name
-	vData, err := Download(&url)
+func ParseDownloadFromV2fly(name, suffix string) (domain, domain_suffix []string) {
+	fp := "domain-list-community/data/" + strings.TrimSpace(name)
+	file, err := os.Open(fp)
 	if err != nil {
-		log.Fatalf(err.Error())
+		log.Fatalf("failed to open file: %s", err)
 	}
+	defer file.Close()
 
-	scanner := bufio.NewScanner(bytes.NewReader(vData))
+	commentRe := regexp.MustCompile(`\s*#.*`)
+	suffixRe := regexp.MustCompile(`\s*` + suffix)
+
+	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		s := strings.TrimSpace(scanner.Text())
 
@@ -322,27 +338,35 @@ func ParseDownloadFromV2fly(name string) (domain, domain_suffix []string) {
 			continue
 		}
 
+		s = commentRe.ReplaceAllString(s, "")
+
 		if f := strings.HasPrefix(s, "include:"); f {
 			name := strings.TrimPrefix(s, "include:")
-			_domain, _domain_suffix := ParseDownloadFromV2fly(name)
+			_domain, _domain_suffix := ParseDownloadFromV2fly(name, suffix)
 			domain = append(domain, _domain...)
 			domain_suffix = append(domain_suffix, _domain_suffix...)
 			continue
 		}
 		if f := strings.HasPrefix(s, "full:"); f {
-			d := strings.TrimPrefix(s, "full:")
-			d = strings.TrimSuffix(d, "@ads")
-			d = strings.TrimSpace(d)
+			d := strings.TrimSpace(suffixRe.ReplaceAllString(strings.TrimPrefix(s, "full:"), ""))
+			if strings.Contains(d, "@") {
+				log.Printf("ignore v2fly rule= %s, file path=%s", s, fp)
+				continue
+			}
 			domain = append(domain, d)
 			continue
 		}
 		if f := strings.Contains(s, ":"); !f {
-			s := strings.TrimSpace(strings.TrimSuffix(s, "@ads"))
-			domain_suffix = append(domain_suffix, s)
+			ds := strings.TrimSpace(suffixRe.ReplaceAllString(s, ""))
+			if strings.Contains(ds, "@") {
+				log.Printf("ignore v2fly rule= %s, file path=%s", s, fp)
+				continue
+			}
+			domain_suffix = append(domain_suffix, ds)
 			continue
 		}
 
-		log.Printf("ignore v2fly rule: %s", s)
+		log.Printf("ignore v2fly rule= %s, file path=%s", s, fp)
 	}
 
 	return
