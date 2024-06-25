@@ -16,6 +16,12 @@ jobs:
         with:
           submodules: "recursive"
 
+      - name: Update submodules
+        run: |
+          git submodule update --remote --merge
+          git commit -am "Update submodules" || echo "No changes to commit"
+          git push
+
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
