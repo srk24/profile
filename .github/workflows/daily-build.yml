@@ -3,9 +3,9 @@ name: Daily Build
 on:
   schedule:
     - cron: '0 21 * * *'
-  # push:
-  #   branches:
-  #     - master
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -18,9 +18,7 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --remote --merge
-          git commit -am "Update submodules" || echo "No changes to commit"
-          git push
+          git submodule update --recursive --remote
 
       - name: Setup Go
         uses: actions/setup-go@v5
