@@ -155,7 +155,7 @@
         "type": "remote",
         "tag": "geoip_cn",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geoip/raw/rule-set/geoip-cn.srs",
+        "url": "https://mirror.ghproxy.com/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
         "download_detour": "direct-out"
       }
     ]
