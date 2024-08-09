@@ -1,0 +1,213 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true,
+      "store_rdrc": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_detour": "direct-out",
+      "secret": ""
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_udp",
+        "address": "223.5.5.5",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "dns_encrypt",
+        "address": "h3://223.5.5.5/dns-query",
+        "address_resolver": "dns_udp",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip",
+        "strategy": "ipv6_only"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://refused"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": ["reject", "inrejct"],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "rule_set": ["process_direct", "domestic", "steam@cn", "indirect"],
+        "server": "dns_udp"
+      },
+      {
+        "rule_set": ["global"],
+        "server": "dns_fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet6_range": "fccc::/16"
+    },
+    "final": "dns_encrypt",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["192.168.100.1/30", "fddd::1/126"],
+      "mtu": 9000,
+      "auto_route": true,
+      "endpoint_independent_nat": true,
+      "sniff": true,
+      "sniff_timeout": "10ms"
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "users": [
+        {
+          "username": "admin",
+          "password": "nimda"
+        }
+      ],
+      "listen": "0.0.0.0",
+      "listen_port": 7000,
+      "sniff": true,
+      "sniff_timeout": "10ms",
+      "domain_strategy": "prefer_ipv4"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "select-out",
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "rule_set": ["reject", "inrejct"],
+        "outbound": "block-out"
+      },
+      {
+        "protocol": "bittorrent",
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": ["process_direct", "domestic", "steam@cn", "indirect"],
+        "outbound": "direct-out"
+      },
+      {
+        "rule_set": ["global"],
+        "outbound": "select-out"
+      },
+      {
+        "ip_is_private": true,
+        "rule_set": ["geoip_cn"],
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "inline",
+        "tag": "inrejct",
+        "rules": [
+          {
+            "type": "logical",
+            "mode": "and",
+            "rules": [
+              { "domain_keyword": ["mcdn", "pcdn", "stun", "tracker", "broadcast", "p2p"] },
+              { "domain_keyword": ["bilibili", "biliapi", "bilivideo", "douyu"] }
+            ]
+          },
+          {
+            "domain_suffix": [
+              "tanx.com",
+              "miaozhen.com",
+              "tqt.weibo.cn",
+              "qzs.gdtimg.com",
+              "gdt.qq.com",
+              "open.e.kuaishou.cn",
+              "open.e.kuaishou.com"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "indirect",
+        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com", "dler.cloud"] }]
+      },
+      {
+        "type": "remote",
+        "tag": "reject",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "process_direct",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_direct.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "steam@cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-steam@cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "global",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "domestic",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "direct-out"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip_cn",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
+        "download_detour": "direct-out"
+      }
+    ]
+  },
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block-out"
+    }
+  ]
+}

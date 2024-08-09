@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "process_name": [
+        "storedownloadd",
+        "v2ray",
+        "ss-local",
+        "UUBooster",
+        "aria2c.exe",
+        "BitComet.exe",
+        "fdm.exe",
+        "NetTransport.exe",
+        "qbittorrent.exe",
+        "Thunder.exe",
+        "transmission-daemon.exe",
+        "transmission-qt.exe",
+        "uTorrent.exe",
+        "WebTorrent.exe",
+        "aria2c",
+        "fdm",
+        "Folx",
+        "NetTransport",
+        "qbittorrent",
+        "qbittorrent-nox",
+        "Thunder",
+        "Transmission",
+        "uTorrent",
+        "WebTorrent",
+        "WebTorrent Helper"
+      ]
+    }
+  ]
+}

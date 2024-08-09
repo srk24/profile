@@ -1,0 +1,17 @@
+hostname = app.bilibili.com, app.biliapi.net, grpc.biliapi.net, api.bilibili.com, api.biliapi.net, api.vc.bilibili.com, manga.bilibili.com
+
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v\d\.Search\/DefaultWords$ url reject
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/search\/(defaultwords|square) url reject
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr url reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist url reject-dict
+^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? url reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash url reject-dict
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? url reject-dict
+
+; ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/account\/myinfo\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_high.min.js
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/feed\/index\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_index.min.js
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/account\/mine\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_mine.min.js
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(show|list) url script-response-body https://github.com/srk24/profile/raw/master/js/bili_splash.min.js
+^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_tab.min.js
+; ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/top\/activity url script-response-body https://github.com/srk24/profile/raw/master/js/bili_top.min.js

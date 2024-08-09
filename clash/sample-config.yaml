@@ -1,0 +1,134 @@
+# https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb
+
+mixed-port: 7890
+tproxy-port: 7893
+allow-lan: true
+bind-address: '*'
+external-controller: 0.0.0.0:9090
+external-ui: ./clash-dashboard
+ipv6: false
+log-level: info
+mode: rule
+routing-mark: 7777
+profile:
+  tracing: true
+  store-selected: true
+  store-fake-ip: true
+
+interface-name: br0
+auto-redir:
+  enable: true
+  auto-route: true
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '+.ntp.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - 'xbox.*.*.microsoft.com'
+    - '+.xboxlive.com'
+    - '+.microsoft.com'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - 'in.appcenter.ms'
+    - '+.msn.com'
+    - '+.nflxvideo.net'
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.mcdn.bilivideo.cn'
+    - '+.qq.com'
+    - '+.tencent.com'
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    # - dhcp://enp1s0
+    # - tls://1.12.12.12
+    # - https://1.12.12.12/dns-query
+  nameserver-policy:
+    '+.taobao.com': '223.5.5.5'
+    '+.qq.com': '119.29.29.29'
+
+proxy-providers:
+  XXXX:
+    type: http
+    url: 
+    interval: 3600
+    path: ./providers/_XXXX.yaml
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com
+      interval: 600
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    use:
+      - XXXX
+  - name: AdBlock
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://github.com/srk24/profile/raw/master/clash/provider/reject.yaml
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  special:
+    type: http
+    behavior: classical
+    url: https://github.com/dler-io/Rules/raw/main/Clash/Provider/Special.yaml
+    path: ./ruleset/special.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: classical
+    url: https://github.com/dler-io/Rules/raw/main/Clash/Provider/Proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: classical
+    url: https://github.com/dler-io/Rules/raw/main/Clash/Provider/Domestic.yaml
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  tele:
+    type: http
+    behavior: classical
+    url: https://github.com/dler-io/Rules/raw/main/Clash/Provider/Telegram.yaml
+    path: ./ruleset/telegram.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,reject,AdBlock
+  - RULE-SET,special,DIRECT
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,tele,PROXY
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
