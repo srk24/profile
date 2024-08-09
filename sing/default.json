@@ -34,7 +34,7 @@
       {
         "tag": "dns_fakeip",
         "address": "fakeip",
-        "strategy": "ipv6_only"
+        "strategy": "ipv4_only"
       },
       {
         "tag": "dns_block",
@@ -59,7 +59,7 @@
     ],
     "fakeip": {
       "enabled": true,
-      "inet6_range": "fccc::/16"
+      "inet4_range": "10.0.0.0/8"
     },
     "final": "dns_encrypt",
     "strategy": "prefer_ipv4"
@@ -68,7 +68,7 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "address": ["192.168.100.1/30", "fddd::1/126"],
+      "address": ["172.18.0.1/30", "fccc::1/126"],
       "mtu": 9000,
       "auto_route": true,
       "endpoint_independent_nat": true,
@@ -150,7 +150,7 @@
       {
         "type": "inline",
         "tag": "indirect",
-        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com", "dler.cloud"] }]
+        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
       },
       {
         "type": "remote",
