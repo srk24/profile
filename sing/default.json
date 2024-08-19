@@ -28,7 +28,6 @@
       {
         "tag": "dns_encrypt",
         "address": "h3://223.5.5.5/dns-query",
-        "address_resolver": "dns_udp",
         "detour": "direct-out"
       },
       {
@@ -43,12 +42,12 @@
     ],
     "rules": [
       {
-        "rule_set": ["reject", "inrejct"],
+        "rule_set": ["reject", "in_rejct"],
         "server": "dns_block",
         "disable_cache": true
       },
       {
-        "rule_set": ["process_direct", "domestic", "steam@cn", "indirect"],
+        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
         "server": "dns_udp"
       },
       {
@@ -100,7 +99,7 @@
         "outbound": "dns-out"
       },
       {
-        "rule_set": ["reject", "inrejct"],
+        "rule_set": ["reject", "in_rejct"],
         "outbound": "block-out"
       },
       {
@@ -108,7 +107,7 @@
         "outbound": "direct-out"
       },
       {
-        "rule_set": ["process_direct", "domestic", "steam@cn", "indirect"],
+        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
         "outbound": "direct-out"
       },
       {
@@ -124,7 +123,7 @@
     "rule_set": [
       {
         "type": "inline",
-        "tag": "inrejct",
+        "tag": "in_rejct",
         "rules": [
           {
             "type": "logical",
@@ -149,49 +148,49 @@
       },
       {
         "type": "inline",
-        "tag": "indirect",
+        "tag": "in_direct",
         "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
       },
       {
         "type": "remote",
         "tag": "reject",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/srk24/profile@master/sing/ruleset/adguard.srs",
         "download_detour": "direct-out"
       },
       {
         "type": "remote",
         "tag": "process_direct",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/srk24/profile/raw/master/sing/ruleset/process_direct.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/srk24/profile@master/sing/ruleset/process_direct.srs",
         "download_detour": "direct-out"
       },
       {
         "type": "remote",
         "tag": "steam@cn",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-steam@cn.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/SagerNet/sing-geosite@rule-set/geosite-steam@cn.srs",
         "download_detour": "direct-out"
       },
       {
         "type": "remote",
         "tag": "global",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/SagerNet/sing-geosite@rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "direct-out"
       },
       {
         "type": "remote",
         "tag": "domestic",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/SagerNet/sing-geosite@rule-set/geosite-geolocation-cn.srs",
         "download_detour": "direct-out"
       },
       {
         "type": "remote",
         "tag": "geoip_cn",
         "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
+        "url": "https://jsd.onmicrosoft.cn/gh/Loyalsoldier/geoip@release/srs/cn.srs",
         "download_detour": "direct-out"
       }
     ]
