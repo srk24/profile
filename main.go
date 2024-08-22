@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"slices"
 	"strings"
 	"time"
 
@@ -36,6 +37,16 @@ type SingRule struct {
 }
 
 func main() {
+	block_list := []string{
+		"tanx.com",
+		"miaozhen.com",
+		"tqt.weibo.cn",
+		"qzs.gdtimg.com",
+		"gdt.qq.com",
+		"open.e.kuaishou.cn",
+		"open.e.kuaishou.com",
+	}
+
 	_ = os.MkdirAll("./sing/tmp/", 0777)
 
 	CompileSingboxFile("./sing/ruleset/process_direct.json")
@@ -48,6 +59,11 @@ func main() {
 	f, _ = Download("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs", "./sing/tmp/geosite-category-ads-all.srs")
 	DecompileSingboxFile(f.Name())
 	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-category-ads-all.json")
+	for _, item := range block_list {
+		if exist := slices.Contains(domain_suffix, item); !exist {
+			domain_suffix = append(domain_suffix, item)
+		}
+	}
 	GenerateSurgeFile("./surge/list/reject.list", domain, domain_suffix)
 	GenerateClashFile("./clash/provider/reject.yaml", domain, domain_suffix)
 	GenerateQuanXFile("./quanx/list/reject.snippet", domain, domain_suffix, domain_keyword)
@@ -74,11 +90,35 @@ func UnmarshalSingboxSourceCfg(path string) (domain, domain_suffix, domain_keywo
 	byteValue, _ := os.ReadFile(path)
 	json.Unmarshal(byteValue, &rules)
 
+	domain_map := make(map[string]bool)
+	domain_suffix_map := make(map[string]bool)
+	domain_keyword_map := make(map[string]bool)
+	domain_regex_map := make(map[string]bool)
 	for i := 0; i < len(rules.Rules); i++ {
-		domain = append(domain, rules.Rules[i].Domain...)
-		domain_suffix = append(domain_suffix, rules.Rules[i].DomainSuffix...)
-		domain_keyword = append(domain_keyword, rules.Rules[i].DomainKeyword...)
-		domain_regex = append(domain_regex, rules.Rules[i].DomainRegex...)
+		for _, item := range rules.Rules[i].Domain {
+			if _, v := domain_map[item]; !v {
+				domain_map[item] = true
+				domain = append(domain, item)
+			}
+		}
+		for _, item := range rules.Rules[i].DomainSuffix {
+			if _, v := domain_suffix_map[item]; !v {
+				domain_suffix_map[item] = true
+				domain_suffix = append(domain_suffix, item)
+			}
+		}
+		for _, item := range rules.Rules[i].DomainKeyword {
+			if _, v := domain_keyword_map[item]; !v {
+				domain_keyword_map[item] = true
+				domain_keyword = append(domain_keyword, item)
+			}
+		}
+		for _, item := range rules.Rules[i].DomainRegex {
+			if _, v := domain_regex_map[item]; !v {
+				domain_regex_map[item] = true
+				domain_regex = append(domain_regex, item)
+			}
+		}
 	}
 	return
 }
