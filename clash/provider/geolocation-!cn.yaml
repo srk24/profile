@@ -517,7 +517,6 @@ payload:
     - ..hangout
     - ..hotmail
     - ..hsbc
-    - ..iadsdk.apple.com
     - ..ibm
     - ..imdb
     - ..intel
@@ -9599,6 +9598,7 @@ payload:
     - .i91dz.com
     - .iaablog.com
     - .iad.apple.com
+    - .iadsdk.apple.com
     - .iafd.com
     - .iam.soy
     - .iamakamai.com

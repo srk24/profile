@@ -19,6 +19,7 @@ amp-api-edge.apps.apple.com
 amp-api-search-edge.apps.apple.com
 amp-api.apps.apple.com
 amp-api.media.apple.com
+amp-api.music.apple.com
 aod.itunes.apple.com
 api-edge.apps.apple.com
 api-p-ap-c.smoot.apple.com
@@ -35,6 +36,7 @@ applemdm.corp.google.com
 apps.mzstatic.com
 apps5.oingo.com
 apptrailers.itunes.apple.com
+auth.music.apple.com
 avail.googleflights.net
 b.c2r.ts.cdn.office.net
 bag.itunes.apple.com
@@ -213,7 +215,6 @@ hellofontpreview.oss-cn-beijing.aliyuncs.com
 hellowebfonts.oss-cn-beijing.aliyuncs.com
 hospital.pku.edu.cn
 i.pki.goog
-iadsdk.apple.com
 icloud-cdn.icloud.com.akadns.net
 icloud.cdn-apple.com
 images-cn-8.ssl-images-amazon.com
@@ -271,6 +272,7 @@ menu-static.gog-statics.com
 mesu-cdn.apple.com.akadns.net
 mesu-china.apple.com.akadns.net
 mesu.apple.com
+misc-assets.itunes.apple.com
 ml.cdn-apple.com
 monitoring.qatp1.net
 monitoring.qcpp1.net
@@ -279,7 +281,9 @@ moocs.unipus.cn
 msgr.dlservice.microsoft.com
 msgruser.dlservice.microsoft.com
 music.apple.com
+myapp.itunes.apple.com
 myvs.download.prss.microsoft.com
+np-edge.itunes.apple.com
 o.pki.goog
 ocsp-lb.apple.com.akadns.net
 ocsp.apple.com
@@ -311,11 +315,13 @@ pagead-googlehosted.l.google.com
 pancake.apple.com
 pancake.cdn-apple.com.akadns.net
 pba0.apple.com
+pd-nk.itunes.apple.com
 pd.itunes.apple.com
 performanceparameters.googleapis.com
 pki-goog.l.google.com
 play.1ucrs.com
 play.itunes.apple.com
+play.music.apple.com
 probe.siri.apple.com
 prod-controlbe.floonet.goog
 prod-databe.floonet.goog
@@ -437,6 +443,7 @@ tac.googleapis.com
 techstop.corp.google.com
 test.bugs-qa.chromium.org
 test.gbugs-qa.chromium.org
+tf-feedback.itunes.apple.com
 time.izatcloud.net
 time.xtracloud.net
 tj-pod1-smp-device.apple.com
@@ -486,6 +493,7 @@ www.libvideo.com
 www.microsoft.com
 www.pxcc.com
 www.recaptcha.net
+www.support.apple.com
 www.ztedevices.com
 www4-static.gog-statics.com
 xb.dlservice.microsoft.com

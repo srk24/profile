@@ -516,7 +516,6 @@ zeenews-fonts.s3.amazonaws.com
 ..hangout
 ..hotmail
 ..hsbc
-..iadsdk.apple.com
 ..ibm
 ..imdb
 ..intel
@@ -9598,6 +9597,7 @@ zeenews-fonts.s3.amazonaws.com
 .i91dz.com
 .iaablog.com
 .iad.apple.com
+.iadsdk.apple.com
 .iafd.com
 .iam.soy
 .iamakamai.com
