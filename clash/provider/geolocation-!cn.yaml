@@ -20,6 +20,7 @@ payload:
     - adobe-dns-4.adobe.com
     - adobe-dns.adobe.com
     - adobeereg.com
+    - alkalimakersuite-pa.clients6.google.com
     - alt1-mtalk.google.com
     - alt2-mtalk.google.com
     - alt3-mtalk.google.com
@@ -301,6 +302,7 @@ payload:
     - scholar.googleusercontent.com
     - scholar.l.google.com
     - sentry.ppy.sh
+    - servd-anthropic-website.b-cdn.net
     - sni1dcb6gl.wpc.edgecastcdn.net
     - spectator.ppy.sh
     - spotify.com.edgesuite.net
@@ -1540,7 +1542,6 @@ payload:
     - .alivevue.com
     - .aljazeera.com
     - .aljazeera.net
-    - .alkalimakersuite-pa.clients6.google.com
     - .all-sex-links.com
     - .all3dsexpics.com
     - .alldrawingshere.com
@@ -1863,6 +1864,7 @@ payload:
     - .antenna.co.kr
     - .anthemgame.com
     - .anthemthegame.com
+    - .anthropic.com
     - .anudetube.com
     - .anybunny.org
     - .anybunny.tv
@@ -2835,6 +2837,7 @@ payload:
     - .bannedbook.net
     - .bannedbook.org
     - .baraero.com
+    - .bard.google.com
     - .barefootnetworks.com
     - .barelist.com
     - .bareporno.com
@@ -4912,6 +4915,7 @@ payload:
     - .clasporno.org
     - .classicnike.com
     - .classymomsex.com
+    - .claude.ai
     - .clco.cc
     - .clearasil.us
     - .clearlinux.org
@@ -5469,6 +5473,7 @@ payload:
     - .deepfreeze.tech
     - .deepl.com
     - .deepmind.com
+    - .deepmind.google
     - .definebabe.com
     - .definefetish.com
     - .degruyter.com
@@ -11600,6 +11605,7 @@ payload:
     - .makeeu.com
     - .makeitopen.com
     - .makeitrealcontest.com
+    - .makersuite.google.com
     - .makesenseofdata.com
     - .makingstartshere.com
     - .maktoob.com
@@ -19232,6 +19238,7 @@ payload:
     - .x-artvideo.net
     - .x-caprice.com
     - .x-fetish.org
+    - .x.ai
     - .x.co
     - .x.com
     - .x.company
