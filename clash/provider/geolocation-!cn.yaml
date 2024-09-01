@@ -13463,6 +13463,8 @@ payload:
     - .nordstrom.com
     - .nordstrommedia.com
     - .norsk.mobi
+    - .notebooklm.google
+    - .notebooklm.google.com
     - .notepad-plus-plus.org
     - .notion-static.com
     - .notion.com
@@ -13882,6 +13884,7 @@ payload:
     - .openamt.com
     - .openapiplatform.com
     - .openapiservice.com
+    - .openart.ai
     - .opencollective.com
     - .opencreate.org
     - .opendroneid.org
