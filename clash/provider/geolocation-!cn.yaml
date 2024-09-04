@@ -20,6 +20,8 @@ payload:
     - adobe-dns-4.adobe.com
     - adobe-dns.adobe.com
     - adobeereg.com
+    - ai.google.dev
+    - alkalicore-pa.clients6.google.com
     - alkalimakersuite-pa.clients6.google.com
     - alt1-mtalk.google.com
     - alt2-mtalk.google.com
@@ -1058,6 +1060,7 @@ payload:
     - .abema-tv.com
     - .abema.io
     - .abema.tv
+    - .abematv.co.jp
     - .abgsp1.buzz
     - .abigass.com
     - .aboluowang.com
@@ -1354,7 +1357,7 @@ payload:
     - .ahtranny.com
     - .ahvideosexe.com
     - .ahxxx.club
-    - .ai.google.dev
+    - .ai.com
     - .ai7995.site
     - .ai91porn.cc
     - .aiaa.org
@@ -4928,6 +4931,7 @@ payload:
     - .clinicalkey.com
     - .clip16.com
     - .clipcake.com
+    - .clipdrop.co
     - .cliphayho.com
     - .cliphunter.com
     - .clips4sale.com
@@ -5618,6 +5622,7 @@ payload:
     - .diddykongracing.com
     - .didilist.com
     - .dierectv.com
+    - .dify.ai
     - .digicert-cn.com
     - .digicert-validation.com
     - .digicert.com
@@ -8000,6 +8005,7 @@ payload:
     - .gateimg.com
     - .gateio.live
     - .gateio.services
+    - .gateway.ai.cloudflare.com
     - .gateway.dev
     - .gateway.pinata.cloud
     - .gauleporno.xxx
@@ -8089,6 +8095,7 @@ payload:
     - .gelbooru.com
     - .gelbooru.me
     - .gelbooru.wjcodes.com
+    - .geller-pa.googleapis.com
     - .gemfire.net
     - .gemfury.com
     - .gemini.com
@@ -8096,6 +8103,7 @@ payload:
     - .gemini.yahoo.com
     - .gen.lib.rus.ec
     - .gendai.net
+    - .generativeai.google
     - .generativelanguage.googleapis.com
     - .geneticconstructor.com
     - .geng8cn.xyz
@@ -10554,6 +10562,7 @@ payload:
     - .jasa3dmax.com
     - .jasaautocad.com
     - .jasmin.com
+    - .jasper.ai
     - .jav-angel.net
     - .jav-subtitles.com
     - .jav-vr.net
@@ -15075,6 +15084,7 @@ payload:
     - .privatevoyeurvideos.com
     - .privilege.hk
     - .privilege.tw
+    - .proactivebackend-pa.googleapis.com
     - .proctoscopeexam.com
     - .prodrive-japan.com
     - .product.co.jp
