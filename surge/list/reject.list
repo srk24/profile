@@ -184,7 +184,9 @@ wlog.kuaishou.com
 .bar.baidu.com
 .bdplus.baidu.com
 .bds.snssdk.com
+.beacon.qq.com
 .beacon.sina.com.cn
+.beaconcdn.qq.com
 .beizi.biz
 .biz.weibo.com
 .bluekai.com
@@ -233,12 +235,14 @@ wlog.kuaishou.com
 .cpro2.baidu.com
 .cpro2.baidustatic.com
 .cps.360buy.com
+.cpu.baidu.com
 .crash.163.com
 .crashlytics.163.com
 .cre-dp.sina.cn
 .cre.dp.sina.cn
 .cretgate.com
 .crs.baidu.com
+.cstm.baidu.com
 .ctobsnssdk.com
 .cupid.iqiyi.com
 .d00.sina.com.cn
@@ -267,6 +271,7 @@ wlog.kuaishou.com
 .dl2.bav.baidu.com
 .dlsw.baidu.com
 .dlsw.br.baidu.com
+.dlswbr.baidu.com
 .dmapp.youku.com
 .dmp.sina.cn
 .dn-growing.qbox.me
@@ -279,6 +284,7 @@ wlog.kuaishou.com
 .dp.im.weibo.cn
 .drmcmm.baidu.com
 .dsp.simba.taobao.com
+.duiwai.baidu.com
 .dup.baidustatic.com
 .dxp.baidu.com
 .dzl.baidu.com
@@ -289,6 +295,7 @@ wlog.kuaishou.com
 .ecma.bdimg.com
 .ecmb.bdimg.com
 .ecmc.bdimg.com
+.eduad.baidu.com
 .eiv.baidu.com
 .em.baidu.com
 .emogi.com
@@ -309,8 +316,10 @@ wlog.kuaishou.com
 .fav.simba.taobao.com
 .fc-feed.cdn.bcebos.com
 .fclick.baidu.com
+.fclog.baidu.com
 .feed.baidu.com
 .feedback.whalecloud.com
+.fenxi.com
 .ff.win.taobao.com
 .fm.p0y.cn
 .fout.jp
@@ -325,6 +334,7 @@ wlog.kuaishou.com
 .game.weibo.com
 .gamecenter.iqiyi.com
 .gamex.mobile.youku.com
+.gdt.qq.com
 .gemini.yahoo.com
 .gimg.baidu.com
 .gma.alicdn.com
@@ -352,7 +362,9 @@ wlog.kuaishou.com
 .googletraveladservices-cn.com
 .googletraveladservices.com
 .googlevads-cn.com
+.goutong.baidu.com
 .gozendata.com
+.gsp1.baidu.com
 .gtms01.alicdn.com
 .gtms02.alicdn.com
 .gtms03.alicdn.com
@@ -367,6 +379,7 @@ wlog.kuaishou.com
 .h-adashx.ut.taobao.com
 .h-adashx.ut.youku.com
 .h-adashx4yt.ut.taobao.com
+.hao123union.baidu.com
 .hc.baidu.com
 .hm.baidu.com
 .hmma.baidu.com
@@ -397,6 +410,7 @@ wlog.kuaishou.com
 .img01.taotaosou.cn
 .imglnkc.com
 .imglnkd.com
+.imgstat.baidu.com
 .imp.optaim.com
 .impact-ad.jp
 .init.phpwind.com
@@ -409,6 +423,8 @@ wlog.kuaishou.com
 .intl.wapa.taobao.com
 .intl.waptest.taobao.com
 .ironbeast.io
+.isdspeed.qq.com
+.iwanad.baidu.com
 .iyes.youku.com
 .j.br.baidu.com
 .ja2.gamersky.com
@@ -426,6 +442,7 @@ wlog.kuaishou.com
 .ladsp.com
 .leanplum.com
 .letv.allyes.com
+.lianmeng.360.cn
 .lijit.com
 .log.hunantv.com
 .log.mix.sina.com.cn
@@ -437,20 +454,24 @@ wlog.kuaishou.com
 .lqc006.com
 .lstat.youku.com
 .lu.sogoucdn.com
+.lxbjs.baidu.com
 .m-adash.m.taobao.com
 .m.intl.taobao.com
 .m.simba.taobao.com
 .m1.baidu.com
 .ma.baidu.com
+.mail-ads.google.com
 .marketingplatform.google.com
 .match.p4p.1688.com
 .material.istreamsche.com
 .mbdlog.iqiyi.com
 .mcs.snssdk.com
+.mediav.com
 .metrics.duolingo.com
 .mfadsrvr.com
 .mg.games.sina.com.cn
 .mgid.com
+.miao.baidu.com
 .microad.co.jp
 .microad.jp
 .minisite.letv.com
@@ -474,6 +495,7 @@ wlog.kuaishou.com
 .msg2.video.qiyi.com
 .msite.baidu.com
 .mtrace.qq.com
+.mvad.com
 .myes.youku.com
 .n.mark.letv.com
 .najva.com
@@ -523,6 +545,7 @@ wlog.kuaishou.com
 .pglstatp-toutiao-b.com
 .pglstatp-toutiao.com
 .pindao.huoban.taobao.com
+.pingjs.qq.com
 .pl.youku.com
 .policy.video.iqiyi.com
 .pos.baidu.com
@@ -537,6 +560,7 @@ wlog.kuaishou.com
 .push.wandoujia.com
 .push.zhanzhang.baidu.com
 .pv.sohu.com
+.qhupdate.com
 .qianclick.baidu.com
 .qwapi.com
 .r.l.youku.com
@@ -555,9 +579,12 @@ wlog.kuaishou.com
 .rm.sina.com.cn
 .rplog.baidu.com
 .rs.sinajs.cn
+.s.360.cn
 .s.baidu.com
 .s.img.mix.sina.com.cn
 .s.p.youku.com
+.s.so.360.cn
+.s.union.360.cn
 .s4yxaqyq95.com
 .sa.tuisong.baidu.com
 .sabavision.com
@@ -587,6 +614,7 @@ wlog.kuaishou.com
 .slog.sina.cn
 .slog.sina.com.cn
 .snapads.com
+.sngmta.qq.com
 .sobar.baidu.com
 .sobartop.baidu.com
 .socdm.com
@@ -601,6 +629,7 @@ wlog.kuaishou.com
 .stat.letv.com
 .stat.m.jd.com
 .stat.v.baidu.com
+.stat.y.qq.com
 .stat.youku.com
 .static.app.m.letv.com
 .static.hotjar.com
@@ -618,8 +647,10 @@ wlog.kuaishou.com
 .supersonicads-a.akamaihd.net
 .supersonicads.com
 .taboola.com
+.tajs.qq.com
 .tanxlog.istreamsche.com
 .tapsell.ir
+.tcss.qq.com
 .tdrec.youku.com
 .tejia.taobao.com
 .telecome.cn
@@ -638,6 +669,7 @@ wlog.kuaishou.com
 .tongji.baidu.com
 .tongji.linezing.com
 .toolbar.baidu.com
+.trace.qq.com
 .track.sohu.com
 .tracker.ai.xiaomi.com
 .tracker.baidu.com
@@ -694,6 +726,8 @@ wlog.kuaishou.com
 .wenku-cms.bj.bcebos.com
 .widget.weibo.com
 .wisepush.video.baidu.com
+.wit.qq.com
+.wkctj.baidu.com
 .wm.baidu.com
 .woocall.sina.com.cn
 .wwads.cn
@@ -717,6 +751,5 @@ wlog.kuaishou.com
 .miaozhen.com
 .tqt.weibo.cn
 .qzs.gdtimg.com
-.gdt.qq.com
 .open.e.kuaishou.cn
 .open.e.kuaishou.com
