@@ -303,6 +303,7 @@ payload:
     - scholar.google.sk
     - scholar.googleusercontent.com
     - scholar.l.google.com
+    - sentry.hetzner.company
     - sentry.ppy.sh
     - servd-anthropic-website.b-cdn.net
     - sni1dcb6gl.wpc.edgecastcdn.net
@@ -9072,6 +9073,7 @@ payload:
     - .herringnetwork.com
     - .hetzner.cloud
     - .hetzner.com
+    - .hetzner.company
     - .hetzner.de
     - .hex.pm
     - .hexatronik.com
