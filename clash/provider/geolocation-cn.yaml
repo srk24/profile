@@ -641,6 +641,7 @@ payload:
     - .360kuai.com
     - .360os.com
     - .360panyun.cn
+    - .360qhcdn.com
     - .360safe.com
     - .360shouji.com
     - .360taojin.com
@@ -728,6 +729,7 @@ payload:
     - .51meishu.com
     - .51nod.com
     - .51sole.com
+    - .51togic.com
     - .51wendang.com
     - .51yes.com
     - .5253.com
@@ -1097,6 +1099,7 @@ payload:
     - .antgroup-inc.cn
     - .antgroup.com
     - .anticheatexpert.com
+    - .antpcdn.com
     - .antutu.com
     - .anxia.com
     - .anycross.com
@@ -1131,6 +1134,7 @@ payload:
     - .appforebay.cn
     - .appgift.sinaapp.com
     - .appinn.com
+    - .appjiagu.com
     - .apple-appstore.cn
     - .apple-dns.cn
     - .apple-dns.com.cn
@@ -2197,7 +2201,10 @@ payload:
     - .dbank.com
     - .dbankcdn.cn
     - .dbankcdn.com
+    - .dbankcloud.cn
     - .dbankcloud.com
+    - .dbankedge.cn
+    - .dbankedge.net
     - .dbfund.com.cn
     - .dcads.sina.com.cn
     - .dcarapi.com
@@ -2836,8 +2843,11 @@ payload:
     - .gpsonextra.net
     - .gputechconf.cn
     - .gracg.com
+    - .gree.cn
     - .gree.com
+    - .gree.com.cn
     - .greenxiazai.com
+    - .greeyun.com
     - .growingio.com
     - .grzq.com
     - .gsadds.com
@@ -2971,6 +2981,8 @@ payload:
     - .heytapimage.com
     - .heytapmobi.com
     - .heytea.com
+    - .hf-aw.cn
+    - .hf-aw.com
     - .hffunds.cn
     - .hftfund.com
     - .hfzq.com.cn
@@ -3074,6 +3086,8 @@ payload:
     - .httpsdns.baidu.com
     - .huaan.com.cn
     - .huaban.com
+    - .huafeng-accuweather.cn
+    - .huafengaw.com
     - .huajingsec.com
     - .huajinsc.cn
     - .huangyuhui.net
@@ -3324,6 +3338,7 @@ payload:
     - .iqiyipic.com
     - .iranshao.com
     - .irs01.com
+    - .irsnp.com
     - .is-cool.cn
     - .is-cool.com.cn
     - .iscas.ac.cn
@@ -3619,6 +3634,7 @@ payload:
     - .kindleoasis.cn
     - .kindleoasis.com.cn
     - .kingdee.com
+    - .kinghomechina.com
     - .kingsoft.com
     - .kiyuu.club
     - .kkmh.com
@@ -3978,6 +3994,7 @@ payload:
     - .mcchcdn.com
     - .mcmod.cn
     - .mcs.snssdk.com
+    - .mdcdn.cn
     - .mdeer.com
     - .mdpda.com
     - .me1.ltd
@@ -4037,6 +4054,10 @@ payload:
     - .microsoftreactor.com.cn
     - .microsofttranslator-int.cn
     - .midasbuy.com
+    - .midea.cn
+    - .midea.com
+    - .midea.com.cn
+    - .mideaepayuat.com
     - .miercn.com
     - .mifile.cn
     - .migu.cn
@@ -4131,6 +4152,8 @@ payload:
     - .msidlabpbmc.cn
     - .msite.baidu.com
     - .msjyfund.com.cn
+    - .msmartlife.cn
+    - .msmartlife.com
     - .msn.cn
     - .mspil.cn
     - .msra.cn
@@ -4542,6 +4565,7 @@ payload:
     - .qeodns.com
     - .qeodns.net
     - .qh24.com
+    - .qhcdn.com
     - .qhimg.com
     - .qhimgs0.com
     - .qhimgs1.com
@@ -4573,6 +4597,7 @@ payload:
     - .qihuapi.cn
     - .qihucdn.com
     - .qijiayoudao.net
+    - .qiku.com
     - .qikucdn.com
     - .qingcache.com
     - .qingcloud.com
@@ -4890,6 +4915,7 @@ payload:
     - .slog.sina.com.cn
     - .sm.cn
     - .smartapps.cn
+    - .smartmidea.net
     - .sms18.com
     - .smtcdns.com
     - .smtcdns.net
@@ -5270,6 +5296,7 @@ payload:
     - .topthink.com
     - .toptown.cn
     - .toscdn.com
+    - .tosot.com.cn
     - .touqikan.com
     - .tourismshow.cn
     - .tourismuser.cn
@@ -5320,7 +5347,6 @@ payload:
     - .trafficmanager.cn
     - .travelsky.com
     - .trends.mobile.sina.cn
-    - .tripcdn.com
     - .trunktech.com
     - .trust-provider.cn
     - .trustcenter.cn
@@ -5661,6 +5687,7 @@ payload:
     - .wdzj.com
     - .we4399.com
     - .weand.com
+    - .weathercn.com
     - .webank.com
     - .webankcdn.net
     - .webex.com.cn
@@ -6133,6 +6160,7 @@ payload:
     - .zhiyuanhe.cn
     - .zhiyuanyun.com.cn
     - .zhiziyun.com
+    - .zhlyen.com
     - .zhongkao.com
     - .zhonshian.cn
     - .zhonshian.com

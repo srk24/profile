@@ -87,23 +87,48 @@ payload:
     - crl.microsoft.com
     - crl.versign.net
     - csis-prod.s3.amazonaws.com
+    - d1g1f25tn8m2e6.cloudfront.net
     - d1k2us671qcoau.cloudfront.net
+    - d1m7jfoe9zdc1j.cloudfront.net
+    - d1mhjrowxxagfy.cloudfront.net
+    - d1oca24q5dwo6d.cloudfront.net
+    - d1w2poirtb3as9.cloudfront.net
+    - d1xhnb4ptk05mw.cloudfront.net
+    - d1ymi26ma8va5x.cloudfront.net
     - d29vzk4ow07wi7.cloudfront.net
+    - d2aba1wr3818hz.cloudfront.net
     - d2anahhhmp1ffz.cloudfront.net
+    - d2dylwb3shzel1.cloudfront.net
+    - d2e2de1etea730.cloudfront.net
+    - d2nvs31859zcd8.cloudfront.net
+    - d2um2qdswy1tb0.cloudfront.net
+    - d2vjef5jvl6bfs.cloudfront.net
+    - d2xmjdvx03ij56.cloudfront.net
     - d33wubrfki0l68.cloudfront.net
+    - d36nr0u3xmc4mm.cloudfront.net
+    - d3aqoihi2n8ty8.cloudfront.net
+    - d3c27h4odz752x.cloudfront.net
+    - d3vd9lfkzbru3h.cloudfront.net
+    - d6d4ismr40iw.cloudfront.net
+    - d6tizftlrpuof.cloudfront.net
     - databank.worldbank.org
     - database.asahi.com
+    - ddacn6pr5v0tl.cloudfront.net
     - default.exp-tas.com
     - deribit.cdn.prismic.io
     - deutschewelle.h-cdn.com
     - developers.facebook.com
     - dfp6rglgjqszk.cloudfront.net
+    - dgeft87wbj63p.cloudfront.net
     - dl.begellhouse.com
     - dlgarenanow-a.akamaihd.net
     - dlmobilegarena-a.akamaihd.net
+    - dqrpb9wgowsf5.cloudfront.net
     - ds-linear-abematv.akamaized.net
     - ds-vod-abematv.akamaized.net
+    - ds0h3roq6wcgc.cloudfront.net
     - dtlgalleryint.cloudapp.net
+    - dykkng5hnh52u.cloudfront.net
     - e122475.dscg.akamaiedge.net
     - ea.tt.omtrdc.net
     - eaassets-a.akamaihd.net
@@ -178,7 +203,10 @@ payload:
     - misa-prod.s3.ap-northeast-1.amazonaws.com
     - mobilelive-hamivideo.cdn.hinet.net
     - mscrl.microsoft.com
+    - mtalk-dev.google.com
+    - mtalk-staging.google.com
     - mtalk.google.com
+    - mtalk4.google.com
     - muse.jhu.edu
     - mwf-service.akamaized.net
     - na1r.services.adobe.com
@@ -11321,6 +11349,7 @@ payload:
     - .litv.tv
     - .litvfreepc.akamaized.net
     - .liuhefabu.club
+    - .live-video.net
     - .live.com
     - .live.com.au
     - .live.eu
@@ -11370,6 +11399,7 @@ payload:
     - .localizestatus.com
     - .localpresshk.com
     - .localxlist.org
+    - .location.services.mozilla.com
     - .logi.com
     - .logicool.co.jp
     - .logicoolg.com
@@ -14547,6 +14577,11 @@ payload:
     - .platinumlinks.org
     - .play-bmm.shop
     - .play-bmmer.buzz
+    - .play-fe.googleapis.com
+    - .play-games.googleusercontent.com
+    - .play-lh.googleusercontent.com
+    - .play.google.com
+    - .play.googleapis.com
     - .play4free.com
     - .playapex.com
     - .playartifact.com
@@ -15169,6 +15204,7 @@ payload:
     - .purextc.com
     - .puripuriunkomura.com
     - .pururin.to
+    - .push.services.mozilla.com
     - .pussy-pics.net
     - .pussy3dporn.com
     - .pussyboy.net
