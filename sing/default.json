@@ -13,7 +13,7 @@
     "clash_api": {
       "external_controller": "127.0.0.1:9090",
       "secret": "",
-      "access_control_allow_origin": ["https://yacd.haishan.me", "https://clash.razord.top"],
+      "access_control_allow_origin": [],
       "access_control_allow_private_network": true
     }
   },
@@ -46,7 +46,7 @@
         "disable_cache": true
       },
       {
-        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
+        "rule_set": ["process_direct", "domestic", "in_direct"],
         "server": "dns_udp"
       },
       {
@@ -69,20 +69,14 @@
       "address": ["192.18.0.1/30", "fccc::1/126"],
       "mtu": 9000,
       "auto_route": true,
-      "endpoint_independent_nat": true,
+      "stack": "system",
       "sniff": true,
       "sniff_timeout": "10ms"
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "users": [
-        {
-          "username": "admin",
-          "password": "nimda"
-        }
-      ],
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 7000,
       "sniff": true,
       "sniff_timeout": "10ms",
@@ -106,7 +100,7 @@
         "outbound": "direct-out"
       },
       {
-        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
+        "rule_set": ["process_direct", "domestic", "in_direct"],
         "outbound": "direct-out"
       },
       {
@@ -148,7 +142,14 @@
       {
         "type": "inline",
         "tag": "in_direct",
-        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
+        "rules": [
+          {
+            "domain_suffix": ["steamserver.net", "steamcontent.com"]
+          },
+          {
+            "process_path_regex": ["^D:\\\\(Tencent|Game)\\\\.+", ".+SGuard.+"]
+          }
+        ]
       },
       {
         "type": "remote",
@@ -162,13 +163,6 @@
         "tag": "process_direct",
         "format": "binary",
         "url": "https://jsd.onmicrosoft.cn/gh/srk24/profile@master/sing/ruleset/process_direct.srs",
-        "download_detour": "direct-out"
-      },
-      {
-        "type": "remote",
-        "tag": "steam@cn",
-        "format": "binary",
-        "url": "https://jsd.onmicrosoft.cn/gh/SagerNet/sing-geosite@rule-set/geosite-steam@cn.srs",
         "download_detour": "direct-out"
       },
       {
