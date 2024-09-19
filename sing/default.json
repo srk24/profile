@@ -46,7 +46,7 @@
         "disable_cache": true
       },
       {
-        "rule_set": ["process_direct", "domestic", "in_direct"],
+        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
         "server": "dns_udp"
       },
       {
@@ -69,17 +69,16 @@
       "address": ["192.18.0.1/30", "fccc::1/126"],
       "mtu": 9000,
       "auto_route": true,
-      "stack": "system",
-      "sniff": true,
-      "sniff_timeout": "10ms"
+      "stack": "gvisor",
+      "sniff": true
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "127.0.0.1",
+      "users": [{ "username": "wuhooo", "password": "yoohooo" }],
+      "listen": "0.0.0.0",
       "listen_port": 7000,
       "sniff": true,
-      "sniff_timeout": "10ms",
       "domain_strategy": "prefer_ipv4"
     }
   ],
@@ -143,12 +142,8 @@
         "type": "inline",
         "tag": "in_direct",
         "rules": [
-          {
-            "domain_suffix": ["steamserver.net", "steamcontent.com"]
-          },
-          {
-            "process_path_regex": ["^D:\\\\(Tencent|Game)\\\\.+", ".+SGuard.+"]
-          }
+          { "domain_suffix": ["steamserver.net", "steamcontent.com"] },
+          { "process_path_regex": ["^D:\\\\(Tencent|Game)\\\\.+", ".+SGuard.+"] }
         ]
       },
       {
