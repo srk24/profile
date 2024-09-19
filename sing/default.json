@@ -46,7 +46,7 @@
         "disable_cache": true
       },
       {
-        "rule_set": ["process_direct", "domestic", "steam@cn", "in_direct"],
+        "rule_set": ["process_direct", "domestic", "in_direct"],
         "server": "dns_udp"
       },
       {
