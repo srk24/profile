@@ -45,6 +45,8 @@ func main() {
 		"gdt.qq.com",
 		"open.e.kuaishou.cn",
 		"open.e.kuaishou.com",
+		"cnlogs.umeng.com",
+		"umengcloud.com",
 	}
 
 	_ = os.MkdirAll("./sing/tmp/", 0777)
