@@ -169,6 +169,7 @@ payload:
     - gigabyte2.azureedge.net
     - github-cloud.s3.amazonaws.com
     - gitlab-assets.oss-cn-hongkong.aliyuncs.com
+    - google-ohttp-relay-safebrowsing.fastly-edge.com
     - hamivideo.hinet.net
     - hammerandchisel.ssl.zendesk.com
     - heads-ak-spotify-com.akamaized.net
@@ -1978,6 +1979,7 @@ payload:
     - .amourangels.com
     - .amp-api.podcast.apple.com
     - .amp.dev
+    - .amplifi.com
     - .amplifyapp.com
     - .amplifyframework.com
     - .ampproject.com
@@ -5986,6 +5988,7 @@ payload:
     - .classics.ac.uk
     - .classymomsex.com
     - .claude.ai
+    - .claudeusercontent.com
     - .clc-london.ac.uk
     - .clco.cc
     - .clean-cooling.ac.uk
@@ -9038,8 +9041,10 @@ payload:
     - .fastindianporn.com
     - .fastlane.ci
     - .fastlane.tools
+    - .fastly-edge.com
     - .fastly-terrarium.com
     - .fastly.com
+    - .fastly.io
     - .fastly.net
     - .fastlylabs.com
     - .fastlylb.net
@@ -9724,6 +9729,7 @@ payload:
     - .frontier.ac.uk
     - .frontiersin.org
     - .frontiersofoncology.ac.uk
+    - .frontrow.com
     - .froogle.com
     - .frostbite.com
     - .frprn.com
@@ -10225,6 +10231,7 @@ payload:
     - .github.io
     - .githubapp.com
     - .githubassets.com
+    - .githubcopilot.com
     - .githubhackathon.com
     - .githubnext.com
     - .githubpreview.dev
@@ -11823,6 +11830,7 @@ payload:
     - .httpsfacebook.com
     - .httpwwwfacebook.com
     - .htvncdn.net
+    - .htx.com
     - .htyj-bj.com
     - .hu1u.com
     - .huabansp.com
@@ -20777,6 +20785,7 @@ payload:
     - .signal.org
     - .signalbar.com
     - .signalprocessingsociety.org
+    - .signalr.net
     - .signalusers.org
     - .sihe.ac.uk
     - .sikh-uni.ac.uk
@@ -22985,6 +22994,7 @@ payload:
     - .ubisoft.com
     - .ubisoftconnect.com
     - .ubn.ac.uk
+    - .ubncloud.com
     - .ubnw.net
     - .ubuntu-touch.io
     - .ubuntu.com
@@ -23070,7 +23080,9 @@ payload:
     - .uhr.ac.uk
     - .uhsl.ac.uk
     - .uhub.com
+    - .ui.com
     - .uiporn.com
+    - .uisp.com
     - .ujapanesesex.com
     - .ujizzcn.com
     - .uk-cdi.ac.uk
@@ -23899,6 +23911,7 @@ payload:
     - .vk.design
     - .vk.link
     - .vk.me
+    - .vk.ru
     - .vkcache.com
     - .vkgo.app
     - .vklive.app
@@ -24540,6 +24553,7 @@ payload:
     - .wifevideos.net
     - .wifewantstoplay.com
     - .wifi-mx.com
+    - .wifiman.com
     - .wigan-leigh.ac.uk
     - .wigs.ac.uk
     - .wigstoncollege.ac.uk
@@ -25910,6 +25924,7 @@ payload:
     - .zencdn.net
     - .zencoder.com
     - .zendesk.com
+    - .zenlesszonezero.com
     - .zenodo.org
     - .zeplerinstitute.ac.uk
     - .zeplin.dev
