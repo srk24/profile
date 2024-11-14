@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"profile/adguard"
 	"slices"
 	"strings"
 	"time"
@@ -54,9 +55,17 @@ func main() {
 	CompileSingboxFile("./sing/ruleset/process_direct.json")
 
 	f, _ := Download("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "./sing/ruleset/adguard.txt")
+
+	reader, _ := os.Open("./sing/ruleset/adguard.txt")
+
+	domain, excludeDomain, err := adguard.Convert(reader)
+	if err == nil {
+		GenerateSurgeFile("./surge/list/adguard.list", domain, block_list)
+		GenerateSurgeFile("./surge/list/adguard_exclude.list", excludeDomain, []string{})
+	}
+
 	ConvertSingboxFile(f.Name(), "adguard")
 	os.Remove(f.Name())
-	// DecompileSingboxFile("./sing/ruleset/adguard.srs")
 
 	f, _ = Download("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs", "./sing/tmp/geosite-category-ads-all.srs")
 	DecompileSingboxFile(f.Name())
