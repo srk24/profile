@@ -1,0 +1,18 @@
+#!name=Weibo.Intl 配置
+#!desc=删除微博国际版广告
+#!system=ios
+
+[Rule]
+DOMAIN,bootpreload.uve.weibo.com,REJECT-TINYGIF
+DOMAIN,adimg.uve.weibo.com,REJECT-TINYGIF
+
+[Map Local]
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+
+[Script]
+weibo_portal = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibo_preload = type=http-response,pattern=^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibo_timeline = type=http-response,pattern=^https?:\/\/api\.weibo\.(cn|com)\/2\/((ad\/weibointl)|(statuses\/(friends_timeline|(friends\/timeline)|(extend)))|(profile\/container_timeline)|(searchall)),requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/weibo_timeline.min.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.weibo.cn, api.weibo.com, boot.biz.weibo.com, *.uve.weibo.com

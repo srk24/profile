@@ -1,0 +1,161 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui"
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_udp",
+        "address": "119.29.29.29",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "dns_encrypt",
+        "address": "h3://223.5.5.5/dns-query",
+        "address_resolver": "dns_udp",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "dns_fakeip",
+        "address": "fakeip",
+        "strategy": "ipv4_only"
+      }
+    ],
+    "rules": [
+      {
+        "action": "reject",
+        "rule_set": ["adguard", "in_rejct"]
+      },
+      {
+        "action": "route",
+        "rule_set": ["domestic", "in_direct"],
+        "server": "dns_udp"
+      },
+      {
+        "action": "route",
+        "rule_set": ["global"],
+        "server": "dns_fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "172.16.0.0/12"
+    },
+    "final": "dns_encrypt",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["192.18.0.1/30", "fccc::1/126"],
+      "auto_route": true,
+      "stack": "gvisor"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "select-out",
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "port": 53
+      },
+      {
+        "action": "sniff",
+        "sniffer": ["http", "tls", "dns", "bittorrent"],
+        "inbound": "tun-in"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "route",
+        "protocol": ["bittorrent"],
+        "outbound": "direct-out"
+      },
+      {
+        "action": "route",
+        "rule_set": ["domestic", "in_direct"],
+        "outbound": "direct-out"
+      },
+      {
+        "action": "route",
+        "rule_set": ["global"],
+        "outbound": "select-out"
+      },
+      {
+        "action": "route",
+        "ip_is_private": true,
+        "rule_set": ["geoip_cn"],
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "inline",
+        "tag": "in_rejct",
+        "rules": [
+          { "domain_keyword": ["mcdn", "pcdn", "stun", "tracker", "broadcast", "p2p"] },
+          { "domain_keyword": ["bilibili", "biliapi", "bilivideo", "douyu"] }
+        ]
+      },
+      {
+        "type": "inline",
+        "tag": "in_direct",
+        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
+      },
+      {
+        "type": "remote",
+        "tag": "adguard",
+        "format": "binary",
+        "url": "https://ghp.ci/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "global",
+        "format": "binary",
+        "url": "https://ghp.ci/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "domestic",
+        "format": "binary",
+        "url": "https://ghp.ci/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip_cn",
+        "format": "binary",
+        "url": "https://ghp.ci/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      }
+    ]
+  },
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    }
+  ]
+}

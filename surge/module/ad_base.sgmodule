@@ -1,0 +1,10 @@
+#!name= Advertising Base Remove
+#!desc= 去除广告
+
+[URL Rewrite]
+
+[Script]
+ad_networks = type=http-response,pattern=^https:\/\/((api-access\.pangolin-sdk-toutiao|is\.snssdk)\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?),requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/ad_networks.js
+
+[MITM]
+hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com, open.e.kuaishou.com

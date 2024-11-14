@@ -1,0 +1,5 @@
+hostname = api.weibo.cn, api.weibo.com, sdkapp.uve.weibo.com, wbapp.uve.weibo.com
+
+^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/(interface\/sdk\/sdkad\.php|wbapplua\/wbpullad\.lua) url reject-dict
+
+^https?:\/\/api\.weibo\.(cn|com)\/2\/((ad\/weibointl)|(statuses\/(friends_timeline|(friends\/timeline)|(extend)))|(profile\/container_timeline)|(searchall)) url script-response-body https://github.com/srk24/profile/raw/master/js/weibo_timeline.min.js

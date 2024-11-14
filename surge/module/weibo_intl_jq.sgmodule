@@ -1,0 +1,18 @@
+#!name=Weibo.Intl 配置
+#!desc=删除微博国际版广告
+#!system=ios
+
+[Rule]
+DOMAIN,adimg.uve.weibo.com,REJECT
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.* '.data.display_ad = 1'
+http-response-jq ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload '.ads[] |= (.start_time += 864000 | .end_time += 864000 | .display_duration = 0 | .daily_display_cnt = 0 | .total_display_cnt = 0)'
+http-response-jq ^https?:\/\/api\.weibo\.(cn|com)\/2\/(profile\/container_timeline|searchall) 'del(.items[] | select(.data.mblogtype != 0))'
+http-response-jq ^https?:\/\/api\.weibo\.(cn|com)\/2\/statuses\/(friends_timeline|(friends\/timeline)) '.ad = [] | .advertises = [] | .ad_version_2_weibo = []'
+http-response-jq ^https?:\/\/api\.weibo\.(cn|com)\/2\/ad\/weibointl '.data = []'
+http-response-jq ^https?:\/\/api\.weibo\.(cn|com)\/2\/statuses\/extend '.head_cards = []'
+http-response-jq ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime '. = {}'
+
+[MITM]
+hostname = %APPEND% api.weibo.cn, api.weibo.com, boot.biz.weibo.com, *.uve.weibo.com

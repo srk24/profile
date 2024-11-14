@@ -1,0 +1,9 @@
+#!name= Block Bilibili Advertising
+#!desc= 去除B站动态广告
+#!system=ios
+
+[Script]
+bilibili_dynamic = type=http-response,pattern=^https?:\/\/((app\.bilibili\.com)|(grpc\.biliapi\.net))\/bilibili\.app\.dynamic\.v2\.Dynamic\/(DynAll|DynVideo)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bilibili_proto.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, *.biliapi.net
