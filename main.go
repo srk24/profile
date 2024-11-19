@@ -55,21 +55,20 @@ func main() {
 	CompileSingboxFile("./sing/ruleset/process_direct.json")
 
 	f, _ := Download("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "./sing/ruleset/adguard.txt")
-
 	reader, _ := os.Open("./sing/ruleset/adguard.txt")
-
 	domain, excludeDomain, err := adguard.Convert(reader)
 	if err == nil {
 		GenerateSurgeFile("./surge/list/adguard.list", domain, block_list)
 		GenerateSurgeFile("./surge/list/adguard_exclude.list", excludeDomain, []string{})
 	}
-
 	ConvertSingboxFile(f.Name(), "adguard")
 	os.Remove(f.Name())
 
 	f, _ = Download("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs", "./sing/tmp/geosite-category-ads-all.srs")
 	DecompileSingboxFile(f.Name())
-	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-category-ads-all.json")
+	f, _ = Download("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs", "./sing/tmp/geosite-category-httpdns-cn@ads.srs")
+	DecompileSingboxFile(f.Name())
+	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfgMulti([]string{"./sing/tmp/geosite-category-ads-all.json", "./sing/tmp/geosite-category-httpdns-cn@ads.json"})
 	for _, item := range block_list {
 		if exist := slices.Contains(domain_suffix, item); !exist {
 			domain_suffix = append(domain_suffix, item)
@@ -94,6 +93,17 @@ func main() {
 	GenerateQuanXFile("./quanx/list/geolocation-cn.snippet", domain, domain_suffix, domain_keyword)
 
 	defer os.RemoveAll("./sing/tmp/")
+}
+
+func UnmarshalSingboxSourceCfgMulti(path []string) (domain, domain_suffix, domain_keyword, domain_regex []string) {
+	for _, p := range path {
+		_domain, _domain_suffix, _domain_keyword, _domain_regex := UnmarshalSingboxSourceCfg(p)
+		domain = append(domain, _domain...)
+		domain_suffix = append(domain_suffix, _domain_suffix...)
+		domain_keyword = append(domain_keyword, _domain_keyword...)
+		domain_regex = append(domain_regex, _domain_regex...)
+	}
+	return
 }
 
 func UnmarshalSingboxSourceCfg(path string) (domain, domain_suffix, domain_keyword, domain_regex []string) {
