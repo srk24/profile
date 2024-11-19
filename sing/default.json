@@ -35,7 +35,7 @@
     "rules": [
       {
         "action": "reject",
-        "rule_set": ["adguard", "in_rejct"]
+        "rule_set": ["adguard", "httpdns@ads", "in_rejct"]
       },
       {
         "action": "route",
@@ -123,6 +123,14 @@
         "tag": "adguard",
         "format": "binary",
         "url": "https://ghp.ci/https://github.com/srk24/profile/raw/master/sing/ruleset/adguard.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "httpdns@ads",
+        "format": "binary",
+        "url": "https://ghp.ci/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
         "download_detour": "direct-out",
         "update_interval": "6h"
       },
