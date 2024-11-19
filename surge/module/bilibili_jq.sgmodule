@@ -3,7 +3,7 @@
 #!system=ios
 
 [Rule]
-AND,((OR,((DOMAIN-KEYWORD,pcdn), (DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker), (DOMAIN-KEYWORD,broadcast), (DOMAIN-KEYWORD,p2p))), (OR,((DOMAIN-KEYWORD,biliapi), (DOMAIN-KEYWORD,bilibili)))),REJECT
+AND,((OR,((DOMAIN-KEYWORD,pcdn), (DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker), (DOMAIN-KEYWORD,broadcast), (DOMAIN-KEYWORD,p2p))), (OR,((DOMAIN-KEYWORD,biliapi), (DOMAIN-KEYWORD,bilibili)))),REJECT,pre-matching
 
 [URL Rewrite]
 ^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\.Search\/DefaultWords$ - reject

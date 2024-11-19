@@ -3,7 +3,7 @@
 #!system=ios
 
 [Rule]
-DOMAIN,adimg.uve.weibo.com,REJECT
+DOMAIN,adimg.uve.weibo.com,REJECT,pre-matching
 
 [Body Rewrite]
 http-response-jq ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.* '.data.display_ad = 1'
