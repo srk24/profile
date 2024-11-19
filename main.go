@@ -50,32 +50,6 @@ func main() {
 		"umengcloud.com",
 	}
 
-	// from surge system rule
-	apple_system_domain := []string{
-		"api.smoot.apple.com",
-		"captive.apple.com",
-		"xp.apple.com",
-		"configuration.apple.com",
-		"guzzoni.apple.com",
-		"smp-device-content.apple.com",
-		"aod.itunes.apple.com",
-		"mesu.apple.com",
-		"api.smoot.apple.cn",
-		"gs-loc.apple.com",
-		"mvod.itunes.apple.com",
-		"streamingaudio.itunes.apple.com",
-	}
-
-	// from surge system rule
-	apple_system_domain_suffix := []string{
-		"ess.apple.com",
-		"push-apple.com.akadns.net",
-		"push.apple.com",
-		"lcdn-locator.apple.com",
-		"lcdn-registration.apple.com",
-		"ls.apple.com",
-	}
-
 	_ = os.MkdirAll("./sing/tmp/", 0777)
 
 	CompileSingboxFile("./sing/ruleset/process_direct.json")
@@ -115,16 +89,6 @@ func main() {
 	f, _ = Download("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs", "./sing/tmp/geosite-geolocation-cn.srs")
 	DecompileSingboxFile(f.Name())
 	domain, domain_suffix, domain_keyword, _ = UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-cn.json")
-	for _, item := range apple_system_domain {
-		if exist := slices.Contains(domain, item); !exist {
-			domain = append(domain, item)
-		}
-	}
-	for _, item := range apple_system_domain_suffix {
-		if exist := slices.Contains(domain_suffix, item); !exist {
-			domain_suffix = append(domain_suffix, item)
-		}
-	}
 	GenerateSurgeFile("./surge/list/geolocation-cn.list", domain, domain_suffix)
 	GenerateClashFile("./clash/provider/geolocation-cn.yaml", domain, domain_suffix)
 	GenerateQuanXFile("./quanx/list/geolocation-cn.snippet", domain, domain_suffix, domain_keyword)
