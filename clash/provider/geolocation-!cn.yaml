@@ -67,6 +67,7 @@ payload:
     - bnetproduct-a.akamaihd.net
     - bnetshopus.akamaized.net
     - brightcove.imgix.net
+    - browser-intake-datadoghq.com
     - bybit-exchange.github.io
     - bybit.ada.support
     - c.ppy.sh
@@ -179,6 +180,7 @@ payload:
     - hl2rcv.adobe.com
     - hlrcv.stage.adobe.com
     - homebrew.bintray.com
+    - hpefonts.s3.amazonaws.com
     - hpstore.corpmerchandise.com
     - hulu.playback.edge.bamgrid.com
     - i.jeded.com
@@ -1068,6 +1070,7 @@ payload:
     - .9hentai.ru
     - .9hentai.to
     - .9hentaiz.com
+    - .9ineverse.com
     - .9k6v4y.cyou
     - .9nation.com.au
     - .9news.com.au
@@ -2047,6 +2050,7 @@ payload:
     - .andovercollege.ac.uk
     - .android.com
     - .androidauthority.com
+    - .androidfilehost.com
     - .androidify.com
     - .androidpolice.com
     - .andygod.com
@@ -4711,9 +4715,13 @@ payload:
     - .bordersandborderlands.ac.uk
     - .borderscollege.ac.uk
     - .boringcompany.com
+    - .borneo.world
+    - .borneoasia.com
+    - .borneoschematic.com
     - .borwap.com
     - .bosco.ac.uk
     - .boshancy.com
+    - .bosharso.net
     - .boslife.biz
     - .boslife.net
     - .bossae.com
@@ -5021,6 +5029,7 @@ payload:
     - .buhidoh.net
     - .bui.ac.uk
     - .buic.ac.uk
+    - .buicha.social
     - .buila.ac.uk
     - .building3dcontent.com
     - .builtenvsigns.ac.uk
@@ -5703,6 +5712,7 @@ payload:
     - .chat.com
     - .chatango.com
     - .chatgpt.com
+    - .chatgpt.livekit.cloud
     - .chatgptvideo.xyz
     - .chatgptvideob.buzz
     - .chatsex.xxx
@@ -6651,6 +6661,10 @@ payload:
     - .currenttime.tv
     - .cursecdn.com
     - .curseforge.com
+    - .cursor-cdn.com
+    - .cursor.com
+    - .cursor.sh
+    - .cursorapi.com
     - .curve.fi
     - .curvybbwwives.com
     - .curvyerotic.com
@@ -6663,6 +6677,7 @@ payload:
     - .custombeatsny.com
     - .custombeatssbydreus.com
     - .customdrdrebeats.com
+    - .customercontrolpanel.de
     - .customizedbeatbydre.com
     - .customizedbeatsbydre.com
     - .customizedbeatsdre.com
@@ -6902,6 +6917,8 @@ payload:
     - .dell-brand.com
     - .dell.com
     - .dellcdn.com
+    - .dellsupportcenter.com
+    - .delltechnologies.com
     - .deluxe.com.hk
     - .delvenetworks.com
     - .demand.ac.uk
@@ -7824,6 +7841,7 @@ payload:
     - .eastsurreycollege.ac.uk
     - .easttouch.com.hk
     - .eastweek.com.hk
+    - .easy-jtag.com
     - .easy.ac
     - .easyanticheat.net
     - .easylist.to
@@ -8224,6 +8242,7 @@ payload:
     - .embs.ac.uk
     - .embs.org
     - .emc.ac.uk
+    - .emc.com
     - .emcs.org
     - .eme.ac.uk
     - .emec.ac.uk
@@ -8336,6 +8355,7 @@ payload:
     - .epicbrowser.com
     - .epicgames.com
     - .epicgames.dev
+    - .epicgamescdn.com
     - .epicreads.com
     - .epics.ac.uk
     - .epicure.ac.uk
@@ -10786,6 +10806,8 @@ payload:
     - .greenend.org.uk
     - .greenhead.ac.uk
     - .greenhill.ac.uk
+    - .greenlakeaas.com
+    - .greenlakehybridcloud.com
     - .greenplum.net
     - .greenwich-college.ac.uk
     - .greenwich.ac.uk
@@ -10872,6 +10894,7 @@ payload:
     - .gyakusimei.com
     - .gyc.ac.uk
     - .gynoexam.info
+    - .gyutte.site
     - .gyutto.com
     - .h-doujinshi.xyz
     - .h-flash.com
@@ -11363,6 +11386,17 @@ payload:
     - .hetzner.de
     - .hew.ac.uk
     - .hewit.ac.uk
+    - .hewlett-packard.asia
+    - .hewlett-packard.ch
+    - .hewlett-packard.co
+    - .hewlett-packard.co.il
+    - .hewlett-packard.co.uk
+    - .hewlett-packard.com.cn
+    - .hewlett-packard.com.mx
+    - .hewlett-packard.com.sg
+    - .hewlett-packard.jp
+    - .hewlett-packard.mobi
+    - .hewlettpackard.enterprises
     - .hex.pm
     - .hexatronik.com
     - .hexdocs.pm
@@ -11568,6 +11602,8 @@ payload:
     - .horsedicks.net
     - .horsemecum.com
     - .horseporn.tv
+    - .host.livekit.cloud
+    - .hostborneo.org
     - .hot-arab-films.com
     - .hot-cartoon.com
     - .hot-gayporn.com
@@ -11692,7 +11728,9 @@ payload:
     - .hpdriver.com
     - .hpdrivers.com
     - .hpdrivers.org
+    - .hpe.com
     - .hpeclipse.com
+    - .hpecyber.com
     - .hpengage.com
     - .hpeprint.com
     - .hpeprintcenter.com
@@ -13807,6 +13845,7 @@ payload:
     - .la-mama.ru
     - .laban.ac.uk
     - .labinacell.ac.uk
+    - .labo.wovs.tk
     - .lackcoll.ac.uk
     - .lackham.ac.uk
     - .lacomics.org
@@ -14731,6 +14770,7 @@ payload:
     - .manhuntdaily.com
     - .manhwa24h.com
     - .manhwahentai.me
+    - .maniakey.homes
     - .manlitphil.ac.uk
     - .manorama.com
     - .manoramanews.com
@@ -15191,6 +15231,7 @@ payload:
     - .mexc.com
     - .mexcsensors.com
     - .mfg-inspector.com
+    - .mfmf.club
     - .mfo.ac.uk
     - .mgo-images.com
     - .mgo.com
@@ -15204,6 +15245,9 @@ payload:
     - .mhs-relay.ac.uk
     - .mhs.ac.uk
     - .mhshosting.com
+    - .mi.kochudaho.me
+    - .mi.mashiro.site
+    - .mi.nakn.jp
     - .mi9.com.au
     - .mi9cdn.com
     - .miamifintechfestival.com
@@ -15668,6 +15712,21 @@ payload:
     - .missav.uno
     - .missendenabbey.ac.uk
     - .misshotgirls.com
+    - .misskey-square.net
+    - .misskey.04.si
+    - .misskey.always-we-need.games
+    - .misskey.art
+    - .misskey.cloud
+    - .misskey.design
+    - .misskey.flowers
+    - .misskey.gamelore.fun
+    - .misskey.gg
+    - .misskey.io
+    - .misskey.noellabo.jp
+    - .misskey.ranranhome.info
+    - .misskey.stream
+    - .misskey.yukineko.me
+    - .misskeyusercontent.jp
     - .mist.ac.uk
     - .mistresskym.com
     - .mit.edu
@@ -15679,6 +15738,8 @@ payload:
     - .mixmaturesex.com
     - .mixvintagesex.com
     - .mjv-art.org
+    - .mk.shrimpia.network
+    - .mk.yopo.work
     - .mkcollege.ac.uk
     - .mkncc.ac.uk
     - .mkt.com
@@ -15740,6 +15801,7 @@ payload:
     - .moefuns.co
     - .moeimg.net
     - .moez-m.com
+    - .mof.kemomi.me
     - .mofos.com
     - .mofosex.com
     - .mofosnetwork.com
@@ -15984,6 +16046,8 @@ payload:
     - .msftnet.org
     - .msgamesresearch.com
     - .msinnovationchallenge.com
+    - .msk.ilnk.info
+    - .msk.kitazawa.me
     - .msn.com
     - .msn.net
     - .msnbc.com
@@ -16540,6 +16604,12 @@ payload:
     - .netacad.com
     - .netacad.net
     - .netarabic.com
+    - .netcup-news.de
+    - .netcup-sonderangebote.de
+    - .netcup.com
+    - .netcup.de
+    - .netcup.eu
+    - .netcup.net
     - .netfapx.com
     - .netflav.com
     - .netflav1.com
@@ -16790,6 +16860,7 @@ payload:
     - .nijie.info
     - .nijifeti.com
     - .nijigen-daiaru.com
+    - .nijimiss.moe
     - .nijinchu.com
     - .nijioma.blog
     - .nijiyome.jp
@@ -17490,6 +17561,7 @@ payload:
     - .odysee.com
     - .oecd-ilibrary.org
     - .oed.com
+    - .oekakiskey.com
     - .oeps.ac.uk
     - .oercymru.ac.uk
     - .oerwales.ac.uk
@@ -20940,6 +21012,7 @@ payload:
     - .skunkgirl.cc
     - .sky.com
     - .skyassets.com
+    - .skymansion.net
     - .skymatter.com
     - .skyoceanrescue.com
     - .skyoceanrescue.de
@@ -21062,6 +21135,8 @@ payload:
     - .sneakerpage.net
     - .sneakerskick.com
     - .snjulebu.com
+    - .snk-corp.co.jp
+    - .snkplaymore.info
     - .snow.me
     - .snowcorp.com
     - .snowmiku.com
@@ -21813,6 +21888,7 @@ payload:
     - .sub147.com
     - .sublimedirectory.com
     - .sublimetext.com
+    - .submarin.online
     - .submittal-log.com
     - .submityourflicks.com
     - .subscene.com
@@ -21855,6 +21931,8 @@ payload:
     - .supc.ac.uk
     - .superadultgames.com
     - .supercell.com
+    - .supercell.helpshift.com
+    - .supercell.net
     - .supercoach.com.au
     - .supercomputingwales.ac.uk
     - .superdarn.ac.uk
@@ -21894,6 +21972,7 @@ payload:
     - .suruga-ya.jp
     - .surveynet.ac.uk
     - .suschem-nottingham-cdt.ac.uk
+    - .sushi.ski
     - .susiewildin.com
     - .sussex.ac.uk
     - .sussexbusinessschool.ac.uk
@@ -22555,12 +22634,15 @@ payload:
     - .tiipple.ac.uk
     - .tik-tokapi.com
     - .tiktok.com
+    - .tiktokcdn-eu.com
     - .tiktokcdn-us.com
     - .tiktokcdn.com
     - .tiktokd.net
     - .tiktokd.org
     - .tiktokv.com
+    - .tiktokv.eu
     - .tiktokv.us
+    - .tiktokw.eu
     - .tiktokw.us
     - .tilehill.ac.uk
     - .tiltbrush.com
@@ -22799,6 +22881,7 @@ payload:
     - .troisrivieresmini.com
     - .tropictube.com
     - .tropmed.ac.uk
+    - .trpger.us
     - .trs.ac.uk
     - .trueamateurmodels.com
     - .trueamateurs.com
@@ -22872,6 +22955,7 @@ payload:
     - .tte-lisa.ac.uk
     - .tteshop.com
     - .ttetraining.ac.uk
+    - .ttlivecdn.com
     - .ttrb.ac.uk
     - .ttvnw.net
     - .ttwstatic.com
@@ -22938,6 +23022,7 @@ payload:
     - .turing.ac.uk
     - .turingsafehaven.ac.uk
     - .turkeyblocks.org
+    - .turn.livekit.cloud
     - .tushy.com
     - .tuta.io
     - .tutanota.com
@@ -23316,6 +23401,7 @@ payload:
     - .unkoscene.com
     - .unl.ac.uk
     - .unlocklimitlesslearning.com
+    - .unlocktool.net
     - .unn.ac.uk
     - .unpkg.com
     - .unravel2.com
@@ -25941,6 +26027,7 @@ payload:
     - .z00.world
     - .z18r.co
     - .z18r.com
+    - .z3x-team.com
     - .z5.app
     - .z5.com
     - .z676869.com

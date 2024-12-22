@@ -19,6 +19,7 @@ wlog.kuaishou.com
 .a.baidu.com
 .a.ckm.iqiyi.com
 .a.market.xiaomi.com
+.a.youdao.com
 .aaxads.com
 .acjs.aliyun.com
 .actives.youku.com
@@ -57,6 +58,7 @@ wlog.kuaishou.com
 .adashx4yt.m.taobao.com
 .adashxgc.ut.taobao.com
 .adbehavior.ximalaya.com
+.adbkwai.com
 .adbox.sina.com.cn
 .adbutter.net
 .adcolony.com
@@ -70,11 +72,13 @@ wlog.kuaishou.com
 .adivery.com
 .adivery.ir
 .adjust.com
+.adkwai.com
 .adm.baidu.com
 .adm.leju.sina.com.cn
 .admob-cn.com
 .admob.com
 .admob.xiaomi.com
+.admusicpic.music.126.net
 .adnet.sohu.com
 .adnxs.com
 .adping.qq.com
@@ -86,6 +90,7 @@ wlog.kuaishou.com
 .ads.api.my7v.com
 .ads.huan.tv
 .ads.huantest.com
+.ads.music.126.net
 .ads.pubmatic.com
 .ads.service.kugou.com
 .ads.sina.com
@@ -118,6 +123,7 @@ wlog.kuaishou.com
 .adsview2.qq.com
 .adtechus.com
 .adtrue.com
+.adukwai.com
 .adv-sv-show.focus.cn
 .adv.app.qq.com
 .adv.sec.intl.miui.com
@@ -192,6 +198,7 @@ wlog.kuaishou.com
 .bluekai.com
 .btlaunch.baidu.com
 .btrace.qq.com
+.byteadverts.com
 .c-adash.m.taobao.com
 .c-nfa.jd.com
 .c.baidu.com
@@ -289,6 +296,8 @@ wlog.kuaishou.com
 .dxp.baidu.com
 .dzl.baidu.com
 .e.baidu.com
+.e.kuaishou.cn
+.e.kuaishou.com
 .e.qq.com
 .e.stat.ykimg.com
 .eclick.baidu.com
@@ -323,6 +332,7 @@ wlog.kuaishou.com
 .ff.win.taobao.com
 .fm.p0y.cn
 .fout.jp
+.fpb.sohu.com
 .fz.letv.com
 .g.163.com
 .g.baidu.com
@@ -397,6 +407,10 @@ wlog.kuaishou.com
 .i.ipinyou.com
 .i.snssdk.com
 .iad.apple.com
+.iadmat.nosdn.127.net
+.iadmatapk.nosdn.127.net
+.iadmusicmat.music.126.net
+.iadmusicmatvideo.music.126.net
 .iadsdk.apple.com
 .idm-su.baidu.com
 .idm.bce.baidu.com
@@ -562,6 +576,8 @@ wlog.kuaishou.com
 .pv.sohu.com
 .qhupdate.com
 .qianclick.baidu.com
+.qpb.sohu.com
+.qpb1.sohu.com
 .qwapi.com
 .r.l.youku.com
 .re.m.taobao.com
@@ -602,6 +618,7 @@ wlog.kuaishou.com
 .sdkinit.taobao.com
 .sentry.d.mi.com
 .sentry.d.xiaomi.net
+.sentry.music.163.com
 .serving-sys.com
 .sestat.baidu.com
 .sf3-ttcdn-tos.pstatp.com
@@ -742,6 +759,7 @@ wlog.kuaishou.com
 .yuedu.iqiyi.com
 .z.gds.cnzz.com
 .znsv.baidu.com
+.zxid-api.mobileservice.cn
 .zymo.mps.weibo.com
 .zynga.com
 .zyngaplayersupport.com
