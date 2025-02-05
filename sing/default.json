@@ -21,15 +21,8 @@
         "detour": "direct-out"
       },
       {
-        "tag": "dns_encrypt",
-        "address": "h3://223.5.5.5/dns-query",
-        "address_resolver": "dns_udp",
-        "detour": "direct-out"
-      },
-      {
         "tag": "dns_fakeip",
-        "address": "fakeip",
-        "strategy": "ipv4_only"
+        "address": "fakeip"
       }
     ],
     "rules": [
@@ -39,13 +32,9 @@
       },
       {
         "action": "route",
-        "rule_set": ["domestic", "in_direct"],
-        "server": "dns_udp"
-      },
-      {
-        "action": "route",
         "rule_set": ["global"],
         "server": "dns_fakeip",
+        "strategy": "ipv4_only",
         "rewrite_ttl": 1
       }
     ],
@@ -53,7 +42,7 @@
       "enabled": true,
       "inet4_range": "172.16.0.0/12"
     },
-    "final": "dns_encrypt",
+    "final": "dns_udp",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
