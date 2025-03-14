@@ -2,299 +2,404 @@ package adguard
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"net/netip"
 	"os"
 	"strconv"
 	"strings"
-
-	"github.com/sagernet/sing-box/log"
-	"github.com/sagernet/sing/common"
-	E "github.com/sagernet/sing/common/exceptions"
-	M "github.com/sagernet/sing/common/metadata"
 )
 
-type agdguardRuleLine struct {
-	ruleLine    string
-	isRawDomain bool
-	isExclude   bool
-	isSuffix    bool
-	hasStart    bool
-	hasEnd      bool
-	isRegexp    bool
-	isImportant bool
+// Rule represents a parsed AdGuard rule with its properties
+type Rule struct {
+	Content     string
+	IsRawDomain bool
+	IsExclude   bool
+	IsSuffix    bool
+	HasStart    bool
+	HasEnd      bool
+	IsRegexp    bool
+	IsImportant bool
 }
 
-func Convert(reader io.Reader) (_domain, _excludeDomain []string, err error) {
+// Convert parses AdGuard rules from a reader and returns domain and exclude domain lists
+func Convert(reader io.Reader) (domains, excludeDomains []string, err error) {
 	scanner := bufio.NewScanner(reader)
-	var (
-		ruleLines    []agdguardRuleLine
-		ignoredLines int
-	)
-parseLine:
+	var rules []Rule
+	var ignoredCount int
+
+parseLoop:
 	for scanner.Scan() {
-		ruleLine := scanner.Text()
-		if ruleLine == "" || ruleLine[0] == '!' || ruleLine[0] == '#' {
+		line := scanner.Text()
+		
+		// Skip comments and empty lines
+		if line == "" || line[0] == '!' || line[0] == '#' {
 			continue
 		}
-		originRuleLine := ruleLine
-		if M.IsDomainName(ruleLine) {
-			ruleLines = append(ruleLines, agdguardRuleLine{
-				ruleLine:    ruleLine,
-				isRawDomain: true,
+		
+		originalLine := line
+		
+		// Check if line is already a domain name
+		if isDomainName(line) {
+			rules = append(rules, Rule{
+				Content:     line,
+				IsRawDomain: true,
 			})
 			continue
 		}
-		hostLine, err := parseAdGuardHostLine(ruleLine)
+		
+		// Try parsing as a host line
+		hostDomain, err := parseHostLine(line)
 		if err == nil {
-			if hostLine != "" {
-				ruleLines = append(ruleLines, agdguardRuleLine{
-					ruleLine:    hostLine,
-					isRawDomain: true,
-					hasStart:    true,
-					hasEnd:      true,
+			if hostDomain != "" {
+				rules = append(rules, Rule{
+					Content:     hostDomain,
+					IsRawDomain: true,
+					HasStart:    true,
+					HasEnd:      true,
 				})
 			}
 			continue
 		}
-		if strings.HasSuffix(ruleLine, "|") {
-			ruleLine = ruleLine[:len(ruleLine)-1]
+		
+		// Remove trailing pipe if exists
+		if strings.HasSuffix(line, "|") {
+			line = line[:len(line)-1]
 		}
-		var (
-			isExclude   bool
-			isSuffix    bool
-			hasStart    bool
-			hasEnd      bool
-			isRegexp    bool
-			isImportant bool
-		)
-		if !strings.HasPrefix(ruleLine, "/") && strings.Contains(ruleLine, "$") {
-			params := common.SubstringAfter(ruleLine, "$")
-			for _, param := range strings.Split(params, ",") {
-				paramParts := strings.Split(param, "=")
-				var ignored bool
+		
+		// Initialize rule properties
+		var isExclude, isSuffix, hasStart, hasEnd, isRegexp, isImportant bool
+		
+		// Check for rule modifiers
+		if !strings.HasPrefix(line, "/") && strings.Contains(line, "$") {
+			params := strings.Split(strings.SplitN(line, "$", 2)[1], ",")
+			line = strings.SplitN(line, "$", 2)[0]
+			
+			var skipRule bool
+			for _, param := range params {
+				paramParts := strings.SplitN(param, "=", 2)
+				var handled bool
+				
 				if len(paramParts) > 0 && len(paramParts) <= 2 {
 					switch paramParts[0] {
-					case "app", "network":
-						// maybe support by package_name/process_name
-					case "dnstype":
-						// maybe support by query_type
 					case "important":
-						ignored = true
+						handled = true
 						isImportant = true
 					case "dnsrewrite":
-						if len(paramParts) == 2 && M.ParseAddr(paramParts[1]).IsUnspecified() {
-							ignored = true
+						if len(paramParts) == 2 && isUnspecifiedAddress(paramParts[1]) {
+							handled = true
 						}
+					case "app", "network", "dnstype":
+						// Not handling these modifiers
 					}
 				}
-				if !ignored {
-					ignoredLines++
-					log.Debug("ignored unsupported rule with modifier: ", paramParts[0], ": ", ruleLine)
-					continue parseLine
+				
+				if !handled {
+					ignoredCount++
+					fmt.Printf("Ignored unsupported rule with modifier %s: %s\n", paramParts[0], originalLine)
+					skipRule = true
+					break
 				}
 			}
-			ruleLine = common.SubstringBefore(ruleLine, "$")
+			
+			if skipRule {
+				continue parseLoop
+			}
 		}
-		if strings.HasPrefix(ruleLine, "@@") {
-			ruleLine = ruleLine[2:]
+		
+		// Check for exclusion rules
+		if strings.HasPrefix(line, "@@") {
+			line = line[2:]
 			isExclude = true
 		}
-		if strings.HasSuffix(ruleLine, "|") {
-			ruleLine = ruleLine[:len(ruleLine)-1]
+		
+		// Remove trailing pipe again if exists
+		if strings.HasSuffix(line, "|") {
+			line = line[:len(line)-1]
 		}
-		if strings.HasPrefix(ruleLine, "||") {
-			ruleLine = ruleLine[2:]
+		
+		// Check for domain suffix notation
+		if strings.HasPrefix(line, "||") {
+			line = line[2:]
 			isSuffix = true
-		} else if strings.HasPrefix(ruleLine, "|") {
-			ruleLine = ruleLine[1:]
+		} else if strings.HasPrefix(line, "|") {
+			line = line[1:]
 			hasStart = true
 		}
-		if strings.HasSuffix(ruleLine, "^") {
-			ruleLine = ruleLine[:len(ruleLine)-1]
+		
+		// Check for end of domain marker
+		if strings.HasSuffix(line, "^") {
+			line = line[:len(line)-1]
 			hasEnd = true
 		}
-		if strings.HasPrefix(ruleLine, "/") && strings.HasSuffix(ruleLine, "/") {
-			ruleLine = ruleLine[1 : len(ruleLine)-1]
-			if ignoreIPCIDRRegexp(ruleLine) {
-				ignoredLines++
-				log.Debug("ignored unsupported rule with IPCIDR regexp: ", ruleLine)
+		
+		// Check for regular expressions
+		if strings.HasPrefix(line, "/") && strings.HasSuffix(line, "/") {
+			line = line[1 : len(line)-1]
+			if isIPCIDRRegexp(line) {
+				ignoredCount++
+				fmt.Printf("Ignored unsupported rule with IPCIDR regexp: %s\n", line)
 				continue
 			}
 			isRegexp = true
 		} else {
-			if strings.Contains(ruleLine, "://") {
-				ruleLine = common.SubstringAfter(ruleLine, "://")
+			// Handle URLs and paths
+			if strings.Contains(line, "://") {
+				line = strings.SplitN(line, "://", 2)[1]
 			}
-			if strings.Contains(ruleLine, "/") {
-				ignoredLines++
-				log.Debug("ignored unsupported rule with path: ", ruleLine)
+			
+			if strings.Contains(line, "/") {
+				ignoredCount++
+				fmt.Printf("Ignored unsupported rule with path: %s\n", line)
 				continue
 			}
-			if strings.Contains(ruleLine, "##") {
-				ignoredLines++
-				log.Debug("ignored unsupported rule with element hiding: ", ruleLine)
+			
+			if strings.Contains(line, "##") || strings.Contains(line, "#$#") {
+				ignoredCount++
+				fmt.Printf("Ignored unsupported rule with element hiding: %s\n", line)
 				continue
 			}
-			if strings.Contains(ruleLine, "#$#") {
-				ignoredLines++
-				log.Debug("ignored unsupported rule with element hiding: ", ruleLine)
-				continue
+			
+			// Validate domain
+			domainCheck := line
+			if strings.HasPrefix(domainCheck, ".") || strings.HasPrefix(domainCheck, "-") {
+				domainCheck = "r" + domainCheck
 			}
-			var domainCheck string
-			if strings.HasPrefix(ruleLine, ".") || strings.HasPrefix(ruleLine, "-") {
-				domainCheck = "r" + ruleLine
-			} else {
-				domainCheck = ruleLine
-			}
-			if ruleLine == "" {
-				ignoredLines++
-				log.Debug("ignored unsupported rule with empty domain", originRuleLine)
+			
+			if line == "" {
+				ignoredCount++
+				fmt.Printf("Ignored unsupported rule with empty domain: %s\n", originalLine)
 				continue
 			} else {
 				domainCheck = strings.ReplaceAll(domainCheck, "*", "x")
-				if !M.IsDomainName(domainCheck) {
-					_, ipErr := parseADGuardIPCIDRLine(ruleLine)
+				if !isDomainName(domainCheck) {
+					_, ipErr := parseIPCIDRLine(line)
 					if ipErr == nil {
-						ignoredLines++
-						log.Debug("ignored unsupported rule with IPCIDR: ", ruleLine)
+						ignoredCount++
+						fmt.Printf("Ignored unsupported rule with IPCIDR: %s\n", line)
 						continue
 					}
-					if M.ParseSocksaddr(domainCheck).Port != 0 {
-						log.Debug("ignored unsupported rule with port: ", ruleLine)
+					
+					if hasPort(domainCheck) {
+						fmt.Printf("Ignored unsupported rule with port: %s\n", line)
 					} else {
-						log.Debug("ignored unsupported rule with invalid domain: ", ruleLine)
+						fmt.Printf("Ignored unsupported rule with invalid domain: %s\n", line)
 					}
-					ignoredLines++
+					ignoredCount++
 					continue
 				}
 			}
 		}
-		ruleLines = append(ruleLines, agdguardRuleLine{
-			ruleLine:    ruleLine,
-			isExclude:   isExclude,
-			isSuffix:    isSuffix,
-			hasStart:    hasStart,
-			hasEnd:      hasEnd,
-			isRegexp:    isRegexp,
-			isImportant: isImportant,
+		
+		// Add rule to the list
+		rules = append(rules, Rule{
+			Content:     line,
+			IsExclude:   isExclude,
+			IsSuffix:    isSuffix,
+			HasStart:    hasStart,
+			HasEnd:      hasEnd,
+			IsRegexp:    isRegexp,
+			IsImportant: isImportant,
 		})
 	}
-	if len(ruleLines) == 0 {
-		return nil, nil, E.New("AdGuard rule-set is empty or all rules are unsupported")
+	
+	// Check if we've got any valid rules
+	if len(rules) == 0 {
+		return nil, nil, fmt.Errorf("AdGuard rule-set is empty or all rules are unsupported")
 	}
-	if common.All(ruleLines, func(it agdguardRuleLine) bool {
-		return it.isRawDomain
-	}) {
+	
+	// Check if all rules are raw domains
+	if allRawDomains(rules) {
 		return nil, nil, nil
 	}
-	mapDomain := func(it agdguardRuleLine) string {
-		ruleLine := it.ruleLine
-		if it.isSuffix {
-			ruleLine = "||" + ruleLine
-		} else if it.hasStart {
-			ruleLine = "|" + ruleLine
+	
+	// Process rules into domains and excluded domains
+	var importantDomains, importantExcludeDomains, normalDomains, normalExcludeDomains []string
+	
+	for _, rule := range rules {
+		if rule.IsRegexp {
+			continue
 		}
-		if it.hasEnd {
-			ruleLine += "^"
-		}
-		return ruleLine
-	}
-
-	importantDomain := common.Map(common.Filter(ruleLines, func(it agdguardRuleLine) bool { return it.isImportant && !it.isRegexp && !it.isExclude }), mapDomain)
-	importantExcludeDomain := common.Map(common.Filter(ruleLines, func(it agdguardRuleLine) bool { return it.isImportant && !it.isRegexp && it.isExclude }), mapDomain)
-	domain := common.Map(common.Filter(ruleLines, func(it agdguardRuleLine) bool { return !it.isImportant && !it.isRegexp && !it.isExclude }), mapDomain)
-	excludeDomain := common.Map(common.Filter(ruleLines, func(it agdguardRuleLine) bool { return !it.isImportant && !it.isRegexp && it.isExclude }), mapDomain)
-
-	_domain = []string{}
-	for _, d := range importantDomain {
-		if !strings.Contains(d, "*") {
-			d = strings.TrimLeft(d, "|")
-			d = strings.TrimRight(d, "^")
-			_domain = append(_domain, d)
-		}
-	}
-	for _, d := range domain {
-		if !strings.Contains(d, "*") {
-			d = strings.TrimLeft(d, "|")
-			d = strings.TrimRight(d, "^")
-			_domain = append(_domain, d)
+		
+		formattedRule := formatRule(rule)
+		
+		if rule.IsImportant {
+			if rule.IsExclude {
+				importantExcludeDomains = append(importantExcludeDomains, formattedRule)
+			} else {
+				importantDomains = append(importantDomains, formattedRule)
+			}
+		} else {
+			if rule.IsExclude {
+				normalExcludeDomains = append(normalExcludeDomains, formattedRule)
+			} else {
+				normalDomains = append(normalDomains, formattedRule)
+			}
 		}
 	}
-
-	_excludeDomain = []string{}
-	for _, d := range importantExcludeDomain {
-		if !strings.Contains(d, "*") {
-			d = strings.TrimLeft(d, "|")
-			d = strings.TrimRight(d, "^")
-			_excludeDomain = append(_excludeDomain, d)
-		}
-	}
-	for _, d := range excludeDomain {
-		if !strings.Contains(d, "*") {
-			d = strings.TrimLeft(d, "|")
-			d = strings.TrimRight(d, "^")
-			_excludeDomain = append(_excludeDomain, d)
-		}
-	}
-
-	return
+	
+	// Build final domain lists (important ones first)
+	domains = extractCleanDomains(importantDomains)
+	domains = append(domains, extractCleanDomains(normalDomains)...)
+	
+	excludeDomains = extractCleanDomains(importantExcludeDomains)
+	excludeDomains = append(excludeDomains, extractCleanDomains(normalExcludeDomains)...)
+	
+	return domains, excludeDomains, nil
 }
 
-func ignoreIPCIDRRegexp(ruleLine string) bool {
-	if strings.HasPrefix(ruleLine, "(http?:\\/\\/)") {
-		ruleLine = ruleLine[12:]
-	} else if strings.HasPrefix(ruleLine, "(https?:\\/\\/)") {
-		ruleLine = ruleLine[13:]
-	} else if strings.HasPrefix(ruleLine, "^") {
-		ruleLine = ruleLine[1:]
-	} else {
+// Helper functions
+
+func isDomainName(s string) bool {
+	parts := strings.Split(s, ".")
+	if len(parts) < 2 {
 		return false
 	}
-	_, parseErr := strconv.ParseUint(common.SubstringBefore(ruleLine, "\\."), 10, 8)
-	return parseErr == nil
+	
+	for _, part := range parts {
+		if len(part) == 0 {
+			return false
+		}
+		
+		for i := 0; i < len(part); i++ {
+			c := part[i]
+			if !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '_') {
+				return false
+			}
+		}
+		
+		if part[0] == '-' || part[len(part)-1] == '-' {
+			return false
+		}
+	}
+	
+	// Check TLD is not all digits
+	lastPart := parts[len(parts)-1]
+	isAllDigits := true
+	for i := 0; i < len(lastPart); i++ {
+		if lastPart[i] < '0' || lastPart[i] > '9' {
+			isAllDigits = false
+			break
+		}
+	}
+	
+	return !isAllDigits
 }
 
-func parseAdGuardHostLine(ruleLine string) (string, error) {
-	idx := strings.Index(ruleLine, " ")
+func hasPort(addr string) bool {
+	return strings.Contains(addr, ":")
+}
+
+func isUnspecifiedAddress(addr string) bool {
+	ip, err := netip.ParseAddr(addr)
+	return err == nil && ip.IsUnspecified()
+}
+
+func parseHostLine(line string) (string, error) {
+	idx := strings.Index(line, " ")
 	if idx == -1 {
 		return "", os.ErrInvalid
 	}
-	address, err := netip.ParseAddr(ruleLine[:idx])
+	
+	address, err := netip.ParseAddr(line[:idx])
 	if err != nil {
 		return "", err
 	}
+	
 	if !address.IsUnspecified() {
 		return "", nil
 	}
-	domain := ruleLine[idx+1:]
-	if !M.IsDomainName(domain) {
-		return "", E.New("invalid domain name: ", domain)
+	
+	domain := line[idx+1:]
+	if !isDomainName(domain) {
+		return "", fmt.Errorf("invalid domain name: %s", domain)
 	}
+	
 	return domain, nil
 }
 
-func parseADGuardIPCIDRLine(ruleLine string) (netip.Prefix, error) {
+func parseIPCIDRLine(line string) (netip.Prefix, error) {
 	var isPrefix bool
-	if strings.HasSuffix(ruleLine, ".") {
+	if strings.HasSuffix(line, ".") {
 		isPrefix = true
-		ruleLine = ruleLine[:len(ruleLine)-1]
+		line = line[:len(line)-1]
 	}
-	ruleStringParts := strings.Split(ruleLine, ".")
-	if len(ruleStringParts) > 4 || len(ruleStringParts) < 4 && !isPrefix {
+	
+	parts := strings.Split(line, ".")
+	if (len(parts) > 4) || (len(parts) < 4 && !isPrefix) {
 		return netip.Prefix{}, os.ErrInvalid
 	}
-	ruleParts := make([]uint8, 0, len(ruleStringParts))
-	for _, part := range ruleStringParts {
-		rulePart, err := strconv.ParseUint(part, 10, 8)
+	
+	bytes := make([]byte, 0, len(parts))
+	for _, part := range parts {
+		val, err := strconv.ParseUint(part, 10, 8)
 		if err != nil {
 			return netip.Prefix{}, err
 		}
-		ruleParts = append(ruleParts, uint8(rulePart))
+		bytes = append(bytes, uint8(val))
 	}
-	bitLen := len(ruleParts) * 8
-	for len(ruleParts) < 4 {
-		ruleParts = append(ruleParts, 0)
+	
+	bitLen := len(bytes) * 8
+	for len(bytes) < 4 {
+		bytes = append(bytes, 0)
 	}
-	return netip.PrefixFrom(netip.AddrFrom4(*(*[4]byte)(ruleParts)), bitLen), nil
+	
+	var addr [4]byte
+	copy(addr[:], bytes)
+	return netip.PrefixFrom(netip.AddrFrom4(addr), bitLen), nil
+}
+
+func isIPCIDRRegexp(line string) bool {
+	if strings.HasPrefix(line, "(http?:\\/\\/)") {
+		line = line[12:]
+	} else if strings.HasPrefix(line, "(https?:\\/\\/)") {
+		line = line[13:]
+	} else if strings.HasPrefix(line, "^") {
+		line = line[1:]
+	} else {
+		return false
+	}
+	
+	firstPart := strings.SplitN(line, "\\.", 2)[0]
+	_, err := strconv.ParseUint(firstPart, 10, 8)
+	return err == nil
+}
+
+func allRawDomains(rules []Rule) bool {
+	for _, rule := range rules {
+		if !rule.IsRawDomain {
+			return false
+		}
+	}
+	return true
+}
+
+func formatRule(rule Rule) string {
+	result := rule.Content
+	
+	if rule.IsSuffix {
+		result = "||" + result
+	} else if rule.HasStart {
+		result = "|" + result
+	}
+	
+	if rule.HasEnd {
+		result += "^"
+	}
+	
+	return result
+}
+
+func extractCleanDomains(rules []string) []string {
+	var result []string
+	
+	for _, rule := range rules {
+		if !strings.Contains(rule, "*") {
+			rule = strings.TrimLeft(rule, "|")
+			rule = strings.TrimRight(rule, "^")
+			result = append(result, rule)
+		}
+	}
+	
+	return result
 }
