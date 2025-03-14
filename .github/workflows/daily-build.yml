@@ -17,7 +17,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.24'
 
       - name: Set Timezone
         run: sudo timedatectl set-timezone Asia/Shanghai
@@ -41,7 +41,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status -s)" ]; then
-            git add .
-            git commit -m "${{ env.GEN_MSG }}"
+            git commit -am "${{ env.GEN_MSG }}"
             git push -f -u origin master
           fi

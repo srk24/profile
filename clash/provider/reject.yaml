@@ -7,6 +7,16 @@ payload:
     - bloodhound.spotify.com
     - e8aeb8bbdbbd7.cdn.sohucs.com
     - log-sdk.gifshow.com
+    - pinggai0.caixin.com
+    - pinggai1.caixin.com
+    - pinggai2.caixin.com
+    - pinggai3.caixin.com
+    - pinggai4.caixin.com
+    - pinggai5.caixin.com
+    - pinggai6.caixin.com
+    - pinggai7.caixin.com
+    - pinggai8.caixin.com
+    - pinggai9.caixin.com
     - wlog.kuaishou.com
     - .1rx.io
     - .2016.sina.cn
@@ -20,11 +30,13 @@ payload:
     - .a.baidu.com
     - .a.ckm.iqiyi.com
     - .a.market.xiaomi.com
+    - .a.youdao.com
     - .aaxads.com
     - .acjs.aliyun.com
     - .actives.youku.com
     - .ad-delivery.net
     - .ad-srv.net
+    - .ad.12306.cn
     - .ad.api.3g.youku.com
     - .ad.api.mobile.youku.com
     - .ad.api.moji.com
@@ -58,6 +70,7 @@ payload:
     - .adashx4yt.m.taobao.com
     - .adashxgc.ut.taobao.com
     - .adbehavior.ximalaya.com
+    - .adbkwai.com
     - .adbox.sina.com.cn
     - .adbutter.net
     - .adcolony.com
@@ -71,11 +84,13 @@ payload:
     - .adivery.com
     - .adivery.ir
     - .adjust.com
+    - .adkwai.com
     - .adm.baidu.com
     - .adm.leju.sina.com.cn
     - .admob-cn.com
     - .admob.com
     - .admob.xiaomi.com
+    - .admusicpic.music.126.net
     - .adnet.sohu.com
     - .adnxs.com
     - .adping.qq.com
@@ -87,6 +102,7 @@ payload:
     - .ads.api.my7v.com
     - .ads.huan.tv
     - .ads.huantest.com
+    - .ads.music.126.net
     - .ads.pubmatic.com
     - .ads.service.kugou.com
     - .ads.sina.com
@@ -119,6 +135,7 @@ payload:
     - .adsview2.qq.com
     - .adtechus.com
     - .adtrue.com
+    - .adukwai.com
     - .adv-sv-show.focus.cn
     - .adv.app.qq.com
     - .adv.sec.intl.miui.com
@@ -193,6 +210,7 @@ payload:
     - .bluekai.com
     - .btlaunch.baidu.com
     - .btrace.qq.com
+    - .byteadverts.com
     - .c-adash.m.taobao.com
     - .c-nfa.jd.com
     - .c.baidu.com
@@ -290,6 +308,8 @@ payload:
     - .dxp.baidu.com
     - .dzl.baidu.com
     - .e.baidu.com
+    - .e.kuaishou.cn
+    - .e.kuaishou.com
     - .e.qq.com
     - .e.stat.ykimg.com
     - .eclick.baidu.com
@@ -324,6 +344,7 @@ payload:
     - .ff.win.taobao.com
     - .fm.p0y.cn
     - .fout.jp
+    - .fpb.sohu.com
     - .fz.letv.com
     - .g.163.com
     - .g.baidu.com
@@ -398,6 +419,10 @@ payload:
     - .i.ipinyou.com
     - .i.snssdk.com
     - .iad.apple.com
+    - .iadmat.nosdn.127.net
+    - .iadmatapk.nosdn.127.net
+    - .iadmusicmat.music.126.net
+    - .iadmusicmatvideo.music.126.net
     - .iadsdk.apple.com
     - .idm-su.baidu.com
     - .idm.bce.baidu.com
@@ -563,6 +588,8 @@ payload:
     - .pv.sohu.com
     - .qhupdate.com
     - .qianclick.baidu.com
+    - .qpb.sohu.com
+    - .qpb1.sohu.com
     - .qwapi.com
     - .r.l.youku.com
     - .re.m.taobao.com
@@ -603,6 +630,7 @@ payload:
     - .sdkinit.taobao.com
     - .sentry.d.mi.com
     - .sentry.d.xiaomi.net
+    - .sentry.music.163.com
     - .serving-sys.com
     - .sestat.baidu.com
     - .sf3-ttcdn-tos.pstatp.com
@@ -735,6 +763,8 @@ payload:
     - .x.clearbitjs.com
     - .xy-log.tagtic.cn
     - .yektanet.com
+    - .yfanads.cn
+    - .yfanads.com
     - .yiliao.hupan.com
     - .ykatr.youku.com
     - .ykrec.youku.com
@@ -743,11 +773,61 @@ payload:
     - .yuedu.iqiyi.com
     - .z.gds.cnzz.com
     - .znsv.baidu.com
+    - .zxid-api.mobileservice.cn
+    - .zxid-m.mobileservice.cn
     - .zymo.mps.weibo.com
     - .zynga.com
     - .zyngaplayersupport.com
     - .zz.bdstatic.com
     - .zzy1.quyaoya.com
+    - .apidns.kwd.inkuai.com
+    - .dns.iqiyi.com
+    - .dns.jd.com
+    - .dns.qiyipic.iqiyi.com
+    - .dns.weibo.cn
+    - .dns.weixin.qq.com
+    - .dns.weixin.qq.com.cn
+    - .doh.iqiyi.com
+    - .doh.ptqy.gitv.tv
+    - .dotserver.douyucdn.cn
+    - .hdns.ksyun.com
+    - .httpdns-api.aliyuncs.com
+    - .httpdns-browser.platform.dbankcloud.cn
+    - .httpdns-sc.aliyuncs.com
+    - .httpdns-sdk.n.netease.com
+    - .httpdns.alicdn.com
+    - .httpdns.baidu.com
+    - .httpdns.baidubce.com
+    - .httpdns.bcelive.com
+    - .httpdns.bilivideo.com
+    - .httpdns.browser.miui.com
+    - .httpdns.c.cdnhwc2.com
+    - .httpdns.cctv.com
+    - .httpdns.danuoyi.tbcache.com
+    - .httpdns.gslb.yy.com
+    - .httpdns.huaweicloud.com
+    - .httpdns.kg.qq.com
+    - .httpdns.kwd.inkuai.com
+    - .httpdns.meituan.com
+    - .httpdns.music.163.com
+    - .httpdns.n.netease.com
+    - .httpdns.n.shifen.com
+    - .httpdns.ocloud.heytapmobi.com
+    - .httpdns.ocloud.oppomobile.com
+    - .httpdns.platform.dbankcloud.cn
+    - .httpdns.platform.dbankcloud.com
+    - .httpdns.pro
+    - .httpdns.push.heytapmobi.com
+    - .httpdns.push.oppomobile.com
+    - .httpdns.volcengineapi.com
+    - .httpdns.yunxindns.com
+    - .httpdns.zybang.com
+    - .httpdns1.cc.cdnhwc5.com
+    - .httpdnsvip.meituan.com
+    - .httpsdns.baidu.com
+    - .kuaishou.httpdns.pro
+    - .lofter.httpdns.c.163.com
+    - .music.httpdns.c.163.com
     - .tanx.com
     - .miaozhen.com
     - .tqt.weibo.cn
