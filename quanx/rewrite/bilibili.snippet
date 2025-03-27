@@ -1,0 +1,13 @@
+hostname = app.bili*.com, app.bili*.net, api.bili*.com, api.bili*.net, grpc.bili*.com, grpc.bili*.net, api.vc.bilibili.com
+
+^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\.Search\/DefaultWords$ url reject
+^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\/search\/(defaultwords|square) url reject
+
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/pgc\/season\/app\/related\/recommend\? url reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v\d\/topic_svr url reject-dict
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v\d\/dynamic_svr\/mix_uplist url reject-dict
+
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/feed\/index\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_index.min.js
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/splash\/(show|list) url script-response-body https://github.com/srk24/profile/raw/master/js/bili_splash.min.js
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/account\/mine\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_mine.min.js
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/resource\/show\/tab\/v2\? url script-response-body https://github.com/srk24/profile/raw/master/js/bili_tab.min.js

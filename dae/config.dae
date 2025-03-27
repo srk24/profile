@@ -1,0 +1,57 @@
+global {
+  tproxy_port: 7000
+  log_level: info
+  tcp_check_url: 'http://cp.cloudflare.com'
+  udp_check_dns: 'dns.google:53'
+  check_interval: 600s
+  check_tolerance: 50ms
+  lan_interface: br0
+  wan_interface: auto
+  allow_insecure: false
+  enable_local_tcp_fast_redirect: true
+  auto_config_kernel_parameter: true
+}
+
+subscription {
+  sub_one: 'https://www.example.com/subscription/link'
+}
+
+group {
+  proxy {
+    filter: subtag(sub_one) && name(regex: '[港台坡本]')
+    policy: min_moving_avg
+  }
+}
+
+# https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md
+dns {
+  ipversion_prefer: 4
+  upstream {
+    udpdns: 'udp://119.29.29.29'
+    encryptdns: 'https://doh.pub/dns-query'
+    fakeipdns: 'https://doh.pub/dns-query'
+  }
+  routing {
+    request {
+      qname(geosite:category-ads-all) -> reject
+      qname(geosite:cn) -> udpdns
+      qname(geosite:geolocation-!cn) -> fakeipdns
+      fallback: encryptdns
+    }
+    response {
+      upstream(googledns) -> accept
+      ip(geoip:private) && !qname(geosite:cn) -> encryptdns
+      fallback: accept
+    }
+  }
+}
+
+# https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md
+routing {
+  pname(mosdns) -> must_rules
+  dip(geoip:cn) -> direct
+  dip(172.18.0.1/30) -> proxy
+  dip(geoip:private) -> direct
+  domain(geosite:cn) -> direct
+  fallback: proxy
+}
