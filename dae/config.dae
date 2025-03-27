@@ -5,7 +5,7 @@ global {
   udp_check_dns: 'dns.google:53'
   check_interval: 600s
   check_tolerance: 50ms
-  lan_interface: br0
+  lan_interface: br-lan
   wan_interface: auto
   allow_insecure: false
   enable_local_tcp_fast_redirect: true
@@ -13,12 +13,12 @@ global {
 }
 
 subscription {
-  sub_one: 'https://www.example.com/subscription/link'
+  sub_one: 'https://'
 }
 
 group {
   proxy {
-    filter: subtag(sub_one) && name(regex: '[港台坡本]')
+    filter: subtag(sub_one) && name(regex: '[港台坡本].*[to]')
     policy: min_moving_avg
   }
 }
@@ -29,17 +29,16 @@ dns {
   upstream {
     udpdns: 'udp://119.29.29.29'
     encryptdns: 'https://doh.pub/dns-query'
-    fakeipdns: 'https://doh.pub/dns-query'
   }
   routing {
     request {
       qname(geosite:category-ads-all) -> reject
       qname(geosite:cn) -> udpdns
-      qname(geosite:geolocation-!cn) -> fakeipdns
+      qname(geosite:geolocation-!cn) -> encryptdns
       fallback: encryptdns
     }
     response {
-      upstream(googledns) -> accept
+      upstream(encryptdns) -> accept
       ip(geoip:private) && !qname(geosite:cn) -> encryptdns
       fallback: accept
     }
@@ -49,8 +48,9 @@ dns {
 # https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md
 routing {
   pname(mosdns) -> must_rules
+  dscp(0x4) -> direct # https://github.com/daeuniverse/dae/discussions/295
+  domain(geosite:geolocation-!cn) -> proxy
   dip(geoip:cn) -> direct
-  dip(172.18.0.1/30) -> proxy
   dip(geoip:private) -> direct
   domain(geosite:cn) -> direct
   fallback: proxy

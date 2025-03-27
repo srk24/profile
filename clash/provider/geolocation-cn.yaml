@@ -112,6 +112,7 @@ payload:
     - crashlyticsreports-pa.googleapis.com
     - crl-lb.apple.com.akadns.net
     - crl.apple.com
+    - crl.globalsign.net
     - crl.pki.goog
     - crls.pki.goog
     - csi.gstatic.com
@@ -522,6 +523,7 @@ payload:
     - www.apple.com.edgekey.net
     - www.apple.com.edgekey.net.globalredir.akadns.net
     - www.destinationurl.com
+    - www.entrust.cn
     - www.googleadapis.com
     - www.gstatic.com
     - www.libvideo.com

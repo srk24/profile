@@ -39,6 +39,7 @@ payload:
     - api-p.videomarket.jp
     - api.viu.now.com
     - apl-hamivideo.cdn.hinet.net
+    - apple-tv-plus-press.apple.com
     - apple.com.akadns.net
     - appleworldwidedeveloper.hb-api.omtrdc.net
     - appleworldwidedeveloper.sc.omtrdc.net
@@ -179,6 +180,8 @@ payload:
     - himalaya-exchange.zendesk.com
     - hl2rcv.adobe.com
     - hlrcv.stage.adobe.com
+    - hls-amt.itunes.apple.com
+    - hls.itunes.apple.com
     - homebrew.bintray.com
     - hpefonts.s3.amazonaws.com
     - hpstore.corpmerchandise.com
@@ -252,6 +255,7 @@ payload:
     - p16-tiktokcdn-com.akamaized.net
     - paper-attachments.s3.amazonaws.com
     - pki.google.com
+    - play-edge.itunes.apple.com
     - poshtestgallery.cloudapp.net
     - pplx-res.cloudinary.com
     - practivate.adobe
@@ -408,6 +412,7 @@ payload:
     - time4.google.com
     - time5.facebook.com
     - tmdb-image-prod.b-cdn.net
+    - tv.applemusic.com
     - tvcastlive-hamivideo.cdn.hinet.net
     - ubisoft-orbit-savegames.s3.amazonaws.com
     - ubisoft-uplay-savegames.s3.amazonaws.com
@@ -418,6 +423,7 @@ payload:
     - utcnist.colorado.edu
     - utcnist2.colorado.edu
     - utcnist3.colorado.edu
+    - uts-api.itunes.apple.com
     - ve-dash-uk-live.akamaized.net
     - ve-uhd-push-uk-live.akamaized.net
     - venmo.s3.amazonaws.com
@@ -808,6 +814,9 @@ payload:
     - .1lib.to
     - .1lib.tw
     - .1monsterbeatsbydreus.com
+    - .1password.ca
+    - .1password.com
+    - .1password.eu
     - .1pondo.tv
     - .1pornlist.com
     - .1thek.com
@@ -1146,6 +1155,7 @@ payload:
     - .aabb1803.com
     - .aacrjournals.org
     - .aadmv.com
+    - .aadrm.com
     - .aaex.uk
     - .aalah.me
     - .aanaan.com
@@ -1363,6 +1373,7 @@ payload:
     - .admob.com
     - .adobe-aemassets-value.com
     - .adobe-audience-finder.com
+    - .adobe-crl.verisign.com
     - .adobe-video-partner-finder.com
     - .adobe.com
     - .adobe.io
@@ -1549,6 +1560,7 @@ payload:
     - .agemys.org
     - .agendaweek.com
     - .agenet.ac.uk
+    - .agilebits.com
     - .agocg.ac.uk
     - .agrd.eu
     - .agrd.io
@@ -5738,6 +5750,8 @@ payload:
     - .certificate-transparency.org
     - .certinomis.com
     - .certinomis.fr
+    - .certipath-aia.verisign.com
+    - .certipath-crl.verisign.com
     - .certsign.ro
     - .certum.pl
     - .ceruk.ac.uk
@@ -6598,6 +6612,7 @@ payload:
     - .criticalfriend.ac.uk
     - .criticaltheology.ac.uk
     - .critiquebrainz.org
+    - .crl.verisign.com
     - .crmdynint-gcc.com
     - .crmdynint.com
     - .crocels.ac.uk
@@ -6640,6 +6655,14 @@ payload:
     - .cs4hs.com
     - .csakporno.hu
     - .csc.ac.uk
+    - .csc3-2004-aia.verisign.com
+    - .csc3-2004-crl.verisign.com
+    - .csc3-2009-2-aia.verisign.com
+    - .csc3-2009-2-crl.verisign.com
+    - .csc3-2009-aia.verisign.com
+    - .csc3-2009-crl.verisign.com
+    - .csc3-2010-aia.verisign.com
+    - .csc3-2010-crl.verisign.com
     - .cscd.ac.uk
     - .csct.ac.uk
     - .cscuk.ac.uk
@@ -7162,7 +7185,9 @@ payload:
     - .dify.ai
     - .digicert-cn.com
     - .digicert-validation.com
+    - .digicert.co.jp
     - .digicert.com
+    - .digicert.eu
     - .digimap.ac.uk
     - .digital-anime.com
     - .digital-id.ch
@@ -8123,6 +8148,8 @@ payload:
     - .ebsl.ac.uk
     - .ebslondon.ac.uk
     - .ebuyheadphones.com
+    - .eca-client-crl.verisign.com
+    - .eca-client-ocsp.verisign.com
     - .eca.ac.uk
     - .eca.hinet.net
     - .ecampus-leeds.ac.uk
@@ -8431,6 +8458,8 @@ payload:
     - .enterprisepaging.com
     - .enterpriseresearch.ac.uk
     - .enterprisessl.com
+    - .entrust.cn
+    - .entrust.com
     - .entrust.net
     - .entrustdatacard.com
     - .enveast.ac.uk
@@ -8703,12 +8732,21 @@ payload:
     - .evesham.ac.uk
     - .evilangel.com
     - .evilx.su
+    - .evintl-aia.verisign.com
+    - .evintl-crl.verisign.com
+    - .evintl-ocsp.verisign.com
+    - .evintl-t1-crl.verisign.com
     - .evise.com
     - .evolve.ac.uk
     - .evolver.com
     - .evolver3d.com
     - .evolverpro.com
     - .evropaelire.org
+    - .evsecure-aia.verisign.com
+    - .evsecure-crl.verisign.com
+    - .evsecure-ocsp.verisign.com
+    - .evsecure-t1-aia.verisign.com
+    - .evsecure-t1-crl.verisign.com
     - .ewlc.ac.uk
     - .eworld.com
     - .ewrs.ac.uk
@@ -13234,6 +13272,7 @@ payload:
     - .iwyn138.com
     - .ixnxx.tv
     - .ixquick.com
+    - .ixsystems.com
     - .ixxx.com
     - .iyalc.com
     - .iyf.tv
@@ -15453,6 +15492,7 @@ payload:
     - .microsoftadvertisingregionalawards.com
     - .microsoftaffiliates.com
     - .microsoftapp.net
+    - .microsoftazuread-sso.com
     - .microsoftazuresponsorships.com
     - .microsoftcloud.com
     - .microsoftcloudsummit.com
@@ -17703,6 +17743,7 @@ payload:
     - .ocnkm.ac.uk
     - .ocsp-certum.com
     - .ocsp-responder.com
+    - .ocsp.verisign.com
     - .ocul.us
     - .oculus-china.com
     - .oculus.com
@@ -17883,6 +17924,7 @@ payload:
     - .onmanorama.com
     - .onsalekey.com
     - .onsaletrend.com
+    - .onsitecrl.verisign.com
     - .onstream.cc
     - .ontrack.ac.uk
     - .onxxxtube.com
@@ -17974,6 +18016,7 @@ payload:
     - .organicmaps.app
     - .orgasm.com
     - .orgasmlist.com
+    - .orgc3-crl.verisign.com
     - .orgypornonly.com
     - .orgyxxxhub.com
     - .orientalasianporn.com
@@ -18083,6 +18126,9 @@ payload:
     - .ozeex.com
     - .ozodi.org
     - .ozodlik.org
+    - .ozon.ru
+    - .ozone.ru
+    - .ozonusercontent.com
     - .ozvoice.org
     - .pa9pal.com
     - .paaypal.com
@@ -18692,10 +18738,13 @@ payload:
     - .pjbyj.top
     - .pjful-app.lol
     - .pjgirls.com
+    - .pki-ocsp.verisign.com
     - .pki-post.ch
     - .pki-posta.ch
     - .pki-poste.ch
     - .pki.goog
+    - .pki.hinet.net
+    - .pki.symantec.com
     - .placemyad.com.au
     - .placesdocs.com
     - .planetminecraft.com
@@ -18724,6 +18773,8 @@ payload:
     - .playcover.io
     - .playcover.workers.dev
     - .playerjs.io
+    - .playfab.com
+    - .playfabapi.com
     - .playforceone.com
     - .playgrounds-cdn.apple.com
     - .playhearthstone.com
@@ -19402,6 +19453,7 @@ payload:
     - .public-sex-porn.com
     - .public-trust.com
     - .publicagentxxx.com
+    - .publicca.hinet.net
     - .publicengagement.ac.uk
     - .publicinterest.ac.uk
     - .publicpornvideo.com
@@ -21703,6 +21755,9 @@ payload:
     - .ssl.com
     - .sslpaypal.org
     - .ssmh.ac.uk
+    - .ssp-aia.verisign.com
+    - .ssp-crl.verisign.com
+    - .ssp-ocsp.verisign.com
     - .sspanel.net
     - .sspc.ac.uk
     - .sspf.ac.uk
@@ -22209,6 +22264,26 @@ payload:
     - .svobodnaevropa.bg
     - .svp-team.com
     - .svpply.com
+    - .svr-wimax-ocsp.verisign.com
+    - .svrintl-aia.verisign.com
+    - .svrintl-crl.verisign.com
+    - .svrintl-g3-aia.verisign.com
+    - .svrintl-g3-crl.verisign.com
+    - .svrintl-t1-aia.verisign.com
+    - .svrintl-t1-crl.verisign.com
+    - .svrsecure-aia.verisign.com
+    - .svrsecure-crl.verisign.com
+    - .svrsecure-g2-aia.verisign.com
+    - .svrsecure-g2-crl.verisign.com
+    - .svrsecure-g3-aia.verisign.com
+    - .svrsecure-g3-crl.verisign.com
+    - .svrsecure-oracle-aia.verisign.com
+    - .svrsecure-oracle-crl.verisign.com
+    - .svrsecure-oracle-ocsp.verisign.com
+    - .svrsecure-t1-aia.verisign.com
+    - .svrsecure-t1-crl.verisign.com
+    - .svrtrial-g2-aia.verisign.com
+    - .svrtrial-g2-crl.verisign.com
     - .svscomics.asia
     - .svscomics.com
     - .svsgames.org
@@ -22307,6 +22382,7 @@ payload:
     - .syfor.click
     - .syhacked.com
     - .symantec.com
+    - .symauth.com
     - .symcb.com
     - .symcd.com
     - .symonds.ac.uk
@@ -22891,6 +22967,7 @@ payload:
     - .tlccollege.ac.uk
     - .tlcmd.ac.uk
     - .tlcmoodle.ac.uk
+    - .tls.hinet.net
     - .tltp.ac.uk
     - .tmc.ac.uk
     - .tmcs.ac.uk
@@ -23098,6 +23175,7 @@ payload:
     - .truedepth3d.com
     - .truedwg.com
     - .truefi.io
+    - .truenas.com
     - .trunest.com
     - .truro-penwith.ac.uk
     - .truro.ac.uk
@@ -23239,6 +23317,7 @@ payload:
     - .tutamail.com
     - .tutanota.com
     - .tutanota.de
+    - .tv.apple.com
     - .tvappstore.net
     - .tvb.com
     - .tvb.com.au
@@ -24196,6 +24275,7 @@ payload:
     - .visabank.org
     - .visabg.com
     - .visabusinessinsights.com
+    - .visaca.com
     - .visacarddesignlab.com
     - .visacards.com
     - .visacheckout.net
@@ -25161,6 +25241,7 @@ payload:
     - .wrocah.ac.uk
     - .wroxton-college.ac.uk
     - .wrssdtp.ac.uk
+    - .ws.symantec.com
     - .wsc.ac.uk
     - .wscinternational.ac.uk
     - .wsfc.ac.uk

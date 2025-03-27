@@ -2,6 +2,7 @@
   "log": {
     "disabled": false,
     "level": "info",
+    "output": "box.log",
     "timestamp": false
   },
   "experimental": {
@@ -10,6 +11,8 @@
     },
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
+      "access_control_allow_origin": ["https://yacd.haishan.me", "https://clash.razord.top"],
+      "access_control_allow_private_network": true,
       "external_ui": "ui",
       "secret": ""
     }
@@ -22,7 +25,7 @@
         "type": "https",
         "tag": "dns_encrypt",
         "server": "doh.pub",
-        "dodomain_resolver": "dns_udp"
+        "domain_resolver": "dns_udp"
       },
       {
         "type": "udp",
@@ -64,13 +67,6 @@
       "route_exclude_address_set": ["geoip_cn"],
       "stack": "gvisor",
       "endpoint_independent_nat": true
-    },
-    {
-      "type": "direct",
-      "tag": "dns-in",
-      "network": "udp",
-      "listen": "::",
-      "listen_port": 5353
     }
   ],
   "route": {
@@ -78,10 +74,6 @@
     "default_domain_resolver": "dns_encrypt",
     "final": "select-out",
     "rules": [
-      {
-        "action": "hijack-dns",
-        "inbound": ["dns-in"]
-      },
       {
         "action": "sniff",
         "sniffer": ["http", "tls", "quic", "dns", "bittorrent"],
@@ -125,7 +117,7 @@
         "type": "remote",
         "tag": "global",
         "format": "binary",
-        "url": "https://ghp.ci/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
         "download_detour": "direct-out",
         "update_interval": "6h"
       },
@@ -133,7 +125,7 @@
         "type": "remote",
         "tag": "domestic",
         "format": "binary",
-        "url": "https://ghp.ci/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
         "download_detour": "direct-out",
         "update_interval": "6h"
       },
@@ -141,7 +133,7 @@
         "type": "remote",
         "tag": "geoip_cn",
         "format": "binary",
-        "url": "https://ghp.ci/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
+        "url": "https://ghfast.top/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
         "download_detour": "direct-out",
         "update_interval": "6h"
       }

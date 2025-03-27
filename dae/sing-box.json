@@ -1,0 +1,43 @@
+{
+  "dns": {
+    "final": "dns_encrypt",
+    "strategy": "ipv4_only",
+    "servers": [
+      {
+        "type": "fakeip",
+        "tag": "dns_fakeip",
+        "inet4_range": "198.18.0.0/15"
+      }
+    ],
+    "rules": [
+      {
+        "action": "route-options",
+        "rewrite_ttl": 1
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "network": "udp",
+      "listen": "::",
+      "listen_port": 5553
+    }
+  ],
+  "route": {
+    "final": "direct-out",
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "inbound": ["dns-in"]
+      }
+    ]
+  },
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    }
+  ]
+}

@@ -38,6 +38,7 @@ aod-pod-uk-live.akamaized.net
 api-p.videomarket.jp
 api.viu.now.com
 apl-hamivideo.cdn.hinet.net
+apple-tv-plus-press.apple.com
 apple.com.akadns.net
 appleworldwidedeveloper.hb-api.omtrdc.net
 appleworldwidedeveloper.sc.omtrdc.net
@@ -178,6 +179,8 @@ heads4-ak-spotify-com.akamaized.net
 himalaya-exchange.zendesk.com
 hl2rcv.adobe.com
 hlrcv.stage.adobe.com
+hls-amt.itunes.apple.com
+hls.itunes.apple.com
 homebrew.bintray.com
 hpefonts.s3.amazonaws.com
 hpstore.corpmerchandise.com
@@ -251,6 +254,7 @@ p-events-delivery.akamaized.net
 p16-tiktokcdn-com.akamaized.net
 paper-attachments.s3.amazonaws.com
 pki.google.com
+play-edge.itunes.apple.com
 poshtestgallery.cloudapp.net
 pplx-res.cloudinary.com
 practivate.adobe
@@ -407,6 +411,7 @@ time4.facebook.com
 time4.google.com
 time5.facebook.com
 tmdb-image-prod.b-cdn.net
+tv.applemusic.com
 tvcastlive-hamivideo.cdn.hinet.net
 ubisoft-orbit-savegames.s3.amazonaws.com
 ubisoft-uplay-savegames.s3.amazonaws.com
@@ -417,6 +422,7 @@ ut1-wwv.nist.gov
 utcnist.colorado.edu
 utcnist2.colorado.edu
 utcnist3.colorado.edu
+uts-api.itunes.apple.com
 ve-dash-uk-live.akamaized.net
 ve-uhd-push-uk-live.akamaized.net
 venmo.s3.amazonaws.com
@@ -807,6 +813,9 @@ zeenews-fonts.s3.amazonaws.com
 .1lib.to
 .1lib.tw
 .1monsterbeatsbydreus.com
+.1password.ca
+.1password.com
+.1password.eu
 .1pondo.tv
 .1pornlist.com
 .1thek.com
@@ -1145,6 +1154,7 @@ zeenews-fonts.s3.amazonaws.com
 .aabb1803.com
 .aacrjournals.org
 .aadmv.com
+.aadrm.com
 .aaex.uk
 .aalah.me
 .aanaan.com
@@ -1362,6 +1372,7 @@ zeenews-fonts.s3.amazonaws.com
 .admob.com
 .adobe-aemassets-value.com
 .adobe-audience-finder.com
+.adobe-crl.verisign.com
 .adobe-video-partner-finder.com
 .adobe.com
 .adobe.io
@@ -1548,6 +1559,7 @@ zeenews-fonts.s3.amazonaws.com
 .agemys.org
 .agendaweek.com
 .agenet.ac.uk
+.agilebits.com
 .agocg.ac.uk
 .agrd.eu
 .agrd.io
@@ -5737,6 +5749,8 @@ zeenews-fonts.s3.amazonaws.com
 .certificate-transparency.org
 .certinomis.com
 .certinomis.fr
+.certipath-aia.verisign.com
+.certipath-crl.verisign.com
 .certsign.ro
 .certum.pl
 .ceruk.ac.uk
@@ -6597,6 +6611,7 @@ zeenews-fonts.s3.amazonaws.com
 .criticalfriend.ac.uk
 .criticaltheology.ac.uk
 .critiquebrainz.org
+.crl.verisign.com
 .crmdynint-gcc.com
 .crmdynint.com
 .crocels.ac.uk
@@ -6639,6 +6654,14 @@ zeenews-fonts.s3.amazonaws.com
 .cs4hs.com
 .csakporno.hu
 .csc.ac.uk
+.csc3-2004-aia.verisign.com
+.csc3-2004-crl.verisign.com
+.csc3-2009-2-aia.verisign.com
+.csc3-2009-2-crl.verisign.com
+.csc3-2009-aia.verisign.com
+.csc3-2009-crl.verisign.com
+.csc3-2010-aia.verisign.com
+.csc3-2010-crl.verisign.com
 .cscd.ac.uk
 .csct.ac.uk
 .cscuk.ac.uk
@@ -7161,7 +7184,9 @@ zeenews-fonts.s3.amazonaws.com
 .dify.ai
 .digicert-cn.com
 .digicert-validation.com
+.digicert.co.jp
 .digicert.com
+.digicert.eu
 .digimap.ac.uk
 .digital-anime.com
 .digital-id.ch
@@ -8122,6 +8147,8 @@ zeenews-fonts.s3.amazonaws.com
 .ebsl.ac.uk
 .ebslondon.ac.uk
 .ebuyheadphones.com
+.eca-client-crl.verisign.com
+.eca-client-ocsp.verisign.com
 .eca.ac.uk
 .eca.hinet.net
 .ecampus-leeds.ac.uk
@@ -8430,6 +8457,8 @@ zeenews-fonts.s3.amazonaws.com
 .enterprisepaging.com
 .enterpriseresearch.ac.uk
 .enterprisessl.com
+.entrust.cn
+.entrust.com
 .entrust.net
 .entrustdatacard.com
 .enveast.ac.uk
@@ -8702,12 +8731,21 @@ zeenews-fonts.s3.amazonaws.com
 .evesham.ac.uk
 .evilangel.com
 .evilx.su
+.evintl-aia.verisign.com
+.evintl-crl.verisign.com
+.evintl-ocsp.verisign.com
+.evintl-t1-crl.verisign.com
 .evise.com
 .evolve.ac.uk
 .evolver.com
 .evolver3d.com
 .evolverpro.com
 .evropaelire.org
+.evsecure-aia.verisign.com
+.evsecure-crl.verisign.com
+.evsecure-ocsp.verisign.com
+.evsecure-t1-aia.verisign.com
+.evsecure-t1-crl.verisign.com
 .ewlc.ac.uk
 .eworld.com
 .ewrs.ac.uk
@@ -13233,6 +13271,7 @@ zeenews-fonts.s3.amazonaws.com
 .iwyn138.com
 .ixnxx.tv
 .ixquick.com
+.ixsystems.com
 .ixxx.com
 .iyalc.com
 .iyf.tv
@@ -15452,6 +15491,7 @@ zeenews-fonts.s3.amazonaws.com
 .microsoftadvertisingregionalawards.com
 .microsoftaffiliates.com
 .microsoftapp.net
+.microsoftazuread-sso.com
 .microsoftazuresponsorships.com
 .microsoftcloud.com
 .microsoftcloudsummit.com
@@ -17702,6 +17742,7 @@ zeenews-fonts.s3.amazonaws.com
 .ocnkm.ac.uk
 .ocsp-certum.com
 .ocsp-responder.com
+.ocsp.verisign.com
 .ocul.us
 .oculus-china.com
 .oculus.com
@@ -17882,6 +17923,7 @@ zeenews-fonts.s3.amazonaws.com
 .onmanorama.com
 .onsalekey.com
 .onsaletrend.com
+.onsitecrl.verisign.com
 .onstream.cc
 .ontrack.ac.uk
 .onxxxtube.com
@@ -17973,6 +18015,7 @@ zeenews-fonts.s3.amazonaws.com
 .organicmaps.app
 .orgasm.com
 .orgasmlist.com
+.orgc3-crl.verisign.com
 .orgypornonly.com
 .orgyxxxhub.com
 .orientalasianporn.com
@@ -18082,6 +18125,9 @@ zeenews-fonts.s3.amazonaws.com
 .ozeex.com
 .ozodi.org
 .ozodlik.org
+.ozon.ru
+.ozone.ru
+.ozonusercontent.com
 .ozvoice.org
 .pa9pal.com
 .paaypal.com
@@ -18691,10 +18737,13 @@ zeenews-fonts.s3.amazonaws.com
 .pjbyj.top
 .pjful-app.lol
 .pjgirls.com
+.pki-ocsp.verisign.com
 .pki-post.ch
 .pki-posta.ch
 .pki-poste.ch
 .pki.goog
+.pki.hinet.net
+.pki.symantec.com
 .placemyad.com.au
 .placesdocs.com
 .planetminecraft.com
@@ -18723,6 +18772,8 @@ zeenews-fonts.s3.amazonaws.com
 .playcover.io
 .playcover.workers.dev
 .playerjs.io
+.playfab.com
+.playfabapi.com
 .playforceone.com
 .playgrounds-cdn.apple.com
 .playhearthstone.com
@@ -19401,6 +19452,7 @@ zeenews-fonts.s3.amazonaws.com
 .public-sex-porn.com
 .public-trust.com
 .publicagentxxx.com
+.publicca.hinet.net
 .publicengagement.ac.uk
 .publicinterest.ac.uk
 .publicpornvideo.com
@@ -21702,6 +21754,9 @@ zeenews-fonts.s3.amazonaws.com
 .ssl.com
 .sslpaypal.org
 .ssmh.ac.uk
+.ssp-aia.verisign.com
+.ssp-crl.verisign.com
+.ssp-ocsp.verisign.com
 .sspanel.net
 .sspc.ac.uk
 .sspf.ac.uk
@@ -22208,6 +22263,26 @@ zeenews-fonts.s3.amazonaws.com
 .svobodnaevropa.bg
 .svp-team.com
 .svpply.com
+.svr-wimax-ocsp.verisign.com
+.svrintl-aia.verisign.com
+.svrintl-crl.verisign.com
+.svrintl-g3-aia.verisign.com
+.svrintl-g3-crl.verisign.com
+.svrintl-t1-aia.verisign.com
+.svrintl-t1-crl.verisign.com
+.svrsecure-aia.verisign.com
+.svrsecure-crl.verisign.com
+.svrsecure-g2-aia.verisign.com
+.svrsecure-g2-crl.verisign.com
+.svrsecure-g3-aia.verisign.com
+.svrsecure-g3-crl.verisign.com
+.svrsecure-oracle-aia.verisign.com
+.svrsecure-oracle-crl.verisign.com
+.svrsecure-oracle-ocsp.verisign.com
+.svrsecure-t1-aia.verisign.com
+.svrsecure-t1-crl.verisign.com
+.svrtrial-g2-aia.verisign.com
+.svrtrial-g2-crl.verisign.com
 .svscomics.asia
 .svscomics.com
 .svsgames.org
@@ -22306,6 +22381,7 @@ zeenews-fonts.s3.amazonaws.com
 .syfor.click
 .syhacked.com
 .symantec.com
+.symauth.com
 .symcb.com
 .symcd.com
 .symonds.ac.uk
@@ -22890,6 +22966,7 @@ zeenews-fonts.s3.amazonaws.com
 .tlccollege.ac.uk
 .tlcmd.ac.uk
 .tlcmoodle.ac.uk
+.tls.hinet.net
 .tltp.ac.uk
 .tmc.ac.uk
 .tmcs.ac.uk
@@ -23097,6 +23174,7 @@ zeenews-fonts.s3.amazonaws.com
 .truedepth3d.com
 .truedwg.com
 .truefi.io
+.truenas.com
 .trunest.com
 .truro-penwith.ac.uk
 .truro.ac.uk
@@ -23238,6 +23316,7 @@ zeenews-fonts.s3.amazonaws.com
 .tutamail.com
 .tutanota.com
 .tutanota.de
+.tv.apple.com
 .tvappstore.net
 .tvb.com
 .tvb.com.au
@@ -24195,6 +24274,7 @@ zeenews-fonts.s3.amazonaws.com
 .visabank.org
 .visabg.com
 .visabusinessinsights.com
+.visaca.com
 .visacarddesignlab.com
 .visacards.com
 .visacheckout.net
@@ -25160,6 +25240,7 @@ zeenews-fonts.s3.amazonaws.com
 .wrocah.ac.uk
 .wroxton-college.ac.uk
 .wrssdtp.ac.uk
+.ws.symantec.com
 .wsc.ac.uk
 .wscinternational.ac.uk
 .wsfc.ac.uk
