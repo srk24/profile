@@ -1,8 +1,11 @@
+# config see more at https://github.com/daeuniverse/dae/blob/main/example.dae
+# dscp see more at https://github.com/daeuniverse/dae/discussions/295
+
 global {
   tproxy_port: 7000
   tproxy_port_protect: true
   log_level: info
-  disable_waiting_network: false
+  disable_waiting_network: true
   lan_interface: br-lan
   wan_interface: auto
   auto_config_kernel_parameter: true
@@ -11,7 +14,7 @@ global {
   udp_check_dns: 'dns.google.com:53,8.8.8.8,2001:4860:4860::8888'
   check_interval: 30s
   check_tolerance: 0ms
-  dial_mode: domain
+  dial_mode: domain+
   allow_insecure: false
   sniffing_timeout: 100ms
   tls_implementation: tls
@@ -20,27 +23,22 @@ global {
   auto_config_kernel_parameter: true
 }
 
-# https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/dns.md
 dns {
   ipversion_prefer: 4
   upstream {
-    udpdns: 'udp://119.29.29.29:53'
-    encryptdns: 'https://1.12.12.12/dns-query'
+    mosdns: 'udp://127.0.0.1:5335'
   }
   routing {
     request {
-      qname(geosite:category-ads-all) -> reject
-      qname(geosite:cn) -> udpdns
-      qname(geosite:geolocation-!cn) -> encryptdns
-      fallback: encryptdns
+      fallback: mosdns
     }
   }
 }
 
-# https://github.com/daeuniverse/dae/blob/main/docs/en/configuration/routing.md
 routing {
-  pname(NetworkManager, systemd-resolved, dnsmasq, mosdns) -> must_direct
-  dscp(0x4) -> direct # https://github.com/daeuniverse/dae/discussions/295
+  pname(NetworkManager, systemd-resolved, dnsmasq) -> must_direct
+  pname(mosdns) -> must_rules
+  dscp(0x4) -> direct
   domain(geosite:geolocation-!cn) -> proxy
   dip(geoip:cn) -> direct
   dip(geoip:private) -> direct
@@ -54,7 +52,7 @@ subscription {
 
 group {
   proxy {
-    filter: subtag(sub_one) && name(regex: '.*')
+    filter: subtag(sub_one)
     policy: min_moving_avg
   }
 }
