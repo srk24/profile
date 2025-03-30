@@ -1,8 +1,30 @@
 {
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "access_control_allow_origin": ["http://yacd.haishan.me", "http://clash.razord.top"],
+      "access_control_allow_private_network": true,
+      "external_ui": "ui"
+    }
+  },
   "dns": {
     "final": "dns_encrypt",
     "strategy": "ipv4_only",
     "servers": [
+      {
+        "type": "https",
+        "tag": "dns_encrypt",
+        "server": "223.5.5.5"
+      },
       {
         "type": "fakeip",
         "tag": "dns_fakeip",
@@ -11,7 +33,10 @@
     ],
     "rules": [
       {
-        "action": "route-options",
+        "action": "route",
+        "server": "dns_fakeip",
+        "inbound": "dns-in",
+        "strategy": "ipv4_only",
         "rewrite_ttl": 1
       }
     ]
@@ -21,16 +46,33 @@
       "type": "direct",
       "tag": "dns-in",
       "network": "udp",
-      "listen": "::",
-      "listen_port": 5553
+      "listen": "0.0.0.0",
+      "listen_port": 5353
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "0.0.0.0",
+      "listen_port": 7000
     }
   ],
   "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": "dns_encrypt",
     "final": "direct-out",
     "rules": [
       {
+        "action": "sniff",
+        "sniffer": ["http", "tls", "quic", "dns"]
+      },
+      {
         "action": "hijack-dns",
-        "inbound": ["dns-in"]
+        "protocol": "dns"
+      },
+      {
+        "action": "route",
+        "inbound": "socks-in",
+        "outbound": "select-out"
       }
     ]
   },
