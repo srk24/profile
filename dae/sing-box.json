@@ -1,19 +1,23 @@
 {
   "log": {
     "disabled": false,
-    "level": "warn",
+    "level": "info",
     "output": "box.log",
     "timestamp": false
   },
   "experimental": {
     "cache_file": {
-      "enabled": true
+      "enabled": true,
+      "store_fakeip": true
     },
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
-      "access_control_allow_origin": ["http://yacd.haishan.me", "http://clash.razord.top"],
+      "access_control_allow_origin": ["http://board.zash.run.place", "http://clash.razord.top"],
       "access_control_allow_private_network": true,
-      "external_ui": "ui"
+      "external_ui": "ui",
+      "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "external_ui_download_detour": "direct-out",
+      "secret": "password"
     }
   },
   "dns": {
