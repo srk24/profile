@@ -338,26 +338,26 @@ func UnmarshalSingboxSourceCfg(path string) (domain, domain_suffix, domain_keywo
 	domain_suffix_map := make(map[string]bool)
 	domain_keyword_map := make(map[string]bool)
 	domain_regex_map := make(map[string]bool)
-	for i := 0; i < len(rules.Rules); i++ {
-		for _, item := range rules.Rules[i].Domain {
+	for _, rule := range rules.Rules {
+		for _, item := range rule.Domain {
 			if _, v := domain_map[item]; !v {
 				domain_map[item] = true
 				domain = append(domain, strings.TrimLeft(item, "."))
 			}
 		}
-		for _, item := range rules.Rules[i].DomainSuffix {
+		for _, item := range rule.DomainSuffix {
 			if _, v := domain_suffix_map[item]; !v {
 				domain_suffix_map[item] = true
 				domain_suffix = append(domain_suffix, strings.TrimLeft(item, "."))
 			}
 		}
-		for _, item := range rules.Rules[i].DomainKeyword {
+		for _, item := range rule.DomainKeyword {
 			if _, v := domain_keyword_map[item]; !v {
 				domain_keyword_map[item] = true
 				domain_keyword = append(domain_keyword, item)
 			}
 		}
-		for _, item := range rules.Rules[i].DomainRegex {
+		for _, item := range rule.DomainRegex {
 			if _, v := domain_regex_map[item]; !v {
 				domain_regex_map[item] = true
 				domain_regex = append(domain_regex, item)
