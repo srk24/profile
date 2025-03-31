@@ -113,8 +113,9 @@
       },
       {
         "action": "route",
+        "outbound": "direct-out",
         "ip_is_private": true,
-        "outbound": "direct-out"
+        "rule_set": ["geoip_cn"]
       }
     ],
     "rule_set": [
