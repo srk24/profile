@@ -36,9 +36,10 @@
         "domain_resolver": "dns_udp"
       },
       {
-        "type": "fakeip",
-        "tag": "dns_fakeip",
-        "inet4_range": "198.18.0.0/15"
+        "type": "tls",
+        "tag": "dns_remote",
+        "server": "8.8.8.8",
+        "detour": "select-out"
       }
     ],
     "rules": [
@@ -53,10 +54,8 @@
       },
       {
         "action": "route",
-        "server": "dns_fakeip",
-        "rule_set": ["global"],
-        "strategy": "ipv4_only",
-        "rewrite_ttl": 1
+        "server": "dns_remote",
+        "rule_set": ["global"]
       }
     ]
   },
@@ -70,13 +69,6 @@
       "route_exclude_address_set": ["geoip_cn"],
       "stack": "gvisor",
       "endpoint_independent_nat": true
-    },
-    {
-      "type": "direct",
-      "tag": "dns-in",
-      "network": "udp",
-      "listen": "127.0.0.1",
-      "listen_port": 5353
     }
   ],
   "route": {
@@ -84,10 +76,6 @@
     "default_domain_resolver": "dns_udp",
     "final": "select-out",
     "rules": [
-      {
-        "action": "hijack-dns",
-        "inbound": "dns-in"
-      },
       {
         "action": "sniff",
         "sniffer": ["http", "tls", "quic", "dns", "bittorrent"]
@@ -109,7 +97,7 @@
       {
         "action": "route",
         "outbound": "select-out",
-        "ip_cidr": "198.18.0.0/15"
+        "rule_set": ["global"]
       },
       {
         "action": "route",
