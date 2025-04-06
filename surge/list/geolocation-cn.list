@@ -15,6 +15,7 @@ ads5-normal-hl.zijieapi.com
 adservice.google.com
 ai.ytimg.com
 ai.zhaomi.cn
+alibaba.cdn.steampipe.steamcontent.com
 amp-api-edge-lb-cn.itunes-apple.com.akadns.net
 amp-api-edge-lb.itunes-apple.com.akadns.net
 amp-api-edge.apps.apple.com
@@ -280,6 +281,7 @@ log5-applog-hl.fqnovel.com
 logger-dev.corp.google.com
 logger.corp.google.com
 login.corp.google.com
+lv.queniujq.cn
 manga.bilibili.com
 maps.apple.com
 menu-static.gog-statics.com
@@ -2260,6 +2262,7 @@ xz.pphimalayanrt.com
 .cnr.cn
 .cns.com.cn
 .cnsciedu.com
+.cnspeedtest.cn
 .cnstock.com
 .cnsuning.com
 .cnthinkers.com
@@ -2503,7 +2506,6 @@ xz.pphimalayanrt.com
 .dl.kjava.sina.cn
 .dl.ops.baidu.com
 .dl.steam.clngaa.com
-.dl.steam.ksyna.com
 .dl1sw.baidu.com
 .dl2.bav.baidu.com
 .dlgslb.cn
@@ -2920,6 +2922,7 @@ xz.pphimalayanrt.com
 .fofa.so
 .fontstar.com.cn
 .foresightfund.com
+.forevernine.com
 .forface3d.com
 .founderff.com
 .foundertype.com
@@ -3088,6 +3091,9 @@ xz.pphimalayanrt.com
 .gogokid.com.cn
 .gold678.com
 .golden1.sogou.com
+.golink.com
+.golinkapi.com
+.golinkcn.com
 .golue.com
 .gongqingyun.cn
 .gongxiangcj.com
@@ -3597,6 +3603,7 @@ xz.pphimalayanrt.com
 .img4399.com
 .imgo.tv
 .imgstat.baidu.com
+.immersivetranslate.com
 .imooc.com
 .imp.optaim.com
 .imqq.com
@@ -5191,6 +5198,7 @@ xz.pphimalayanrt.com
 .rj.m.taobao.co
 .rj.m.taobao.com
 .rm.sina.com.cn
+.rmbgame.net
 .rmwxgame.com
 .ro.com
 .roblox.cn
@@ -5460,6 +5468,11 @@ xz.pphimalayanrt.com
 .spcloudhw.net
 .spcode.baidu.com
 .spdb.com.cn
+.speed.neu6.edu.cn
+.speed.nuaa.edu.cn
+.speedtest.cn
+.speedtest.mfcyun.com
+.speedtest.shu.edu.cn
 .speedws.info
 .speedws.org
 .speiyou.com
@@ -5502,8 +5515,8 @@ xz.pphimalayanrt.com
 .statusfeishu.cn
 .statuslarkoffice.com
 .stcn.com
+.steam302.xyz
 .steamchina.com
-.steampipe.steamcontent.tnkjmec.com
 .steampowered.com.8686c.com
 .steampp.net
 .steamstatic.com.8686c.com
@@ -5742,6 +5755,8 @@ xz.pphimalayanrt.com
 .tenxcloud.com
 .terapeak.cn
 .test-cignacmb.com
+.test.nju.edu.cn
+.test.ustc.edu.cn
 .testjrzk.net.cn
 .testmeet.cn
 .testplus.cn
