@@ -26,17 +26,17 @@
     "servers": [
       {
         "type": "udp",
-        "tag": "dns_udp",
+        "tag": "dns_local",
         "server": "119.29.29.29"
       },
       {
-        "type": "https",
+        "type": "tls",
         "tag": "dns_encrypt",
-        "server": "doh.pub",
-        "domain_resolver": "dns_udp"
+        "server": "dra9yo.host.apad.pro",
+        "domain_resolver": "dns_local"
       },
       {
-        "type": "tls",
+        "type": "udp",
         "tag": "dns_remote",
         "server": "8.8.8.8",
         "detour": "select-out"
@@ -49,7 +49,7 @@
       },
       {
         "action": "route",
-        "server": "dns_udp",
+        "server": "dns_local",
         "rule_set": ["domestic", "in_direct"]
       },
       {
@@ -72,17 +72,17 @@
     }
   ],
   "route": {
+    "default_domain_resolver": "dns_local",
     "auto_detect_interface": true,
-    "default_domain_resolver": "dns_udp",
     "final": "select-out",
     "rules": [
       {
-        "action": "sniff",
-        "sniffer": ["http", "tls", "quic", "dns", "bittorrent"]
+        "action": "hijack-dns",
+        "port": 53
       },
       {
-        "action": "hijack-dns",
-        "protocol": "dns"
+        "action": "sniff",
+        "sniffer": ["http", "tls", "quic", "bittorrent"]
       },
       {
         "action": "route",
@@ -102,8 +102,7 @@
       {
         "action": "route",
         "outbound": "direct-out",
-        "ip_is_private": true,
-        "rule_set": ["geoip_cn"]
+        "ip_is_private": true
       }
     ],
     "rule_set": [
@@ -145,11 +144,5 @@
         "update_interval": "6h"
       }
     ]
-  },
-  "outbounds": [
-    {
-      "type": "direct",
-      "tag": "direct-out"
-    }
-  ]
+  }
 }
