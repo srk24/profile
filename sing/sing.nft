@@ -1,0 +1,53 @@
+#!/usr/sbin/nft -f
+
+define LANv4 = { 0.0.0.0/8, 10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 
+                 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/4, 240.0.0.0/4 }
+
+define LANv6 = { ::/128, ::1/128, fc00::/7, fe80::/10 }
+
+table inet sing_box_transparent_proxy {
+    set lan_networks_v4 {
+        type ipv4_addr
+        flags interval
+        elements = $LANv4
+    }
+
+    set lan_networks_v6 {
+        type ipv6_addr
+        flags interval
+        elements = $LANv6
+    }
+
+    chain prerouting {
+        type filter hook prerouting priority raw; policy accept;
+
+        # Skip already marked traffic
+        meta mark 0x2024 accept
+
+        # Skip local traffic
+        ip daddr @lan_networks_v4 accept
+        ip6 daddr @lan_networks_v6 accept
+
+        # Apply redirects to sing
+        meta l4proto udp tproxy to :6153
+        meta l4proto tcp redirect to :6152
+    }
+
+    chain output {
+        type filter hook output priority raw; policy accept;
+
+        # skip user=sing
+        skuid sing accept
+
+        # Skip already marked traffic
+        meta mark 0x2024 accept
+
+        # Skip traffic to local networks
+        ip daddr @lan_networks_v4 accept
+        ip6 daddr @lan_networks_v6 accept
+
+        # Apply redirects to sing
+        meta l4proto udp tproxy to :6153
+        meta l4proto tcp redirect to :6152
+    }
+}

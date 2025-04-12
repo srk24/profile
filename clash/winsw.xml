@@ -1,0 +1,15 @@
+<service>
+  <id>ClashSvc</id>
+  <name>Clash Service</name>
+  <description>Clash daemon, A rule-based proxy in Go.</description>
+  <executable>./bin/clash-windows-amd64.exe</executable>
+  <arguments>-d ./bin -f ./config.yaml</arguments>
+  <download from="https://github.com/alecthw/mmdb_china_ip_list/raw/release/lite/Country.mmdb" to="./bin/Country.mmdb" failOnError="false"/>
+  <log mode="reset"/>
+  <logpath>./log</logpath>
+  <startmode>Automatic</startmode>
+  <onfailure action="restart" delay="10 sec"/>
+  <onfailure action="restart" delay="20 sec"/>
+  <onfailure action="none" />
+  <priority>High</priority>
+</service>

@@ -1,0 +1,147 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "output": "box.log",
+    "timestamp": false
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "access_control_allow_origin": ["http://board.zash.run.place", "http://clash.razord.top"],
+      "access_control_allow_private_network": true,
+      "external_ui": "ui",
+      "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "external_ui_download_detour": "direct-out",
+      "secret": "password"
+    }
+  },
+  "dns": {
+    "final": "dns_encrypt",
+    "strategy": "ipv4_only",
+    "servers": [
+      {
+        "type": "tls",
+        "tag": "dns_encrypt",
+        "server": "dns.alidns.com",
+        "domain_resolver": "dns_local"
+      },
+      {
+        "type": "udp",
+        "tag": "dns_local",
+        "server": "223.5.5.5"
+      },
+      {
+        "type": "udp",
+        "tag": "dns_remote",
+        "server": "8.8.8.8",
+        "detour": "select-out"
+      }
+    ],
+    "rules": [
+      {
+        "action": "reject",
+        "rule_set": ["reject_ads"]
+      },
+      {
+        "action": "route",
+        "server": "dns_local",
+        "rule_set": ["domestic", "in_direct"]
+      },
+      {
+        "action": "route",
+        "server": "dns_remote",
+        "rule_set": ["global"]
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": ["172.18.0.1/30"],
+      "auto_route": true,
+      "auto_redirect": true,
+      "route_exclude_address_set": ["geoip_cn"],
+      "stack": "gvisor"
+    }
+  ],
+  "route": {
+    "default_domain_resolver": "dns_local",
+    "auto_detect_interface": true,
+    "final": "select-out",
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "port": 53
+      },
+      {
+        "action": "sniff",
+        "sniffer": ["http", "tls", "quic", "bittorrent"]
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "protocol": ["bittorrent"]
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "rule_set": ["domestic", "in_direct"]
+      },
+      {
+        "action": "route",
+        "outbound": "select-out",
+        "rule_set": ["global"]
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "ip_is_private": true
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "inline",
+        "tag": "in_direct",
+        "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
+      },
+      {
+        "type": "remote",
+        "tag": "reject_ads",
+        "format": "binary",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "global",
+        "format": "binary",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "domestic",
+        "format": "binary",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip_cn",
+        "format": "binary",
+        "url": "https://ghfast.top/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      }
+    ]
+  }
+}
