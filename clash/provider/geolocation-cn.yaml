@@ -482,6 +482,7 @@ payload:
     - test.bugs-qa.chromium.org
     - test.gbugs-qa.chromium.org
     - tf-feedback.itunes.apple.com
+    - time.amazonaws.cn
     - time.izatcloud.net
     - time.xtracloud.net
     - tj-pod1-smp-device.apple.com
@@ -726,6 +727,7 @@ payload:
     - .3conline.com
     - .3d66.com
     - .3dmgame.com
+    - .3dmjiasu.com
     - .3elife.net
     - .3h3.com
     - .3ili6.cn
@@ -1064,6 +1066,7 @@ payload:
     - .ajzq.com
     - .aki-game.com
     - .akikocorp.cn
+    - .akspeedy.com
     - .aldwx.com
     - .alexafund.cn
     - .alexafund.com.cn
@@ -1487,6 +1490,7 @@ payload:
     - .beisenapp.com
     - .beisencloud.com
     - .beisenpaas.com
+    - .benfuip.com
     - .bengbeng.com
     - .benghuai.com
     - .benmi.com
@@ -1566,6 +1570,7 @@ payload:
     - .bitauto.com
     - .bitautoimg.com
     - .bitecoin.com
+    - .biubiu001.com
     - .biyehome.net
     - .biz.weibo.com
     - .bj.file.myqcloud.com
@@ -1799,6 +1804,7 @@ payload:
     - .ccf.org.cn
     - .ccfund.com.cn
     - .ccnew.com
+    - .ccspeed.cn
     - .cctalk.com
     - .cctv.cn
     - .cctv.com
@@ -2781,6 +2787,8 @@ payload:
     - .ersjk.com
     - .essence.com.cn
     - .essurl.com
+    - .et-api.com
+    - .et001.com
     - .etao.com
     - .etnet.com.cn
     - .etnetchina.com.cn
@@ -2901,6 +2909,7 @@ payload:
     - .ffbuddy.com
     - .fgo.wiki
     - .fhldns.com
+    - .fhyx.com
     - .filez.com
     - .fimmu.com
     - .finchina.com
@@ -2917,6 +2926,7 @@ payload:
     - .fm.p0y.cn
     - .fm365.com
     - .fm3838.com
+    - .fnjiasu.com
     - .focus-img.cn
     - .focus.cn
     - .fofa.info
@@ -2955,6 +2965,7 @@ payload:
     - .fun.tv
     - .funcdn.com
     - .fund123.cn
+    - .funjsq.com
     - .funnycore.com
     - .funshion.com
     - .funshion.net
@@ -3041,6 +3052,7 @@ payload:
     - .gfan.com
     - .gffunds.com.cn
     - .gfund.com
+    - .ggkuai.com
     - .ggoplay.com
     - .ggowan.com
     - .ggpht.cn
@@ -3049,6 +3061,7 @@ payload:
     - .ghzq.com.cn
     - .gifshow.com
     - .gigabyte.cn
+    - .gijsq.com
     - .gimg.baidu.com
     - .giocdn.com
     - .gitbook.cn
@@ -3152,6 +3165,7 @@ payload:
     - .gtms04.alicdn.com
     - .guabu.com
     - .guaiguai.com
+    - .guaiku.com
     - .guanaitong.com
     - .guanggaotongapp.cn
     - .guanhaobio.com
@@ -3335,6 +3349,8 @@ payload:
     - .hsfund.com
     - .htcases.com
     - .hteacher.net
+    - .htjsq.com
+    - .htjsq.mobi
     - .htsc.com.cn
     - .htsec.com
     - .httpdns-api.aliyuncs.com
@@ -4023,6 +4039,7 @@ payload:
     - .kingsoft.com
     - .kiyuu.club
     - .kjwugx.com
+    - .kk1.vip
     - .kkmh.com
     - .kkzj.com
     - .klpbbs.com
@@ -4286,6 +4303,7 @@ payload:
     - .liulanqi.net
     - .liulishuo.com
     - .liuxiaoer.com
+    - .liuxing.com
     - .live800.com
     - .livecdnstatic.com
     - .livechina.cn
@@ -4320,6 +4338,7 @@ payload:
     - .longre.com
     - .longtugame.com
     - .longzhu.com
+    - .lorhf.com
     - .lotpc.com
     - .loupan.com
     - .lpl.com.cn
@@ -4353,6 +4372,7 @@ payload:
     - .lxdns.com
     - .lxdns.info
     - .lxdns.org
+    - .lxjiasu.com
     - .lxway.com
     - .lxzjjt.cn
     - .lxzjjt.com
@@ -4504,6 +4524,7 @@ payload:
     - .minapp.com
     - .mincdn.com
     - .mindspore.cn
+    - .mingxuan.store
     - .mingyuanyun.com
     - .minhangshi.com
     - .minimaxi.com
@@ -4809,6 +4830,7 @@ payload:
     - .onlinesjtu.com
     - .onlylady.com
     - .onmschina.cn
+    - .oojsq.com
     - .oortgslb.com
     - .opdown.com
     - .opdwz.cn
@@ -5108,6 +5130,7 @@ payload:
     - .qixin.com
     - .qiyi.com
     - .qiyipic.com
+    - .qiyou.cn
     - .qiyukf.com
     - .qizuang.com
     - .qlinkto.cn
@@ -6589,6 +6612,7 @@ payload:
     - .ydstatic.com
     - .ydsys.cn
     - .yeah.net
+    - .yebaojiasu.com
     - .yeepay.com
     - .yeshen.com
     - .yeshj.com
@@ -6721,6 +6745,7 @@ payload:
     - .yuanzhiyijiantong.com
     - .yudou.cn
     - .yuedu.iqiyi.com
+    - .yuelun.com
     - .yuewen.com
     - .yufuid.com
     - .yufuid.com.cn
