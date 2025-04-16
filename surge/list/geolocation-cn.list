@@ -39,6 +39,8 @@ applemdm.corp.google.com
 apps.mzstatic.com
 apps5.oingo.com
 apptrailers.itunes.apple.com
+assets1.xboxlive.cn
+assets2.xboxlive.cn
 auth.music.apple.com
 avail.googleflights.net
 b.c2r.ts.cdn.office.net
@@ -51,6 +53,11 @@ beacons3.gvt2.com
 bg.v4.a.dl.ws.microsoft.com
 bg4.v4.a.dl.ws.microsoft.com
 bj1.api.bing.com
+blzdist-di.necdn.leihuo.netease.com
+blzdist-hs.necdn.leihuo.netease.com
+blzdist-ow.necdn.leihuo.netease.com
+blzdist-phx.necdn.leihuo.netease.com
+blzdist-wow.necdn.leihuo.netease.com
 bookkeeper.itunes.apple.com
 borgmon.adz.google.com
 build.microsoft.com
@@ -59,11 +66,14 @@ c.android.clients.google.com
 c.pki.goog
 cache-management-prod.google.com
 cache.pack.google.com
+cdn-ali.content.steamchina.com
 cdn-cn.apple-mapkit.com
 cdn-cn1.apple-mapkit.com
 cdn-cn2.apple-mapkit.com
 cdn-cn3.apple-mapkit.com
 cdn-cn4.apple-mapkit.com
+cdn-qc.content.steamchina.com
+cdn-ws.content.steamchina.com
 cdn.ampproject.org
 cdn.apple-mapkit.com
 cdn.globalsigncdn.com.cdn.cloudflare.net
@@ -149,6 +159,7 @@ e8aeb8bbdbbd7.cdn.sohucs.com
 emmapplecodevice.googleapis.com
 emoi-cncdn.bing.com
 enrichgw.10010.com
+epicgames-download1-1251447533.file.myqcloud.com
 experiments.apple.com
 f.c2r.ts.cdn.office.net
 fides-pol.apple.com
@@ -435,6 +446,7 @@ ssh-relay.corp.google.com
 ssl-google-analytics.l.google.com
 ssl.gstatic.com
 sslredirect.corp.google.com
+st-bak.viv.wanwang.space
 staging-controlbe.floonet.goog
 staging-databe.floonet.goog
 staging-regioninfo-pa.googleapis.com
@@ -485,8 +497,10 @@ time.amazonaws.cn
 time.izatcloud.net
 time.xtracloud.net
 tj-pod1-smp-device.apple.com
+tlu.dl.delivery.mp.microsoft.com
 tools.google.com
 tools.l.google.com
+trts.baishancdnx.cn
 uberproxy-debug.corp.google.com
 uberproxy-debug4.corp.google.com
 uberproxy-pen-redirect.corp.google.com
@@ -502,6 +516,7 @@ updates-http.cdn-apple.com
 updates-http.cdn-apple.com.akadns.net
 updates.cdn-apple.com
 uplaypc-s-ubisoft.cdn.ubi.com
+uplaypc-s-ubisoft.cdn.ubionline.com.cn
 upp.itunes.apple.com
 valid.apple.com
 valid.origin-apple.com.akadns.net
