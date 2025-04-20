@@ -14,7 +14,6 @@ payload:
     - ads3-normal-hl.zijieapi.com
     - ads5-normal-hl.zijieapi.com
     - adservice.google.com
-    - ai.ytimg.com
     - ai.zhaomi.cn
     - alibaba.cdn.steampipe.steamcontent.com
     - amp-api-edge-lb-cn.itunes-apple.com.akadns.net
@@ -30,13 +29,13 @@ payload:
     - api-p-ap-d.smoot.apple.com
     - api-p-ap-e.smoot.apple.com
     - apilog-web.acfun.cn
+    - app-analytics-services.com
     - app-measurement-cn.com
     - app-measurement.com
     - app-site-association.cdn-apple.com
     - appldnld.apple.com
     - appldnld.g.aaplimg.com
     - appleid.cdn-apple.com
-    - applemdm.corp.google.com
     - apps.mzstatic.com
     - apps5.oingo.com
     - apptrailers.itunes.apple.com
@@ -60,7 +59,6 @@ payload:
     - blzdist-phx.necdn.leihuo.netease.com
     - blzdist-wow.necdn.leihuo.netease.com
     - bookkeeper.itunes.apple.com
-    - borgmon.adz.google.com
     - build.microsoft.com
     - c.admob.com
     - c.android.clients.google.com
@@ -138,12 +136,8 @@ payload:
     - developer.microsoft.com
     - dg-meta.video.google.com
     - discussionschinese.apple.com
-    - distribution.qatp1.net
-    - distribution.qcpp1.net
-    - distribution.qpdp1.net
     - dl.google.com
     - dl.l.google.com
-    - dns.corp.google.com
     - docs.microsoft.com
     - doubleclick-cn.net
     - doubleclick.net
@@ -151,8 +145,6 @@ payload:
     - download.microsoft.com
     - download.mlcc.google.com
     - download.qatp1.net
-    - download.qcpp1.net
-    - download.qpdp1.net
     - download.tensorflow.google.com
     - download.visualstudio.microsoft.com
     - downloaddispatch.itunes.apple.com
@@ -165,9 +157,7 @@ payload:
     - f.c2r.ts.cdn.office.net
     - fides-pol.apple.com
     - firebase-settings.crashlytics.com
-    - fontfiles.googleadapis.com
     - fontfiles.googleapis.com
-    - fonts.googleadapis.com
     - fonts.googleapis.com
     - fonts.gstatic.com
     - fs.microsoft.com
@@ -175,9 +165,7 @@ payload:
     - g1.gstatic.com
     - g2.gstatic.com
     - g3.gstatic.com
-    - g3doc.corp.google.com
     - geetest.datasink.sensorsdata.cn
-    - gmskiosk-ssl.corp.google.com
     - go.corp.google.com
     - gog-cdn-fastly.gog.com
     - gog-cdn.akamaized.net
@@ -195,7 +183,6 @@ payload:
     - googleflights-cn.net
     - googleoptimize-cn.com
     - googleoptimize.com
-    - googleplex.com
     - googlesyndication-cn.com
     - googlesyndication.com
     - googletagmanager-cn.com
@@ -205,9 +192,6 @@ payload:
     - googletraveladservices-cn.com
     - googletraveladservices.com
     - googlevads-cn.com
-    - gorom.corp.google.com
-    - goto.corp.google.com
-    - goto.google.com
     - gs-loc-cn.apple.com
     - gs-loc.apple.com
     - gsp10-ssl-cn.ls.apple.com
@@ -302,8 +286,6 @@ payload:
     - mesu.apple.com
     - misc-assets.itunes.apple.com
     - ml.cdn-apple.com
-    - monitoring.qatp1.net
-    - monitoring.qcpp1.net
     - monitoring.qpdp1.net
     - moocs.unipus.cn
     - msgr.dlservice.microsoft.com
@@ -362,7 +344,6 @@ payload:
     - pd.itunes.apple.com
     - performanceparameters.googleapis.com
     - pki-goog.l.google.com
-    - play.1ucrs.com
     - play.itunes.apple.com
     - play.music.apple.com
     - probe.siri.apple.com
@@ -374,25 +355,14 @@ payload:
     - proxyconfig.corp.google.com
     - publicassets.cdn-apple.com
     - qagpublic.qatp1.net
-    - qagpublic.qcpp1.net
-    - qagpublic.qpdp1.net
-    - qgadmin.qatp1.net
     - qgadmin.qcpp1.net
-    - qgadmin.qpdp1.net
     - qh.dlservice.microsoft.com
     - qiao-cn.com
     - qpx.googleflights.net
     - qualysapi.qatp1.net
-    - qualysapi.qcpp1.net
-    - qualysapi.qpdp1.net
-    - qualysguard.qatp1.net
-    - qualysguard.qcpp1.net
     - qualysguard.qpdp1.net
     - r.cert.corp.google.com
-    - rapture-autopush.corp.google.com
     - rapture-prod.corp.google.com
-    - rapture-test.corp.google.com
-    - rapture.corp.google.com
     - recaptcha-cn.net
     - recaptcha.net
     - redirector.bdn.dev
@@ -406,7 +376,6 @@ payload:
     - redirector.offline-maps.gvt1.com
     - redirector.snap.gvt1.com
     - redirector.xn--ngstr-lra8j.com
-    - regioninfo-pa.googleapis.com
     - res-1.cdn.office.net
     - res.cdn.office.net
     - reserve-prime.apple.com
@@ -420,9 +389,7 @@ payload:
     - s5.mzstatic.com
     - safebrowsing-cache.google.com
     - safebrowsing.googleapis.com
-    - scanservice1.qatp1.net
     - scanservice1.qcpp1.net
-    - scanservice1.qpdp1.net
     - sdx.microsoft.com
     - se-edge.itunes.apple.com
     - se2.itunes.apple.com
@@ -432,7 +399,6 @@ payload:
     - seed.siri.apple.com
     - sequoia.apple.com
     - service.urchin.com
-    - settings.xn--9trs65b.com
     - sf-api-token-service.itunes.apple.com
     - sh-pod2-smp-device.apple.com
     - shazam-insights.cdn-apple.com
@@ -443,14 +409,12 @@ payload:
     - software.download.prss.microsoft.com
     - sp.itunes.apple.com
     - ss.bjmu.edu.cn
-    - ssh-relay.corp.google.com
     - ssl-google-analytics.l.google.com
     - ssl.gstatic.com
     - sslredirect.corp.google.com
     - st-bak.viv.wanwang.space
     - staging-controlbe.floonet.goog
     - staging-databe.floonet.goog
-    - staging-regioninfo-pa.googleapis.com
     - staging.databe.floonet.goog
     - static-login.gog-statics.com
     - static.gc.apple.com
@@ -473,9 +437,7 @@ payload:
     - sup.corp.google.com
     - sup.l.google.com
     - support-china.apple-support.akadns.net
-    - support.1ucrs.com
     - support.apple.com
-    - supportcenter.corp.google.com
     - surface.downloads.prss.microsoft.com
     - swallow-apple-com.v.aaplimg.com
     - swallow.apple.com
@@ -490,8 +452,6 @@ payload:
     - sylvan.apple.com
     - sync.itunes.apple.com
     - tac.googleapis.com
-    - techstop.corp.google.com
-    - test.bugs-qa.chromium.org
     - test.gbugs-qa.chromium.org
     - tf-feedback.itunes.apple.com
     - time.amazonaws.cn
@@ -502,14 +462,8 @@ payload:
     - tools.google.com
     - tools.l.google.com
     - trts.baishancdnx.cn
-    - uberproxy-debug.corp.google.com
     - uberproxy-debug4.corp.google.com
-    - uberproxy-pen-redirect.corp.google.com
-    - uberproxy-with-cn.l.google.com
-    - uberproxy-with-cn4.l.google.com
-    - uberproxy-with-cn6.l.google.com
     - uberproxy.corp.google.com
-    - uberproxy4.corp.google.com
     - uberproxy6.corp.google.com
     - update.crashlytics.com
     - update.googleapis.com
@@ -521,7 +475,6 @@ payload:
     - upp.itunes.apple.com
     - valid.apple.com
     - valid.origin-apple.com.akadns.net
-    - vext.corp.google.com
     - vscode.download.prss.microsoft.com
     - vz.download.prss.microsoft.com
     - wear.googleapis.com
@@ -542,7 +495,6 @@ payload:
     - www.apple.com.edgekey.net.globalredir.akadns.net
     - www.destinationurl.com
     - www.entrust.cn
-    - www.googleadapis.com
     - www.gstatic.com
     - www.libvideo.com
     - www.microsoft.com
@@ -552,7 +504,6 @@ payload:
     - www.ztedevices.com
     - www4-static.gog-statics.com
     - xb.dlservice.microsoft.com
-    - xn--9kr7l.com
     - xn--flw351e.com
     - xp.apple.com
     - xz.pphimalayanrt.com
@@ -940,6 +891,7 @@ payload:
     - .abchina.com
     - .abhouses.com
     - .aboutamazon.cn
+    - .ac.fun
     - .acadn.cn
     - .acadn.com
     - .acctdns.com
@@ -948,6 +900,10 @@ payload:
     - .acer.com.cn
     - .acetaffy.club
     - .acfun.cn
+    - .acfun.net
+    - .acfunchina.cn
+    - .acfunchina.com
+    - .acfunchina.net
     - .acg.tv
     - .acgab.cn
     - .acgvideo.com
@@ -1974,6 +1930,8 @@ payload:
     - .ceblease.com
     - .cecdc.com
     - .cecport.com
+    - .cedf.cn
+    - .cedf.org.cn
     - .cegid-cloud.cn
     - .centanet.com
     - .centuryenglish.com
@@ -2008,9 +1966,17 @@ payload:
     - .chashebao.com
     - .chatglm.cn
     - .chazhengla.com
+    - .chdi.com.cn
     - .che168.com
     - .checkzeit.com
+    - .chei.com.cn
     - .cheng.xin
+    - .chesicc.cn
+    - .chesicc.com
+    - .chesicc.com.cn
+    - .chesicc.net
+    - .chesicc.net.cn
+    - .chesicc.org.cn
     - .cheyisou.com
     - .chicalot.cn
     - .china-chair.com
@@ -2060,6 +2026,7 @@ payload:
     - .chinauos.com
     - .chinaweiyu.com
     - .chinawutong.com
+    - .chinayz.com.cn
     - .chinaz.com
     - .chinaz.net
     - .chinazns.com
@@ -2071,6 +2038,8 @@ payload:
     - .chongdiantou.com
     - .chouti.com
     - .chrstatic.com
+    - .chsi.cn
+    - .chsi.com.cn
     - .chuangxin.com
     - .chuanke.com
     - .chuansong.me
@@ -3040,6 +3009,7 @@ payload:
     - .gaodun.com
     - .gaoshouyou.com
     - .gaoxiaojob.com
+    - .gatzs.com.cn
     - .gcable.com.cn
     - .gcloudcs.com
     - .gcloudcstest.com
@@ -3065,6 +3035,11 @@ payload:
     - .gezida.com
     - .gf.com.cn
     - .gfan.com
+    - .gfbzb.cn
+    - .gfbzb.com
+    - .gfbzb.com.cn
+    - .gfbzb.gov.cn
+    - .gfbzb.net
     - .gffunds.com.cn
     - .gfund.com
     - .ggkuai.com
@@ -3423,6 +3398,8 @@ payload:
     - .huaweicloud-dns.com
     - .huaweicloud-idme.cn
     - .huaweicloud-idme.com
+    - .huaweicloud-koophone.cn
+    - .huaweicloud-koophone.com
     - .huaweicloud-smn.cn
     - .huaweicloud-smn.com
     - .huaweicloud-smn.net
@@ -4576,6 +4553,8 @@ payload:
     - .mobmore.com
     - .modelarts-infer.cn
     - .modelarts-infer.com
+    - .modelarts-maas.cn
+    - .modelarts-maas.com
     - .modernjs.cn
     - .moegirl.org
     - .moegirl.org.cn
@@ -4696,6 +4675,8 @@ payload:
     - .nbd.com.cn
     - .nbsdk-baichuan.alicdn.com
     - .nbsdk-baichuan.taobao.com
+    - .ncss.cn
+    - .ncss.org.cn
     - .ndcpp.com
     - .nearme.com.cn
     - .nease.net
@@ -5076,6 +5057,9 @@ payload:
     - .qeodns.com
     - .qeodns.net
     - .qftexpay.cn
+    - .qgzb.com.cn
+    - .qgzb.gov.cn
+    - .qgzb.net
     - .qh24.com
     - .qhcdn.com
     - .qhimg.com
@@ -6820,6 +6804,8 @@ payload:
     - .zampda.net
     - .zampdsp.com
     - .zastatic.com
+    - .zbbm.gov.cn
+    - .zbbm.net
     - .zbjimg.com
     - .zcjbgame.com
     - .zcmbc.com.cn

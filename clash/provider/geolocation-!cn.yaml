@@ -1,4 +1,5 @@
 payload:
+    - 1password.drift.click
     - 3dns-1.adobe.com
     - 3dns-2.adobe.com
     - 3dns-3.adobe.com
@@ -651,7 +652,6 @@ payload:
     - .weatherchannel
     - .windows
     - .xbox
-    - .xn--9kr7l.com
     - .xn--cckwcxetd
     - .xn--cg4bki
     - .xn--flw351e
@@ -804,6 +804,7 @@ payload:
     - .1drv.ms
     - .1e100.net
     - .1inch.io
+    - .1infra.net
     - .1jjdg2.vip
     - .1lib.cloud
     - .1lib.cz
@@ -816,8 +817,15 @@ payload:
     - .1lib.tw
     - .1monsterbeatsbydreus.com
     - .1password.ca
+    - .1password.co
     - .1password.com
+    - .1password.community
     - .1password.eu
+    - .1password.io
+    - .1passwordservices.com
+    - .1passwordusercontent.ca
+    - .1passwordusercontent.com
+    - .1passwordusercontent.eu
     - .1pondo.tv
     - .1pornlist.com
     - .1thek.com
@@ -1071,6 +1079,7 @@ payload:
     - .88manhua.top
     - .88square.com
     - .89.com
+    - .8chan.moe
     - .8kcosplay.com
     - .8kpornvids.com
     - .8muses.com
@@ -4153,6 +4162,7 @@ payload:
     - .blogblog.com
     - .blogebay.com
     - .blogger.com
+    - .blogger.googleusercontent.com
     - .bloggrowup.com
     - .blogoverflow.com
     - .blogspot.ae
@@ -5085,6 +5095,7 @@ payload:
     - .btt904.com
     - .bttzyw.com
     - .bttzyw.net
+    - .btwrdn.co
     - .btwrdn.com
     - .buba.ac.uk
     - .bubbaporn.com
@@ -5771,6 +5782,7 @@ payload:
     - .cf-ipfs.com
     - .cf.ac.uk
     - .cfake.com
+    - .cfargotunnel.com
     - .cfas.ac.uk
     - .cfblob.com
     - .cfd-tv.com
@@ -10240,6 +10252,7 @@ payload:
     - .gemfire.net
     - .gemfury.com
     - .gemini.com
+    - .gemini.google
     - .gemini.google.com
     - .gemini.yahoo.com
     - .gen.lib.rus.ec
@@ -14221,6 +14234,7 @@ payload:
     - .leighcollege.ac.uk
     - .leis.ac.uk
     - .leliao1.com
+    - .lemmynsfw.com
     - .lemoncams.com
     - .lencr.org
     - .lenkino.xxx
@@ -16245,6 +16259,7 @@ payload:
     - .msftnet.org
     - .msgamesresearch.com
     - .mshome.net
+    - .msidentity.com
     - .msinnovationchallenge.com
     - .msk.ilnk.info
     - .msk.kitazawa.me
@@ -18238,6 +18253,7 @@ payload:
     - .pashtovoa.com
     - .pasionmujeres.com
     - .paskoocheh.com
+    - .passage.id
     - .passion-hd.com
     - .passion.com
     - .passiontimes.hk
@@ -18891,6 +18907,7 @@ payload:
     - .politicsinaction.ac.uk
     - .poly-of-wales.ac.uk
     - .polygon.com
+    - .polymarket.com
     - .polymer-project.org
     - .polymerproject.org
     - .poms.ac.uk
@@ -19437,6 +19454,7 @@ payload:
     - .proudman-oceanographic-lab.ac.uk
     - .provide.ac.uk
     - .prowe.ac.uk
+    - .proxifier.com
     - .proxomics.ac.uk
     - .proxyadult.org
     - .proxyrarbg.org
@@ -20310,6 +20328,7 @@ payload:
     - .rvc.ac.uk
     - .rwcmd.ac.uk
     - .ryokoyomiuri.co.jp
+    - .rzr.to
     - .s-bluemix.net
     - .s-books.com
     - .s-cashonmobile.com
@@ -21644,6 +21663,8 @@ payload:
     - .southwestnuclearhub.ac.uk
     - .sovec.net
     - .soyinyj.top
+    - .soyjak.party
+    - .soyjak.st
     - .sp.cool
     - .spa.ac.uk
     - .spaceexplored.com
@@ -24662,6 +24683,7 @@ payload:
     - .voyeurweb.com
     - .vpngate.jp
     - .vpngate.net
+    - .vpnrouter.homes
     - .vporn.com
     - .vpornvideos.com
     - .vpro.com
@@ -25515,6 +25537,7 @@ payload:
     - .xn--7hv594h.com
     - .xn--8uq428d76d.tokyo
     - .xn--90wwvt03e.com
+    - .xn--9kr7l.com
     - .xn--9trs65b.com
     - .xn--av-o44ep1d.com
     - .xn--cck4d8b3009a.com
@@ -25630,6 +25653,7 @@ payload:
     - .xsz-av.com
     - .xtapes.to
     - .xtegvk.xyz
+    - .xtls.github.io
     - .xtracloud.net
     - .xtube.com
     - .xtubebdsm.com
