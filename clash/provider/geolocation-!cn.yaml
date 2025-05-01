@@ -5025,6 +5025,7 @@ payload:
     - .brnc.ac.uk
     - .brni.com
     - .broadbandreports.com
+    - .broadcom.com
     - .broadpressinc.com
     - .broadstairscollege.ac.uk
     - .brocaproject.com
@@ -15415,6 +15416,7 @@ payload:
     - .metabrainz.org
     - .metacloud.com
     - .metacpan.org
+    - .metacubex.one
     - .metadac.ac.uk
     - .metalpha.finance
     - .metamind.io
@@ -16265,6 +16267,8 @@ payload:
     - .msftnet.org
     - .msgamesresearch.com
     - .mshome.net
+    - .msi.cn
+    - .msi.com
     - .msidentity.com
     - .msinnovationchallenge.com
     - .msk.ilnk.info
@@ -21227,6 +21231,7 @@ payload:
     - .sinchew.com.my
     - .sinchew.my
     - .sinet.ac.uk
+    - .sing-box.app
     - .sing4.lat
     - .sing68.com
     - .singlelogin.app
@@ -23219,6 +23224,7 @@ payload:
     - .trmini.com
     - .trocoll.ac.uk
     - .troisrivieresmini.com
+    - .trojan-gfw.github.io
     - .tropictube.com
     - .tropmed.ac.uk
     - .trpger.us

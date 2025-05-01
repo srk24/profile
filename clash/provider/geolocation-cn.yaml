@@ -992,6 +992,7 @@ payload:
     - .adxvip.com
     - .ae.bdstatic.com
     - .afd.baidu.com
+    - .afdian.com
     - .afdian.net
     - .afdiancdn.com
     - .afp.adchina.com
@@ -2084,6 +2085,7 @@ payload:
     - .click.qianqian.com
     - .click.uve.mobile.sina.cn
     - .click.uve.weibo.com
+    - .client-update.queniuqe.com
     - .clk1.cn
     - .clk1.top
     - .cloud-beijing.com
@@ -2488,6 +2490,7 @@ payload:
     - .dji.com
     - .dji.net
     - .djicdn.com
+    - .djiits.com
     - .djiops.com
     - .djiservice.org
     - .dl-vip.bav.baidu.com
@@ -3576,6 +3579,7 @@ payload:
     - .ifanrusercontent.com
     - .ifanrx.com
     - .ifastps.com.cn
+    - .ifdian.net
     - .ifeilian.cn
     - .ifeilian.com
     - .ifeng.com
@@ -4587,6 +4591,7 @@ payload:
     - .moocollege.com
     - .moonshot.cn
     - .mop.com
+    - .morefreegame.com
     - .morganstanleyhuaxin.com
     - .moseeker.com
     - .moulem.com
@@ -5516,10 +5521,16 @@ payload:
     - .spcode.baidu.com
     - .spdb.com.cn
     - .speed.neu6.edu.cn
+    - .speed.nju.edu.cn
     - .speed.nuaa.edu.cn
+    - .speed.qlu.edu.cn
+    - .speed.ujs.edu.cn
+    - .speed6.ujs.edu.cn
     - .speedtest.cn
     - .speedtest.mfcyun.com
     - .speedtest.shu.edu.cn
+    - .speedtest.xaut.edu.cn
+    - .speedtest6.shu.edu.cn
     - .speedws.info
     - .speedws.org
     - .speiyou.com
@@ -5804,6 +5815,8 @@ payload:
     - .test-cignacmb.com
     - .test.nju.edu.cn
     - .test.ustc.edu.cn
+    - .test6.nju.edu.cn
+    - .test6.ustc.edu.cn
     - .testjrzk.net.cn
     - .testmeet.cn
     - .testplus.cn
@@ -5908,6 +5921,7 @@ payload:
     - .tongtaiamc.com
     - .tongxianghuicn.com
     - .tongyi.aliyun.com
+    - .tongyi.com
     - .toolbar.baidu.com
     - .tools.team
     - .toplife.com
@@ -6507,6 +6521,7 @@ payload:
     - .xiaoluzhidian.com
     - .xiaomi.cn
     - .xiaomi.com
+    - .xiaomi.eu
     - .xiaomi.net
     - .xiaomicp.com
     - .xiaomidns.cn
@@ -6583,6 +6598,7 @@ payload:
     - .xn--owtw8cc49ajfl.cn
     - .xn--r70as2s.xn--fiqs8s
     - .xn0.cc
+    - .xnfz.seu.edu.cn
     - .xnpic.com
     - .xoyo.com
     - .xoyocdn.com
