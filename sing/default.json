@@ -1,7 +1,7 @@
 {
   "log": {
     "disabled": false,
-    "level": "info",
+    "level": "warn",
     "output": "box.log",
     "timestamp": false
   },
@@ -25,7 +25,7 @@
     "strategy": "ipv4_only",
     "servers": [
       {
-        "type": "tls",
+        "type": "h3",
         "tag": "dns_encrypt",
         "server": "dns.alidns.com",
         "domain_resolver": "dns_local"
@@ -45,7 +45,7 @@
     "rules": [
       {
         "action": "reject",
-        "rule_set": ["reject_ads"]
+        "rule_set": ["advertise", "httpdns"]
       },
       {
         "action": "route",
@@ -63,7 +63,8 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "address": ["172.18.0.1/30"],
+      "interface_name": "utun0",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
       "auto_route": true,
       "auto_redirect": true,
       "route_exclude_address_set": ["geoip_cn"],
@@ -71,7 +72,7 @@
     }
   ],
   "route": {
-    "default_domain_resolver": "dns_local",
+    "default_domain_resolver": "dns_encrypt",
     "auto_detect_interface": true,
     "final": "select-out",
     "rules": [
@@ -112,9 +113,17 @@
       },
       {
         "type": "remote",
-        "tag": "reject_ads",
+        "tag": "advertise",
         "format": "binary",
-        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct-out",
+        "update_interval": "6h"
+      },
+      {
+        "type": "remote",
+        "tag": "httpdns",
+        "format": "binary",
+        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
         "download_detour": "direct-out",
         "update_interval": "6h"
       },
