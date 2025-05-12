@@ -2,7 +2,7 @@
   "log": {
     "disabled": false,
     "level": "warn",
-    "output": "box.log",
+    "output": "sing-box.log",
     "timestamp": false
   },
   "experimental": {
@@ -21,7 +21,7 @@
     }
   },
   "dns": {
-    "final": "dns_encrypt",
+    "final": "dns_local",
     "strategy": "ipv4_only",
     "servers": [
       {
@@ -33,7 +33,7 @@
       {
         "type": "udp",
         "tag": "dns_local",
-        "server": "223.5.5.5"
+        "server": "119.29.29.29"
       },
       {
         "type": "udp",
@@ -43,10 +43,6 @@
       }
     ],
     "rules": [
-      {
-        "action": "reject",
-        "rule_set": ["advertise", "httpdns"]
-      },
       {
         "action": "route",
         "server": "dns_local",
@@ -72,7 +68,7 @@
     }
   ],
   "route": {
-    "default_domain_resolver": "dns_encrypt",
+    "default_domain_resolver": "dns_local",
     "auto_detect_interface": true,
     "final": "select-out",
     "rules": [
@@ -110,22 +106,6 @@
         "type": "inline",
         "tag": "in_direct",
         "rules": [{ "domain_suffix": ["steamserver.net", "steamcontent.com"] }]
-      },
-      {
-        "type": "remote",
-        "tag": "advertise",
-        "format": "binary",
-        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs",
-        "download_detour": "direct-out",
-        "update_interval": "6h"
-      },
-      {
-        "type": "remote",
-        "tag": "httpdns",
-        "format": "binary",
-        "url": "https://ghfast.top/https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
-        "download_detour": "direct-out",
-        "update_interval": "6h"
       },
       {
         "type": "remote",
