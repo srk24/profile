@@ -2,48 +2,44 @@
 # dscp see more at https://github.com/daeuniverse/dae/discussions/295
 
 global {
-  tproxy_port: 7000
-  tproxy_port_protect: true
   log_level: info
-  disable_waiting_network: true
-  lan_interface: br-lan
-  wan_interface: auto
-  auto_config_kernel_parameter: true
-  tcp_check_url: 'http://cp.cloudflare.com,1.1.1.1,2606:4700:4700::1111'
-  tcp_check_http_method: HEAD
-  udp_check_dns: 'dns.google.com:53,8.8.8.8,2001:4860:4860::8888'
-  check_interval: 30s
-  check_tolerance: 0ms
   dial_mode: domain
-  allow_insecure: false
-  sniffing_timeout: 100ms
-  tls_implementation: tls
-  utls_imitate: chrome_auto
-  enable_local_tcp_fast_redirect: true
-  auto_config_kernel_parameter: true
+  disable_waiting_network: false
+  wan_interface: auto
+  lan_interface: br-lan
+  tcp_check_url: 'http://cp.cloudflare.com'
+  udp_check_dns: '8.8.8.8'
+  check_interval: 30s
+  check_tolerance: 10ms
+  sniffing_timeout: 30ms
 }
 
 dns {
   ipversion_prefer: 4
   upstream {
-    mosdns: 'udp://127.0.0.1:5335'
+    localdns: 'udp://223.5.5.5:53'
+    remotedns: 'tcp+udp://8.8.8.8:53'
   }
   routing {
     request {
-      fallback: mosdns
+      qname(geosite:cn) -> localdns
+      qname(suffix:steamserver.net) -> localdns
+      qname(suffix:steamcontent.com) -> localdns
+      qname(geosite:geolocation-!cn) -> remotedns
+      fallback: localdns
     }
   }
 }
 
 routing {
   pname(NetworkManager, systemd-resolved, dnsmasq) -> must_direct
-  pname(mosdns) -> must_rules
-  pname(sing-box) -> direct
   dscp(0x4) -> direct
-  dip(198.18.0.0/15) -> proxy
+  domain(geosite:cn) -> direct
+  domain(suffix:steamserver.net) -> direct
+  domain(suffix:steamcontent.com) -> direct
+  domain(geosite:geolocation-!cn) -> direct
   dip(geoip:cn) -> direct
   dip(geoip:private) -> direct
-  domain(geosite:cn) -> direct
   fallback: proxy
 }
 
