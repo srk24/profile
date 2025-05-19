@@ -128,6 +128,8 @@ disney.my.sentry.io
 dl.begellhouse.com
 dlgarenanow-a.akamaihd.net
 dlmobilegarena-a.akamaihd.net
+docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
+docker-pinata-support.s3.amazonaws.com
 dqrpb9wgowsf5.cloudfront.net
 ds-linear-abematv.akamaized.net
 ds-vod-abematv.akamaized.net
@@ -448,6 +450,7 @@ vscode-sync.trafficmanager.net
 vscode.blob.core.windows.net
 vscode.search.windows.net
 vsmarketplacebadge.apphb.com
+webchannel-alkalimakersuite-pa.clients6.google.com
 weblive-hamivideo.cdn.hinet.net
 widgets.stripst.com
 wip.adobe.com
@@ -814,6 +817,7 @@ zeenews-fonts.s3.amazonaws.com
 .1lib.eu
 .1lib.limited
 .1lib.pl
+.1lib.sk
 .1lib.to
 .1lib.tw
 .1monsterbeatsbydreus.com
@@ -6124,6 +6128,7 @@ zeenews-fonts.s3.amazonaws.com
 .claravenger.com
 .clarendon.ac.uk
 .clarin.ac.uk
+.clarity.ms
 .clarivate.com
 .clash.com
 .clashmini.com
@@ -6312,6 +6317,8 @@ zeenews-fonts.s3.amazonaws.com
 .codei.sh
 .codeish.co
 .codeish.io
+.coderabbit.ai
+.coderabbit.gallery.vsassets.io
 .codespot.com
 .codethemicrobit.com
 .codima.ac.uk
@@ -7345,6 +7352,7 @@ zeenews-fonts.s3.amazonaws.com
 .discussionsapple.com
 .dishworld.com
 .disinhe.ac.uk
+.diskstation.me
 .disney-asia.com
 .disney-discount.com
 .disney-plus.net
@@ -7505,6 +7513,7 @@ zeenews-fonts.s3.amazonaws.com
 .docker.com
 .docker.io
 .dockerizer.com
+.dockerstatic.com
 .docleradn.com
 .doclercdn.com
 .docs.com
@@ -7715,12 +7724,18 @@ zeenews-fonts.s3.amazonaws.com
 .drweb.ru
 .drweb.uz
 .dscis.ac.uk
+.dscloud.biz
+.dscloud.me
+.dscloud.mobi
 .dses.ac.uk
 .dsex.to
 .dsfc.ac.uk
 .dsl.ac.uk
 .dslr.net
 .dslreports.com
+.dsmynas.com
+.dsmynas.net
+.dsmynas.org
 .dssott.com
 .dst-dtc.ac.uk
 .dsw.ac.uk
@@ -9129,6 +9144,9 @@ zeenews-fonts.s3.amazonaws.com
 .family-simulator.io
 .family.co.jp
 .family.com.tw
+.familyds.com
+.familyds.net
+.familyds.org
 .familylifestudy.ac.uk
 .familymart.com.my
 .familymart.com.ph
@@ -12218,6 +12236,7 @@ zeenews-fonts.s3.amazonaws.com
 .i-o-u.info
 .i-scmp.com
 .i.org
+.i234.me
 .i69.com.tw
 .i91dz.com
 .iaablog.com
@@ -12246,6 +12265,7 @@ zeenews-fonts.s3.amazonaws.com
 .ibeatsbydre.com
 .ibis.ac.uk
 .ibkr.com
+.ibllc.com
 .ibm.com
 .ibm.eu
 .ibm.net
@@ -16261,6 +16281,7 @@ zeenews-fonts.s3.amazonaws.com
 .msft.info
 .msft.net
 .msftauth.net
+.msftauthimages.net
 .msftconnecttest.com
 .msfteducation.ca
 .msftncsi.com
@@ -16418,6 +16439,7 @@ zeenews-fonts.s3.amazonaws.com
 .mydirectgroove.com
 .mydirectvchannels.com
 .mydirtyhobby.com
+.myds.me
 .myebay.com
 .myeplg.ac.uk
 .myerscough.ac.uk
@@ -22452,6 +22474,7 @@ zeenews-fonts.s3.amazonaws.com
 .synbio-cdt.ac.uk
 .synergyse.com
 .synology.com
+.synology.me
 .synologydownload.com
 .synologyupdate.com
 .synsym.ac.uk
@@ -23256,6 +23279,7 @@ zeenews-fonts.s3.amazonaws.com
 .trustedpeach.com
 .trustisfps.com
 .trustsign.ch
+.trustwallet.com
 .trustwave.com
 .truthordarepics.com
 .truyen-hentai.com
@@ -26409,8 +26433,12 @@ zeenews-fonts.s3.amazonaws.com
 .yyfb.cyou
 .yzld188.top
 .yzzk.com
+.z-lib.fm
+.z-lib.gd
+.z-lib.gl
 .z-lib.org
 .z-library.se
+.z-library.sk
 .z00.world
 .z18r.co
 .z18r.com
