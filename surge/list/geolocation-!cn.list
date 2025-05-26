@@ -233,6 +233,7 @@ ntp-b.nist.gov
 ntp-c.colorado.edu
 ntp-d.nist.gov
 ntp-wwv.nist.gov
+ntp.ubuntu.com
 ntp0.ntp-servers.net
 ntp1.ntp-servers.net
 ntp2.ntp-servers.net
@@ -404,10 +405,12 @@ time-e-g.nist.gov
 time-e-wwv.nist.gov
 time.apple.com
 time.aws.com
+time.cloudflare.com
 time.euro.apple.com
 time.facebook.com
 time.google.com
 time.nist.gov
+time.windows.com
 time1.facebook.com
 time1.google.com
 time2.facebook.com
@@ -2239,7 +2242,6 @@ zeenews-fonts.s3.amazonaws.com
 .api-extractor.com
 .api-priconne-redive.cygames.jp
 .api.ai
-.api.nebula-emby.com
 .api.news
 .api.notion.com
 .apibay.org
@@ -2642,6 +2644,7 @@ zeenews-fonts.s3.amazonaws.com
 .architectural-cadcam.com
 .archive-it.org
 .archive.ac.uk
+.archive.md
 .archive.org
 .archive.ph
 .archive.today
@@ -12265,7 +12268,16 @@ zeenews-fonts.s3.amazonaws.com
 .ibeatsbydre.cc
 .ibeatsbydre.com
 .ibis.ac.uk
+.ibkr.ca
+.ibkr.co.in
+.ibkr.co.uk
 .ibkr.com
+.ibkr.com.au
+.ibkr.com.hk
+.ibkr.com.sg
+.ibkr.eu
+.ibkr.ie
+.ibkrguides.com
 .ibllc.com
 .ibm.com
 .ibm.eu
@@ -13712,6 +13724,8 @@ zeenews-fonts.s3.amazonaws.com
 .juggsjoy.com
 .juiceced.xyz
 .juicytwink.com
+.jules.google
+.jules.google.com
 .julesjordan.com
 .juliamiles.com
 .juliamovies.com
@@ -16250,6 +16264,7 @@ zeenews-fonts.s3.amazonaws.com
 .mql5.com
 .mr-apple.com.tw
 .mr-tireman.jp
+.mradx.net
 .mray.club
 .mrbdsm.com
 .mrc.ac.uk
@@ -20230,6 +20245,7 @@ zeenews-fonts.s3.amazonaws.com
 .rosetta.ac.uk
 .roshy.tv
 .roslin.ac.uk
+.rostaxi.org
 .rothamsted.ac.uk
 .rotherham-coll.ac.uk
 .rotherham.ac.uk
@@ -23018,10 +23034,8 @@ zeenews-fonts.s3.amazonaws.com
 .tiktokw.us
 .tilehill.ac.uk
 .tiltbrush.com
-.time.cloudflare.com
 .time.gov
 .time.nrc.ca
-.time.windows.com
 .timefxapp.com
 .timelinestoryteller.com
 .timesmembership.com
@@ -24440,6 +24454,7 @@ zeenews-fonts.s3.amazonaws.com
 .viznet.ac.uk
 .vjav.com
 .vjmedia.com.hk
+.vk-analytics.ru
 .vk-apps.com
 .vk-apps.ru
 .vk-cdn.me
@@ -24897,7 +24912,6 @@ zeenews-fonts.s3.amazonaws.com
 .web-instagram.net
 .web.app
 .web.dev
-.web.nebula-emby.com
 .webappfieldguide.com
 .webcam-teen.net
 .webcamgirls.chat
@@ -26052,6 +26066,8 @@ zeenews-fonts.s3.amazonaws.com
 .yammer.com
 .yamoon.club
 .yande.re
+.yandex-bank.net
+.yandex-images.clstorage.net
 .yandex.aero
 .yandex.az
 .yandex.by
@@ -26083,7 +26099,10 @@ zeenews-fonts.s3.amazonaws.com
 .yandex.tm
 .yandex.ua
 .yandex.uz
+.yandexadexchange.net
 .yandexcloud.net
+.yandexcom.net
+.yandexwebcache.org
 .yantaqu.com
 .yaohubaba.com
 .yaoimangaonline.com
