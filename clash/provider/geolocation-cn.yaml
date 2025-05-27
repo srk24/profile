@@ -2463,6 +2463,23 @@ payload:
     - .deppon.com.cn
     - .develenv.com
     - .devui.design
+    - .dewu-inc.com
+    - .dewu-inner.com
+    - .dewu-inner.net
+    - .dewu.co
+    - .dewu.com
+    - .dewu.net
+    - .dewuapp.cn
+    - .dewucdn.com
+    - .dewuhaowu.cn
+    - .dewuhd.cn
+    - .dewuhd.com
+    - .dewuhui.cn
+    - .dewuhui.com
+    - .dewumall.com
+    - .dewus.cn
+    - .dewuyouhui.cn
+    - .dewuyouhui.com
     - .dfcfw.com
     - .dfham.com
     - .dfkhgj.com
@@ -2632,6 +2649,7 @@ payload:
     - .dsp.simba.taobao.com
     - .dtsbc.com.cn
     - .dtstatic.com
+    - .du8.ltd
     - .duapp.net
     - .duapps.com
     - .duba.com
@@ -2659,6 +2677,10 @@ payload:
     - .duxiaomanfintech.com
     - .duxiaomantech.com
     - .duxiu.com
+    - .dw2.co
+    - .dw4.co
+    - .dwhhd.cn
+    - .dwhhd.com
     - .dwion.com
     - .dwjq.com.cn
     - .dwstatic.com
@@ -3078,6 +3100,9 @@ payload:
     - .ghzq.com.cn
     - .gia.jd.com
     - .gifshow.com
+    - .giftatdw.cn
+    - .giftatdw.com
+    - .giftattoday.com
     - .gigabyte.cn
     - .gijsq.com
     - .gimg.baidu.com
@@ -3159,6 +3184,9 @@ payload:
     - .greenxiazai.com
     - .greeyun.com
     - .growingio.com
+    - .growthsharebounce.cn
+    - .growthsharequestion.cn
+    - .growthsharetubular.cn
     - .grzq.com
     - .gsadds.com
     - .gsgh.cn
@@ -4977,6 +5005,7 @@ payload:
     - .pan.quark.cn
     - .pan.xunlei.com
     - .panasonic.cn
+    - .pandarzli.com
     - .pangolin-dsp-toutiao-b.com
     - .pangolin-dsp-toutiao.com
     - .pangolin-sdk-toutiao-b.com
@@ -4999,6 +5028,8 @@ payload:
     - .pddpic.com
     - .pearvideo.com
     - .peccn.com
+    - .pengyoudewu.cn
+    - .pengyoudewu.com
     - .people.cn
     - .people.com.cn
     - .pfp.sina.com.cn
@@ -5046,6 +5077,11 @@ payload:
     - .pkulaw.com
     - .pmphmooc.com
     - .pn1waq.com
+    - .poizon-inner.com
+    - .poizon-inner.net
+    - .poizon-support.com
+    - .poizon.com
+    - .poizon.net
     - .policy.video.iqiyi.com
     - .polyv.net
     - .portal101.cn
@@ -5462,6 +5498,8 @@ payload:
     - .shijiexia.com
     - .shimo.im
     - .shixiseng.com
+    - .shizhuang-inc.com
+    - .shizhuang-inc.net
     - .shmetro.com
     - .shopee.cn
     - .shopeesz.com
@@ -5894,6 +5932,9 @@ payload:
     - .tgprocs.net
     - .th.bing.com
     - .thecover.cn
+    - .theduapp.cn
+    - .theduapp.com
+    - .theduapp.com.cn
     - .thelarkcloud.com
     - .themisweeps.com
     - .thepaper.cn
@@ -6499,11 +6540,14 @@ payload:
     - .wo116114.com
     - .wo1wan.com
     - .woaihuoshan.com
+    - .wodehaodewu.cn
     - .wodingche.com
     - .wohst8.com
     - .wol.tv
     - .wolai.com
     - .womai.com
+    - .womendedw.cn
+    - .womendedw.com
     - .wondercv.com
     - .wonnder.com
     - .woocall.sina.com.cn
