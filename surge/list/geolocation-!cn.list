@@ -170,6 +170,7 @@ firebaselogging.googleapis.com
 firebaseperusertopics-pa.googleapis.com
 firebaseremoteconfig.googleapis.com
 firstsearch.oclc.org
+flightsimulator.azureedge.net
 fontshop-prod-responsive-images.s3.amazonaws.com
 foxnewsplayer-a.akamaihd.net
 gamedownloads-rockstargames-com.akamaized.net
@@ -273,6 +274,7 @@ practivate.adobe.newoa
 practivate.adobe.ntp
 prd-priconne-redive.akamaized.net
 preprod-publicca.googleapis.com
+prodforza.blob.core.windows.net
 production-openaicom-storage.azureedge.net
 psg-int-centralus.cloudapp.net
 psg-int-eastus.cloudapp.net
@@ -588,6 +590,8 @@ zeenews-fonts.s3.amazonaws.com
 .cisco
 .dclk
 .dell
+.devimages-cdn.apple.com
+.devstreaming-cdn.apple.com
 .doubleclick-cn.net
 .doubleclick.net
 .flickr
@@ -2789,6 +2793,7 @@ zeenews-fonts.s3.amazonaws.com
 .asmr.gay
 .asmrbuluo.com
 .asn-online.org
+.asobostudio.com
 .asp-cc.com
 .asp.net
 .aspbjournals.org
@@ -7200,13 +7205,11 @@ zeenews-fonts.s3.amazonaws.com
 .deviantclip.com
 .device-manager.us
 .devilsfilm.com
-.devimages-cdn.apple.com
 .devm2m.com
 .devolution.ac.uk
 .devopsassessment.net
 .devopsms.com
 .devsitetest.how
-.devstreaming-cdn.apple.com
 .devtools-paypal.com
 .dewcol.ac.uk
 .dewitwithdurex.com
@@ -9599,6 +9602,7 @@ zeenews-fonts.s3.amazonaws.com
 .flic.kr
 .flickr.com
 .flickr.net
+.flightsimulator.com
 .flipfap.com
 .flipnotestudio.com
 .flipshare.com
@@ -9682,6 +9686,7 @@ zeenews-fonts.s3.amazonaws.com
 .fortune.ac.uk
 .fortunecentre.ac.uk
 .fortuneinsight.com
+.forza.net
 .forzamotorsport.net
 .forzaracingchampionship.com
 .forzarc.com

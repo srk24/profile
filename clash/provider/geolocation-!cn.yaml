@@ -171,6 +171,7 @@ payload:
     - firebaseperusertopics-pa.googleapis.com
     - firebaseremoteconfig.googleapis.com
     - firstsearch.oclc.org
+    - flightsimulator.azureedge.net
     - fontshop-prod-responsive-images.s3.amazonaws.com
     - foxnewsplayer-a.akamaihd.net
     - gamedownloads-rockstargames-com.akamaized.net
@@ -274,6 +275,7 @@ payload:
     - practivate.adobe.ntp
     - prd-priconne-redive.akamaized.net
     - preprod-publicca.googleapis.com
+    - prodforza.blob.core.windows.net
     - production-openaicom-storage.azureedge.net
     - psg-int-centralus.cloudapp.net
     - psg-int-eastus.cloudapp.net
@@ -589,6 +591,8 @@ payload:
     - .cisco
     - .dclk
     - .dell
+    - .devimages-cdn.apple.com
+    - .devstreaming-cdn.apple.com
     - .doubleclick-cn.net
     - .doubleclick.net
     - .flickr
@@ -2790,6 +2794,7 @@ payload:
     - .asmr.gay
     - .asmrbuluo.com
     - .asn-online.org
+    - .asobostudio.com
     - .asp-cc.com
     - .asp.net
     - .aspbjournals.org
@@ -7201,13 +7206,11 @@ payload:
     - .deviantclip.com
     - .device-manager.us
     - .devilsfilm.com
-    - .devimages-cdn.apple.com
     - .devm2m.com
     - .devolution.ac.uk
     - .devopsassessment.net
     - .devopsms.com
     - .devsitetest.how
-    - .devstreaming-cdn.apple.com
     - .devtools-paypal.com
     - .dewcol.ac.uk
     - .dewitwithdurex.com
@@ -9600,6 +9603,7 @@ payload:
     - .flic.kr
     - .flickr.com
     - .flickr.net
+    - .flightsimulator.com
     - .flipfap.com
     - .flipnotestudio.com
     - .flipshare.com
@@ -9683,6 +9687,7 @@ payload:
     - .fortune.ac.uk
     - .fortunecentre.ac.uk
     - .fortuneinsight.com
+    - .forza.net
     - .forzamotorsport.net
     - .forzaracingchampionship.com
     - .forzarc.com
