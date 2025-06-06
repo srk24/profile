@@ -589,6 +589,7 @@ payload:
     - .cern
     - .chrome
     - .cisco
+    - .configuration.apple.com
     - .dclk
     - .dell
     - .devimages-cdn.apple.com
@@ -9361,6 +9362,7 @@ payload:
     - .fcfacebook.com
     - .fcot.ac.uk
     - .fcrt.ac.uk
+    - .fcs-keys-pub-prod.cdn-apple.com
     - .fcw.xxx
     - .fcww0.com
     - .fdacebook.info
@@ -10279,6 +10281,8 @@ payload:
     - .gda.ac.uk
     - .gdansk-amazon.com
     - .gdian-dh.mom
+    - .gdmf-ados.apple.com
+    - .gdmf.apple.com
     - .gdsrx888.com
     - .gears5.com
     - .gearspop.com
@@ -10605,8 +10609,6 @@ payload:
     - .gnailapp.sbs
     - .gnatwork.ac.uk
     - .gnews.org
-    - .gnf-mdn.apple.com
-    - .gnf-mr.apple.com
     - .gnom-cham.com
     - .gnu.org
     - .gnzi.xyz
@@ -11060,6 +11062,7 @@ payload:
     - .gslink.us
     - .gsmd.ac.uk
     - .gsmlondon.ac.uk
+    - .gsra.apple.com
     - .gsrc.io
     - .gssw.ac.uk
     - .gstatic.com
@@ -17588,7 +17591,6 @@ payload:
     - .nrooms-dh.sbs
     - .nrp.ac.uk
     - .nrs.ac.uk
-    - .ns.itunes.apple.com
     - .nsad.ac.uk
     - .nsals.ac.uk
     - .nsamr.ac.uk
@@ -22582,7 +22584,6 @@ payload:
     - .swoosh.com
     - .swoosh.tv
     - .sworcs.ac.uk
-    - .swpost.apple.com
     - .swpr.livedoor.blog
     - .swrac.ac.uk
     - .swtor.com
@@ -25358,6 +25359,7 @@ payload:
     - .wkap.nl
     - .wkc.ac.uk
     - .wkcic.ac.uk
+    - .wkms-public.apple.com
     - .wlc.ac.uk
     - .wlcbms.ac.uk
     - .wlcbs.ac.uk
