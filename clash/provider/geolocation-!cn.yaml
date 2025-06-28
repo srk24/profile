@@ -190,9 +190,11 @@ payload:
     - hlrcv.stage.adobe.com
     - hls-amt.itunes.apple.com
     - hls.itunes.apple.com
+    - holoxx.f5.si
     - homebrew.bintray.com
     - hpefonts.s3.amazonaws.com
     - hpstore.corpmerchandise.com
+    - hub.slarker.me
     - hulu.playback.edge.bamgrid.com
     - i.jeded.com
     - img-prod-cms-rt-microsoft-com.akamaized.net
@@ -285,6 +287,22 @@ payload:
     - pvr-hamivideo.cdn.hinet.net
     - qualcomm.sc.omtrdc.net
     - rink.hockeyapp.net
+    - rss.4040940.xyz
+    - rss.datuan.dev
+    - rss.littlebaby.life
+    - rss.owo.nz
+    - rss.wudifeixue.com
+    - rsshub.asailor.org
+    - rsshub.email-once.com
+    - rsshub.henry.wang
+    - rsshub.isrss.com
+    - rsshub.ktachibana.party
+    - rsshub.pseudoyu.com
+    - rsshub.rss.tips
+    - rsshub.rssforever.com
+    - rsshub.umzzz.com
+    - rsshub.woodland.cafe
+    - rsshub2.asailor.org
     - rtm.tnt-ea.com
     - sa78gs.wpc.edgecastcdn.net
     - scc.ott.hinet.net
@@ -564,6 +582,7 @@ payload:
     - wwis-dubc1-vip98.adobe.com
     - wwis-dubc1-vip99.adobe.com
     - www-cdn.icloud.com.akadns.net
+    - yangzhi.app
     - zeenews-fonts.s3.amazonaws.com
     - .2mdn-cn.net
     - .2mdn.net
