@@ -14,6 +14,7 @@ payload:
     - ads3-normal-hl.zijieapi.com
     - ads5-normal-hl.zijieapi.com
     - adservice.google.com
+    - afcs.dell.com
     - ai.zhaomi.cn
     - alibaba.cdn.steampipe.steamcontent.com
     - amp-api-edge-lb-cn.itunes-apple.com.akadns.net
@@ -105,6 +106,7 @@ payload:
     - client-api.itunes.apple.com
     - clientflow.apple.com
     - clientflow.apple.com.akadns.net
+    - clientperipherals.dell.com
     - clientservices.googleapis.com
     - cma.itunes.apple.com
     - cn-smp-paymentservices.apple.com
@@ -128,8 +130,10 @@ payload:
     - cstat.cdn-apple.com
     - ctldl.windowsupdate.com
     - cueme-api.quark.cn
+    - customization-cdn.dell.com
     - dartsearch-cn.net
     - dd-cdn.origin-apple.com.akadns.net
+    - dds.dell.com
     - dejavu.apple.com
     - devblogs.microsoft.com
     - developer.microsoft.com
@@ -137,6 +141,7 @@ payload:
     - devstreaming-cdn.apple.com
     - dg-meta.video.google.com
     - discussionschinese.apple.com
+    - dl.dell.com
     - dl.google.com
     - dl.l.google.com
     - docs.microsoft.com
@@ -150,22 +155,32 @@ payload:
     - download.visualstudio.microsoft.com
     - downloaddispatch.itunes.apple.com
     - e8aeb8bbdbbd7.cdn.sohucs.com
+    - ea2cn-dev-outlet.dell.com
+    - ea2cn-prod-outlet.dell.com
+    - ea2cn-staging-outlet.dell.com
     - emmapplecodevice.googleapis.com
     - emoi-cncdn.bing.com
     - enrichgw.10010.com
     - epicgames-download1-1251447533.file.myqcloud.com
     - experiments.apple.com
     - f.c2r.ts.cdn.office.net
+    - fcs.dell.com
     - fides-pol.apple.com
     - firebase-settings.crashlytics.com
     - fontfiles.googleapis.com
     - fonts.googleapis.com
     - fonts.gstatic.com
     - fs.microsoft.com
+    - fta.dell.com
+    - ftaapj.dell.com
+    - ftaemea.dell.com
+    - ftasitapj.dell.com
     - g0.gstatic.com
     - g1.gstatic.com
     - g2.gstatic.com
     - g3.gstatic.com
+    - gbxgateway-dev.dell.com
+    - gbxgateway.dell.com
     - geetest.datasink.sensorsdata.cn
     - go.corp.google.com
     - gog-cdn-fastly.gog.com
@@ -224,6 +239,7 @@ payload:
     - hellowebfonts.oss-cn-beijing.aliyuncs.com
     - hospital.pku.edu.cn
     - hs.wosms.cn
+    - i.dell.com
     - i.pki.goog
     - icloud-cdn.icloud.com.akadns.net
     - icloud.cdn-apple.com
@@ -292,6 +308,7 @@ payload:
     - music.apple.com
     - myapp.itunes.apple.com
     - myvs.download.prss.microsoft.com
+    - nexus.dell.com
     - np-edge.itunes.apple.com
     - ntp.aliyun.com
     - ntp.tencent.com
@@ -321,6 +338,7 @@ payload:
     - oscdn.origin-apple.com.akadns.net
     - osxapps.itunes.apple.com
     - osxapps.itunes.g.aaplimg.com
+    - p.cdn.persaas.dell.com
     - p1-juejin.byteimg.com
     - p2-juejin.byteimg.com
     - p3-ad-sign.byteimg.com
@@ -389,6 +407,7 @@ payload:
     - safebrowsing-cache.google.com
     - safebrowsing.googleapis.com
     - scanservice1.qcpp1.net
+    - scene7-cdn.dell.com
     - sdx.microsoft.com
     - se-edge.itunes.apple.com
     - se2.itunes.apple.com
@@ -402,9 +421,13 @@ payload:
     - sh-pod2-smp-device.apple.com
     - shazam-insights.cdn-apple.com
     - shell.cdn.office.net
+    - si.cdn.dell.com
     - silverlight.dlservice.microsoft.com
     - slupdate.dlservice.microsoft.com
+    - sm.dell.com
     - smp-device-content.apple.com
+    - snp.cdn.dell.com
+    - snpi.dell.com
     - software.download.prss.microsoft.com
     - sp.itunes.apple.com
     - ss.bjmu.edu.cn
@@ -437,6 +460,7 @@ payload:
     - sup.l.google.com
     - support-china.apple-support.akadns.net
     - support.apple.com
+    - supportassist.dell.com
     - surface.downloads.prss.microsoft.com
     - swallow-apple-com.v.aaplimg.com
     - swallow.apple.com
@@ -486,11 +510,13 @@ payload:
     - wlog.kuaishou.com
     - wscont1.apps.microsoft.com
     - wscont2.apps.microsoft.com
+    - www-csb.dell.com
     - www-google-analytics.l.google.com
     - www-googletagmanager.l.google.com
     - www.amd.com
     - www.apple.com
     - www.apple.com.edgekey.net.globalredir.akadns.net
+    - www.dell.com
     - www.destinationurl.com
     - www.entrust.cn
     - www.gstatic.com
@@ -1000,6 +1026,7 @@ payload:
     - .adx.xiaodutv.com
     - .adxvip.com
     - .ae.bdstatic.com
+    - .aegis.qq.com
     - .afd.baidu.com
     - .afdian.com
     - .afdian.net
@@ -1112,6 +1139,7 @@ payload:
     - .aliyun-iot-share.com
     - .aliyun.com
     - .aliyuncdn.com
+    - .aliyundrive.cloud
     - .aliyundrive.com
     - .aliyundrive.net
     - .aliyunfile.com
@@ -2231,28 +2259,12 @@ payload:
     - .cmpassport.com
     - .cmvideo.cn
     - .cn-cdn1.skymansion.net
-    - .cn-east-2.myhuaweicloud.com
-    - .cn-east-3.myhuaweicloud.com
-    - .cn-east-4.myhuaweicloud.com
-    - .cn-east-5.myhuaweicloud.com
-    - .cn-north-1.myhuaweicloud.com
-    - .cn-north-11.myhuaweicloud.com
-    - .cn-north-2.myhuaweicloud.com
-    - .cn-north-3.myhuaweicloud.com
-    - .cn-north-4.myhuaweicloud.com
-    - .cn-north-5.myhuaweicloud.com
-    - .cn-north-6.myhuaweicloud.com
-    - .cn-north-9.myhuaweicloud.com
-    - .cn-northeast-1.myhuaweicloud.com
-    - .cn-south-1.myhuaweicloud.com
-    - .cn-south-2.myhuaweicloud.com
-    - .cn-south-4.myhuaweicloud.com
-    - .cn-southwest-2.myhuaweicloud.com
     - .cn.bing.com
     - .cn.bing.net
     - .cn.mm.bing.net
     - .cn.pool.ntp.org
     - .cnanzhi.com
+    - .cnb.cool
     - .cnbksy.com
     - .cnblogs.com
     - .cncqcloud.com
@@ -2309,7 +2321,6 @@ payload:
     - .coolbuy.com
     - .cooldock.com
     - .coolsite.vip
-    - .copy-manga.com
     - .cosbj.myqcloud.com
     - .coscd.myqcloud.com
     - .cosgz.myqcloud.com
@@ -2463,6 +2474,12 @@ payload:
     - .deepin.org
     - .deepinos.org
     - .deepseek.com
+    - .dell-alw.com
+    - .dell-brand.com
+    - .dell.com.cn
+    - .dellemc.com.cn
+    - .dellmobile.cn
+    - .delltechnologies.com.cn
     - .dengguobi.com
     - .deppon.com
     - .deppon.com.cn
@@ -3060,6 +3077,7 @@ payload:
     - .fullgoal.com.cn
     - .fun.tv
     - .funcdn.com
+    - .functiongraph.run
     - .fund123.cn
     - .funjsq.com
     - .funnycore.com
@@ -4552,9 +4570,6 @@ payload:
     - .mamecn.com
     - .management-azure-devices-provisioning.cn
     - .management-azure-devices.cn
-    - .mangacopy.com
-    - .mangafuna.xyz
-    - .mangafunb.fun
     - .manhuatai.com
     - .manmanbuy.com
     - .manmankan.com
@@ -4801,6 +4816,7 @@ payload:
     - .myhuaweicloud-obs.cn
     - .myhuaweicloud-obs.com
     - .myhuaweicloud.cn
+    - .myhuaweicloud.com
     - .myhwcdn.cn
     - .myhwcdn.com
     - .myhwcloudlive.com
@@ -5143,6 +5159,7 @@ payload:
     - .pkoplink.com
     - .pkuh6.cn
     - .pkulaw.com
+    - .platform.dell.com
     - .pmphmooc.com
     - .pn1waq.com
     - .poizon-inner.com
@@ -5413,6 +5430,7 @@ payload:
     - .roblox.cn
     - .roblox.qq.com
     - .robloxdev.cn
+    - .robomaster.com
     - .roborock.com
     - .rock-chips.com
     - .rockyenglish.com
@@ -5434,6 +5452,7 @@ payload:
     - .ruby-china.org
     - .rubyconfchina.org
     - .ruguoapp.com
+    - .rumt-zh.com
     - .runoob.com
     - .runsheng.com
     - .ruseer.com
@@ -6441,6 +6460,7 @@ payload:
     - .volcfcdn.com
     - .volcfcdnbyte.com
     - .volcfcdndvs.com
+    - .volcfcdndvs1.com
     - .volcfcdnplus.com
     - .volcfcdnrd.com
     - .volcfcdnsc.com
