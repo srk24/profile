@@ -50,7 +50,7 @@ func main() {
 		"gdt.qq.com",
 		"open.e.kuaishou.cn",
 		"open.e.kuaishou.com",
-		"cnlogs.umeng.com",
+		"umeng.com",
 		"umengcloud.com",
 	}
 
