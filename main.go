@@ -52,6 +52,7 @@ func main() {
 		"open.e.kuaishou.com",
 		"umeng.com",
 		"umengcloud.com",
+		"fapi.xdrun.com",
 	}
 
 	if err := os.MkdirAll("./sing/tmp/", 0755); err != nil {
