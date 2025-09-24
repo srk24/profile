@@ -173,7 +173,7 @@ func processGeositeData(block_list []string) {
 func processAdsData(block_list []string) {
 	sources := []string{
 		"https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs",
-		"https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
+		// "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
 	}
 
 	jsonFiles := make([]string, len(sources))
