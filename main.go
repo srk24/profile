@@ -48,8 +48,8 @@ func main() {
 		"tqt.weibo.cn",
 		"qzs.gdtimg.com",
 		"gdt.qq.com",
-		"open.e.kuaishou.cn",
-		"open.e.kuaishou.com",
+		"e.kuaishou.cn",
+		"e.kuaishou.com",
 		"umeng.com",
 		"umengcloud.com",
 		"fapi.xdrun.com",
@@ -67,6 +67,9 @@ func main() {
 
 	// 处理AdGuard数据
 	processAdGuard(block_list)
+
+	// 处理AdRules数据
+	processAdRules(block_list)
 
 	// 处理地理位置数据
 	processGeositeData(block_list)
@@ -227,6 +230,34 @@ func processAdsData(block_list []string) {
 	}()
 
 	wg.Wait()
+}
+
+func processAdRules(block_list []string) {
+	src := "https://github.com/Cats-Team/AdRules/raw/main/adrules_domainset.txt"
+	output := "./sing/tmp/adrules_domainset.txt"
+
+	f, err := Download(src, output)
+	if err != nil {
+		log.Printf("Failed to download AdRules domain set: %v", err)
+		return
+	}
+
+	domain, domain_suffix, err := UnmarshalClashDomainSetFile(f.Name())
+	if err != nil {
+		log.Printf("Failed to unmarshal AdRules domain set: %v", err)
+		return
+	}
+
+	// 添加屏蔽列表
+	for _, item := range block_list {
+		if !slices.Contains(domain_suffix, item) {
+			domain_suffix = append(domain_suffix, item)
+		}
+	}
+
+	if err := GenerateSurgeFile("./surge/list/adrules.list", domain, domain_suffix); err != nil {
+		log.Printf("Failed to generate adrules surge file: %v", err)
+	}
 }
 
 func processNonCNGeositeData() {
@@ -404,6 +435,34 @@ func UnmarshalSurgeFile(path string) (domain, domain_suffix, domain_keyword, dom
 		}
 	}
 	return
+}
+
+func UnmarshalClashDomainSetFile(path string) (domain, domain_suffix []string, err error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return nil, nil, fmt.Errorf("failed to open file: %w", err)
+	}
+	defer file.Close()
+
+	byteValue, _ := io.ReadAll(file)
+	for line := range strings.SplitSeq(string(byteValue), "\n") {
+		line = strings.TrimSpace(line)
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+
+		if trimmed, ok := strings.CutPrefix(line, "+."); ok {
+			domain_suffix = append(domain_suffix, trimmed)
+		} else {
+			domain = append(domain, line)
+		}
+	}
+
+	if len(domain) == 0 {
+		return nil, nil, fmt.Errorf("no valid domain found")
+	}
+
+	return domain, domain_suffix, nil
 }
 
 func GenerateSurgeFile(filename string, domain, domainSuffix []string) error {
