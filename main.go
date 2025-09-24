@@ -458,7 +458,7 @@ func UnmarshalClashDomainSetFile(path string) (domain, domain_suffix []string, e
 		}
 	}
 
-	if len(domain) == 0 {
+	if len(domain) == 0 && len(domain_suffix) == 0 {
 		return nil, nil, fmt.Errorf("no valid domain found")
 	}
 
