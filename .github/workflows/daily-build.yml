@@ -41,6 +41,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status -s)" ]; then
+            git add .
             git commit -am "${{ env.GEN_MSG }}"
             git push -f -u origin master
           fi
