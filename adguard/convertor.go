@@ -63,9 +63,7 @@ parseLoop:
 		}
 		
 		// Remove trailing pipe if exists
-		if strings.HasSuffix(line, "|") {
-			line = line[:len(line)-1]
-		}
+		line = strings.TrimSuffix(line, "|")
 		
 		// Initialize rule properties
 		var isExclude, isSuffix, hasStart, hasEnd, isRegexp, isImportant bool
@@ -114,9 +112,7 @@ parseLoop:
 		}
 		
 		// Remove trailing pipe again if exists
-		if strings.HasSuffix(line, "|") {
-			line = line[:len(line)-1]
-		}
+		line = strings.TrimSuffix(line, "|")
 		
 		// Check for domain suffix notation
 		if strings.HasPrefix(line, "||") {
