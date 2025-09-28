@@ -7232,8 +7232,7 @@
         "zymo.mps.weibo.com",
         "zz.bdstatic.com",
         "zzdtec.com",
-        "zzy1.quyaoya.com",
-        "api.github.com"
+        "zzy1.quyaoya.com"
       ],
       "domain_regex": [
         "\\.(.+-)?ap-chongqing(-.+)?\\.myqcloud\\.com$",
