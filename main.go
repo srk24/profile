@@ -61,7 +61,6 @@ func main() {
 	}
 
 	direct_list := []string{
-		"api.github.com",
 	}
 
 	proxy_list := []string{
