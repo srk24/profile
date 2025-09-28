@@ -53,6 +53,20 @@ func main() {
 		"umeng.com",
 		"umengcloud.com",
 		"fapi.xdrun.com",
+		"mix-mind.com",
+		"in-neo.com",
+		"rtbasia.com",
+		"gridsum.com",
+		"addnewer.com",
+	}
+
+	direct_list := []string{
+		"api.github.com",
+	}
+
+	proxy_list := []string{
+		"alicesw.com",
+		"uhdnow.com",
 	}
 
 	if err := os.MkdirAll("./sing/tmp/", 0755); err != nil {
@@ -71,8 +85,14 @@ func main() {
 	// 处理AdRules数据
 	processAdRules(block_list)
 
-	// 处理地理位置数据
-	processGeositeData(block_list)
+	// 处理 v2ray 广告和 HTTP DNS 数据
+	processAdsData(block_list)
+
+	// 处理 v2ray 非中国地理位置数据
+	processNonCNGeositeData(proxy_list)
+
+	// 处理 v2ray 中国地理位置数据
+	processCNGeositeData(direct_list)
 
 	// 清理临时目录
 	defer os.RemoveAll("./sing/tmp/")
@@ -143,31 +163,6 @@ func processAdGuard(block_list []string) {
 	if err := os.Remove(f.Name()); err != nil {
 		log.Printf("Failed to remove temporary file: %v", err)
 	}
-}
-
-func processGeositeData(block_list []string) {
-	var wg sync.WaitGroup
-	wg.Add(3)
-
-	// 处理广告和HTTP DNS数据
-	go func() {
-		defer wg.Done()
-		processAdsData(block_list)
-	}()
-
-	// 处理非中国地理位置数据
-	go func() {
-		defer wg.Done()
-		processNonCNGeositeData()
-	}()
-
-	// 处理中国地理位置数据
-	go func() {
-		defer wg.Done()
-		processCNGeositeData()
-	}()
-
-	wg.Wait()
 }
 
 func processAdsData(block_list []string) {
@@ -260,7 +255,7 @@ func processAdRules(block_list []string) {
 	}
 }
 
-func processNonCNGeositeData() {
+func processNonCNGeositeData(proxy_list []string) {
 	src := "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs"
 	output := "./sing/tmp/geosite-geolocation-!cn.srs"
 
@@ -275,16 +270,33 @@ func processNonCNGeositeData() {
 		return
 	}
 
-	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-!cn.json")
+	domain, domain_suffix, domain_keyword, domain_regex := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-!cn.json")
+
+	// 添加代理列表
+	for _, item := range proxy_list {
+		if !slices.Contains(domain, item) && !slices.Contains(domain_suffix, item) {
+			domain_suffix = append(domain_suffix, item)
+		}
+	}
 
 	// 并行生成各种格式文件
 	var wg sync.WaitGroup
-	wg.Add(3)
+	wg.Add(4)
 
 	go func() {
 		defer wg.Done()
 		if err := GenerateSurgeFile("./surge/list/geolocation-!cn.list", domain, domain_suffix); err != nil {
 			log.Printf("Failed to generate non-CN surge file: %v", err)
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+		if err := GenerateSingboxFile("./sing/ruleset/geolocation-!cn.json", domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
+		log.Printf("Failed to generate singbox file: %v", err)
+		}
+		if err := CompileSingboxFile("./sing/ruleset/geolocation-!cn.json"); err != nil {
+			log.Printf("Failed to compile singbox file: %v", err)
 		}
 	}()
 
@@ -305,7 +317,7 @@ func processNonCNGeositeData() {
 	wg.Wait()
 }
 
-func processCNGeositeData() {
+func processCNGeositeData(direct_list []string) {
 	src := "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs"
 	output := "./sing/tmp/geosite-geolocation-cn.srs"
 
@@ -320,16 +332,33 @@ func processCNGeositeData() {
 		return
 	}
 
-	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-cn.json")
+	domain, domain_suffix, domain_keyword, domain_regex := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-cn.json")
+
+	// 添加直连列表
+	for _, item := range direct_list {
+		if !slices.Contains(domain, item) && !slices.Contains(domain_suffix, item) {
+			domain_suffix = append(domain_suffix, item)
+		}
+	}
 
 	// 并行生成各种格式文件
 	var wg sync.WaitGroup
-	wg.Add(3)
+	wg.Add(4)
 
 	go func() {
 		defer wg.Done()
 		if err := GenerateSurgeFile("./surge/list/geolocation-cn.list", domain, domain_suffix); err != nil {
 			log.Printf("Failed to generate CN surge file: %v", err)
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+		if err := GenerateSingboxFile("./sing/ruleset/geolocation-cn.json", domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
+		log.Printf("Failed to generate singbox file: %v", err)
+		}
+		if err := CompileSingboxFile("./sing/ruleset/geolocation-cn.json"); err != nil {
+			log.Printf("Failed to compile singbox file: %v", err)
 		}
 	}()
 
