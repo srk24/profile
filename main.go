@@ -47,6 +47,7 @@ func main() {
 		"miaozhen.com",
 		"tqt.weibo.cn",
 		"qzs.gdtimg.com",
+		"adsmind.gdtimg.com",
 		"gdt.qq.com",
 		"e.kuaishou.cn",
 		"e.kuaishou.com",
