@@ -178,6 +178,7 @@ gamedownloads-rockstargames-com.akamaized.net
 gamer-cds.cdn.hinet.net
 gamer2-cds.cdn.hinet.net
 gigabyte2.azureedge.net
+github-api.arkoselabs.com
 github-cloud.s3.amazonaws.com
 gitlab-assets.oss-cn-hongkong.aliyuncs.com
 google-ohttp-relay-safebrowsing.fastly-edge.com
@@ -397,6 +398,7 @@ statics-marketingsites-eus-ms-com.akamaized.net
 statics-marketingsites-wcus-ms-com.akamaized.net
 steambroadcast.akamaized.net
 steamcdn-a.akamaihd.net
+steamcloudsweden.blob.core.windows.net
 steamcommunity-a.akamaihd.net
 steamcommunity-a.akamaihd.net.edgesuite.net
 steammobile.akamaized.net
@@ -4819,6 +4821,7 @@ zeenews-fonts.s3.amazonaws.com
 .bnbstatic.com
 .bnef.com
 .bnext.com.tw
+.bntrace.com
 .bnu.ac.uk
 .boa.ac.uk
 .bobble.ac.uk
@@ -6241,6 +6244,8 @@ zeenews-fonts.s3.amazonaws.com
 .classics.ac.uk
 .classymomsex.com
 .claude.ai
+.claude.com
+.claudemcpclient.com
 .claudeusercontent.com
 .clc-london.ac.uk
 .clco.cc
@@ -17397,6 +17402,7 @@ zeenews-fonts.s3.amazonaws.com
 .nfscdict.com
 .nfscofficial.com
 .nfsworld.com
+.nftstatic.com
 .nftstorage.link
 .ngc.ac.uk
 .ngeo.com
@@ -18143,6 +18149,7 @@ zeenews-fonts.s3.amazonaws.com
 .ocsp-certum.com
 .ocsp-responder.com
 .ocsp.verisign.com
+.octocaptcha.com
 .ocul.us
 .oculus-china.com
 .oculus.com
