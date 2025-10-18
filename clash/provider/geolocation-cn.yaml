@@ -576,11 +576,22 @@ payload:
     - .116cd.net
     - .119you.com
     - .12306.cn
+    - .123245.com
+    - .123254.com
+    - .123294.com
     - .1234567.com.cn
+    - .123624.com
+    - .123641.com
+    - .123842.com
+    - .123860.com
+    - .123912.com
+    - .123952.com
+    - .123957.com
     - .123juzi.com
     - .123juzi.net
     - .123pan.cn
     - .123pan.com
+    - .123panpay.com
     - .123u.com
     - .126.com
     - .126.link
@@ -954,6 +965,7 @@ payload:
     - .activity04.com
     - .activity05.com
     - .activitybyte.com
+    - .acwifi.net
     - .acwing.com
     - .ad.duapps.com
     - .ad.intl.xiaomi.com
@@ -1201,6 +1213,8 @@ payload:
     - .anitama.net
     - .anjuke.com
     - .anjukestatic.com
+    - .anlaiye.com
+    - .anlaiye.com.cn
     - .anmo.com
     - .anquan.org
     - .anquanke.com
@@ -1221,6 +1235,8 @@ payload:
     - .apaas-zone-test.com
     - .apabi.com
     - .apcdns.net
+    - .apdcdn.com
+    - .apdcdn.net
     - .api.apps.sina.cn
     - .api.game.letvstore.com
     - .api.mobula.sdk.duapps.com
@@ -1288,6 +1304,7 @@ payload:
     - .asczwa.com
     - .asczxcefsv.com
     - .asfiovnxocqpcry.com.cn
+    - .asklib.com
     - .asktug.com
     - .asmlink.cn
     - .assoc-amazon.cn
@@ -1440,8 +1457,6 @@ payload:
     - .bcebos.com
     - .bcfmglobal.com
     - .bcvbw.com
-    - .bcy.net
-    - .bcyimg.com
     - .bczcdn.com
     - .bczeducation.cn
     - .bdactivity.com
@@ -1454,6 +1469,7 @@ payload:
     - .bdispatch.com
     - .bdispatch.net
     - .bdmozon.com
+    - .bdmyandex.com
     - .bdns-api-test.net
     - .bdns-boe.com
     - .bdns-boe.net
@@ -1502,6 +1518,7 @@ payload:
     - .beisenapp.com
     - .beisencloud.com
     - .beisenpaas.com
+    - .bendibao.com
     - .benfuip.com
     - .bengbeng.com
     - .benghuai.com
@@ -1655,6 +1672,8 @@ payload:
     - .build9s.io
     - .burningvocabulary.cn
     - .burningvocabulary.com
+    - .butterfly-static.cn
+    - .butterflyai.cn
     - .bvfcdn.com
     - .bx0byte.com
     - .bx1k.com
@@ -1759,6 +1778,7 @@ payload:
     - .bytetstatic.com
     - .bytetstatic.net
     - .bytevalk.com
+    - .bytevcloudapi.com
     - .bytevcloudvod.com
     - .bytevdn-boe.com
     - .bytevdn.com
@@ -1819,6 +1839,7 @@ payload:
     - .ccf.org.cn
     - .ccfund.com.cn
     - .ccnew.com
+    - .ccrgt.com
     - .ccspeed.cn
     - .cctalk.com
     - .cctv.cn
@@ -2009,7 +2030,9 @@ payload:
     - .chaoxingv.com
     - .chashebao.com
     - .chatglm.cn
+    - .chaz.fun
     - .chazhengla.com
+    - .chaziyu.com
     - .chdi.com.cn
     - .che168.com
     - .checkzeit.com
@@ -2025,6 +2048,7 @@ payload:
     - .chicalot.cn
     - .china-chair.com
     - .china-nengyuan.com
+    - .china-tower.com
     - .china.com
     - .chinaamc.com
     - .chinabank.com.cn
@@ -2059,6 +2083,7 @@ payload:
     - .chinastock.com.cn
     - .chinatelecom-h.com
     - .chinatelecom.com.cn
+    - .chinatowercom.cn
     - .chinatranslation.net
     - .chinaunicom.cn
     - .chinaunicom.com
@@ -2079,16 +2104,19 @@ payload:
     - .chn.cn
     - .chndoi.org
     - .chntel.com
+    - .chongbuluo.com
     - .chongdiantou.com
     - .chouti.com
     - .chrstatic.com
     - .chsi.cn
     - .chsi.com.cn
+    - .chuangcdn.com
     - .chuangxin.com
     - .chuanke.com
     - .chuansong.me
     - .chuansongme.com
     - .chugou360.com
+    - .chujingapp.com
     - .chushou.tv
     - .chuyu.me
     - .cib-fund.com.cn
@@ -2296,6 +2324,7 @@ payload:
     - .cocodiy.com
     - .code666.com
     - .codechina.net
+    - .codeloop.top
     - .coding.me
     - .coding.net
     - .codm.com
@@ -2331,6 +2360,10 @@ payload:
     - .cowlevel.net
     - .cowtransfer.com
     - .coze.cn
+    - .coze.site
+    - .cozebaas.cn
+    - .cozefn.cn
+    - .cozeide.cn
     - .cpatrk.net
     - .cppblog.com
     - .cpppf.org
@@ -2543,6 +2576,7 @@ payload:
     - .dj99.com
     - .djdjapp.com
     - .dji.com
+    - .dji.ink
     - .dji.net
     - .djicdn.com
     - .djiits.com
@@ -2616,6 +2650,7 @@ payload:
     - .dongguantoday.com
     - .dongjiao.cc
     - .dongjiaoapp.com
+    - .dongqiudi.com
     - .dongting.com
     - .dopa.com
     - .doservice.com
@@ -2628,10 +2663,12 @@ payload:
     - .douban.fm
     - .doubanio.com
     - .doubao.com
+    - .doubaocdn.com
     - .doubo03.com
     - .doucang.cn
     - .doucang.com
     - .douding.cn
+    - .doudou.com
     - .douxie.com
     - .douyin.com
     - .douyinact.com
@@ -3415,6 +3452,7 @@ payload:
     - .hftfund.com
     - .hfzq.com.cn
     - .hhtravel.com
+    - .hi-butterfly.cn
     - .hiascend.cn
     - .hiascend.com
     - .hichina.com
@@ -3486,6 +3524,7 @@ payload:
     - .hsbcinsurance.com.cn
     - .hsbcqh.com.cn
     - .hsfund.com
+    - .hsqh.net
     - .htcases.com
     - .hteacher.net
     - .htjsq.com
@@ -3660,7 +3699,9 @@ payload:
     - .iask.com
     - .ibaotu.com
     - .ibcet.org
+    - .ibdxiguaimg.com
     - .ibdxigualive.com
+    - .ibdxiguastatic.com
     - .ibdxiguavod.com
     - .ibidian.com
     - .ibobscs.com
@@ -3755,11 +3796,14 @@ payload:
     - .im9.com
     - .imc-oneaccess.cn
     - .imcapptest.com
+    - .imcome.net
+    - .imcoming.com
     - .imedao.com
     - .img-x.jd.com
     - .img.taotaosou.cn
     - .img01.taotaosou.cn
     - .img4399.com
+    - .imgcdc.com
     - .imgo.tv
     - .imgstat.baidu.com
     - .immersivetranslate.com
@@ -4159,10 +4203,12 @@ payload:
     - .kanbox.com
     - .kanimg.com
     - .kankanews.com
+    - .kankannews.com
     - .kantianqi.net
     - .kanxue.com
     - .kanzhun.com
     - .kaola.com
+    - .kaolacdn.com
     - .kaopu001.com
     - .kata.com.cn
     - .kc9.cn
@@ -4198,6 +4244,7 @@ payload:
     - .kjwugx.com
     - .kk1.vip
     - .kkmh.com
+    - .kksmg.com
     - .kkzj.com
     - .klpbbs.com
     - .km6g.cn
@@ -4430,7 +4477,6 @@ payload:
     - .letv.com
     - .letvcdn.com
     - .letvimg.com
-    - .lf-rc1.yhgfb-cn-static.com
     - .lgstatic.com
     - .lhzq.com
     - .liangxinyao.com
@@ -4450,6 +4496,7 @@ payload:
     - .lieyunwang.com
     - .lightonus.com
     - .likuso.com
+    - .limestart.cn
     - .linakesi.cn
     - .linakesi.com
     - .lingkou.cn
@@ -4574,6 +4621,7 @@ payload:
     - .manmanbuy.com
     - .manmankan.com
     - .maoercdn.com
+    - .maoxiangai.com
     - .maoyan.com
     - .maoyun.com
     - .maoyuncloud.cn
@@ -4582,6 +4630,7 @@ payload:
     - .mariokart.cn
     - .mariokart.com.cn
     - .marscode.cn
+    - .marscode.com.cn
     - .mashort.cn
     - .match.p4p.1688.com
     - .material.istreamsche.com
@@ -4594,10 +4643,14 @@ payload:
     - .mbalib.com
     - .mbdlog.iqiyi.com
     - .mcadn.cn
+    - .mcbaas.work
     - .mcbang.com
     - .mcbbs.net
     - .mcchcdn.com
+    - .mcdemo.show
+    - .mchost.guru
     - .mcmod.cn
+    - .mcprev.cn
     - .mcs.snssdk.com
     - .mdcdn.cn
     - .mdeer.com
@@ -4638,6 +4691,7 @@ payload:
     - .mgtv.com
     - .mhystatic.com
     - .mhyurl.cn
+    - .mi-idc.com
     - .mi-img.com
     - .mi.com
     - .miao.baidu.com
@@ -4828,6 +4882,7 @@ payload:
     - .myoppo.com
     - .mypaas.com
     - .mypaas.com.cn
+    - .myparallelstory.com
     - .myqcloud.com
     - .myqnapcloud.cn
     - .myshow360.net
@@ -4923,6 +4978,7 @@ payload:
     - .nintendoswitch.com.cn
     - .njcb.com.cn
     - .njzq.com.cn
+    - .nlark.com
     - .nmc.cn
     - .nmrdata.com
     - .nnthink.com
@@ -5109,6 +5165,7 @@ payload:
     - .pchome.net
     - .pconline.com.cn
     - .pcpop.com
+    - .pddcdn.com
     - .pddpic.com
     - .pearvideo.com
     - .peccn.com
@@ -5135,6 +5192,7 @@ payload:
     - .phpwind.com
     - .phpwind.net
     - .piaoliang.com
+    - .picpic-ai.cn
     - .picself.cn
     - .pigai.org
     - .pindao.huoban.taobao.com
@@ -5155,6 +5213,7 @@ payload:
     - .pipix.com
     - .pipixiaha.com
     - .pishu.com.cn
+    - .pixeldance.com
     - .piyipiba.com
     - .pkoplink.com
     - .pkuh6.cn
@@ -5210,6 +5269,7 @@ payload:
     - .pubgno1.cn
     - .pubgtool.com
     - .pubyun.com
+    - .puddingcat.top
     - .puh3.net.cn
     - .pups.bdimg.com
     - .pupuapi.com
@@ -5324,6 +5384,7 @@ payload:
     - .qishuimusic.com.cn
     - .qiumibao.com
     - .qiuwen.wiki
+    - .qiuwenbaike.cn
     - .qixin.com
     - .qiyi.com
     - .qiyipic.com
@@ -5377,6 +5438,7 @@ payload:
     - .qunarcdn.com
     - .qunarzz.com
     - .qunjielong.com
+    - .qunliao.info
     - .quyaoya.com
     - .qweather.com
     - .qweather.net
@@ -5398,6 +5460,7 @@ payload:
     - .razersynapse.com
     - .razerzone.com
     - .rdfybk.com
+    - .rdnsdb.com
     - .re.m.taobao.com
     - .re.taobao.com
     - .reactorms.com.cn
@@ -5585,6 +5648,7 @@ payload:
     - .shihuo.cn
     - .shijiexia.com
     - .shimo.im
+    - .shimonote.com
     - .shixiseng.com
     - .shizhuang-inc.com
     - .shizhuang-inc.net
@@ -5595,6 +5659,7 @@ payload:
     - .shopoppo.com.cn
     - .shopss.com
     - .shoujihuifu.com
+    - .shouqianba.com
     - .shouyoubus.com
     - .shrbank.com
     - .shssp.org
@@ -5653,6 +5718,7 @@ payload:
     - .smartapps.cn
     - .smartmidea.net
     - .smgbb.cn
+    - .smgv.cn
     - .sms18.com
     - .smtcdns.com
     - .smtcdns.net
@@ -5755,6 +5821,7 @@ payload:
     - .staticadm.leju.sina.com.cn
     - .staticfile.net
     - .staticfile.org
+    - .statickksmg.com
     - .stats.ipinyou.com
     - .statusfeishu.cn
     - .statuslarkoffice.com
@@ -5795,6 +5862,7 @@ payload:
     - .sunlogin.net
     - .sunrtb.com
     - .supercachenet.com
+    - .supercachenode.com
     - .supercellcommunity.cn
     - .supercellsupport.cn
     - .superlib.com
@@ -5897,6 +5965,7 @@ payload:
     - .tcloudscdn.com
     - .tcloudscdn.net
     - .tcss.qq.com
+    - .tcwqqdy.guru
     - .tdnsv1.com
     - .tdnsv1.net
     - .tdnsv10.com
@@ -6090,6 +6159,7 @@ payload:
     - .tlgslb.cn
     - .tlgslb.com
     - .tlivecdn.com
+    - .tlivemcdn.com
     - .tlivepush.com
     - .tlivesource.com
     - .tm2a8.cn
@@ -6162,7 +6232,10 @@ payload:
     - .toutiaowap.com
     - .toutiaowap.net
     - .touzid.com
+    - .tower.com.cn
     - .tower.im
+    - .tower0788.cn
+    - .tower0788.com
     - .tpyzq.com
     - .tr-test-ali.net
     - .tr-test.net
@@ -6173,6 +6246,9 @@ payload:
     - .tracker.baidu.com
     - .tracking.miui.com
     - .tracup.com
+    - .trae.cn
+    - .trae.com.cn
+    - .trae.guru
     - .trafficmanager.cn
     - .travelsky.com
     - .travelskymobile.cn
@@ -6210,7 +6286,9 @@ payload:
     - .tvbc.com.cn
     - .tvcc.cn
     - .tvcc.com.cn
+    - .tvmao.com
     - .tvupgrade.yunos.com
+    - .tvzhe.com
     - .twscholar.com
     - .tx-exhibition.com
     - .txbyod.com
@@ -6287,6 +6365,7 @@ payload:
     - .ulic.baidu.com
     - .ulikecam.com
     - .ulog.imap.baidu.com
+    - .ultracachenode.com
     - .um.run
     - .umajor.net
     - .ume-trip.cn
@@ -6531,6 +6610,7 @@ payload:
     - .wanyiwang.com
     - .wanyx.com
     - .wapwbclick.mobile.sina.cn
+    - .warmheart.top
     - .warsaga.cn
     - .wasu.cn
     - .wasu.tv
@@ -6583,6 +6663,11 @@ payload:
     - .wenjuan.com
     - .wenku-cms.bj.bcebos.com
     - .wenmingban.com
+    - .wenshushu.cn
+    - .wenshushu.com
+    - .wenxiaozhan.cn
+    - .wenxiaozhan.com
+    - .wenxiaozhan.net
     - .wenxin-ge.com
     - .werepository.com.cn
     - .west95582.com
@@ -6668,7 +6753,13 @@ payload:
     - .wscdns.info
     - .wscdns.org
     - .wsoso.com
+    - .wss.cc
+    - .wss.email
+    - .wss.ink
+    - .wss.pet
+    - .wss.show
     - .wss.zone
+    - .wss1.cn
     - .wsukwai.com
     - .wtown.com
     - .wtturl.cn
@@ -6702,6 +6793,7 @@ payload:
     - .xd.cn
     - .xd.com
     - .xdcdn.net
+    - .xdqtech.com
     - .xdwan.com
     - .xedge.cc
     - .xesimg.com
@@ -6928,6 +7020,7 @@ payload:
     - .ynhr.com
     - .yo9.com
     - .yocajr.com
+    - .yoma.cn
     - .youba.com
     - .youboy.com
     - .youdao.com
