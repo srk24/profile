@@ -88,7 +88,7 @@ ciscolivehls-i.akamaihd.net
 client-teamviewer-com.trafficmanager.net
 clients1.google.com
 cloudsync-prod.s3.amazonaws.com
-courier-push-apple.com.akadns.net
+configuration-lb.ls-apple.com.akadns.net
 crl.microsoft.com
 crl.versign.net
 csis-prod.s3.amazonaws.com
@@ -4895,6 +4895,7 @@ zeenews-fonts.s3.amazonaws.com
 .boombeach.com
 .boomerang.com
 .booru.org
+.boosty.to
 .booth.pm
 .bootstrapcdn.com
 .bootyliciousmag.com
@@ -5792,6 +5793,7 @@ zeenews-fonts.s3.amazonaws.com
 .cdn-apple.com
 .cdn-telegram.org
 .cdn-terapeak.com
+.cdn-vk.ru
 .cdn.ac.uk
 .cdn77.com
 .cdn77.org
@@ -6657,6 +6659,7 @@ zeenews-fonts.s3.amazonaws.com
 .coupang.com
 .coupangcdn.com
 .couplecam.co.uk
+.courier-push-apple.com.akadns.net
 .couriermail.com.au
 .coursera-for-business.org
 .coursera.community
@@ -7819,6 +7822,7 @@ zeenews-fonts.s3.amazonaws.com
 .domywife.com
 .don.ac.uk
 .donatecarsoh.org
+.donationalerts.com
 .doncaster.ac.uk
 .dongtaiwang.com
 .donkeykongcountryreturns.com
@@ -15723,6 +15727,7 @@ zeenews-fonts.s3.amazonaws.com
 .melonbooks.co.jp
 .melonstube.com
 .meme111.com
+.memealerts.com
 .men.com
 .men18.net
 .menai.ac.uk
@@ -18214,6 +18219,7 @@ zeenews-fonts.s3.amazonaws.com
 .okaapps.com
 .okazudouga.blog.jp
 .okazudouga.tokyo
+.okcdn.ru
 .okex.com
 .okinawabank.co.jp
 .okkisokuho.com
@@ -20806,10 +20812,15 @@ zeenews-fonts.s3.amazonaws.com
 .samsungads.com
 .samsungapps.com
 .samsungcloud.com
+.samsungconsent.com
 .samsungdm.com
 .samsunggalaxyfriends.com
+.samsunghealth.com
+.samsungiotcloud.com
 .samsungknox.com
+.samsungosp.com
 .samsungqbe.com
+.samsungrs.com
 .sandisk.ae
 .sandisk.co.jp
 .sandisk.co.kr
@@ -24456,6 +24467,7 @@ zeenews-fonts.s3.amazonaws.com
 .vercel.app
 .vercel.blog
 .vercel.com
+.vercel.dev
 .vercel.events
 .vercel.live
 .vercel.pub
@@ -24853,6 +24865,7 @@ zeenews-fonts.s3.amazonaws.com
 .vk.ru
 .vk.team
 .vkcache.com
+.vkcloud-static.ru
 .vkgo.app
 .vklive.app
 .vkmessenger.app

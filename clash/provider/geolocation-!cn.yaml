@@ -89,7 +89,7 @@ payload:
     - client-teamviewer-com.trafficmanager.net
     - clients1.google.com
     - cloudsync-prod.s3.amazonaws.com
-    - courier-push-apple.com.akadns.net
+    - configuration-lb.ls-apple.com.akadns.net
     - crl.microsoft.com
     - crl.versign.net
     - csis-prod.s3.amazonaws.com
@@ -4896,6 +4896,7 @@ payload:
     - .boombeach.com
     - .boomerang.com
     - .booru.org
+    - .boosty.to
     - .booth.pm
     - .bootstrapcdn.com
     - .bootyliciousmag.com
@@ -5793,6 +5794,7 @@ payload:
     - .cdn-apple.com
     - .cdn-telegram.org
     - .cdn-terapeak.com
+    - .cdn-vk.ru
     - .cdn.ac.uk
     - .cdn77.com
     - .cdn77.org
@@ -6658,6 +6660,7 @@ payload:
     - .coupang.com
     - .coupangcdn.com
     - .couplecam.co.uk
+    - .courier-push-apple.com.akadns.net
     - .couriermail.com.au
     - .coursera-for-business.org
     - .coursera.community
@@ -7820,6 +7823,7 @@ payload:
     - .domywife.com
     - .don.ac.uk
     - .donatecarsoh.org
+    - .donationalerts.com
     - .doncaster.ac.uk
     - .dongtaiwang.com
     - .donkeykongcountryreturns.com
@@ -15724,6 +15728,7 @@ payload:
     - .melonbooks.co.jp
     - .melonstube.com
     - .meme111.com
+    - .memealerts.com
     - .men.com
     - .men18.net
     - .menai.ac.uk
@@ -18215,6 +18220,7 @@ payload:
     - .okaapps.com
     - .okazudouga.blog.jp
     - .okazudouga.tokyo
+    - .okcdn.ru
     - .okex.com
     - .okinawabank.co.jp
     - .okkisokuho.com
@@ -20807,10 +20813,15 @@ payload:
     - .samsungads.com
     - .samsungapps.com
     - .samsungcloud.com
+    - .samsungconsent.com
     - .samsungdm.com
     - .samsunggalaxyfriends.com
+    - .samsunghealth.com
+    - .samsungiotcloud.com
     - .samsungknox.com
+    - .samsungosp.com
     - .samsungqbe.com
+    - .samsungrs.com
     - .sandisk.ae
     - .sandisk.co.jp
     - .sandisk.co.kr
@@ -24457,6 +24468,7 @@ payload:
     - .vercel.app
     - .vercel.blog
     - .vercel.com
+    - .vercel.dev
     - .vercel.events
     - .vercel.live
     - .vercel.pub
@@ -24854,6 +24866,7 @@ payload:
     - .vk.ru
     - .vk.team
     - .vkcache.com
+    - .vkcloud-static.ru
     - .vkgo.app
     - .vklive.app
     - .vkmessenger.app
