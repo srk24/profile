@@ -146,12 +146,14 @@ payload:
     - ebay-25-assets.s3-us-west-1.amazonaws.com
     - ecapi-pchome.cdn.hinet.net
     - elib.maruzen.co.jp
+    - epc-de-agent-proxy.germanywestcentral.cloudapp.azure.com
     - ereg.adobe.com
     - ereg.wip.adobe.com
     - ereg.wip1.adobe.com
     - ereg.wip2.adobe.com
     - ereg.wip3.adobe.com
     - ereg.wip4.adobe.com
+    - eset-prod-ca48648d0ce7cadf.elb.eu-central-1.amazonaws.com
     - espn.api.edge.bamgrid.com
     - espn.hb.omtrdc.net
     - espndotcom.tt.omtrdc.net
@@ -1965,6 +1967,7 @@ payload:
     - .alphabet.us
     - .alphabetfinance.net
     - .alphaporno.com
+    - .alphaxiv.org
     - .alphera-finance.co.in
     - .alphera-finance.com.hk
     - .alphera-finance.in
@@ -2224,6 +2227,10 @@ payload:
     - .androidpolice.com
     - .andygod.com
     - .andysparis.com
+    - .anexia-engine.com
+    - .anexia-it.com
+    - .anexia.at
+    - .anexia.com
     - .anfutong.com
     - .angel-gto.com
     - .angel.ac.uk
@@ -3145,6 +3152,7 @@ payload:
     - .av6k.com
     - .av6k.vip
     - .avant.ac.uk
+    - .avast.com
     - .avatara.com
     - .avbebe.com
     - .avcar.vip
@@ -3158,6 +3166,7 @@ payload:
     - .avelip.com
     - .aventertainments.com
     - .avfox.cc
+    - .avg.com
     - .avgigi.com
     - .avgle.com
     - .avgle.net
@@ -3169,6 +3178,7 @@ payload:
     - .avhu.com
     - .avinetworks.com
     - .avinin.com
+    - .avira.com
     - .avizoon.site
     - .avizoone.com
     - .avjb.com
@@ -4199,6 +4209,7 @@ payload:
     - .bitchesgirls.com
     - .bitchmomporn.com
     - .bitcoin.org
+    - .bitdefender.com
     - .bite.ac.uk
     - .bitfinex.com
     - .bitflyer.com
@@ -6233,6 +6244,7 @@ payload:
     - .clacks.ac.uk
     - .clacton.ac.uk
     - .clad.ac.uk
+    - .clamwin.com
     - .clannad-movie.jp
     - .claravenger.com
     - .clarendon.ac.uk
@@ -8187,6 +8199,7 @@ payload:
     - .e-szigno.hu
     - .e-tugra.com
     - .e3an.ac.uk
+    - .e5.sk
     - .e53w.com
     - .e5a6ae085b6c43020dea230eb0c0ecc33a188227507da97b8ecc05eb8beace6.us-east-1.prod.service.minerva.devices.a2z.com
     - .e621.net
@@ -8954,6 +8967,11 @@ payload:
     - .esds.ac.uk
     - .ese.ac.uk
     - .eselondon.ac.uk
+    - .eset.com
+    - .eset.eu
+    - .eset.sk
+    - .eset.systems
+    - .esetsoftware.com
     - .esg.ac.uk
     - .eshcru.ac.uk
     - .esher.ac.uk
@@ -9121,6 +9139,7 @@ payload:
     - .f-dro1d.org
     - .f-droid.com
     - .f-droid.org
+    - .f-secure.com
     - .f5pf.com
     - .f6988.com
     - .f8.com
@@ -9683,6 +9702,7 @@ payload:
     - .fifastreet3.com
     - .fife.ac.uk
     - .fifeglen.ac.uk
+    - .fifthns.com
     - .fightforux.com
     - .figma.com
     - .filesmonster.vip
@@ -9807,6 +9827,7 @@ payload:
     - .firstanalvideos.com
     - .firstchancesfife.ac.uk
     - .firstgynexam.com
+    - .firstns.cc
     - .firstpelvicexam.com
     - .firstprivatebank.com.mm
     - .fiscalstudies.ac.uk
@@ -9937,6 +9958,7 @@ payload:
     - .fotoscaserasx.com
     - .foundationdb.org
     - .foundationyear.ac.uk
+    - .fourthns.systems
     - .fout.jp
     - .fox-corporation.com
     - .fox-news.com
@@ -12095,6 +12117,7 @@ payload:
     - .hotbeatsonsale.com
     - .hotbed.ac.uk
     - .hotcandyland.com
+    - .hotcrp.com
     - .hotcuckoldwife.com
     - .hotcumporn.com
     - .hotescortdusseldorf.com
@@ -14125,6 +14148,8 @@ payload:
     - .karlajames.com
     - .karupsha.com
     - .karupspc.com
+    - .kaspersky-labs.com
+    - .kaspersky.com
     - .kastatic.org
     - .katestube.com
     - .kavkazr.com
@@ -15600,6 +15625,7 @@ payload:
     - .mbs.ac.uk
     - .mc6.ac.uk
     - .mca.ac.uk
+    - .mcafee.com
     - .mcb.com.mm
     - .mcc.ac.uk
     - .mcd-holdings.co.jp
@@ -17776,6 +17802,7 @@ payload:
     - .northumberland-acl.ac.uk
     - .northumberland.ac.uk
     - .northumbria.ac.uk
+    - .norton.com
     - .norwichresearchpark.ac.uk
     - .notebooklm.google
     - .notebooklm.google.com
@@ -18378,6 +18405,7 @@ payload:
     - .openmaps.org
     - .openreality.com
     - .openresty.org
+    - .openreview.net
     - .openrouter.ai
     - .opensciencelab.ac.uk
     - .opensciencelaboratory.ac.uk
@@ -18602,6 +18630,7 @@ payload:
     - .panda30.shop
     - .pandamovies.pw
     - .pandanet-igs.com
+    - .pandasecurity.com
     - .pankwire.com
     - .panorama-dtp.ac.uk
     - .panoramio.com
@@ -21109,6 +21138,7 @@ payload:
     - .secomtrust.net
     - .second-ns.com
     - .second-ns.de
+    - .secondns.at
     - .secret-flirt-hub.com
     - .secretbabes.co.uk
     - .secretchina.com
@@ -21609,6 +21639,7 @@ payload:
     - .siege-amazon.com
     - .sifa.ac.uk
     - .sifangclub.com
+    - .sigcomm.org
     - .sigma-cetl.ac.uk
     - .sigma-network.ac.uk
     - .sigmoidoscopeexam.com
@@ -21624,6 +21655,7 @@ payload:
     - .signalprocessingsociety.org
     - .signalr.net
     - .signalusers.org
+    - .sigops.org
     - .sihe.ac.uk
     - .sikh-uni.ac.uk
     - .sikiswap.com
@@ -23339,6 +23371,7 @@ payload:
     - .thinkquarterly.com
     - .thinkwales.ac.uk
     - .thinkwithgoogle.com
+    - .thirdns.de
     - .thisav.com
     - .thisismoney.co.uk
     - .thisispolaris.com
@@ -24255,6 +24288,7 @@ payload:
     - .usatodaynetworkservice.com
     - .use-of-mans.ac.uk
     - .uselessjunk.com
+    - .usenix.org
     - .useplannr.com
     - .userapi.com
     - .usercontent.dev
