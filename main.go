@@ -59,9 +59,11 @@ func main() {
 		"rtbasia.com",
 		"gridsum.com",
 		"addnewer.com",
+		"msmp.abchina.com.cn",
 	}
 
 	direct_list := []string{
+		"api.github.com",
 	}
 
 	proxy_list := []string{
