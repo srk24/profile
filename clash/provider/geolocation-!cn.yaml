@@ -2005,14 +2005,9 @@ payload:
     - .alsod.ac.uk
     - .alt.ac.uk
     - .alt.com
+    - .altera.co.jp
     - .altera.com
     - .alteraforum.com
-    - .alteraforums.com
-    - .alteraforums.net
-    - .alterauserforum.com
-    - .alterauserforum.net
-    - .alterauserforums.com
-    - .alterauserforums.net
     - .altereco.ac.uk
     - .altis.ac.uk
     - .altmetric.com
@@ -6334,6 +6329,7 @@ payload:
     - .cloudflarepartners.com
     - .cloudflareportal.com
     - .cloudflarepreview.com
+    - .cloudflareregistrar.com
     - .cloudflareresolve.com
     - .cloudflaressl.com
     - .cloudflarestatus.com
@@ -6532,6 +6528,7 @@ payload:
     - .comicuniverse.org
     - .comixzilla.com
     - .comm-coll-hackney.ac.uk
+    - .comm-verse.com
     - .commandandconquer.com
     - .comments.app
     - .commerceos.com
@@ -7772,6 +7769,7 @@ payload:
     - .dmcdn.net
     - .dmed.technology
     - .dmgmediaprivacy.co.uk
+    - .dml-lang.org
     - .dml.ac.uk
     - .dmm-extension.com
     - .dmm.co.jp
@@ -8476,6 +8474,7 @@ payload:
     - .ebscohost.com
     - .ebsl.ac.uk
     - .ebslondon.ac.uk
+    - .ebuyer.com
     - .ebuyheadphones.com
     - .eca-client-crl.verisign.com
     - .eca-client-ocsp.verisign.com
@@ -10146,6 +10145,11 @@ payload:
     - .fracebook.com
     - .fragment.com
     - .fragrancebay.com
+    - .framer.com
+    - .framer.website
+    - .framercanvas.com
+    - .framerstatic.com
+    - .framerusercontent.com
     - .francecasquebeatssolde.com
     - .francemail.com
     - .francistowne.ac.uk
@@ -11260,6 +11264,7 @@ payload:
     - .grannytube.net
     - .grantham.ac.uk
     - .grantleyhall.ac.uk
+    - .granulate.io
     - .graph-fallback.instagram.com
     - .graph.instagram.com
     - .graph.org
@@ -11399,6 +11404,7 @@ payload:
     - .hackerguardian.com
     - .hackfacebook.com
     - .hackfacebookid.com
+    - .hackharassment.com
     - .hacklang.org
     - .hackney.ac.uk
     - .hacksear.ch
@@ -13082,6 +13088,7 @@ payload:
     - .insiderdevtour.com
     - .insiderintelligence.com
     - .insidevoa.com
+    - .insight.tech
     - .inspire-dtp.ac.uk
     - .inspiretrust.ac.uk
     - .inst-of-oceanographic-sci.ac.uk
@@ -13174,6 +13181,7 @@ payload:
     - .intel.ch
     - .intel.cl
     - .intel.cm
+    - .intel.co
     - .intel.co.ae
     - .intel.co.cr
     - .intel.co.id
@@ -13187,6 +13195,7 @@ payload:
     - .intel.com.au
     - .intel.com.bo
     - .intel.com.br
+    - .intel.com.cn
     - .intel.com.co
     - .intel.com.ec
     - .intel.com.hk
@@ -13205,6 +13214,7 @@ payload:
     - .intel.cu
     - .intel.cz
     - .intel.de
+    - .intel.dev
     - .intel.dk
     - .intel.dz
     - .intel.ec
@@ -13217,6 +13227,7 @@ payload:
     - .intel.ga
     - .intel.gd
     - .intel.ge
+    - .intel.gg
     - .intel.gl
     - .intel.gm
     - .intel.gr
@@ -13227,6 +13238,7 @@ payload:
     - .intel.hn
     - .intel.ht
     - .intel.hu
+    - .intel.id
     - .intel.ie
     - .intel.in
     - .intel.io
@@ -13320,10 +13332,12 @@ payload:
     - .intellinuxgraphics.net
     - .intellinuxwireless.net
     - .intelnervana.com
-    - .intelnet.component
     - .intelplay.com
     - .intelquark.com
+    - .intelrealsense.cn
     - .intelrealsense.com
+    - .intelrealsense.net
+    - .intelreimbursement.com
     - .intelrxt.com
     - .intelsalestraining.com
     - .intelsecurity.com
@@ -15271,6 +15285,7 @@ payload:
     - .mahajantech.com
     - .mahsc.ac.uk
     - .mail-ads.google.com
+    - .mail.com
     - .mail.ru
     - .maileoch.com
     - .mailhealth.com
@@ -15706,6 +15721,7 @@ payload:
     - .meawallet.app
     - .meb.gov.mm
     - .mebank.ir
+    - .meccontroller.com
     - .meddyliwchamgymru.ac.uk
     - .mede-innovation.ac.uk
     - .medev.ac.uk
@@ -16586,6 +16602,7 @@ payload:
     - .movetv.com
     - .movidius.com
     - .movidius.net
+    - .movidius.org
     - .movie-erog.com
     - .movie1000.xyz
     - .moviepost.com
@@ -18316,6 +18333,7 @@ payload:
     - .one.one.one
     - .one889.app
     - .oneapi.com
+    - .oneapi.io
     - .onedinesfree.com
     - .onedrive.co
     - .onedrive.co.uk
@@ -18396,6 +18414,7 @@ payload:
     - .openapiplatform.com
     - .openapiservice.com
     - .openart.ai
+    - .opencas.io
     - .opencollective.com
     - .opencreate.org
     - .opendns.com
@@ -18433,6 +18452,7 @@ payload:
     - .opentranslatorstothings.org
     - .openuniversity.ac.uk
     - .openurl.ac.uk
+    - .openvino.ai
     - .openvinotoolkit.org
     - .openvpn.net
     - .openweather.co.uk
@@ -18683,6 +18703,7 @@ payload:
     - .passion.com
     - .passiontimes.hk
     - .passport.net
+    - .passwordday.org
     - .pastahealth.com
     - .pastebin.com
     - .paston.ac.uk
@@ -19285,6 +19306,8 @@ payload:
     - .plzpf.com
     - .pm.me
     - .pmatehunter.com
+    - .pmem.org
+    - .pmem.us
     - .pml.ac.uk
     - .pms.ac.uk
     - .pnas.org
@@ -19847,6 +19870,7 @@ payload:
     - .projectapex.com
     - .projectara.com
     - .projectbaseline.com
+    - .projectcircuitbreaker.com
     - .projecteuclid.org
     - .projectjav.com
     - .projectmurphy.net
@@ -20440,6 +20464,7 @@ payload:
     - .rems-cdt.ac.uk
     - .renaissanceskin.ac.uk
     - .renchead.com
+    - .renderingtoolkit.org
     - .renderos.com
     - .reneerossvideos.com
     - .renminbao.com
@@ -21662,9 +21687,12 @@ payload:
     - .signalr.net
     - .signalusers.org
     - .sigops.org
+    - .sigopt.com
     - .sihe.ac.uk
     - .sikh-uni.ac.uk
     - .sikiswap.com
+    - .silicon-mobility.com
+    - .siliconmobility.com
     - .silkengirl.com
     - .silverchair-cdn.com
     - .silversluts.com
@@ -21829,9 +21857,15 @@ payload:
     - .small-angle.ac.uk
     - .smallteenpussy.com
     - .smart-edge.com
+    - .smart-edge.info
+    - .smart-edge.io
+    - .smart-edge.net
+    - .smart-edge.org
+    - .smart-edge.systems
     - .smart.ac.uk
     - .smartcommunitiescoalition.com
     - .smartcommunitiescoalition.org
+    - .smartedge.info
     - .smartexpos.com
     - .smartfea.com
     - .smartline.com.au
@@ -22208,6 +22242,7 @@ payload:
     - .splash-ads.unitychina.cn
     - .splatoon2tournament.com
     - .splint-cetl.ac.uk
+    - .splunk.com
     - .spo-msedge.net
     - .spokenword.ac.uk
     - .sponichi.co.jp
@@ -22550,6 +22585,8 @@ payload:
     - .stonefoxproductions.com
     - .stonyhurst.ac.uk
     - .storage.live.com
+    - .storageclassmemory.io
+    - .storageclassmemory.org
     - .storcuram.ac.uk
     - .store-bridgestonesports.com
     - .storesense.com
@@ -23414,6 +23451,7 @@ payload:
     - .thothub.to
     - .thottok.com
     - .thotvids.com
+    - .threadingbuildingblocks.org
     - .threads.com
     - .threads.net
     - .thri.xxx
@@ -24064,7 +24102,10 @@ payload:
     - .uhr.ac.uk
     - .uhsl.ac.uk
     - .uhub.com
+    - .ui-portal.de
     - .ui.com
+    - .uicdn.com
+    - .uimserv.net
     - .uiporn.com
     - .uisp.com
     - .ujapanesesex.com
@@ -24202,6 +24243,7 @@ payload:
     - .universalorlando.com
     - .universalpictures.com
     - .universalpicturesinternational.com
+    - .universalscalablefirmware.org
     - .universalstudioshollywood.com
     - .universities-scotland.ac.uk
     - .universitiesengland.ac.uk

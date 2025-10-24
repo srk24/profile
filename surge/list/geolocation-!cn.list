@@ -2004,14 +2004,9 @@ zeenews-fonts.s3.amazonaws.com
 .alsod.ac.uk
 .alt.ac.uk
 .alt.com
+.altera.co.jp
 .altera.com
 .alteraforum.com
-.alteraforums.com
-.alteraforums.net
-.alterauserforum.com
-.alterauserforum.net
-.alterauserforums.com
-.alterauserforums.net
 .altereco.ac.uk
 .altis.ac.uk
 .altmetric.com
@@ -6333,6 +6328,7 @@ zeenews-fonts.s3.amazonaws.com
 .cloudflarepartners.com
 .cloudflareportal.com
 .cloudflarepreview.com
+.cloudflareregistrar.com
 .cloudflareresolve.com
 .cloudflaressl.com
 .cloudflarestatus.com
@@ -6531,6 +6527,7 @@ zeenews-fonts.s3.amazonaws.com
 .comicuniverse.org
 .comixzilla.com
 .comm-coll-hackney.ac.uk
+.comm-verse.com
 .commandandconquer.com
 .comments.app
 .commerceos.com
@@ -7771,6 +7768,7 @@ zeenews-fonts.s3.amazonaws.com
 .dmcdn.net
 .dmed.technology
 .dmgmediaprivacy.co.uk
+.dml-lang.org
 .dml.ac.uk
 .dmm-extension.com
 .dmm.co.jp
@@ -8475,6 +8473,7 @@ zeenews-fonts.s3.amazonaws.com
 .ebscohost.com
 .ebsl.ac.uk
 .ebslondon.ac.uk
+.ebuyer.com
 .ebuyheadphones.com
 .eca-client-crl.verisign.com
 .eca-client-ocsp.verisign.com
@@ -10145,6 +10144,11 @@ zeenews-fonts.s3.amazonaws.com
 .fracebook.com
 .fragment.com
 .fragrancebay.com
+.framer.com
+.framer.website
+.framercanvas.com
+.framerstatic.com
+.framerusercontent.com
 .francecasquebeatssolde.com
 .francemail.com
 .francistowne.ac.uk
@@ -11259,6 +11263,7 @@ zeenews-fonts.s3.amazonaws.com
 .grannytube.net
 .grantham.ac.uk
 .grantleyhall.ac.uk
+.granulate.io
 .graph-fallback.instagram.com
 .graph.instagram.com
 .graph.org
@@ -11398,6 +11403,7 @@ zeenews-fonts.s3.amazonaws.com
 .hackerguardian.com
 .hackfacebook.com
 .hackfacebookid.com
+.hackharassment.com
 .hacklang.org
 .hackney.ac.uk
 .hacksear.ch
@@ -13081,6 +13087,7 @@ zeenews-fonts.s3.amazonaws.com
 .insiderdevtour.com
 .insiderintelligence.com
 .insidevoa.com
+.insight.tech
 .inspire-dtp.ac.uk
 .inspiretrust.ac.uk
 .inst-of-oceanographic-sci.ac.uk
@@ -13173,6 +13180,7 @@ zeenews-fonts.s3.amazonaws.com
 .intel.ch
 .intel.cl
 .intel.cm
+.intel.co
 .intel.co.ae
 .intel.co.cr
 .intel.co.id
@@ -13186,6 +13194,7 @@ zeenews-fonts.s3.amazonaws.com
 .intel.com.au
 .intel.com.bo
 .intel.com.br
+.intel.com.cn
 .intel.com.co
 .intel.com.ec
 .intel.com.hk
@@ -13204,6 +13213,7 @@ zeenews-fonts.s3.amazonaws.com
 .intel.cu
 .intel.cz
 .intel.de
+.intel.dev
 .intel.dk
 .intel.dz
 .intel.ec
@@ -13216,6 +13226,7 @@ zeenews-fonts.s3.amazonaws.com
 .intel.ga
 .intel.gd
 .intel.ge
+.intel.gg
 .intel.gl
 .intel.gm
 .intel.gr
@@ -13226,6 +13237,7 @@ zeenews-fonts.s3.amazonaws.com
 .intel.hn
 .intel.ht
 .intel.hu
+.intel.id
 .intel.ie
 .intel.in
 .intel.io
@@ -13319,10 +13331,12 @@ zeenews-fonts.s3.amazonaws.com
 .intellinuxgraphics.net
 .intellinuxwireless.net
 .intelnervana.com
-.intelnet.component
 .intelplay.com
 .intelquark.com
+.intelrealsense.cn
 .intelrealsense.com
+.intelrealsense.net
+.intelreimbursement.com
 .intelrxt.com
 .intelsalestraining.com
 .intelsecurity.com
@@ -15270,6 +15284,7 @@ zeenews-fonts.s3.amazonaws.com
 .mahajantech.com
 .mahsc.ac.uk
 .mail-ads.google.com
+.mail.com
 .mail.ru
 .maileoch.com
 .mailhealth.com
@@ -15705,6 +15720,7 @@ zeenews-fonts.s3.amazonaws.com
 .meawallet.app
 .meb.gov.mm
 .mebank.ir
+.meccontroller.com
 .meddyliwchamgymru.ac.uk
 .mede-innovation.ac.uk
 .medev.ac.uk
@@ -16585,6 +16601,7 @@ zeenews-fonts.s3.amazonaws.com
 .movetv.com
 .movidius.com
 .movidius.net
+.movidius.org
 .movie-erog.com
 .movie1000.xyz
 .moviepost.com
@@ -18315,6 +18332,7 @@ zeenews-fonts.s3.amazonaws.com
 .one.one.one
 .one889.app
 .oneapi.com
+.oneapi.io
 .onedinesfree.com
 .onedrive.co
 .onedrive.co.uk
@@ -18395,6 +18413,7 @@ zeenews-fonts.s3.amazonaws.com
 .openapiplatform.com
 .openapiservice.com
 .openart.ai
+.opencas.io
 .opencollective.com
 .opencreate.org
 .opendns.com
@@ -18432,6 +18451,7 @@ zeenews-fonts.s3.amazonaws.com
 .opentranslatorstothings.org
 .openuniversity.ac.uk
 .openurl.ac.uk
+.openvino.ai
 .openvinotoolkit.org
 .openvpn.net
 .openweather.co.uk
@@ -18682,6 +18702,7 @@ zeenews-fonts.s3.amazonaws.com
 .passion.com
 .passiontimes.hk
 .passport.net
+.passwordday.org
 .pastahealth.com
 .pastebin.com
 .paston.ac.uk
@@ -19284,6 +19305,8 @@ zeenews-fonts.s3.amazonaws.com
 .plzpf.com
 .pm.me
 .pmatehunter.com
+.pmem.org
+.pmem.us
 .pml.ac.uk
 .pms.ac.uk
 .pnas.org
@@ -19846,6 +19869,7 @@ zeenews-fonts.s3.amazonaws.com
 .projectapex.com
 .projectara.com
 .projectbaseline.com
+.projectcircuitbreaker.com
 .projecteuclid.org
 .projectjav.com
 .projectmurphy.net
@@ -20439,6 +20463,7 @@ zeenews-fonts.s3.amazonaws.com
 .rems-cdt.ac.uk
 .renaissanceskin.ac.uk
 .renchead.com
+.renderingtoolkit.org
 .renderos.com
 .reneerossvideos.com
 .renminbao.com
@@ -21661,9 +21686,12 @@ zeenews-fonts.s3.amazonaws.com
 .signalr.net
 .signalusers.org
 .sigops.org
+.sigopt.com
 .sihe.ac.uk
 .sikh-uni.ac.uk
 .sikiswap.com
+.silicon-mobility.com
+.siliconmobility.com
 .silkengirl.com
 .silverchair-cdn.com
 .silversluts.com
@@ -21828,9 +21856,15 @@ zeenews-fonts.s3.amazonaws.com
 .small-angle.ac.uk
 .smallteenpussy.com
 .smart-edge.com
+.smart-edge.info
+.smart-edge.io
+.smart-edge.net
+.smart-edge.org
+.smart-edge.systems
 .smart.ac.uk
 .smartcommunitiescoalition.com
 .smartcommunitiescoalition.org
+.smartedge.info
 .smartexpos.com
 .smartfea.com
 .smartline.com.au
@@ -22207,6 +22241,7 @@ zeenews-fonts.s3.amazonaws.com
 .splash-ads.unitychina.cn
 .splatoon2tournament.com
 .splint-cetl.ac.uk
+.splunk.com
 .spo-msedge.net
 .spokenword.ac.uk
 .sponichi.co.jp
@@ -22549,6 +22584,8 @@ zeenews-fonts.s3.amazonaws.com
 .stonefoxproductions.com
 .stonyhurst.ac.uk
 .storage.live.com
+.storageclassmemory.io
+.storageclassmemory.org
 .storcuram.ac.uk
 .store-bridgestonesports.com
 .storesense.com
@@ -23413,6 +23450,7 @@ zeenews-fonts.s3.amazonaws.com
 .thothub.to
 .thottok.com
 .thotvids.com
+.threadingbuildingblocks.org
 .threads.com
 .threads.net
 .thri.xxx
@@ -24063,7 +24101,10 @@ zeenews-fonts.s3.amazonaws.com
 .uhr.ac.uk
 .uhsl.ac.uk
 .uhub.com
+.ui-portal.de
 .ui.com
+.uicdn.com
+.uimserv.net
 .uiporn.com
 .uisp.com
 .ujapanesesex.com
@@ -24201,6 +24242,7 @@ zeenews-fonts.s3.amazonaws.com
 .universalorlando.com
 .universalpictures.com
 .universalpicturesinternational.com
+.universalscalablefirmware.org
 .universalstudioshollywood.com
 .universities-scotland.ac.uk
 .universitiesengland.ac.uk
