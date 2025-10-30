@@ -1,0 +1,130 @@
+{
+  "dns": {
+    "final": "dns_encrypt",
+    "rules": [
+      {
+        "action": "route",
+        "rule_set": ["domestic"],
+        "server": "dns_local"
+      },
+      {
+        "action": "route",
+        "rule_set": ["global"],
+        "server": "dns_remote"
+      }
+    ],
+    "servers": [
+      {
+        "domain_resolver": "dns_local",
+        "server": "223.5.5.5",
+        "tag": "dns_encrypt",
+        "type": "quic"
+      },
+      {
+        "server": "223.5.5.5",
+        "tag": "dns_local",
+        "type": "udp"
+      },
+      {
+        "server": "8.8.8.8",
+        "tag": "dns_remote",
+        "type": "udp"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "access_control_allow_origin": ["http://board.zash.run.place", "http://clash.razord.top"],
+      "access_control_allow_private_network": true,
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "dashboard",
+      "external_ui_download_detour": "direct-out",
+      "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "secret": "password"
+    }
+  },
+  "inbounds": [
+    {
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "auto_redirect": true,
+      "auto_route": true,
+      "interface_name": "utun0",
+      "stack": "gvisor",
+      "tag": "tun-in",
+      "type": "tun"
+    }
+  ],
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "outbounds": [],
+  "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": "dns_encrypt",
+    "final": "select-out",
+    "rule_set": [
+      {
+        "download_detour": "direct-out",
+        "tag": "global",
+        "type": "remote",
+        "update_interval": "6h0m0s",
+        "url": "https://ghfast.top/https://github.com/srk24/profile/raw/master/sing/ruleset/geolocation-!cn.srs"
+      },
+      {
+        "download_detour": "direct-out",
+        "tag": "domestic",
+        "type": "remote",
+        "update_interval": "6h0m0s",
+        "url": "https://ghfast.top/https://github.com/srk24/profile/raw/master/sing/ruleset/geolocation-cn.srs"
+      },
+      {
+        "download_detour": "direct-out",
+        "tag": "geoip_cn",
+        "type": "remote",
+        "update_interval": "6h0m0s",
+        "url": "https://ghfast.top/https://github.com/Loyalsoldier/geoip/raw/release/srs/cn.srs"
+      }
+    ],
+    "rules": [
+      {
+        "action": "hijack-dns",
+        "port": 53
+      },
+      {
+        "action": "sniff",
+        "sniffer": ["http", "tls", "quic", "bittorrent"]
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "protocol": "bittorrent"
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "rule_set": ["domestic"]
+      },
+      {
+        "action": "route",
+        "outbound": "select-out",
+        "rule_set": ["global"]
+      },
+      {
+        "action": "route",
+        "outbound": "direct-out",
+        "rule_set": ["geoip_cn"]
+      },
+      {
+        "action": "route",
+        "ip_is_private": true,
+        "outbound": "direct-out"
+      }
+    ]
+  }
+}

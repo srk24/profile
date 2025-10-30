@@ -1,0 +1,47 @@
+name: Daily Build
+
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Set Timezone
+        run: sudo timedatectl set-timezone Asia/Shanghai
+
+      - name: Install Sing-Box
+        run: |
+          bash <(curl -fsSL https://sing-box.app/deb-install.sh)
+
+      - name: Generate Rule file
+        run: |
+          sing-box version
+          go run main.go
+
+      - name: Set env variables
+        run: echo "GEN_MSG=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Commit & Push
+        run: |
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status -s)" ]; then
+            git add .
+            git commit -am "${{ env.GEN_MSG }}"
+            git push -f -u origin master
+          fi

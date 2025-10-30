@@ -1,0 +1,46 @@
+#!/usr/sbin/nft -f
+
+include "/etc/nftables.d/cn-list.nft"
+
+table inet sing_box_transparent_proxy {
+    chain prerouting {
+        type filter hook prerouting priority mangle; policy accept;
+
+        # Skip already marked traffic
+        meta mark 0x2024 accept
+
+        # Skip cn traffic
+        ip daddr @cn_ipv4 accept
+        ip6 daddr @cn_ipv6 accept
+
+        # Skip traffic with specific DSCP value
+        ip dscp 0x04 accept
+        ip6 dscp 0x04 accept
+
+        # Apply redirects to sing
+        meta l4proto udp tproxy to 127.0.0.1:6153
+        meta l4proto tcp redirect to 127.0.0.1:6152
+    }
+
+    chain output {
+        type filter hook output priority mangle; policy accept;
+
+        # skip user=sing-box
+        skuid sing-box accept
+
+        # Skip already marked traffic
+        meta mark 0x2024 accept
+
+        # Skip traffic to local networks
+        ip daddr @cn_ipv4 accept
+        ip6 daddr @cn_ipv6 accept
+
+        # Skip traffic with specific DSCP value
+        ip dscp 0x04 accept
+        ip6 dscp 0x04 accept
+
+        # Apply redirects to sing
+        meta l4proto udp tproxy to 127.0.0.1:6153
+        meta l4proto tcp redirect to 127.0.0.1:6152
+    }
+}

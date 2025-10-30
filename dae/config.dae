@@ -1,0 +1,54 @@
+# config see more at https://github.com/daeuniverse/dae/blob/main/example.dae
+# dscp see more at https://github.com/daeuniverse/dae/discussions/295
+
+global {
+  log_level: info
+  dial_mode: domain
+  disable_waiting_network: false
+  wan_interface: auto
+  lan_interface: br-lan
+  tcp_check_url: 'http://cp.cloudflare.com'
+  udp_check_dns: '8.8.8.8'
+  check_interval: 30s
+  check_tolerance: 10ms
+  sniffing_timeout: 30ms
+}
+
+dns {
+  ipversion_prefer: 4
+  upstream {
+    localdns: 'udp://223.5.5.5:53'
+    remotedns: 'tcp+udp://8.8.8.8:53'
+  }
+  routing {
+    request {
+      qname(geosite:cn) -> localdns
+      qname(suffix:steamserver.net) -> localdns
+      qname(suffix:steamcontent.com) -> localdns
+      qname(geosite:geolocation-!cn) -> remotedns
+      fallback: localdns
+    }
+  }
+}
+
+routing {
+  pname(NetworkManager, systemd-resolved, dnsmasq) -> must_direct
+  dscp(0x4) -> direct
+  domain(geosite:cn) -> direct
+  domain(suffix:steamserver.net) -> direct
+  domain(suffix:steamcontent.com) -> direct
+  domain(geosite:geolocation-!cn) -> direct
+  dip(geoip:cn) -> direct
+  dip(geoip:private) -> direct
+  fallback: proxy
+}
+
+node {
+  socks5: 'socks5://127.0.0.1:7000'
+}
+
+group {
+  proxy {
+    policy: min_moving_avg
+  }
+}

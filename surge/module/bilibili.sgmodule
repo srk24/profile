@@ -1,0 +1,24 @@
+#!name= Block Bilibili Advertising
+#!desc= 去除B站客户端广告，调整其UI
+#!system=ios
+
+[Rule]
+AND,((OR,((DOMAIN-KEYWORD,pcdn), (DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker), (DOMAIN-KEYWORD,broadcast), (DOMAIN-KEYWORD,p2p))), (OR,((DOMAIN-KEYWORD,biliapi), (DOMAIN-KEYWORD,bilibili)))),REJECT-DROP
+
+[URL Rewrite]
+^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\.Search\/DefaultWords$ - reject
+^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\/search\/(defaultwords|square) - reject
+
+[Map Local]
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v\d\/topic_svr data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v\d\/dynamic_svr\/mix_uplist data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+
+[Script]
+bili_index = type=http-response,pattern=^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/feed\/index\?,requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bili_index.min.js,script-update-interval=0
+bili_splash = type=http-response,pattern=^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/splash\/(show|list),requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bili_splash.min.js,script-update-interval=0
+bili_mine = type=http-response,pattern=^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/account\/mine\?,requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bili_mine.min.js,script-update-interval=0
+bili_tab = type=http-response, pattern=^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/resource\/show\/tab\/v2\?,requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bili_tab.min.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% app.bili*.com, app.bili*.net, api.bili*.com, api.bili*.net, grpc.bili*.com, grpc.bili*.net, api.vc.bilibili.com
