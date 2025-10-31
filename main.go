@@ -65,8 +65,6 @@ func main() {
 		"api.github.com",
 		"steamserver.net",
 		"steamcontent.com",
-		"dler.cloud",
-		"dler.pro",
 	}
 
 	proxy_list := []string{
