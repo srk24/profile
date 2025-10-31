@@ -29,5 +29,4 @@ test/config/cache*
 profile
 generator
 
-
-.tmp/
+tmp/*

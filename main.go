@@ -286,6 +286,9 @@ func release(domain, domain_suffix, domain_keyword, domain_regex []string, tag s
 		return
 	}
 
+	// 清理覆盖的域名
+	domain, domain_suffix = cleanDomains(domain, domain_suffix)
+
 	// 并行生成各种格式文件
 	var wg sync.WaitGroup
 	wg.Add(4)
@@ -509,4 +512,65 @@ func download(downloadURL string) (*os.File, error) {
 	}
 
 	return tempFile, nil
+}
+
+// ======= utils =======
+// 清理覆盖的域名
+func cleanDomains(domain, domainSuffix []string) ([]string, []string) {
+	log.Printf("Cleaning domains: %d domains, %d suffixes", len(domain), len(domainSuffix))
+	suffixSet := make(map[string]struct{}, len(domainSuffix))
+	for _, s := range domainSuffix {
+		suffixSet[s] = struct{}{}
+	}
+
+	cleanedDomain := make([]string, 0, len(domain))
+	domainSeen := make(map[string]struct{}, len(domain))
+	for _, d := range domain {
+		if _, seen := domainSeen[d]; seen {
+			continue
+		}
+		domainSeen[d] = struct{}{}
+
+		covered := false
+		for parent := parentDomain(d); parent != ""; parent = parentDomain(parent) {
+			if _, ok := suffixSet[parent]; ok {
+				covered = true
+				break
+			}
+		}
+
+		if !covered {
+			cleanedDomain = append(cleanedDomain, d)
+		}
+	}
+
+	cleanedSuffix := make([]string, 0, len(domainSuffix))
+	suffixSeen := make(map[string]struct{}, len(domainSuffix))
+	for _, s := range domainSuffix {
+		if _, seen := suffixSeen[s]; seen {
+			continue
+		}
+
+		covered := false
+		for parent := parentDomain(s); parent != ""; parent = parentDomain(parent) {
+			if _, ok := suffixSet[parent]; ok {
+				covered = true
+				break
+			}
+		}
+
+		if !covered {
+			cleanedSuffix = append(cleanedSuffix, s)
+			suffixSeen[s] = struct{}{}
+		}
+	}
+
+	return cleanedDomain, cleanedSuffix
+}
+
+func parentDomain(s string) string {
+	if idx := strings.IndexByte(s, '.'); idx >= 0 && idx+1 < len(s) {
+		return s[idx+1:]
+	}
+	return ""
 }
