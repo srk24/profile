@@ -2,7 +2,6 @@ payload:
     - 643108e7617ef.cdn.sohucs.com
     - adeventtracker.spotify.com
     - adstudio-assets.scdn.co
-    - analytics.google.com
     - apilog-web.acfun.cn
     - bloodhound.spotify.com
     - e8aeb8bbdbbd7.cdn.sohucs.com
@@ -81,8 +80,6 @@ payload:
     - .adimg.mobile.sina.cn
     - .adimg.uve.weibo.com
     - .adinplay.com
-    - .adivery.com
-    - .adivery.ir
     - .adjust.com
     - .adjust.io
     - .adjust.net.in
@@ -174,6 +171,7 @@ payload:
     - .amdc.alipay.com
     - .analytics-data.io
     - .analytics.163.com
+    - .analytics.facebook.com
     - .analytics.vpc.duolingo.com
     - .api-adservices.apple.com
     - .api.apps.sina.cn
@@ -183,6 +181,7 @@ payload:
     - .api.wapa.taobao.com
     - .api.waptest.taobao.com
     - .apoll.m.taobao.com
+    - .app-analytics-services.com
     - .app-measurement-cn.com
     - .app-measurement.com
     - .appc.baidu.com
@@ -198,6 +197,8 @@ payload:
     - .atm.youku.com
     - .atom-data.io
     - .aty.sohu.com
+    - .b-graph-fallback.facebook.com
+    - .b-graph.facebook.com
     - .b.bdstatic.com
     - .b.smartvideo.youku.com
     - .baichuan.baidu.com
@@ -394,6 +395,13 @@ payload:
     - .googlevads-cn.com
     - .goutong.baidu.com
     - .gozendata.com
+    - .graph-fallback.facebook.com
+    - .graph-fallback.instagram.com
+    - .graph.facebook.com
+    - .graph.fbpigeon.com
+    - .graph.instagram.com
+    - .graph.whatsapp.com
+    - .graph.whatsapp.net
     - .gsp1.baidu.com
     - .gtms01.alicdn.com
     - .gtms02.alicdn.com
@@ -468,7 +476,6 @@ payload:
     - .juicyads.com
     - .jxlog.istreamsche.com
     - .jzt.jd.com
-    - .kaprila.com
     - .kepler-37b.com
     - .kstj.baidu.com
     - .kuyun.com
@@ -532,7 +539,6 @@ payload:
     - .mvad.com
     - .myes.youku.com
     - .n.mark.letv.com
-    - .najva.com
     - .nbsdk-baichuan.alicdn.com
     - .nbsdk-baichuan.taobao.com
     - .neirong.baidu.com
@@ -583,6 +589,7 @@ payload:
     - .pglstatp-toutiao.com
     - .pindao.huoban.taobao.com
     - .pingjs.qq.com
+    - .pixel.facebook.com
     - .pl.youku.com
     - .policy.video.iqiyi.com
     - .pos.baidu.com
@@ -626,7 +633,6 @@ payload:
     - .s.union.360.cn
     - .s4yxaqyq95.com
     - .sa.tuisong.baidu.com
-    - .sabavision.com
     - .sapi.sina.cn
     - .sax.sina.cn
     - .sax.sina.com.cn
@@ -689,7 +695,6 @@ payload:
     - .taboola.com
     - .tajs.qq.com
     - .tanxlog.istreamsche.com
-    - .tapsell.ir
     - .tcss.qq.com
     - .tdrec.youku.com
     - .tejia.taobao.com
@@ -773,7 +778,6 @@ payload:
     - .wwads.cn
     - .x.clearbitjs.com
     - .xy-log.tagtic.cn
-    - .yektanet.com
     - .yfanads.cn
     - .yfanads.com
     - .yiliao.hupan.com
@@ -782,6 +786,7 @@ payload:
     - .ylog.hiido.com
     - .ysm.yahoo.com
     - .yuedu.iqiyi.com
+    - .z-m-graph.facebook.com
     - .z.gds.cnzz.com
     - .znsv.baidu.com
     - .zxid-api.mobileservice.cn
@@ -794,6 +799,9 @@ payload:
     - .tqt.weibo.cn
     - .qzs.gdtimg.com
     - .adsmind.gdtimg.com
+    - .gdt.qq.com
+    - .e.kuaishou.cn
+    - .e.kuaishou.com
     - .umeng.com
     - .umengcloud.com
     - .fapi.xdrun.com

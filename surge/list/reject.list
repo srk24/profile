@@ -1,7 +1,6 @@
 643108e7617ef.cdn.sohucs.com
 adeventtracker.spotify.com
 adstudio-assets.scdn.co
-analytics.google.com
 apilog-web.acfun.cn
 bloodhound.spotify.com
 e8aeb8bbdbbd7.cdn.sohucs.com
@@ -80,8 +79,6 @@ wlog.kuaishou.com
 .adimg.mobile.sina.cn
 .adimg.uve.weibo.com
 .adinplay.com
-.adivery.com
-.adivery.ir
 .adjust.com
 .adjust.io
 .adjust.net.in
@@ -173,6 +170,7 @@ wlog.kuaishou.com
 .amdc.alipay.com
 .analytics-data.io
 .analytics.163.com
+.analytics.facebook.com
 .analytics.vpc.duolingo.com
 .api-adservices.apple.com
 .api.apps.sina.cn
@@ -182,6 +180,7 @@ wlog.kuaishou.com
 .api.wapa.taobao.com
 .api.waptest.taobao.com
 .apoll.m.taobao.com
+.app-analytics-services.com
 .app-measurement-cn.com
 .app-measurement.com
 .appc.baidu.com
@@ -197,6 +196,8 @@ wlog.kuaishou.com
 .atm.youku.com
 .atom-data.io
 .aty.sohu.com
+.b-graph-fallback.facebook.com
+.b-graph.facebook.com
 .b.bdstatic.com
 .b.smartvideo.youku.com
 .baichuan.baidu.com
@@ -393,6 +394,13 @@ wlog.kuaishou.com
 .googlevads-cn.com
 .goutong.baidu.com
 .gozendata.com
+.graph-fallback.facebook.com
+.graph-fallback.instagram.com
+.graph.facebook.com
+.graph.fbpigeon.com
+.graph.instagram.com
+.graph.whatsapp.com
+.graph.whatsapp.net
 .gsp1.baidu.com
 .gtms01.alicdn.com
 .gtms02.alicdn.com
@@ -467,7 +475,6 @@ wlog.kuaishou.com
 .juicyads.com
 .jxlog.istreamsche.com
 .jzt.jd.com
-.kaprila.com
 .kepler-37b.com
 .kstj.baidu.com
 .kuyun.com
@@ -531,7 +538,6 @@ wlog.kuaishou.com
 .mvad.com
 .myes.youku.com
 .n.mark.letv.com
-.najva.com
 .nbsdk-baichuan.alicdn.com
 .nbsdk-baichuan.taobao.com
 .neirong.baidu.com
@@ -582,6 +588,7 @@ wlog.kuaishou.com
 .pglstatp-toutiao.com
 .pindao.huoban.taobao.com
 .pingjs.qq.com
+.pixel.facebook.com
 .pl.youku.com
 .policy.video.iqiyi.com
 .pos.baidu.com
@@ -625,7 +632,6 @@ wlog.kuaishou.com
 .s.union.360.cn
 .s4yxaqyq95.com
 .sa.tuisong.baidu.com
-.sabavision.com
 .sapi.sina.cn
 .sax.sina.cn
 .sax.sina.com.cn
@@ -688,7 +694,6 @@ wlog.kuaishou.com
 .taboola.com
 .tajs.qq.com
 .tanxlog.istreamsche.com
-.tapsell.ir
 .tcss.qq.com
 .tdrec.youku.com
 .tejia.taobao.com
@@ -772,7 +777,6 @@ wlog.kuaishou.com
 .wwads.cn
 .x.clearbitjs.com
 .xy-log.tagtic.cn
-.yektanet.com
 .yfanads.cn
 .yfanads.com
 .yiliao.hupan.com
@@ -781,6 +785,7 @@ wlog.kuaishou.com
 .ylog.hiido.com
 .ysm.yahoo.com
 .yuedu.iqiyi.com
+.z-m-graph.facebook.com
 .z.gds.cnzz.com
 .znsv.baidu.com
 .zxid-api.mobileservice.cn
@@ -793,6 +798,9 @@ wlog.kuaishou.com
 .tqt.weibo.cn
 .qzs.gdtimg.com
 .adsmind.gdtimg.com
+.gdt.qq.com
+.e.kuaishou.cn
+.e.kuaishou.com
 .umeng.com
 .umengcloud.com
 .fapi.xdrun.com

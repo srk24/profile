@@ -7,7 +7,7 @@ DOMAIN,bootpreload.uve.weibo.com,REJECT-TINYGIF
 DOMAIN,adimg.uve.weibo.com,REJECT-TINYGIF
 
 [Map Local]
-^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime data-type=text data="{}"
 
 [Script]
 weibo_portal = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js

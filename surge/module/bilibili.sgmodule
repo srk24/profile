@@ -10,9 +10,9 @@ AND,((OR,((DOMAIN-KEYWORD,pcdn), (DOMAIN-KEYWORD,stun), (DOMAIN-KEYWORD,tracker)
 ^https?:\/\/(?:api|app|grpc)\.bili[^.]*\.(?:com|net).+\/search\/(defaultwords|square) - reject
 
 [Map Local]
-^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v\d\/topic_svr data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v\d\/dynamic_svr\/mix_uplist data="https://github.com/srk24/profile/raw/master/dict/empty-dict.json"
+^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/pgc\/season\/app\/related\/recommend\? data-type=text data="{}"
+^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v\d\/topic_svr data-type=text data="{}"
+^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v\d\/dynamic_svr\/mix_uplist data-type=text data="{}"
 
 [Script]
 bili_index = type=http-response,pattern=^https?:\/\/(?:api|app)\.bili[^.]*\.(?:com|net)\/x\/v2\/feed\/index\?,requires-body=1,max-size=0,script-path=https://github.com/srk24/profile/raw/master/js/bili_index.min.js,script-update-interval=0

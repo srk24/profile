@@ -10,11 +10,8 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"profile/adguard"
-	"slices"
 	"strings"
 	"sync"
-	"time"
 
 	"gopkg.in/yaml.v3"
 )
@@ -75,367 +72,85 @@ func main() {
 		"uhdnow.com",
 	}
 
-	if err := os.MkdirAll("./sing/tmp/", 0755); err != nil {
-		log.Fatal("Failed to create directory: ", err)
-	}
+	// 定义变量
+	var err error
+	var domain, domain_suffix, domain_keyword, domain_regex []string
 
-	// 处理进程数据
-	processProcessData()
+	// 定义临时目录
+	if err := os.MkdirAll("tmp", 0755); err != nil {
+		log.Fatalf("Failed to create tmp directory: %v", err)
+	}
 
 	// 处理PCDN数据
-	processPCDN()
-
-	// 处理AdGuard数据
-	processAdGuard(block_list)
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSurgeFile("https://github.com/uselibrary/PCDN/raw/main/pcdn.list")
+	if err == nil {
+		release(domain, domain_suffix, domain_keyword, domain_regex, "pcdn")
+	} else {
+		log.Printf("Failed to parse PCDN list: %v", err)
+	}
 
 	// 处理AdRules数据
-	processAdRules(block_list)
+	domain, domain_suffix = parseClashDomainSetFile("https://github.com/Cats-Team/AdRules/raw/main/adrules_domainset.txt")
+	if err == nil {
+		// 添加屏蔽列表
+		for _, item := range block_list {
+			domain_suffix = append(domain_suffix, item)
+		}
+		release(domain, domain_suffix, domain_keyword, domain_regex, "adrules")
+	} else {
+		log.Printf("Failed to parse AdRules list: %v", err)
+	}
 
-	// 处理 v2ray 广告和 HTTP DNS 数据
-	processAdsData(block_list)
+	// 处理 v2ray 广告
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs")
+	if err == nil {
+		// 添加屏蔽列表
+		for _, item := range block_list {
+			domain_suffix = append(domain_suffix, item)
+		}
+		release(domain, domain_suffix, domain_keyword, domain_regex, "reject")
+	} else {
+		log.Printf("Failed to parse ads-all.srs: %v", err)
+	}
 
 	// 处理 v2ray 非中国地理位置数据
-	processNonCNGeositeData(proxy_list)
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs")
+	if err == nil {
+		// 添加非中国列表
+		for _, item := range proxy_list {
+			domain_suffix = append(domain_suffix, item)
+		}
+		release(domain, domain_suffix, domain_keyword, domain_regex, "geolocation-!cn")
+	} else {
+		log.Printf("Failed to parse ads-all.srs: %v", err)
+	}
 
 	// 处理 v2ray 中国地理位置数据
-	processCNGeositeData(direct_list)
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs")
+	if err == nil {
+		// 添加屏蔽列表
+		for _, item := range direct_list {
+			domain_suffix = append(domain_suffix, item)
+		}
+		release(domain, domain_suffix, domain_keyword, domain_regex, "geolocation-cn")
+	} else {
+		log.Printf("Failed to parse ads-all.srs: %v", err)
+	}
 
 	// 清理临时目录
-	defer os.RemoveAll("./sing/tmp/")
+	defer os.RemoveAll("tmp")
 }
 
-func processProcessData() {
-	if err := CompileSingboxFile("./sing/ruleset/process_direct.json"); err != nil {
-		log.Printf("Failed to compile process_direct.json: %v", err)
-	}
-}
+// ======= parse various format files =======
 
-func processPCDN() {
-	f, err := Download("https://github.com/uselibrary/PCDN/raw/main/pcdn.list", "./sing/tmp/pcdn.list")
+func parseSurgeFile(fileUrl string) (domain, domain_suffix, domain_keyword, domain_regex []string, err error) {
+	f, err := download(fileUrl)
 	if err != nil {
-		log.Printf("Failed to download PCDN list: %v", err)
+		log.Printf("Failed to download surge file: %v", err)
 		return
 	}
 
-	domain, domain_suffix, domain_keyword, domain_regex := UnmarshalSurgeFile(f.Name())
-
-	if err := GenerateSingboxFile("./sing/ruleset/pcdn.json", domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
-		log.Printf("Failed to generate singbox file: %v", err)
-	}
-
-	if err := CompileSingboxFile("./sing/ruleset/pcdn.json"); err != nil {
-		log.Printf("Failed to compile singbox file: %v", err)
-	}
-
-	if err := GenerateSurgeFile("./surge/list/pcdn.list", domain, domain_suffix); err != nil {
-		log.Printf("Failed to generate surge file: %v", err)
-	}
-
-	if err := GenerateQuanXFile("./quanx/list/pcdn.snippet", domain, domain_suffix, domain_keyword); err != nil {
-		log.Printf("Failed to generate quanx file: %v", err)
-	}
-}
-
-func processAdGuard(block_list []string) {
-	f, err := Download("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "./sing/ruleset/adguard.txt")
-	if err != nil {
-		log.Printf("Failed to download AdGuard filter: %v", err)
-		return
-	}
-
-	reader, err := os.Open("./sing/ruleset/adguard.txt")
-	if err != nil {
-		log.Printf("Failed to open AdGuard filter: %v", err)
-		return
-	}
-	defer reader.Close()
-
-	domain, excludeDomain, err := adguard.Convert(reader)
-	if err == nil {
-		if err := GenerateSurgeFile("./surge/list/adguard.list", domain, block_list); err != nil {
-			log.Printf("Failed to generate adguard surge file: %v", err)
-		}
-		if err := GenerateSurgeFile("./surge/list/adguard_exclude.list", excludeDomain, nil); err != nil {
-			log.Printf("Failed to generate adguard exclude surge file: %v", err)
-		}
-	} else {
-		log.Printf("Failed to convert AdGuard filter: %v", err)
-	}
-
-	if err := ConvertSingboxFile(f.Name(), "adguard"); err != nil {
-		log.Printf("Failed to convert AdGuard singbox file: %v", err)
-	}
-
-	if err := os.Remove(f.Name()); err != nil {
-		log.Printf("Failed to remove temporary file: %v", err)
-	}
-}
-
-func processAdsData(block_list []string) {
-	sources := []string{
-		"https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs",
-		// "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-httpdns-cn@ads.srs",
-	}
-
-	jsonFiles := make([]string, len(sources))
-
-	for i, src := range sources {
-		output := filepath.Join("./sing/tmp", filepath.Base(src))
-		f, err := Download(src, output)
-		if err != nil {
-			log.Printf("Failed to download %s: %v", src, err)
-			continue
-		}
-
-		if err := DecompileSingboxFile(f.Name()); err != nil {
-			log.Printf("Failed to decompile %s: %v", f.Name(), err)
-			continue
-		}
-
-		jsonFile := strings.TrimSuffix(f.Name(), filepath.Ext(f.Name())) + ".json"
-		jsonFiles[i] = jsonFile
-	}
-
-	domain, domain_suffix, domain_keyword, _ := UnmarshalSingboxSourceCfgMulti(jsonFiles)
-
-	// 添加屏蔽列表
-	for _, item := range block_list {
-		if !slices.Contains(domain_suffix, item) {
-			domain_suffix = append(domain_suffix, item)
-		}
-	}
-
-	// 并行生成各种格式文件
-	var wg sync.WaitGroup
-	wg.Add(3)
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateSurgeFile("./surge/list/reject.list", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate reject surge file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateClashFile("./clash/provider/reject.yaml", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate reject clash file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateQuanXFile("./quanx/list/reject.snippet", domain, domain_suffix, domain_keyword); err != nil {
-			log.Printf("Failed to generate reject quanx file: %v", err)
-		}
-	}()
-
-	wg.Wait()
-}
-
-func processAdRules(block_list []string) {
-	src := "https://github.com/Cats-Team/AdRules/raw/main/adrules_domainset.txt"
-	output := "./sing/tmp/adrules_domainset.txt"
-
-	f, err := Download(src, output)
-	if err != nil {
-		log.Printf("Failed to download AdRules domain set: %v", err)
-		return
-	}
-
-	domain, domain_suffix, err := UnmarshalClashDomainSetFile(f.Name())
-	if err != nil {
-		log.Printf("Failed to unmarshal AdRules domain set: %v", err)
-		return
-	}
-
-	// 添加屏蔽列表
-	for _, item := range block_list {
-		if !slices.Contains(domain_suffix, item) {
-			domain_suffix = append(domain_suffix, item)
-		}
-	}
-
-	if err := GenerateSurgeFile("./surge/list/adrules.list", domain, domain_suffix); err != nil {
-		log.Printf("Failed to generate adrules surge file: %v", err)
-	}
-}
-
-func processNonCNGeositeData(proxy_list []string) {
-	src := "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs"
-	output := "./sing/tmp/geosite-geolocation-!cn.srs"
-
-	f, err := Download(src, output)
-	if err != nil {
-		log.Printf("Failed to download non-CN geo data: %v", err)
-		return
-	}
-
-	if err := DecompileSingboxFile(f.Name()); err != nil {
-		log.Printf("Failed to decompile non-CN geo data: %v", err)
-		return
-	}
-
-	domain, domain_suffix, domain_keyword, domain_regex := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-!cn.json")
-
-	// 添加代理列表
-	for _, item := range proxy_list {
-		if !slices.Contains(domain, item) && !slices.Contains(domain_suffix, item) {
-			domain_suffix = append(domain_suffix, item)
-		}
-	}
-
-	// 并行生成各种格式文件
-	var wg sync.WaitGroup
-	wg.Add(4)
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateSurgeFile("./surge/list/geolocation-!cn.list", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate non-CN surge file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateSingboxFile("./sing/ruleset/geolocation-!cn.json", domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
-			log.Printf("Failed to generate singbox file: %v", err)
-		}
-		if err := CompileSingboxFile("./sing/ruleset/geolocation-!cn.json"); err != nil {
-			log.Printf("Failed to compile singbox file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateClashFile("./clash/provider/geolocation-!cn.yaml", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate non-CN clash file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateQuanXFile("./quanx/list/geolocation-!cn.snippet", domain, domain_suffix, domain_keyword); err != nil {
-			log.Printf("Failed to generate non-CN quanx file: %v", err)
-		}
-	}()
-
-	wg.Wait()
-}
-
-func processCNGeositeData(direct_list []string) {
-	src := "https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs"
-	output := "./sing/tmp/geosite-geolocation-cn.srs"
-
-	f, err := Download(src, output)
-	if err != nil {
-		log.Printf("Failed to download CN geo data: %v", err)
-		return
-	}
-
-	if err := DecompileSingboxFile(f.Name()); err != nil {
-		log.Printf("Failed to decompile CN geo data: %v", err)
-		return
-	}
-
-	domain, domain_suffix, domain_keyword, domain_regex := UnmarshalSingboxSourceCfg("./sing/tmp/geosite-geolocation-cn.json")
-
-	// 添加直连列表
-	for _, item := range direct_list {
-		if !slices.Contains(domain, item) && !slices.Contains(domain_suffix, item) {
-			domain_suffix = append(domain_suffix, item)
-		}
-	}
-
-	// 并行生成各种格式文件
-	var wg sync.WaitGroup
-	wg.Add(4)
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateSurgeFile("./surge/list/geolocation-cn.list", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate CN surge file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateSingboxFile("./sing/ruleset/geolocation-cn.json", domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
-			log.Printf("Failed to generate singbox file: %v", err)
-		}
-		if err := CompileSingboxFile("./sing/ruleset/geolocation-cn.json"); err != nil {
-			log.Printf("Failed to compile singbox file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateClashFile("./clash/provider/geolocation-cn.yaml", domain, domain_suffix); err != nil {
-			log.Printf("Failed to generate CN clash file: %v", err)
-		}
-	}()
-
-	go func() {
-		defer wg.Done()
-		if err := GenerateQuanXFile("./quanx/list/geolocation-cn.snippet", domain, domain_suffix, domain_keyword); err != nil {
-			log.Printf("Failed to generate CN quanx file: %v", err)
-		}
-	}()
-
-	wg.Wait()
-}
-
-func UnmarshalSingboxSourceCfgMulti(path []string) (domain, domain_suffix, domain_keyword, domain_regex []string) {
-	for _, p := range path {
-		_domain, _domain_suffix, _domain_keyword, _domain_regex := UnmarshalSingboxSourceCfg(p)
-		domain = append(domain, _domain...)
-		domain_suffix = append(domain_suffix, _domain_suffix...)
-		domain_keyword = append(domain_keyword, _domain_keyword...)
-		domain_regex = append(domain_regex, _domain_regex...)
-	}
-	return
-}
-
-func UnmarshalSingboxSourceCfg(path string) (domain, domain_suffix, domain_keyword, domain_regex []string) {
-	var rules SingRuleSet
-	byteValue, _ := os.ReadFile(path)
-	json.Unmarshal(byteValue, &rules)
-
-	domain_map := make(map[string]bool)
-	domain_suffix_map := make(map[string]bool)
-	domain_keyword_map := make(map[string]bool)
-	domain_regex_map := make(map[string]bool)
-	for _, rule := range rules.Rules {
-		for _, item := range rule.Domain {
-			if _, v := domain_map[item]; !v {
-				domain_map[item] = true
-				domain = append(domain, strings.TrimLeft(item, "."))
-			}
-		}
-		for _, item := range rule.DomainSuffix {
-			if _, v := domain_suffix_map[item]; !v {
-				domain_suffix_map[item] = true
-				domain_suffix = append(domain_suffix, strings.TrimLeft(item, "."))
-			}
-		}
-		for _, item := range rule.DomainKeyword {
-			if _, v := domain_keyword_map[item]; !v {
-				domain_keyword_map[item] = true
-				domain_keyword = append(domain_keyword, item)
-			}
-		}
-		for _, item := range rule.DomainRegex {
-			if _, v := domain_regex_map[item]; !v {
-				domain_regex_map[item] = true
-				domain_regex = append(domain_regex, item)
-			}
-		}
-	}
-	return
-}
-
-func UnmarshalSurgeFile(path string) (domain, domain_suffix, domain_keyword, domain_regex []string) {
-	file, err := os.Open(path)
+	file, err := os.Open(f.Name())
 	if err != nil {
 		log.Printf("Failed to open file: %v", err)
 		return
@@ -472,10 +187,17 @@ func UnmarshalSurgeFile(path string) (domain, domain_suffix, domain_keyword, dom
 	return
 }
 
-func UnmarshalClashDomainSetFile(path string) (domain, domain_suffix []string, err error) {
-	file, err := os.Open(path)
+func parseClashDomainSetFile(fileUrl string) (domain, domain_suffix []string) {
+	f, err := download(fileUrl)
 	if err != nil {
-		return nil, nil, fmt.Errorf("failed to open file: %w", err)
+		log.Printf("Failed to download clash domain set file: %v", err)
+		return
+	}
+
+	file, err := os.Open(f.Name())
+	if err != nil {
+		log.Printf("Failed to open file: %v", err)
+		return
 	}
 	defer file.Close()
 
@@ -494,13 +216,117 @@ func UnmarshalClashDomainSetFile(path string) (domain, domain_suffix []string, e
 	}
 
 	if len(domain) == 0 && len(domain_suffix) == 0 {
-		return nil, nil, fmt.Errorf("no valid domain found")
+		return
 	}
-
-	return domain, domain_suffix, nil
+	return
 }
 
-func GenerateSurgeFile(filename string, domain, domainSuffix []string) error {
+func parseSingboxSrs(fileUrl string) (domain, domain_suffix, domain_keyword, domain_regex []string, err error) {
+	f, err := download(fileUrl)
+	if err != nil {
+		log.Printf("Failed to download sing-geosite file: %v", err)
+		return
+	}
+
+	var jsonFile string
+
+	if strings.HasSuffix(fileUrl, ".srs") {
+		err = decompileSingboxFile(f.Name())
+		if err != nil {
+			log.Printf("Failed to decompile sing-geosite file: %v", err)
+			return
+		}
+		jsonFile = strings.TrimSuffix(f.Name(), filepath.Ext(f.Name())) + ".json"
+	} else {
+		jsonFile = f.Name()
+	}
+
+	var rules SingRuleSet
+	byteValue, _ := os.ReadFile(jsonFile)
+	json.Unmarshal(byteValue, &rules)
+
+	domain_map := make(map[string]bool)
+	domain_suffix_map := make(map[string]bool)
+	domain_keyword_map := make(map[string]bool)
+	domain_regex_map := make(map[string]bool)
+	for _, rule := range rules.Rules {
+		for _, item := range rule.Domain {
+			if _, v := domain_map[item]; !v {
+				domain_map[item] = true
+				domain = append(domain, strings.TrimLeft(item, "."))
+			}
+		}
+		for _, item := range rule.DomainSuffix {
+			if _, v := domain_suffix_map[item]; !v {
+				domain_suffix_map[item] = true
+				domain_suffix = append(domain_suffix, strings.TrimLeft(item, "."))
+			}
+		}
+		for _, item := range rule.DomainKeyword {
+			if _, v := domain_keyword_map[item]; !v {
+				domain_keyword_map[item] = true
+				domain_keyword = append(domain_keyword, item)
+			}
+		}
+		for _, item := range rule.DomainRegex {
+			if _, v := domain_regex_map[item]; !v {
+				domain_regex_map[item] = true
+				domain_regex = append(domain_regex, item)
+			}
+		}
+	}
+	return
+}
+
+// ======= release various format files =======
+
+func release(domain, domain_suffix, domain_keyword, domain_regex []string, tag string) {
+	log.Printf("Releasing tag: %s", tag)
+	if len(domain) == 0 && len(domain_suffix) == 0 && len(domain_keyword) == 0 && len(domain_regex) == 0 {
+		return
+	}
+
+	// 并行生成各种格式文件
+	var wg sync.WaitGroup
+	wg.Add(4)
+
+	go func() {
+		defer wg.Done()
+		if err := releaseSurgeFile(tag, domain, domain_suffix); err != nil {
+			log.Printf("Failed to generate surge file, tag: %v, err: %v", tag, err)
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+		if err := releaseClashFile(tag, domain, domain_suffix); err != nil {
+			log.Printf("Failed to generate clash file, tag: %v, err: %v", tag, err)
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+		if err := releaseQuanXFile(tag, domain, domain_suffix, domain_keyword); err != nil {
+			log.Printf("Failed to generate quanx file, tag: %v, err: %v", tag, err)
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+		if err := releaseSingboxFile(tag, domain, domain_suffix, domain_regex, domain_keyword, nil); err != nil {
+			log.Printf("Failed to generate singbox file, tag: %v, err: %v", tag, err)
+		}
+		filename := fmt.Sprintf("sing/ruleset/%s.json", tag)
+		if err := compileSingboxFile(filename); err != nil {
+			log.Printf("Failed to compile singbox file, tag: %v, err: %v", tag, err)
+		}
+	}()
+
+	wg.Wait()
+}
+
+func releaseSurgeFile(tag string, domain, domainSuffix []string) error {
+	filename := fmt.Sprintf("surge/list/%s.list", tag)
 	// 确保目录存在
 	if err := os.MkdirAll(filepath.Dir(filename), 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
@@ -529,7 +355,8 @@ func GenerateSurgeFile(filename string, domain, domainSuffix []string) error {
 	return writer.Flush()
 }
 
-func GenerateClashFile(filename string, domain, domainSuffix []string) error {
+func releaseClashFile(tag string, domain, domainSuffix []string) error {
+	filename := fmt.Sprintf("clash/provider/%s.yaml", tag)
 	// 确保目录存在
 	if err := os.MkdirAll(filepath.Dir(filename), 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
@@ -552,7 +379,8 @@ func GenerateClashFile(filename string, domain, domainSuffix []string) error {
 	return os.WriteFile(filename, out, 0644)
 }
 
-func GenerateQuanXFile(filename string, domain, domainSuffix, domainKeyword []string) error {
+func releaseQuanXFile(tag string, domain, domainSuffix, domainKeyword []string) error {
+	filename := fmt.Sprintf("quanx/list/%s.snippet", tag)
 	// 确保目录存在
 	if err := os.MkdirAll(filepath.Dir(filename), 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
@@ -594,7 +422,8 @@ func GenerateQuanXFile(filename string, domain, domainSuffix, domainKeyword []st
 	return writer.Flush()
 }
 
-func GenerateSingboxFile(filename string, domain, domainSuffix, domainRegex, domainKeyword, processName []string) error {
+func releaseSingboxFile(tag string, domain, domainSuffix, domainRegex, domainKeyword, processName []string) error {
+	filename := fmt.Sprintf("sing/ruleset/%s.json", tag)
 	// 确保目录存在
 	if err := os.MkdirAll(filepath.Dir(filename), 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
@@ -621,7 +450,10 @@ func GenerateSingboxFile(filename string, domain, domainSuffix, domainRegex, dom
 	return os.WriteFile(filename, json, 0644)
 }
 
-func CompileSingboxFile(filename string) error {
+// ======= sing-box command =======
+
+func compileSingboxFile(filename string) error {
+	log.Printf("Compiling sing-box file: %s", filename)
 	cmd := exec.Command("sing-box", "rule-set", "compile", filename)
 	if err := cmd.Run(); err != nil {
 		return fmt.Errorf("compile failed: %w", err)
@@ -629,7 +461,8 @@ func CompileSingboxFile(filename string) error {
 	return nil
 }
 
-func DecompileSingboxFile(filename string) error {
+func decompileSingboxFile(filename string) error {
+	log.Printf("Decompiling sing-box file: %s", filename)
 	cmd := exec.Command("sing-box", "rule-set", "decompile", filename)
 	if err := cmd.Run(); err != nil {
 		return fmt.Errorf("decompile failed: %w", err)
@@ -637,68 +470,43 @@ func DecompileSingboxFile(filename string) error {
 	return nil
 }
 
-func ConvertSingboxFile(filename string, filetype string) error {
-	cmd := exec.Command("sing-box", "rule-set", "convert", filename, "-t", filetype)
-	if err := cmd.Run(); err != nil {
-		return fmt.Errorf("convert failed: %w", err)
-	}
-	return nil
-}
+// ======= download =======
 
-func Download(downloadURL, output string) (*os.File, error) {
+func download(downloadURL string) (*os.File, error) {
 	if len(downloadURL) == 0 {
 		return nil, fmt.Errorf("url is required")
 	}
 
-	// 确保目录存在
-	if err := os.MkdirAll(filepath.Dir(output), 0755); err != nil {
-		return nil, fmt.Errorf("failed to create directory: %w", err)
-	}
-
+	// 发起HTTP GET请求
 	log.Println("downloading", downloadURL)
-	client := http.Client{
-		Timeout: 15 * time.Second, // 增加超时时间
-		Transport: &http.Transport{
-			MaxIdleConns:        10,
-			IdleConnTimeout:     30 * time.Second,
-			DisableCompression:  false,
-			MaxIdleConnsPerHost: 5,
-		},
-	}
-
-	response, err := client.Get(downloadURL)
+	response, err := http.Get(downloadURL)
 	if err != nil {
 		return nil, fmt.Errorf("HTTP request failed: %w", err)
 	}
 	defer response.Body.Close()
 
+	// 检查HTTP响应状态码
 	if response.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("HTTP status error: %d %s", response.StatusCode, response.Status)
 	}
 
-	f, err := os.Create(output)
+	// 写入临时文件
+	filename := filepath.Base(downloadURL)
+	tempFile, err := os.CreateTemp("tmp", "*_"+filename)
 	if err != nil {
-		return nil, fmt.Errorf("failed to create file: %w", err)
+		return nil, fmt.Errorf("failed to create temp file: %w", err)
 	}
+	defer tempFile.Close()
 
-	// 使用bufio.Writer来提高写入性能
-	writer := bufio.NewWriter(f)
-	_, err = io.Copy(writer, response.Body)
+	_, err = io.Copy(tempFile, response.Body)
 	if err != nil {
-		f.Close()
-		return nil, fmt.Errorf("failed to copy data: %w", err)
+		return nil, fmt.Errorf("failed to write to temp file: %w", err)
 	}
 
-	if err = writer.Flush(); err != nil {
-		f.Close()
-		return nil, fmt.Errorf("failed to flush data: %w", err)
+	// 重置文件指针到开头
+	if _, err := tempFile.Seek(0, io.SeekStart); err != nil {
+		return nil, fmt.Errorf("failed to seek temp file: %w", err)
 	}
 
-	// 将文件指针重置到开始位置
-	if _, err = f.Seek(0, 0); err != nil {
-		f.Close()
-		return nil, fmt.Errorf("failed to seek to beginning: %w", err)
-	}
-
-	return f, nil
+	return tempFile, nil
 }

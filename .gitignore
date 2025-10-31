@@ -28,3 +28,6 @@ test/config/cache*
 # build file
 profile
 generator
+
+
+.tmp/

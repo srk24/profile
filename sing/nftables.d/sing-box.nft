@@ -9,10 +9,6 @@ table inet sing_box_transparent_proxy {
         # Skip already marked traffic
         meta mark 0x2024 accept
 
-        # Skip cn traffic
-        ip daddr @cn_ipv4 accept
-        ip6 daddr @cn_ipv6 accept
-
         # Skip traffic with specific DSCP value
         ip dscp 0x04 accept
         ip6 dscp 0x04 accept
@@ -30,10 +26,6 @@ table inet sing_box_transparent_proxy {
 
         # Skip already marked traffic
         meta mark 0x2024 accept
-
-        # Skip traffic to local networks
-        ip daddr @cn_ipv4 accept
-        ip6 daddr @cn_ipv6 accept
 
         # Skip traffic with specific DSCP value
         ip dscp 0x04 accept
