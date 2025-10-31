@@ -6902,9 +6902,7 @@
         "zztfly.com",
         "api.github.com",
         "steamserver.net",
-        "steamcontent.com",
-        "dler.cloud",
-        "dler.pro"
+        "steamcontent.com"
       ],
       "domain_regex": [
         "\\.(.+-)?ap-nanjing(-.+)?\\.myqcloud\\.com$",
