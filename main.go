@@ -10,6 +10,8 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
+	"sort"
 	"strings"
 	"sync"
 
@@ -87,6 +89,18 @@ func main() {
 		release(domain, domain_suffix, domain_keyword, domain_regex, "pcdn")
 	} else {
 		log.Printf("Failed to parse PCDN list: %v", err)
+	}
+
+	// 处理AdGuard SDNS过滤器数据
+  domain_suffix, err = parseAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
+	if err == nil {
+		// 添加屏蔽列表
+		for _, item := range block_list {
+			domain_suffix = append(domain_suffix, item)
+		}
+		release(nil, domain_suffix, nil, nil, "adguard")
+	} else {
+		log.Printf("Failed to parse AdGuard SDNS filter list: %v", err)
 	}
 
 	// 处理AdRules数据
@@ -274,6 +288,80 @@ func parseSingboxSrs(fileUrl string) (domain, domain_suffix, domain_keyword, dom
 				domain_regex = append(domain_regex, item)
 			}
 		}
+	}
+	return
+}
+
+func parseAdGuardSDNSFilter(fileUrl string) (domainSuffix []string, err error) {
+	var ignore_list []string
+
+	f, err := download(fileUrl)
+	if err != nil {
+		log.Printf("Failed to download AdGuard SDNS filter file: %v", err)
+		return
+	}
+
+	file, err := os.Open(f.Name())
+	if err != nil {
+		log.Printf("Failed to open file: %v", err)
+		return
+	}
+	defer file.Close()
+
+	// 匹配规则
+	reWildcard := regexp.MustCompile(`^\|\|\*\.\s*([a-zA-Z0-9.-]+)\^?$`)
+	reDomainSuffix := regexp.MustCompile(`^\|\|\s*([a-zA-Z0-9.-]+)\^?$`)
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" ||
+			strings.HasPrefix(line, "!") || // 注释
+			strings.HasPrefix(line, "@@") || // 例外
+			strings.HasPrefix(line, "[Adblock") || // 元数据头
+			strings.HasPrefix(line, "/") { // 正则过滤规则
+			ignore_list = append(ignore_list, line)
+			continue
+		}
+
+		switch {
+		case reWildcard.MatchString(line):
+			// 处理 ||*.example.com^
+			m := reWildcard.FindStringSubmatch(line)
+			domainSuffix = append(domainSuffix, m[1])
+		case reDomainSuffix.MatchString(line):
+			// 处理 ||example.com^
+			m := reDomainSuffix.FindStringSubmatch(line)
+			domainSuffix = append(domainSuffix, m[1])
+		default:
+			// 忽略其他类型（如 IP、脚本规则等）
+			ignore_list = append(ignore_list, line)
+			continue
+		}
+	}
+
+	// 实现 排序 domain and domainSuffix
+	sort.Strings(domainSuffix)
+
+	// write ignore_list to file
+	if len(ignore_list) > 0 {
+		ignoreFilename := "adguard_ignore.list"
+		log.Printf("Writing ignore list to file: %s", ignoreFilename)
+		ignoreFile, err := os.Create(ignoreFilename)
+		if err != nil {
+			log.Printf("Failed to create ignore file: %v", err)
+			return nil, err
+		}
+		defer ignoreFile.Close()
+
+		writer := bufio.NewWriter(ignoreFile)
+		for _, item := range ignore_list {
+			if _, err := writer.WriteString(item + "\n"); err != nil {
+				log.Printf("Failed to write to ignore file: %v", err)
+				return nil, err
+			}
+		}
+		writer.Flush()
 	}
 	return
 }
