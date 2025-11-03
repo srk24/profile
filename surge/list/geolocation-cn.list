@@ -211,24 +211,9 @@ googletraveladservices.com
 googlevads-cn.com
 gs-loc-cn.apple.com
 gs-loc.apple.com
-gsp10-ssl-cn.ls.apple.com
-gsp12-cn.ls.apple.com
-gsp13-cn.ls.apple.com
-gsp4-cn.ls.apple.com
 gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-gsp5-cn.ls.apple.com
-gsp85-cn-ssl.ls.apple.com
-gspe11-2-cn-ssl.ls.apple.com
-gspe12-cn-ssl.ls.apple.com
 gspe19-2-cn-ssl.ls-apple.com.akadns.net
-gspe19-2-cn-ssl.ls.apple.com
-gspe19-cn-ssl.ls.apple.com
 gspe19-cn.ls-apple.com.akadns.net
-gspe19-cn.ls.apple.com
-gspe21-ssl.ls.apple.com
-gspe35-ssl.ls.apple.com
-gspe79-cn-ssl.ls.apple.com
-gspe85-cn-ssl.ls.apple.com
 gstatic-cn.com
 gstaticadssl.l.google.com
 gtm.oasisfeng.com
@@ -524,6 +509,9 @@ www4-static.gog-statics.com
 xn--flw351e.com
 xp.apple.com
 xz.pphimalayanrt.com
+captive.apple.com
+time.apple.com
+api.github.com
 .alibaba
 .alipay
 .baidu
@@ -997,6 +985,8 @@ xz.pphimalayanrt.com
 .aiops.com
 .aipage.com
 .aipai.com
+.aiqicha.cn
+.aiqicha.com
 .airchangan.com
 .airchina.com.cn
 .airchinacargo.com
@@ -1022,6 +1012,7 @@ xz.pphimalayanrt.com
 .ali-api-test.net
 .ali-gtm-01.net
 .ali-gtm-pressure.com
+.ali-health.com
 .ali-restore.net
 .ali213.net
 .aliapp.org
@@ -1051,6 +1042,7 @@ xz.pphimalayanrt.com
 .aliimg.com
 .alikmd.com
 .alikunlun.com
+.alikunlun.net
 .alimama.com
 .alimebot.com
 .alimei.com
@@ -1368,6 +1360,7 @@ xz.pphimalayanrt.com
 .bce-cdn.com
 .bce-cdn.net
 .bcebos.com
+.bcelive.com
 .bcfmglobal.com
 .bcvbw.com
 .bczcdn.com
@@ -2237,6 +2230,7 @@ xz.pphimalayanrt.com
 .coolbuy.com
 .cooldock.com
 .coolsite.vip
+.cowcs.com
 .cowlevel.net
 .cowtransfer.com
 .coze.cn
@@ -3000,11 +2994,14 @@ xz.pphimalayanrt.com
 .geforce.cn
 .gefund.com.cn
 .geilicdn.com
+.gepush.com
 .getfeishu.cn
 .getfeishu.com
 .getsays.cn
 .getsays.com
+.getui.cn
 .getui.com
+.getui.net
 .gezida.com
 .gf.com.cn
 .gfan.com
@@ -3267,6 +3264,7 @@ xz.pphimalayanrt.com
 .hisilicon.com
 .hisilicon.com.cn
 .hitevision-solutions.com
+.hitokoto.cn
 .hitv.com
 .hiu58.cn
 .hiyd.com
@@ -3274,6 +3272,7 @@ xz.pphimalayanrt.com
 .hjfile.cn
 .hkgcloudcs.com
 .hktheone.com
+.hlgdata.com
 .hlzqgs.com
 .hm.com.cn
 .hn-cbec.com
@@ -3323,17 +3322,18 @@ xz.pphimalayanrt.com
 .htsec.com
 .httpdns-api.aliyuncs.com
 .httpdns-sc.aliyuncs.com
-.httpdns.bcelive.com
 .httpdns.kwd.inkuai.com
 .httpdns.pro
 .httpdns.yunxindns.com
 .huaan.com.cn
 .huaban.com
+.huabanimg.com
 .huafeng-accuweather.cn
 .huafengaw.com
 .huajingsec.com
 .huajinsc.cn
 .huangyuhui.net
+.huanleguang.com
 .huanqiu.com
 .huanqiucdn.cn
 .huashengdaili.com
@@ -3518,8 +3518,11 @@ xz.pphimalayanrt.com
 .iflyrec.com
 .iflytek.com
 .igao7.com
+.igehuo.com
 .igetget.cn
 .igetget.com
+.igetui.com
+.igexin.com
 .igtm-meeting-tencent.com
 .igtm.pub
 .igwfmc.com
@@ -3556,7 +3559,6 @@ xz.pphimalayanrt.com
 .img4399.com
 .imgcdc.com
 .imgo.tv
-.immersivetranslate.com
 .imooc.com
 .imp.optaim.com
 .imqq.com
@@ -3661,6 +3663,7 @@ xz.pphimalayanrt.com
 .jandan.net
 .japps.cn
 .jb51.com
+.jb51.net
 .jbcz.tv
 .jchat.io
 .jcloud-cache.com
@@ -4183,6 +4186,7 @@ xz.pphimalayanrt.com
 .leigod.cn
 .leigod.com
 .leikeji.com
+.leiniao.com
 .leiphone.com
 .leiting.com
 .leju.com
@@ -4872,7 +4876,9 @@ xz.pphimalayanrt.com
 .pconline.com.cn
 .pcpop.com
 .pddcdn.com
+.pddim.com
 .pddpic.com
+.pddugc.com
 .pearvideo.com
 .peccn.com
 .pengyoudewu.cn
@@ -5011,6 +5017,7 @@ xz.pphimalayanrt.com
 .qgzb.com.cn
 .qgzb.gov.cn
 .qgzb.net
+.qh-cdn.com
 .qh24.com
 .qhcdn.com
 .qhimg.com
@@ -5125,6 +5132,7 @@ xz.pphimalayanrt.com
 .quectel.com.cn
 .quehu.com
 .qugame.com
+.quickapp.cn
 .quickconnect.cn
 .qunar.com
 .qunarcdn.com
@@ -5192,6 +5200,7 @@ xz.pphimalayanrt.com
 .ruby-china.org
 .rubyconfchina.org
 .ruguoapp.com
+.ruiwen.com
 .rumt-zh.com
 .runoob.com
 .runsheng.com
@@ -5580,6 +5589,8 @@ xz.pphimalayanrt.com
 .tcdnvod.com
 .tcdnvodbak.com
 .tcfmglobal.com
+.tcl.com
+.tcl.com.cn
 .tclai.top
 .tcloudbase.com
 .tcloudbase.net
@@ -5591,6 +5602,7 @@ xz.pphimalayanrt.com
 .tcloudhw.net
 .tcloudscdn.com
 .tcloudscdn.net
+.tcltech.com
 .tcwqqdy.guru
 .tdnsv1.com
 .tdnsv1.net
@@ -5876,6 +5888,7 @@ xz.pphimalayanrt.com
 .ttjisu.com
 .ttpod.com
 .ttwebview.com
+.ttxsapp.com.cn
 .tudou.com
 .tudouui.com
 .tuer123.com
@@ -6076,6 +6089,7 @@ xz.pphimalayanrt.com
 .vm45e.cn
 .vmall.com
 .vmallres.com
+.vnet.cn
 .vo6z2.cn
 .vobao.com
 .vodtcbk.com
@@ -6169,6 +6183,7 @@ xz.pphimalayanrt.com
 .vrzwk.net
 .vrzwk.top
 .vscenevideo.com
+.vvstc.com
 .vxo7tu.com
 .vzuu.com
 .wali.com
@@ -6488,6 +6503,7 @@ xz.pphimalayanrt.com
 .xqymuy.com
 .xs8.cn
 .xsa239.com
+.xsbapp.cn
 .xsdzq.cn
 .xsgtvacct.com
 .xtracloud.cn
@@ -6599,6 +6615,7 @@ xz.pphimalayanrt.com
 .yo9.com
 .yocajr.com
 .yoma.cn
+.yoojia.com
 .youba.com
 .youboy.com
 .youdao.com
@@ -6796,7 +6813,10 @@ xz.pphimalayanrt.com
 .zhonshian.com.cn
 .zhuancorp.com
 .zhuangjiba.com
+.zhuaninc.com
+.zhuanspirit.cn
 .zhuanspirit.com
+.zhuanstatic.com
 .zhuanyewanjia.com
 .zhuanzfx.com
 .zhuanzhuan.com
@@ -6874,6 +6894,7 @@ xz.pphimalayanrt.com
 .zui.cn
 .zui.com
 .zuidaima.com
+.zuihuimai.com
 .zuk.cn
 .zuk.com
 .zuk.com.cn
@@ -6893,8 +6914,8 @@ xz.pphimalayanrt.com
 .zyhe.com.cn
 .zzdtec.com
 .zztfly.com
-.api.github.com
+.lcdn-locator.apple.com
+.lcdn-registration.apple.com
+.ls.apple.com
 .steamserver.net
 .steamcontent.com
-.dler.cloud
-.dler.pro

@@ -41,7 +41,12 @@ type SingRule struct {
 }
 
 func main() {
-	block_list := []string{
+
+	allow_block_domain_suffix := []string{
+		"httpdns.bilivideo.com",
+	}
+
+	block_domain_suffix := []string{
 		"tanx.com",
 		"miaozhen.com",
 		"tqt.weibo.cn",
@@ -61,15 +66,21 @@ func main() {
 		"msmp.abchina.com.cn",
 	}
 
-	direct_list := []string{
+	direct_domain := []string{
+		"captive.apple.com",
+		"time.apple.com",
 		"api.github.com",
-		"steamserver.net",
-		"steamcontent.com",
-		"dler.cloud",
-		"dler.pro",
 	}
 
-	proxy_list := []string{
+	direct_domain_suffix := []string{
+		"lcdn-locator.apple.com",
+		"lcdn-registration.apple.com",
+		"ls.apple.com",
+		"steamserver.net",
+		"steamcontent.com",
+	}
+
+	proxy_domain_suffix := []string{
 		"alicesw.com",
 		"uhdnow.com",
 	}
@@ -92,12 +103,25 @@ func main() {
 	}
 
 	// 处理AdGuard SDNS过滤器数据
-  domain_suffix, err = parseAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
+	domain_suffix, err = parseAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
 	if err == nil {
-		// 添加屏蔽列表
-		for _, item := range block_list {
+		// 移除允许的域名
+		cleaned_domain_suffix := make([]string, 0, len(domain_suffix))
+		allowSet := make(map[string]struct{}, len(allow_block_domain_suffix))
+		for _, s := range allow_block_domain_suffix {
+			allowSet[s] = struct{}{}
+		}
+		for _, s := range domain_suffix {
+			if _, ok := allowSet[s]; !ok {
+				cleaned_domain_suffix = append(cleaned_domain_suffix, s)
+			}
+		}
+		domain_suffix = cleaned_domain_suffix
+		// 添加内置列表
+		for _, item := range block_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
 		}
+
 		release(nil, domain_suffix, nil, nil, "adguard")
 	} else {
 		log.Printf("Failed to parse AdGuard SDNS filter list: %v", err)
@@ -106,8 +130,8 @@ func main() {
 	// 处理AdRules数据
 	domain, domain_suffix = parseClashDomainSetFile("https://github.com/Cats-Team/AdRules/raw/main/adrules_domainset.txt")
 	if err == nil {
-		// 添加屏蔽列表
-		for _, item := range block_list {
+		// 添加内置列表
+		for _, item := range block_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
 		}
 		release(domain, domain_suffix, domain_keyword, domain_regex, "adrules")
@@ -118,8 +142,8 @@ func main() {
 	// 处理 v2ray 广告
 	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-category-ads-all.srs")
 	if err == nil {
-		// 添加屏蔽列表
-		for _, item := range block_list {
+		// 添加内置列表
+		for _, item := range block_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
 		}
 		release(domain, domain_suffix, domain_keyword, domain_regex, "reject")
@@ -130,8 +154,8 @@ func main() {
 	// 处理 v2ray 非中国地理位置数据
 	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs")
 	if err == nil {
-		// 添加非中国列表
-		for _, item := range proxy_list {
+		// 添加内置列表
+		for _, item := range proxy_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
 		}
 		release(domain, domain_suffix, domain_keyword, domain_regex, "geolocation-!cn")
@@ -142,8 +166,11 @@ func main() {
 	// 处理 v2ray 中国地理位置数据
 	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-cn.srs")
 	if err == nil {
-		// 添加屏蔽列表
-		for _, item := range direct_list {
+		// 添加内置列表
+		for _, item := range direct_domain {
+			domain = append(domain, item)
+		}
+		for _, item := range direct_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
 		}
 		release(domain, domain_suffix, domain_keyword, domain_regex, "geolocation-cn")

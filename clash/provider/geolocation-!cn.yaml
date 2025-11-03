@@ -22,7 +22,6 @@ payload:
     - default.exp-tas.com
     - deribit.cdn.prismic.io
     - deutschewelle.h-cdn.com
-    - disney.my.sentry.io
     - dl.begellhouse.com
     - elib.maruzen.co.jp
     - f3b7q2p3.ssl.hwcdn.net
@@ -51,8 +50,6 @@ payload:
     - ntp5.ntp-servers.net
     - ntp6.ntp-servers.net
     - ntp7.ntp-servers.net
-    - o33249.ingest.sentry.io
-    - o4504926511693824.ingest.sentry.io
     - ood.opsource.net
     - practivate.adobe
     - practivate.adobe.ipp
@@ -7189,6 +7186,7 @@ payload:
     - .dlfacebook.com
     - .dlhe.ac.uk
     - .dlib.eastview.com
+    - .dln1.ncdn.ec
     - .dls.ac.uk
     - .dlsite.com
     - .dlsite.com.tw
@@ -12362,6 +12360,7 @@ payload:
     - .imilfs.com
     - .imlab.ac.uk
     - .imlive.com
+    - .immersivetranslate.com
     - .immidio.com
     - .immoral.jp
     - .immxd.com
@@ -20563,6 +20562,7 @@ payload:
     - .sensualgirls.org
     - .sensualmothers.com
     - .sensueel.net
+    - .sentry.io
     - .senzuritv.net
     - .sepnet.ac.uk
     - .seqing.one
