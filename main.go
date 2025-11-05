@@ -94,29 +94,26 @@ func main() {
 		log.Fatalf("Failed to create tmp directory: %v", err)
 	}
 
-	// 处理PCDN数据
-	domain, domain_suffix, domain_keyword, domain_regex, err = parseSurgeFile("https://github.com/uselibrary/PCDN/raw/main/pcdn.list")
-	if err == nil {
-		release(domain, domain_suffix, domain_keyword, domain_regex, "pcdn")
-	} else {
-		log.Printf("Failed to parse PCDN list: %v", err)
-	}
+	// 处理 AdGuard SDNS 规则转换为 sing-box 格式
+	convertAdguard(block_domain_suffix, "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "adguard_convert")
 
 	// 处理AdGuard SDNS过滤器数据
 	domain_suffix, err = parseAdGuardSDNSFilter("https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt")
 	if err == nil {
-		// 移除允许的域名
-		cleaned_domain_suffix := make([]string, 0, len(domain_suffix))
+		// 移除白名单域名
 		allowSet := make(map[string]struct{}, len(allow_block_domain_suffix))
 		for _, s := range allow_block_domain_suffix {
 			allowSet[s] = struct{}{}
 		}
+		cleaned_domain_suffix := make([]string, 0, len(domain_suffix))
 		for _, s := range domain_suffix {
-			if _, ok := allowSet[s]; !ok {
-				cleaned_domain_suffix = append(cleaned_domain_suffix, s)
+			if _, ok := allowSet[s]; ok {
+				continue
 			}
+			cleaned_domain_suffix = append(cleaned_domain_suffix, s)
 		}
 		domain_suffix = cleaned_domain_suffix
+
 		// 添加内置列表
 		for _, item := range block_domain_suffix {
 			domain_suffix = append(domain_suffix, item)
@@ -137,6 +134,14 @@ func main() {
 		release(domain, domain_suffix, domain_keyword, domain_regex, "adrules")
 	} else {
 		log.Printf("Failed to parse AdRules list: %v", err)
+	}
+
+	// 处理PCDN数据
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSurgeFile("https://github.com/uselibrary/PCDN/raw/main/pcdn.list")
+	if err == nil {
+		release(domain, domain_suffix, domain_keyword, domain_regex, "pcdn")
+	} else {
+		log.Printf("Failed to parse PCDN list: %v", err)
 	}
 
 	// 处理 v2ray 广告
@@ -336,8 +341,8 @@ func parseAdGuardSDNSFilter(fileUrl string) (domainSuffix []string, err error) {
 	defer file.Close()
 
 	// 匹配规则
-	reWildcard := regexp.MustCompile(`^\|\|\*\.\s*([a-zA-Z0-9.-]+)\^?$`)
-	reDomainSuffix := regexp.MustCompile(`^\|\|\s*([a-zA-Z0-9.-]+)\^?$`)
+	reWildcard := regexp.MustCompile(`^\|\|\*\.\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
+	reDomainSuffix := regexp.MustCompile(`^\|\|\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -397,7 +402,7 @@ func parseAdGuardSDNSFilter(fileUrl string) (domainSuffix []string, err error) {
 
 func release(domain, domain_suffix, domain_keyword, domain_regex []string, tag string) {
 	log.Printf("Releasing tag: %s", tag)
-	if len(domain) == 0 && len(domain_suffix) == 0 && len(domain_keyword) == 0 && len(domain_regex) == 0 {
+	if len(domain) == 0 && len(domain_suffix) == 0 {
 		return
 	}
 
@@ -569,6 +574,50 @@ func releaseSingboxFile(tag string, domain, domainSuffix, domainRegex, domainKey
 }
 
 // ======= sing-box command =======
+
+func convertAdguard(block_domain_suffix []string, fileUrl, tag string) error {
+	filename := fmt.Sprintf("sing/ruleset/%s.srs", tag)
+
+	f, err := download(fileUrl)
+	if err != nil {
+		log.Printf("Failed to download AdGuard SDNS filter file: %v", err)
+		return err
+	}
+	f.Close() // Close the file handle from download function
+
+	file, err := os.OpenFile(f.Name(), os.O_APPEND|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Printf("Failed to open file for appending: %v", err)
+		return err
+	}
+	defer file.Close()
+
+	// write block_domain_suffix to download file
+	writer := bufio.NewWriter(file)
+	if _, err := writer.WriteString("\n"); err != nil {
+		log.Printf("Failed to write newline: %v", err)
+		return err
+	}
+	for _, item := range block_domain_suffix {
+		line := fmt.Sprintf("||%s^\n", item)
+		if _, err := writer.WriteString(line); err != nil {
+			log.Printf("Failed to write to temp file: %v", err)
+			return err
+		}
+	}
+	writer.Flush()
+
+	// use sing-box convert command
+	// sing-box rule-set convert --type adguard [--output <file-name>.srs] <file-name>.txt
+	cmd := exec.Command("sing-box", "rule-set", "convert", "--type", "adguard", "--output", filename, f.Name())
+	if err := cmd.Run(); err != nil {
+		log.Printf("Failed to convert AdGuard SDNS filter to sing-box format: %v", err)
+		return err
+	}
+
+	log.Printf("Converted AdGuard rules to sing-box format: %s", filename)
+	return nil
+}
 
 func compileSingboxFile(filename string) error {
 	log.Printf("Compiling sing-box file: %s", filename)
