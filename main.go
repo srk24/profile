@@ -341,8 +341,9 @@ func parseAdGuardSDNSFilter(fileUrl string) (domainSuffix []string, err error) {
 	defer file.Close()
 
 	// 匹配规则
-	reWildcard := regexp.MustCompile(`^\|\|\*\.\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
-	reDomainSuffix := regexp.MustCompile(`^\|\|\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
+	reDomainSuffix_1 := regexp.MustCompile(`^(\|\|)?\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
+	reDomainSuffix_2 := regexp.MustCompile(`^(\|\|)?\*\.\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`)
+	reDomainSuffix_3 := regexp.MustCompile(`^(\.)\s*(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,})\^?(\$important)?$`) //
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -357,14 +358,18 @@ func parseAdGuardSDNSFilter(fileUrl string) (domainSuffix []string, err error) {
 		}
 
 		switch {
-		case reWildcard.MatchString(line):
-			// 处理 ||*.example.com^
-			m := reWildcard.FindStringSubmatch(line)
-			domainSuffix = append(domainSuffix, m[1])
-		case reDomainSuffix.MatchString(line):
-			// 处理 ||example.com^
-			m := reDomainSuffix.FindStringSubmatch(line)
-			domainSuffix = append(domainSuffix, m[1])
+		case reDomainSuffix_1.MatchString(line):
+			// 处理 example.com^
+			m := reDomainSuffix_1.FindStringSubmatch(line)
+			domainSuffix = append(domainSuffix, m[2])
+		case reDomainSuffix_2.MatchString(line):
+			// 处理 *.example.com^
+			m := reDomainSuffix_2.FindStringSubmatch(line)
+			domainSuffix = append(domainSuffix, m[2])
+		case reDomainSuffix_3.MatchString(line):
+			// 处理 .example.com^
+			m := reDomainSuffix_3.FindStringSubmatch(line)
+			domainSuffix = append(domainSuffix, m[2])
 		default:
 			// 忽略其他类型（如 IP、脚本规则等）
 			ignore_list = append(ignore_list, line)
