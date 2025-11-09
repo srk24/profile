@@ -585,6 +585,7 @@ api.github.com
 .1637.com
 .163cn.tv
 .163industry.com
+.163jiasu.com
 .163mail.com
 .163qiyukf.com
 .163yun.com
@@ -645,6 +646,7 @@ api.github.com
 .310win.com
 .315che.com
 .315dian.com
+.321fenx.com
 .3234.com
 .32r.com
 .3304399.com
@@ -1539,6 +1541,8 @@ api.github.com
 .bocigroup.com
 .bocim.com
 .bocservices.com.cn
+.boe.com
+.boe.com.cn
 .bohejiasuqi.com
 .bojianger.com
 .bokecc.com
@@ -2361,6 +2365,7 @@ api.github.com
 .dearedu.com
 .debugmode.cn
 .dedecms.com
+.deepepg.com
 .deepin.cn
 .deepin.com
 .deepin.org.cn
@@ -3569,7 +3574,7 @@ api.github.com
 .incopat.com
 .indienova.com
 .inewsweek.cn
-.infineon.com
+.infineon.cn
 .infinitynewtab.com
 .infoq.com
 .infoqstatic.com
@@ -3984,6 +3989,7 @@ api.github.com
 .kindleoasis.com.cn
 .kingdee.com
 .kinghomechina.com
+.kingsoft-office-service.com
 .kingsoft.com
 .kiyuu.club
 .kjwugx.com
@@ -4005,6 +4011,7 @@ api.github.com
 .kolbuyer.cn
 .kongfz.com
 .koocdn.com
+.kookong.com
 .koolearn.com
 .koopass.com
 .koowo.cn
@@ -4656,6 +4663,7 @@ api.github.com
 .netease-inc.com
 .netease.com
 .netease.im
+.netstatic.net
 .network-auth.cn
 .netzz.net
 .newasp.net
@@ -5088,6 +5096,8 @@ api.github.com
 .qiyipic.com
 .qiyou.cn
 .qiyukf.com
+.qiyukf.net
+.qiyukf.net.cn
 .qizuang.com
 .qlinkto.cn
 .qlisten.cn
@@ -5460,6 +5470,7 @@ api.github.com
 .starbaby.com
 .starlakelab.com
 .starworldgames.com
+.static163.net
 .staticfile.net
 .staticfile.org
 .statickksmg.com
@@ -5742,7 +5753,6 @@ api.github.com
 .thtf.com.cn
 .thundercdn.com
 .thunderurl.com
-.ti.com
 .ti.com.cn
 .tiancity.com
 .tiancitycdn.com
