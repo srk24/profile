@@ -547,6 +547,7 @@ payload:
     - .alipay
     - .baidu
     - .citic
+    - .geekpark
     - .icbc
     - .sohu
     - .taobao
@@ -1332,6 +1333,7 @@ payload:
     - .b2clogin.cn
     - .b3itech.cn
     - .b3log.org
+    - .b3logfile.com
     - .babytree.com
     - .babytreeimg.com
     - .baichuan-ai.com
@@ -2333,6 +2335,7 @@ payload:
     - .cyts.com
     - .cza84.cn
     - .cztv.com
+    - .cztvcdn.com
     - .cztvcloud.com
     - .dadajiasu.com
     - .dadighost.com
@@ -3024,7 +3027,6 @@ payload:
     - .gdliontech.com
     - .gdrc.com
     - .gdtimg.com
-    - .geekpark.net
     - .geektool.top
     - .geely.com
     - .geetest.com
@@ -3325,7 +3327,6 @@ payload:
     - .homepod.cn
     - .hongbo100.com
     - .hongdefund.com
-    - .hongdunwang.com.cn
     - .hongen.com
     - .hongsanban.com
     - .hongtastock.com
@@ -5498,6 +5499,7 @@ payload:
     - .st.dl.bscstorage.net
     - .st.dl.eccdnx.com
     - .st.dl.pinyuncloud.com
+    - .stage1st.com
     - .starbaby.cc
     - .starbaby.com
     - .starlakelab.com
@@ -5816,7 +5818,7 @@ payload:
     - .timmerse.com
     - .tingbook.com
     - .tingyun.com
-    - .tipdim.org
+    - .tipdm.org
     - .titanar.com
     - .tivitv.com
     - .tjjt360.com
@@ -6358,6 +6360,7 @@ payload:
     - .worldoftank.cn
     - .worldoftanks.cn
     - .worldoftanks.com.cn
+    - .woshipm.com
     - .wostatic.cn
     - .wotgame.cn
     - .wowsgame.cn
@@ -6557,7 +6560,6 @@ payload:
     - .xuexi365.com.cn
     - .xuexi365.net
     - .xuexicha.com
-    - .xueyuanjun.com
     - .xundupdf.com
     - .xunfei.cn
     - .xunfeixxj.com
