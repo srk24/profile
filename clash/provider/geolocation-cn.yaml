@@ -810,6 +810,7 @@ payload:
     - .51jingying.com
     - .51job.com
     - .51jobcdn.com
+    - .51kim.com
     - .51meishu.com
     - .51nod.com
     - .51selling.com
@@ -860,6 +861,7 @@ payload:
     - .5khouse.com
     - .5read.com
     - .5you.com
+    - .6-u.com
     - .61.com
     - .6655.com
     - .66wz.com
@@ -1267,6 +1269,7 @@ payload:
     - .autonavi.com
     - .avicfund.cn
     - .avicsec.com
+    - .avlyun.com
     - .awemeughun.com
     - .awemeuglang.com
     - .awemeugsoul.com
@@ -3429,6 +3432,7 @@ payload:
     - .hunantv.com
     - .huochepiao.com
     - .huocheso.com
+    - .huolala.cn
     - .huorong.cn
     - .huoshan.com
     - .huoshancdn.com
@@ -3604,6 +3608,7 @@ payload:
     - .imooc.com
     - .imp.optaim.com
     - .imqq.com
+    - .imsyy.com
     - .imweb.io
     - .in.th
     - .inanguapi.cn
@@ -4010,6 +4015,7 @@ payload:
     - .kechuang.org
     - .keepcdn.com
     - .kejet.net
+    - .kekeniu.com
     - .kesong.co
     - .ketangpai.com
     - .kf5.com
@@ -5197,6 +5203,7 @@ payload:
     - .qyer.com
     - .qyunapp.com
     - .qyyjt.cn
+    - .qzhuye.com
     - .qznovel.com
     - .qznovelpic.com
     - .qznovelstatic.com
@@ -6120,6 +6127,7 @@ payload:
     - .vg.com
     - .vgtime.com
     - .vhengdata.com
+    - .viayoo.com
     - .vic18.com
     - .videocc.net
     - .videojj.com
@@ -6587,6 +6595,7 @@ payload:
     - .yamaxun.cn
     - .yamibo.com
     - .yangkeduo.com
+    - .yangshipin.cn
     - .yaolan.com
     - .yaoyl.com
     - .yaozh.com
@@ -6877,6 +6886,7 @@ payload:
     - .zhugeapi.net
     - .zhugeio.com
     - .zhuoyuegame.com
+    - .zhuye.kim
     - .zijieapi.cn
     - .zijieapi.com
     - .zijieapi.net
