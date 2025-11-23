@@ -811,6 +811,7 @@ payload:
     - .addthisedge.com
     - .addtoany.com
     - .adelaidenow.com.au
+    - .adfox.ru
     - .adgoogle.net
     - .adguard-dns.com
     - .adguard-dns.io
@@ -845,6 +846,7 @@ payload:
     - .adidas.se
     - .adinst.com
     - .admeld.com
+    - .admetrica.ru
     - .admob.com
     - .adobe-aemassets-value.com
     - .adobe-audience-finder.com
@@ -9137,6 +9139,7 @@ payload:
     - .heyzo.com
     - .hf-iphone.com
     - .hf.co
+    - .hf.space
     - .hg.cool
     - .hgamer.pro
     - .hh-content.com
@@ -11220,6 +11223,7 @@ payload:
     - .kinkoid.com
     - .kinkyfamily.com
     - .kinkypeepz.com
+    - .kinopoisk-ru.clstorage.net
     - .kinopoisk.ru
     - .kir2kos.net
     - .kirbysepicyarn.com
@@ -19520,6 +19524,8 @@ payload:
     - .webtoons.com
     - .webtoonscorp.com
     - .webtype.com
+    - .webvisor.com
+    - .webvisor.org
     - .weekly-economist.com
     - .weeklytimesnow.com.au
     - .weimi180.com
@@ -20297,6 +20303,7 @@ payload:
     - .ya.ru
     - .yaddal.tv
     - .yadori.club
+    - .yads.tech
     - .yaeby.info
     - .yaeby.pro
     - .yahoo-news.com.hk
@@ -20464,6 +20471,7 @@ payload:
     - .yande.re
     - .yandex-bank.net
     - .yandex-images.clstorage.net
+    - .yandex-team.ru
     - .yandex.aero
     - .yandex.az
     - .yandex.by
@@ -20499,6 +20507,7 @@ payload:
     - .yandexadexchange.net
     - .yandexcloud.net
     - .yandexcom.net
+    - .yandexmetrica.com
     - .yandexwebcache.org
     - .yantaqu.com
     - .yaohubaba.com
@@ -20511,6 +20520,7 @@ payload:
     - .yarininsuyu.com
     - .yarnpkg.com
     - .yasarang.net
+    - .yastat.net
     - .yastatic.net
     - .yavtube.com
     - .yaya.cyou
