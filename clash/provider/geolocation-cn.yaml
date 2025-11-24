@@ -2908,17 +2908,14 @@ payload:
     - .frp-all.com
     - .frp-any.com
     - .frp-arm.com
-    - .frp-art.com
     - .frp-bag.com
     - .frp-bar.com
     - .frp-bid.com
     - .frp-box.com
     - .frp-boy.com
     - .frp-bus.com
-    - .frp-car.com
     - .frp-dad.com
     - .frp-dog.com
-    - .frp-dry.com
     - .frp-egg.com
     - .frp-end.com
     - .frp-era.com
@@ -2935,18 +2932,17 @@ payload:
     - .frp-hip.com
     - .frp-hub.com
     - .frp-ice.com
+    - .frp-jar.com
     - .frp-key.com
     - .frp-kit.com
     - .frp-lab.com
     - .frp-leg.com
     - .frp-mad.com
-    - .frp-man.com
     - .frp-mix.com
     - .frp-mom.com
     - .frp-net.com
     - .frp-now.com
     - .frp-nut.com
-    - .frp-oak.com
     - .frp-off.com
     - .frp-oil.com
     - .frp-one.com
@@ -2960,6 +2956,9 @@ payload:
     - .frp-sea.com
     - .frp-shy.com
     - .frp-six.com
+    - .frp-ski.com
+    - .frp-sun.com
+    - .frp-tag.com
     - .fsfund.com
     - .fshark.cn
     - .fspcdn.com
