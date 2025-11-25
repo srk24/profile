@@ -547,7 +547,6 @@ payload:
     - .alipay
     - .baidu
     - .citic
-    - .geekpark
     - .icbc
     - .sohu
     - .taobao
@@ -1755,6 +1754,7 @@ payload:
     - .capitalonline.net
     - .cardbaobao.com
     - .carnoc.com
+    - .cbern.com.cn
     - .cbjq.com
     - .ccb-life.com.cn
     - .ccb.cn
@@ -1987,6 +1987,7 @@ payload:
     - .china-nengyuan.com
     - .china-tower.com
     - .china.com
+    - .chinaaet.com
     - .chinaamc.com
     - .chinabank.com.cn
     - .chinabooktrading.com
@@ -2284,6 +2285,7 @@ payload:
     - .cpatrk.net
     - .cppblog.com
     - .cpppf.org
+    - .cqcb.com
     - .cqccn.com
     - .cqvip.com
     - .cr-cts.com
@@ -3033,6 +3035,7 @@ payload:
     - .gdliontech.com
     - .gdrc.com
     - .gdtimg.com
+    - .geekpark.net
     - .geektool.top
     - .geely.com
     - .geetest.com
@@ -3656,6 +3659,7 @@ payload:
     - .iqiyipic.com
     - .iqoo.com
     - .iranshao.com
+    - .iresearch.cn
     - .irs01.com
     - .irsnp.com
     - .is-cool.cn
@@ -5089,6 +5093,7 @@ payload:
     - .qiangbus.com
     - .qianjia.com
     - .qianlima.com
+    - .qianwen.com
     - .qianxun.com
     - .qianyierp.com
     - .qianzhan.com
@@ -5303,6 +5308,7 @@ payload:
     - .seasungames.com
     - .sec-wiki.com
     - .secec.com
+    - .secrss.com
     - .sectigochina.com
     - .sectigochina.com.cdn.cloudflare.net
     - .securityfeishu.cn
@@ -5341,6 +5347,7 @@ payload:
     - .shangc.net
     - .shanghairc.com
     - .shangshi360.com
+    - .shangyexinzhi.com
     - .shangzhibo.tv
     - .shanhaitujian.com
     - .shanshuihotel.com
@@ -5431,6 +5438,7 @@ payload:
     - .sllssrq.com
     - .sm.cn
     - .smartapps.cn
+    - .smartedu.cn
     - .smartmidea.net
     - .smgbb.cn
     - .smgv.cn

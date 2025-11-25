@@ -93,7 +93,7 @@ payload:
     - .admob-cn.com
     - .adult
     - .amazon
-    - .and
+    - .android
     - .app-measurement-cn.com
     - .app-measurement.com
     - .apple
@@ -105,7 +105,6 @@ payload:
     - .bmw
     - .bridgestone
     - .canon
-    - .cbs
     - .cern
     - .chrome
     - .cisco
@@ -150,8 +149,6 @@ payload:
     - .intuit
     - .java
     - .kindle
-    - .mcd
-    - .mcdonalds
     - .microsoft
     - .mini
     - .mit
@@ -164,13 +161,11 @@ payload:
     - .playstation
     - .porn
     - .samsung
-    - .showtime
     - .sky
     - .skype
     - .softbank
     - .sony
     - .target
-    - .theguardian
     - .volvo
     - .walmart
     - .weather
