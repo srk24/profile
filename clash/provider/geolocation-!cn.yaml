@@ -94,6 +94,7 @@ payload:
     - .adult
     - .amazon
     - .android
+    - .app-analytics-services.com
     - .app-measurement-cn.com
     - .app-measurement.com
     - .apple
@@ -1170,6 +1171,7 @@ payload:
     - .akatns.net
     - .akiba-online.com
     - .akita-bank.co.jp
+    - .akstat.io
     - .akthelp.com
     - .albagals.com
     - .albastudio.co
@@ -1623,6 +1625,7 @@ payload:
     - .apornotube.net
     - .aporntv.com
     - .apornvideo.com
+    - .app-analytics-services-att.com
     - .app-dynamics.com
     - .app-store.wang
     - .app0le.com
@@ -6933,7 +6936,6 @@ payload:
     - .facebook30.net
     - .facebook30.org
     - .facebook4business.com
-    - .facebookads.com
     - .facebookadvertisingsecrets.com
     - .facebookappcenter.info
     - .facebookappcenter.net
@@ -16332,6 +16334,7 @@ payload:
     - .sensualgirls.org
     - .sensualmothers.com
     - .sensueel.net
+    - .sentry-cdn.com
     - .sentry.io
     - .senzuritv.net
     - .seqing.one
@@ -20499,6 +20502,7 @@ payload:
     - .yandex.sx
     - .yandex.tj
     - .yandex.tm
+    - .yandex.tr
     - .yandex.ua
     - .yandex.uz
     - .yandexadexchange.net
