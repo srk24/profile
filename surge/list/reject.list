@@ -163,11 +163,11 @@ wlog.kuaishou.com
 .analytics.facebook.com
 .analytics.vpc.duolingo.com
 .api-adservices.apple.com
-.api.game.letvstore.com
 .app-analytics-services-att.com
 .app-analytics-services.com
 .app-measurement-cn.com
 .app-measurement.com
+.apple.www.letv.com
 .applovin.com
 .applvn.com
 .ark.letv.com
@@ -268,7 +268,6 @@ wlog.kuaishou.com
 .fourier.taobao.com
 .fout.jp
 .fpb.sohu.com
-.fz.letv.com
 .g.163.com
 .g.click.taobao.com
 .g1.tagtic.cn
@@ -356,7 +355,6 @@ wlog.kuaishou.com
 .kuyun.com
 .ladsp.com
 .leanplum.com
-.letv.allyes.com
 .lianmeng.360.cn
 .lijit.com
 .log.hunantv.com
@@ -386,7 +384,6 @@ wlog.kuaishou.com
 .miaowu.baidu.com
 .microad.co.jp
 .microad.jp
-.minisite.letv.com
 .mipcache.bdstatic.com
 .misc.in.duokanbox.com
 .mistat.xiaomi.com
@@ -403,13 +400,11 @@ wlog.kuaishou.com
 .mopub.com
 .mountain.zhidao.baidu.com
 .mpush.qq.com
-.msg.m.letv.com
 .msg.video.qiyi.com
 .msg.youku.com
 .msg2.video.qiyi.com
 .mtrace.qq.com
 .mvad.com
-.n.mark.letv.com
 .najva.com
 .nbsdk-baichuan.alicdn.com
 .nbsdk-baichuan.taobao.com
@@ -457,8 +452,6 @@ wlog.kuaishou.com
 .policy.video.iqiyi.com
 .pos.baidu.com
 .presage.io
-.pro.hoye.letv.com
-.pro.letv.com
 .pubmatic.com
 .push.qq.com
 .pv.hd.sohu.com
@@ -503,11 +496,9 @@ wlog.kuaishou.com
 .ssacdn.com
 .ssp.api.tappx.com
 .stat.chinaso.com
-.stat.letv.com
 .stat.m.jd.com
 .stat.y.qq.com
 .stat.youku.com
-.static.app.m.letv.com
 .static.hotjar.com
 .static.javhd.com
 .static.sensorsdata.cn
