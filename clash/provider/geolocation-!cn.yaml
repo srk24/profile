@@ -587,6 +587,8 @@ payload:
     - .7mmtv.sx
     - .7mmtv.tv
     - .7tb.cc
+    - .7tv.app
+    - .7tv.io
     - .8008206616.com
     - .8111y.top
     - .81jia.tv
@@ -4305,6 +4307,7 @@ payload:
     - .canonical.com
     - .canonproprinters.com
     - .canva.com
+    - .canvastatus.com
     - .capitalgames.com
     - .capitaliq.com
     - .capturingreality.com
@@ -8775,6 +8778,8 @@ payload:
     - .h18ani1.vip
     - .h2porn.com
     - .h528.com
+    - .habr.com
+    - .habrastorage.org
     - .hackday.com.au
     - .hackerfacebook.com
     - .hackerguardian.com
@@ -12228,6 +12233,7 @@ payload:
     - .metabrainz.org
     - .metacloud.com
     - .metacpan.org
+    - .metacritic.com
     - .metacubex.one
     - .metalpha.finance
     - .metamind.io
@@ -16046,6 +16052,7 @@ payload:
     - .rssing.com
     - .rstatic.net
     - .rt.com
+    - .rtbcdn.ru
     - .rthk.hk
     - .rtings.com
     - .ruby-lang.org
@@ -16080,6 +16087,8 @@ payload:
     - .rutracker.org
     - .rutrecker.net
     - .rutrk.org
+    - .rutube.ru
+    - .rutubelist.ru
     - .ruvideos.net
     - .ryokoyomiuri.co.jp
     - .ryukyubank.co.jp
@@ -17728,6 +17737,7 @@ payload:
     - .tellme.pw
     - .tellmewhygame.com
     - .temetube.xyz
+    - .temp-mail.org
     - .tenbyfotolia.com
     - .tensorflow.org
     - .terabox.com
@@ -18647,6 +18657,8 @@ payload:
     - .vaultify.info
     - .vaultify.net
     - .vaultproject.io
+    - .vbcdn.com
+    - .vbcdn.net
     - .vbejeyv.shop
     - .vcanedge.com
     - .vce.com
@@ -18835,6 +18847,9 @@ payload:
     - .viacom.com
     - .viacomcbs.com
     - .viacomcbspressexpress.com
+    - .viber.co
+    - .viber.com
+    - .viber.me
     - .video-jav.net
     - .video-one.com
     - .video.fc2.com
