@@ -4454,6 +4454,8 @@ payload:
     - .medicexam.net
     - .meegobeta.com
     - .mei.com
+    - .meican.com
+    - .meicanstatic.com
     - .meifang.com
     - .meika360.com
     - .meilishuo.com
@@ -4981,6 +4983,7 @@ payload:
     - .platform.dell.com
     - .pmphmooc.com
     - .pn1waq.com
+    - .podcast.xyz
     - .poizon-inner.com
     - .poizon-inner.net
     - .poizon-support.com
@@ -5202,6 +5205,7 @@ payload:
     - .qwenlm.ai
     - .qy.net
     - .qyer.com
+    - .qyerstatic.com
     - .qyunapp.com
     - .qyyjt.cn
     - .qzhuye.com
@@ -6514,6 +6518,7 @@ payload:
     - .xiaoxiongxitong.com
     - .xiaoyuankousuan.com
     - .xiaoyuxitong.com
+    - .xiaoyuzhoufm.com
     - .xiayx.com
     - .xiazaiba.com
     - .xiezuocat.com
@@ -6598,6 +6603,9 @@ payload:
     - .xycdn.com
     - .xycloud.com
     - .xywy.com
+    - .xyzcdn.net
+    - .xyzfm.link
+    - .xyzfm.space
     - .xyzq.com.cn
     - .xzking.com
     - .y43f6.cn
