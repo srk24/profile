@@ -39,7 +39,6 @@ avail.googleflights.net
 b.c2r.ts.cdn.office.net
 bag-cdn.itunes-apple.com.akadns.net
 bag.itunes.apple.com
-bbs.ztedevices.com
 beacons.gcp.gvt2.com
 beacons.gvt2.com
 beacons2.gvt2.com
@@ -534,7 +533,6 @@ www.microsoft.com
 www.pxcc.com
 www.recaptcha.net
 www.support.apple.com
-www.ztedevices.com
 www4-static.gog-statics.com
 xn--flw351e.com
 xp.apple.com
@@ -632,6 +630,7 @@ api.github.com
 .17989.com
 .17cdn.com
 .17house.com
+.17k.com
 .17roco.com
 .17u.cn
 .17u.net
@@ -1481,6 +1480,7 @@ api.github.com
 .bfcdnbf.com
 .bfcdnrd.com
 .bfcdnsc.com
+.bgwxc.com
 .bh3.com
 .bhsr.com
 .biancheng.net
@@ -1963,6 +1963,7 @@ api.github.com
 .chatglm.cn
 .chaz.fun
 .chazhengla.com
+.chazidian.com
 .chaziyu.com
 .chdi.com.cn
 .che168.com
@@ -2626,6 +2627,7 @@ api.github.com
 .dwz.cn
 .dxm-cdn.com
 .dxm-int.com
+.dxmjinr.com
 .dxmlcf.com
 .dxmlcfintech.com
 .dxmpay.com
@@ -3207,6 +3209,7 @@ api.github.com
 .hackinn.com
 .hacpai.com
 .haidilao.com
+.haidubooks.com
 .haier.com
 .haier.net
 .haiersmarthomes.com
@@ -3237,6 +3240,7 @@ api.github.com
 .hapierxia.com
 .hapipixia.com
 .hapiyixia.com
+.hapjs.org
 .happyhlddz.com
 .harmonyos.com
 .haydaypop.cn
@@ -3256,6 +3260,8 @@ api.github.com
 .hecdn.net
 .hefei.cc
 .heisha.net
+.heiyan.com
+.heiyanimg.com
 .heiyu.space
 .hello-inc.com
 .hellobike.com
@@ -3334,6 +3340,7 @@ api.github.com
 .hongdefund.com
 .hongen.com
 .hongsanban.com
+.hongshu.com
 .hongtastock.com
 .hongxiu.com
 .hongyuanqh.com
@@ -3342,6 +3349,7 @@ api.github.com
 .honor.com.cn
 .honorfile.com
 .hoopchina.com.cn
+.hotread.com
 .houdao.com
 .houyicaiji.com
 .houyuantuan.com
@@ -3704,6 +3712,7 @@ api.github.com
 .izuche.com
 .izuchebao.com
 .j-test.com
+.jamcz.com
 .jandan.net
 .japps.cn
 .jb51.com
@@ -4032,6 +4041,7 @@ api.github.com
 .kingsoft-office-service.com
 .kingsoft.com
 .kiyuu.club
+.kjcdn.com
 .kjwugx.com
 .kk1.vip
 .kkmh.com
@@ -4106,6 +4116,7 @@ api.github.com
 .kugouvoice.com
 .kugouyouth.com
 .kujiale.com
+.kujiang.com
 .kumiao.com
 .kunlunaq.com
 .kunlunar.com
@@ -4402,6 +4413,7 @@ api.github.com
 .maisanqi.com
 .maitix.com
 .maixhub.com
+.mala.cn
 .mamayz.cn
 .mamayz.com
 .mamecn.com
@@ -4591,6 +4603,8 @@ api.github.com
 .morefreegame.com
 .morganstanleyhuaxin.com
 .moseeker.com
+.motie.com
+.motieimg.com
 .moulem.com
 .moyubuluo.com
 .mryys.cn
@@ -5246,6 +5260,7 @@ api.github.com
 .rockyenglish.com
 .rong360.com
 .rongechain.com
+.rongshuxia.com
 .roomeet.cn
 .route53.cn
 .routewize.com
@@ -5386,6 +5401,7 @@ api.github.com
 .shouyoubus.com
 .shrbank.com
 .shssp.org
+.shuhai.com
 .shuidichou.com
 .shuidihuzhu.com
 .shuiyaohuo.cn
@@ -5606,6 +5622,7 @@ api.github.com
 .t8tms.com
 .t9tms.com
 .tacool.com
+.tadu.com
 .taichuan.com
 .taichuan.net
 .taihe.com
@@ -6247,6 +6264,7 @@ api.github.com
 .vrzwk.net
 .vrzwk.top
 .vscenevideo.com
+.vsread.com
 .vvstc.com
 .vxo7tu.com
 .vzuu.com
@@ -6443,6 +6461,7 @@ api.github.com
 .wztsy.cn
 .wztsy.com
 .x-cloud.cc
+.x-station.cn
 .x315.com
 .x9exk.cn
 .xa-bank.com
@@ -6575,6 +6594,7 @@ api.github.com
 .xpgod.com
 .xqfunds.com
 .xqymuy.com
+.xs.cn
 .xs8.cn
 .xsa239.com
 .xsbapp.cn
@@ -6904,6 +6924,7 @@ api.github.com
 .zhuanzhuan.com
 .zhuayoukong.com
 .zhubajie.com
+.zhulang.com
 .zhuoyou.com
 .zhuoyuegame.com
 .zhuye.kim
@@ -6958,6 +6979,7 @@ api.github.com
 .zszq.com
 .zt-express.com
 .zte.com.cn
+.ztedevices.com
 .ztemall.com
 .ztems.com
 .ztfsec.com
@@ -6981,6 +7003,7 @@ api.github.com
 .zuk.com
 .zuk.com.cn
 .zuodao.com
+.zuowen.com
 .zuowen8.com
 .zuowenwang.net
 .zuoyebang.cc
