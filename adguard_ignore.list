@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2025-12-04T20:07:22.397Z
+! Last modified: 2025-12-05T20:06:59.040Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -842,7 +842,6 @@
 !+ PLATFORM(windows, mac, android)
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
-!
 ||htm*.hepsiburada.com^
 ||touch.yesim.
 ||data-track*.yingxiong.com^
@@ -1630,8 +1629,8 @@
 !
 ! Title: hostsVN
 ! Description: The filter contains ad and tracking networks in Vietnam.
-! Last modified: 03 Dec 2025 16:47 UTC+7
-! Version: 2512031647
+! Last modified: 05 Dec 2025 14:36 UTC+7
+! Version: 2512051436
 ! Blocked: 889 rules
 ! Expires: 1 days (update frequency)
 ! Homepage: https://bigdargon.github.io/hostsVN/
@@ -1649,9 +1648,9 @@
 !
 ! Title: hostsVN Threat
 ! Description: Only include threat domains
-! Last modified: 03 Dec 2025 16:46 UTC+7
-! Version: 2512031646
-! Blocked: 4.786 rules
+! Last modified: 05 Dec 2025 14:36 UTC+7
+! Version: 2512051436
+! Blocked: 4.787 rules
 ! Expires: 1 days (update frequency)
 ! Homepage: https://bigdargon.github.io/hostsVN/
 !
