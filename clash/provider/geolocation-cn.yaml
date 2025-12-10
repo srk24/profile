@@ -873,12 +873,11 @@ payload:
     - .7230.com
     - .72byte.com
     - .72whys.com
-    - .75.team
-    - .75team.com
     - .7down.com
     - .7fresh.com
     - .7k2k1.cn
     - .7k7k.com
+    - .7moor-fs1.com
     - .7moor.com
     - .7po.com
     - .7x24cc.com
@@ -1530,6 +1529,7 @@ payload:
     - .bio360.net
     - .bio4p.com
     - .biodiscover.com
+    - .biomart.cn
     - .bisheng.cn
     - .bishengcompiler.cn
     - .bishijie.com
@@ -2565,6 +2565,7 @@ payload:
     - .douyincdn.com
     - .douyincloud.net
     - .douyincloud.run
+    - .douyinec.com
     - .douyinfe.com
     - .douyinliving.com
     - .douyinpic.com
@@ -2636,6 +2637,8 @@ payload:
     - .dxmstatic.com
     - .dxmyqh.com
     - .dxpmedia.com
+    - .dxy.cn
+    - .dxy.com
     - .dxycdn.com
     - .dxzq.net
     - .dycloud.run
@@ -2698,6 +2701,7 @@ payload:
     - .ecloud-gdu.com
     - .ecns.cn
     - .ecombdapi.com
+    - .ecombdstatic.com
     - .ectencent.cn
     - .ectencent.com.cn
     - .ecukwai.com
@@ -3226,6 +3230,7 @@ payload:
     - .hangjiayun.com
     - .hangzhouyq.cn
     - .hangzhouyq.com
+    - .hanyi.com
     - .hanyi.com.cn
     - .hao123.com
     - .hao123img.com
@@ -3663,6 +3668,7 @@ payload:
     - .iqiyipic.com
     - .iqoo.com
     - .iranshao.com
+    - .ireader.com
     - .iresearch.cn
     - .irs01.com
     - .irsnp.com
@@ -3859,6 +3865,7 @@ payload:
     - .jingxi.com
     - .jinianbi.com
     - .jinrishici.com
+    - .jinritemai.com
     - .jinrongren.net
     - .jinse.com
     - .jinshuju.net
@@ -5402,6 +5409,7 @@ payload:
     - .shopeesz.com
     - .shopoppo.cn
     - .shopoppo.com.cn
+    - .shoppingads.cn
     - .shopss.com
     - .shoujihuifu.com
     - .shouqianba.com
@@ -5478,6 +5486,7 @@ payload:
     - .snssdk.com
     - .so.com
     - .sobot.com
+    - .soboten.com
     - .socpk.com
     - .sofreight.com
     - .softwhy.com
@@ -6887,6 +6896,9 @@ payload:
     - .zhan.com
     - .zhanbuba.com
     - .zhangyoubao.com
+    - .zhangyue.com
+    - .zhangyue01.com
+    - .zhangyuecdn.com
     - .zhanqi.tv
     - .zhanzhang.net
     - .zhaodanji.com
