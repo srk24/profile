@@ -1068,6 +1068,7 @@ payload:
     - .aliexpress.com
     - .alifanyi.com
     - .aligames.com
+    - .aligfwaf.com
     - .alihealth.com.cn
     - .aliimg.com
     - .alikmd.com
@@ -3377,6 +3378,7 @@ payload:
     - .hteacher.net
     - .htjsq.com
     - .htjsq.mobi
+    - .htrace.wetvinfo.com
     - .htsc.com.cn
     - .htsec.com
     - .httpdns-api.aliyuncs.com
@@ -3841,6 +3843,7 @@ payload:
     - .jianzhi8.com
     - .jiaodong.net
     - .jiaoyimao.com
+    - .jiashule.com
     - .jiasu.bohe.com
     - .jiasuhui.com
     - .jiasule.com
@@ -5229,6 +5232,7 @@ payload:
     - .qweather.net
     - .qwen.ai
     - .qwenlm.ai
+    - .qwps.cn
     - .qy.net
     - .qyer.com
     - .qyerstatic.com
@@ -5701,6 +5705,7 @@ payload:
     - .tcloudscdn.net
     - .tcltech.com
     - .tcwqqdy.guru
+    - .tdnsstic1.cn
     - .tdnsv1.com
     - .tdnsv1.net
     - .tdnsv10.com

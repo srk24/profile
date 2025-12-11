@@ -143,6 +143,7 @@ payload:
     - .adslvseed.qq.com
     - .adsmind.apdcdn.tc.qq.com
     - .adsqqclick.qq.com
+    - .adstats.tencentmusic.com
     - .adstestview.qq.com
     - .adsview.qq.com
     - .adsview2.qq.com
@@ -333,6 +334,7 @@ payload:
     - .hm.baidu.com
     - .hmma.baidu.com
     - .hq-tracking.qq.com
+    - .htrace.wetvinfo.com
     - .httpool.com
     - .hubcloud.com.cn
     - .hwads-t.api.my7v.com
@@ -415,6 +417,7 @@ payload:
     - .mobileads.google.com
     - .mobilemsg.youku.com
     - .mobwithad.com
+    - .monitor.music.qq.com
     - .mopub.com
     - .mountain.zhidao.baidu.com
     - .mpush.qq.com
@@ -481,6 +484,7 @@ payload:
     - .reachmax.cn
     - .realsrv.com
     - .reke.at.sohu.com
+    - .report.qqweb.qq.com
     - .res.hunantv.com
     - .retcode.taobao.com
     - .reyun.com
