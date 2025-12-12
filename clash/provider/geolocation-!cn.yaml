@@ -57,6 +57,10 @@ payload:
     - practivate.adobe.ntp
     - public-us-pingsx.api.clonoth.com
     - rink.hockeyapp.net
+    - roovza-launches.appsflyersdk.com
+    - roovza.inapps.appsflyersdk.com
+    - roovza.launches.appsflyersdk.com
+    - roovza.skadsdk.appsflyersdk.com
     - rss.4040940.xyz
     - rss.datuan.dev
     - rss.littlebaby.life
@@ -4142,6 +4146,7 @@ payload:
     - .bymj.io
     - .bypasscensorship.org
     - .byspotify.com
+    - .bytedapm.com
     - .byteoversea.com
     - .bytick.com
     - .c-ij.com
@@ -13539,6 +13544,7 @@ payload:
     - .nextwork.com.tw
     - .nextwork.hk
     - .nextwork.tw
+    - .nexus-cdn.com
     - .nexusmods.com
     - .nflhotsalejerseys.com
     - .nflxext.com
@@ -18063,6 +18069,7 @@ payload:
     - .tiffany-towers.com
     - .tig-ol-bitties.live
     - .tik-tokapi.com
+    - .tiktok-minis.com
     - .tiktok-row.net
     - .tiktok.com
     - .tiktokcdn-eu.com

@@ -1380,6 +1380,7 @@ payload:
     - .bankofchina.com
     - .banmaaike.com
     - .baofeng.com
+    - .baofeng.net
     - .baomitu.com
     - .baoxianshichang.com
     - .baseopendev.com
@@ -1659,7 +1660,6 @@ payload:
     - .bytedance.org
     - .bytedanceapi.com
     - .bytedancehermestest.com
-    - .bytedapm.com
     - .bytedcdn.com
     - .bytedeliver.com
     - .bytedgames.com
@@ -1753,6 +1753,7 @@ payload:
     - .carnoc.com
     - .cbern.com.cn
     - .cbjq.com
+    - .cc-pay.cn
     - .ccb-life.com.cn
     - .ccb.cn
     - .ccb.com
@@ -2047,6 +2048,7 @@ payload:
     - .chrstatic.com
     - .chsi.cn
     - .chsi.com.cn
+    - .chuangcache.com
     - .chuangcdn.com
     - .chuangxin.com
     - .chuanke.com
@@ -2334,12 +2336,14 @@ payload:
     - .cup62.cn
     - .cwxzx.com
     - .cxbiji.com
+    - .cxmt.com
     - .cyagen.com
     - .cyber-bay.cn
     - .cyber-bay.com.cn
     - .cybtc.com
     - .cyol.com
     - .cyts.com
+    - .cyzone.cn
     - .cza84.cn
     - .cztv.com
     - .cztvcdn.com
@@ -2648,6 +2652,7 @@ payload:
     - .dynamics.cn
     - .dzdvip.com
     - .dzh.com.cn
+    - .dzng.com
     - .dzsc.com
     - .dzw3.com
     - .dzwww.com
@@ -5140,6 +5145,7 @@ payload:
     - .qikoo.com
     - .qiku.com
     - .qikucdn.com
+    - .qiluyidian.net
     - .qimao.com
     - .qingcache.com
     - .qingcloud.com
@@ -5177,6 +5183,7 @@ payload:
     - .qiyukf.net
     - .qiyukf.net.cn
     - .qizuang.com
+    - .ql1d.com
     - .qlinkto.cn
     - .qlisten.cn
     - .qlivecdn.com
@@ -5331,6 +5338,7 @@ payload:
     - .scm121.com
     - .scoregg.com
     - .scsentry.cn
+    - .scsjb.cn
     - .sczsxx.com
     - .sdgdwljt.com
     - .sdo.com
@@ -6833,6 +6841,7 @@ payload:
     - .yunqishi.net
     - .yunshipei.com
     - .yunxiao.com
+    - .yunxinfw.com
     - .yunzhijia.com
     - .yunzhuxue.com
     - .yupoo.com
