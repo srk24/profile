@@ -498,6 +498,7 @@ trts.baishancdnx.cn
 uberproxy-debug4.corp.google.com
 uberproxy.corp.google.com
 uberproxy6.corp.google.com
+ubisoftconnect.eo-edgefunctions7.com
 update.crashlytics.com
 update.googleapis.com
 updates-http.cdn-apple.com
@@ -1541,7 +1542,6 @@ api.github.com
 .biyehome.net
 .bjcathay.com
 .bjinfobank.com
-.bjyouth.gov.cn
 .bjyouth.net
 .bkapigw.com
 .bkapps.com
@@ -1597,6 +1597,7 @@ api.github.com
 .brawlstars.cn
 .bsb.com.cn
 .bsbsb.top
+.bsclink.cn
 .bsurl.cc
 .bsurl.cn
 .btgtravel.com
@@ -1725,7 +1726,6 @@ api.github.com
 .bytexservice.com
 .c-ctrip.com
 .c-t.work
-.caac.gov.cn
 .cabbagebox.com
 .cache4ever.com
 .cache666.com
@@ -1944,6 +1944,7 @@ api.github.com
 .cftsupport.com
 .cfund108.com
 .cfzq.com
+.cgames.com
 .cgbchina.com.cn
 .cgws.com
 .ch.com
@@ -2053,6 +2054,7 @@ api.github.com
 .chuanke.com
 .chuansong.me
 .chuansongme.com
+.chuapp.com
 .chugou360.com
 .chujingapp.com
 .chushou.tv
@@ -2189,7 +2191,6 @@ api.github.com
 .cls.cn
 .clsa.com
 .cma.cn
-.cma.gov.cn
 .cmb-leasing.com
 .cmbc.com.cn
 .cmbchina.biz
@@ -2369,6 +2370,7 @@ api.github.com
 .daocloud.io
 .daojia.com
 .daovoice.io
+.dataeye.com
 .datasea.cn
 .daton.com.cn
 .dayainfo.com
@@ -3019,11 +3021,15 @@ api.github.com
 .game234.com
 .gameabc.com
 .gamebonfire.com
+.gamediary.cn
 .gameitop.com
+.gamelook.com.cn
 .gameloop.com
 .gamemei.com
 .gamepack.cn
+.gameres.com
 .gamersky.com
+.gamewower.com
 .ganji.com
 .ganjiangvpn.com
 .ganjistatic1.com
@@ -3065,7 +3071,6 @@ api.github.com
 .gfbzb.cn
 .gfbzb.com
 .gfbzb.com.cn
-.gfbzb.gov.cn
 .gfbzb.net
 .gffunds.com.cn
 .gfund.com
@@ -3143,6 +3148,7 @@ api.github.com
 .gotokeep.com
 .gotolink.net
 .goufw.com
+.gov.cn
 .govqcloud.com
 .gowinamc.com
 .gpall.cn
@@ -3546,6 +3552,7 @@ api.github.com
 .iconfont.cn
 .icourse163.org
 .icourses.cn
+.icpcw.com
 .icphoto.cn
 .icplishi.com
 .ics.design
@@ -3588,6 +3595,7 @@ api.github.com
 .igetget.com
 .igetui.com
 .igexin.com
+.ign.com.cn
 .igtm-meeting-tencent.com
 .igtm.pub
 .igwfmc.com
@@ -4708,6 +4716,7 @@ api.github.com
 .mzres.com
 .n.cn
 .n0q.cn
+.nadianshi.com
 .nagcloudcs.com
 .naixuecha.com
 .namiso.com
@@ -4750,6 +4759,7 @@ api.github.com
 .newcoder.com
 .newniu.com
 .news.cn
+.news.yxrb.net
 .newupbank.com
 .newyx.net
 .nextstudios.com
@@ -5104,7 +5114,6 @@ api.github.com
 .qeodns.net
 .qftexpay.cn
 .qgzb.com.cn
-.qgzb.gov.cn
 .qgzb.net
 .qh-cdn.com
 .qh24.com
@@ -5147,6 +5156,7 @@ api.github.com
 .qiluyidian.net
 .qimao.com
 .qingcache.com
+.qingcdn.com
 .qingcloud.com
 .qingdaochina.org
 .qingdaonews.com
@@ -5983,6 +5993,7 @@ api.github.com
 .tripcdn.com
 .tritoninfo.net
 .trjcn.com
+.trpcdn.net
 .trunktech.com
 .trust-provider.cn
 .trustcenter.cn
@@ -6038,6 +6049,7 @@ api.github.com
 .uc.cn
 .uc123.com
 .ucbug.com
+.ucg.cn
 .ucgslb.cn
 .ucgslb.com
 .ucgslb.info
@@ -6601,6 +6613,7 @@ api.github.com
 .xiziwang.net
 .xjietiao.com
 .xjoycity.com
+.xkb.com.cn
 .xkw.com
 .xmcdn.com
 .xmhouse.com
@@ -6757,10 +6770,12 @@ api.github.com
 .youpin.com.cn
 .youshang.com
 .youxiake.com
+.youxichaguan.com
 .youxigt.com
 .youxihezi.net
 .youxila.com
 .youxiniao.com
+.youxiputao.com
 .youyierp.com
 .youyitms.com
 .youyiwms.com
@@ -6859,6 +6874,7 @@ api.github.com
 .yy.com
 .yyds.co
 .yystatic.com
+.yystv.cn
 .yytcdn.com
 .yzcdn.cn
 .yzyxgame.com
@@ -6871,7 +6887,6 @@ api.github.com
 .zampda.net
 .zampdsp.com
 .zastatic.com
-.zbbm.gov.cn
 .zbbm.net
 .zbj.com
 .zbjdev.com
