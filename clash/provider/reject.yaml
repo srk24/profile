@@ -194,6 +194,7 @@ payload:
     - .atanx2.alicdn.com
     - .atm.youku.com
     - .atom-data.io
+    - .badjs.weixinbridge.com
     - .baichuan-sdk.alicdn.com
     - .baifen.music.baidu.com
     - .bds.snssdk.com
@@ -205,6 +206,8 @@ payload:
     - .beizi.biz
     - .biz.weibo.com
     - .bluekai.com
+    - .browser.events.data.msn.cn
+    - .browser.events.data.msn.com
     - .btrace.qq.com
     - .bugly.qq.com
     - .byteadverts.com
@@ -220,6 +223,7 @@ payload:
     - .cfts1tifqr.com
     - .china-caa.org
     - .chinaciaf.org
+    - .clarity.ms
     - .clearbit.com
     - .clearbitjs.com
     - .clearbitscripts.com
@@ -241,6 +245,7 @@ payload:
     - .cps.360buy.com
     - .cpu.baidu.com
     - .crash.163.com
+    - .crash2.zhihu.com
     - .crashlytics.163.com
     - .cretgate.com
     - .cstm.baidu.com
@@ -261,6 +266,7 @@ payload:
     - .doubleclick.com
     - .doubleclick.net
     - .drmcmm.baidu.com
+    - .dualstack-logs.amap.com
     - .duiwai.baidu.com
     - .dup.baidustatic.com
     - .e.kuaishou.cn
@@ -387,6 +393,7 @@ payload:
     - .log.umtrack.com
     - .log.v2.hunantv.com
     - .log2.sina.cn
+    - .logs.amap.com
     - .lqc006.com
     - .lstat.youku.com
     - .lu.sogou.com
@@ -407,6 +414,7 @@ payload:
     - .miaowu.baidu.com
     - .microad.co.jp
     - .microad.jp
+    - .microsoftads.com
     - .mipcache.bdstatic.com
     - .misc.in.duokanbox.com
     - .mistat.xiaomi.com
@@ -424,6 +432,7 @@ payload:
     - .mopub.com
     - .mountain.zhidao.baidu.com
     - .mpush.qq.com
+    - .msads.net
     - .msg.video.qiyi.com
     - .msg.youku.com
     - .msg2.video.qiyi.com
@@ -432,6 +441,7 @@ payload:
     - .najva.com
     - .nbsdk-baichuan.alicdn.com
     - .nbsdk-baichuan.taobao.com
+    - .nelreports.net
     - .ns1p.net
     - .nsclick.baidu.com
     - .nsclickvideo.baidu.com
@@ -445,6 +455,7 @@ payload:
     - .openxenterprise.com
     - .openxmarket.asia
     - .optaim.com
+    - .optimus-ads.amap.com
     - .p-log.ykimg.com
     - .p.aty.sohu.com
     - .p4p.sina.com.cn
@@ -595,6 +606,7 @@ payload:
     - .ylog.hiido.com
     - .ysm.yahoo.com
     - .z.gds.cnzz.com
+    - .zhihu-web-analytics.zhihu.com
     - .zhugeapi.com
     - .zhugeapi.net
     - .zhugeio.com

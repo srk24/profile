@@ -193,6 +193,7 @@ wlog.kuaishou.com
 .atanx2.alicdn.com
 .atm.youku.com
 .atom-data.io
+.badjs.weixinbridge.com
 .baichuan-sdk.alicdn.com
 .baifen.music.baidu.com
 .bds.snssdk.com
@@ -204,6 +205,8 @@ wlog.kuaishou.com
 .beizi.biz
 .biz.weibo.com
 .bluekai.com
+.browser.events.data.msn.cn
+.browser.events.data.msn.com
 .btrace.qq.com
 .bugly.qq.com
 .byteadverts.com
@@ -219,6 +222,7 @@ wlog.kuaishou.com
 .cfts1tifqr.com
 .china-caa.org
 .chinaciaf.org
+.clarity.ms
 .clearbit.com
 .clearbitjs.com
 .clearbitscripts.com
@@ -240,6 +244,7 @@ wlog.kuaishou.com
 .cps.360buy.com
 .cpu.baidu.com
 .crash.163.com
+.crash2.zhihu.com
 .crashlytics.163.com
 .cretgate.com
 .cstm.baidu.com
@@ -260,6 +265,7 @@ wlog.kuaishou.com
 .doubleclick.com
 .doubleclick.net
 .drmcmm.baidu.com
+.dualstack-logs.amap.com
 .duiwai.baidu.com
 .dup.baidustatic.com
 .e.kuaishou.cn
@@ -386,6 +392,7 @@ wlog.kuaishou.com
 .log.umtrack.com
 .log.v2.hunantv.com
 .log2.sina.cn
+.logs.amap.com
 .lqc006.com
 .lstat.youku.com
 .lu.sogou.com
@@ -406,6 +413,7 @@ wlog.kuaishou.com
 .miaowu.baidu.com
 .microad.co.jp
 .microad.jp
+.microsoftads.com
 .mipcache.bdstatic.com
 .misc.in.duokanbox.com
 .mistat.xiaomi.com
@@ -423,6 +431,7 @@ wlog.kuaishou.com
 .mopub.com
 .mountain.zhidao.baidu.com
 .mpush.qq.com
+.msads.net
 .msg.video.qiyi.com
 .msg.youku.com
 .msg2.video.qiyi.com
@@ -431,6 +440,7 @@ wlog.kuaishou.com
 .najva.com
 .nbsdk-baichuan.alicdn.com
 .nbsdk-baichuan.taobao.com
+.nelreports.net
 .ns1p.net
 .nsclick.baidu.com
 .nsclickvideo.baidu.com
@@ -444,6 +454,7 @@ wlog.kuaishou.com
 .openxenterprise.com
 .openxmarket.asia
 .optaim.com
+.optimus-ads.amap.com
 .p-log.ykimg.com
 .p.aty.sohu.com
 .p4p.sina.com.cn
@@ -594,6 +605,7 @@ wlog.kuaishou.com
 .ylog.hiido.com
 .ysm.yahoo.com
 .z.gds.cnzz.com
+.zhihu-web-analytics.zhihu.com
 .zhugeapi.com
 .zhugeapi.net
 .zhugeio.com
