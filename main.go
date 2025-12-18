@@ -156,6 +156,14 @@ func main() {
 		log.Printf("Failed to parse ads-all.srs: %v", err)
 	}
 
+	// 处理 v2ray apple
+	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-apple@cn.srs")
+	if err == nil {
+		release(domain, domain_suffix, domain_keyword, domain_regex, "apple")
+	} else {
+		log.Printf("Failed to parse geosite-apple.srs: %v", err)
+	}
+
 	// 处理 v2ray 非中国地理位置数据
 	domain, domain_suffix, domain_keyword, domain_regex, err = parseSingboxSrs("https://github.com/SagerNet/sing-geosite/raw/rule-set/geosite-geolocation-!cn.srs")
 	if err == nil {

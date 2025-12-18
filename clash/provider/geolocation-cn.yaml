@@ -4588,6 +4588,7 @@ payload:
     - .mi-idc.com
     - .mi-img.com
     - .mi.com
+    - .miaibox.com
     - .miaobolive.com
     - .miaomiaoz.com
     - .miaomiaozhe.com
@@ -4958,6 +4959,7 @@ payload:
     - .openlearning.com
     - .openmidas.com
     - .openve.cn
+    - .openvela.com
     - .oppo.cn
     - .oppo.com
     - .oppo.mobi
@@ -6603,6 +6605,7 @@ payload:
     - .xiangrikuijianzhan.com
     - .xiangrikuisite.com
     - .xianjiqun.com
+    - .xiaoaiassist.com
     - .xiaobaixitong.com
     - .xiaodutv.com
     - .xiaoe-tech.com
@@ -6628,6 +6631,7 @@ payload:
     - .xiaomiinc.com
     - .xiaomiinc.com.cn
     - .xiaomiinc.net
+    - .xiaomimimo.com
     - .xiaomimobile.com
     - .xiaomingtaiji.com
     - .xiaominr.com
