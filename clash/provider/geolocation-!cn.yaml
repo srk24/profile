@@ -2001,10 +2001,14 @@ payload:
     - .arcgisonline.com
     - .architectural-cadcam.com
     - .archive-it.org
+    - .archive.fo
+    - .archive.is
+    - .archive.li
     - .archive.md
     - .archive.org
     - .archive.ph
     - .archive.today
+    - .archive.vn
     - .archiveofourown.com
     - .archiveofourown.net
     - .archiveofourown.org
@@ -5324,6 +5328,7 @@ payload:
     - .deepfreeze.tech
     - .deepl.com
     - .deepmind.com
+    - .deezer.com
     - .definebabe.com
     - .definefetish.com
     - .degruyter.com
@@ -5868,6 +5873,8 @@ payload:
     - .dmcdn.net
     - .dmed.technology
     - .dmgmediaprivacy.co.uk
+    - .dmit.io
+    - .dmit.sh
     - .dml-lang.org
     - .dmm-extension.com
     - .dmm.co.jp
@@ -6223,6 +6230,7 @@ payload:
     - .dynamopackages.com
     - .dynamoreach.com
     - .dyncdn.me
+    - .dzcdn.net
     - .dzen.ru
     - .dzeninfra.ru
     - .e-bay.com
@@ -6638,6 +6646,7 @@ payload:
     - .entrust.com
     - .entrust.net
     - .entrustdatacard.com
+    - .eotarchive.org
     - .epicbrowser.com
     - .epicgames.com
     - .epicgames.dev
@@ -8282,6 +8291,7 @@ payload:
     - .ghbi.ir
     - .ghcr.io
     - .ghettotube.com
+    - .ghostarchive.org
     - .ghostgames.com
     - .giantessbooru.com
     - .giffgaff.com
@@ -12294,6 +12304,7 @@ payload:
     - .mega.nz
     - .megacamz.com
     - .megafilmporno.com
+    - .megalodon.jp
     - .megamon.co.kr
     - .megaphone.fm
     - .megapornfreehd.com
@@ -12310,6 +12321,7 @@ payload:
     - .melonstube.com
     - .meme111.com
     - .memealerts.com
+    - .mementoweb.org
     - .men.com
     - .men18.net
     - .menatplay.com
@@ -14833,6 +14845,7 @@ payload:
     - .perfecttitspics.com
     - .periscope.tv
     - .perl.org
+    - .perma.cc
     - .perplexity.ai
     - .perplexity.com
     - .persagg.com
@@ -19678,6 +19691,7 @@ payload:
     - .webcammedellin.co
     - .webcams.tv
     - .webcamtubexxx.com
+    - .webcitation.org
     - .webex.ca
     - .webex.co.in
     - .webex.co.it

@@ -256,6 +256,10 @@ payload:
     - .da.mgtv.com
     - .das-rpt-log.ucloud.cn
     - .data.flurry.com
+    - .data.mistat.india.xiaomi.com
+    - .data.mistat.intl.xiaomi.com
+    - .data.mistat.rus.xiaomi.com
+    - .data.mistat.xiaomi.com
     - .dc.letv.com
     - .decide.mixpanel.com
     - .demdex.net
@@ -395,6 +399,7 @@ payload:
     - .log.v2.hunantv.com
     - .log2.sina.cn
     - .logs.amap.com
+    - .logupdate.avlyun.sec.miui.com
     - .lqc006.com
     - .lstat.youku.com
     - .lu.sogou.com
@@ -418,7 +423,6 @@ payload:
     - .microsoftads.com
     - .mipcache.bdstatic.com
     - .misc.in.duokanbox.com
-    - .mistat.xiaomi.com
     - .mixer.sina.cn
     - .mlog.hiido.com
     - .moat.com
