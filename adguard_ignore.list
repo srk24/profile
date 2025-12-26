@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2025-12-25T20:07:06.414Z
+! Last modified: 2025-12-26T20:06:49.163Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -862,6 +862,7 @@
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||spa-tracker*.spapi.io^
 ||tracking.cds.dmm.
 ||htm*.hepsiburada.com^
 ||touch.yesim.
@@ -1957,6 +1958,11 @@ analytics-*.aasaam.com
 ! Source name: Exception rules
 ! Source: Filters/exceptions.txt
 !
+! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2003
+! Blocked by CNAME data.adobedc.net
+@@||data.orders.costco.com^|
+! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2001
+@@||link.meet5.net^|
 ! https://github.com/AdguardTeam/AdguardFilters/issues/220979
 ! Blocked by CNAME moengage.com
 @@||link.nzz.ch^|
