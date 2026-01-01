@@ -3,7 +3,6 @@ payload:
     - a4e8s8k3.map2.ssl.hwcdn.net
     - adobeereg.com
     - angle.com.tw
-    - anime-rule34-world.b-cdn.net
     - api-p.videomarket.jp
     - bbs.boingboing.net
     - beck-online.beck.de
@@ -79,11 +78,9 @@ payload:
     - rsshub2.asailor.org
     - sa78gs.wpc.edgecastcdn.net
     - scholar.google.cn
-    - servd-anthropic-website.b-cdn.net
     - sni1dcb6gl.wpc.edgecastcdn.net
     - straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
     - tesla-cdn.thron.com
-    - tmdb-image-prod.b-cdn.net
     - ut1-time.colorado.edu
     - utcnist.colorado.edu
     - utcnist2.colorado.edu
@@ -2509,6 +2506,7 @@ payload:
     - .azuresmartspaces.net
     - .azurestackvalidation.com
     - .azurewebsites.net
+    - .b-cdn.net
     - .b-eroland.net
     - .b-ok.africa
     - .b-ok.asia
@@ -4066,6 +4064,8 @@ payload:
     - .bumptop.org
     - .bumptunes.com
     - .bunka.go.jp
+    - .bunny.net
+    - .bunnycdn.com
     - .bunnylust.com
     - .burningcamel.com
     - .burstly.net
