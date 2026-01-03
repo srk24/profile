@@ -988,7 +988,9 @@ payload:
     - .adash.man.aliyuncs.com
     - .adbkwai.com
     - .adcommerce.cn
+    - .adidas.cn
     - .adidas.com.cn
+    - .adidasspecialtysports.cn
     - .adkwai.com
     - .admin5.com
     - .adobedc.cn
@@ -6535,6 +6537,7 @@ payload:
     - .wo116114.com
     - .wo1wan.com
     - .woaihuoshan.com
+    - .wocloud.com.cn
     - .wodehaodewu.cn
     - .wodingche.com
     - .wohst8.com
@@ -6548,6 +6551,7 @@ payload:
     - .woodo.cn
     - .wooyun.org
     - .woozooo.com
+    - .woread.com.cn
     - .worktile.com
     - .worldofship.cn
     - .worldoftank.cn

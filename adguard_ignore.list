@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-01-02T20:07:06.383Z
+! Last modified: 2026-01-03T20:06:57.698Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -315,7 +315,6 @@
 ! sample url for one of the miners: silimbompom.com/142711235a1c137.2.n.2.1.js
 !                                   http://nddmcconmqsy.ru/7492512165a41313.3.n.2.1.l60.js
 !                                   http://jwduahujge.ru/0741703015aacf2.3.1.1.1.l80.js
-!
 ||109.123.233.251^
 ://mine.torrent.pw^
 ||hostingcloud.*.wasm^
@@ -1030,7 +1029,6 @@
 ||*cdn-settings.appsflyersdk.com^
 ||*launches.appsflyersdk.com^
 ||*conversions.appsflyersdk.com^
-||*inapps.appsflyersdk.com^
 ||*register.appsflyersdk.com^
 ! QQ
 ! QQ Music
