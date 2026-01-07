@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-01-06T20:07:39.186Z
+! Last modified: 2026-01-07T20:07:47.425Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -1040,6 +1040,9 @@
 !
 ! NOTE: Regular rules
 !
+||logreport-global-dual.cool*cloud.com^
+||wslog-global-dual.cool*cloud.com^
+||weblogger-wss.cool*cloud.com^
 ||track-*.hungrypanda.co^
 ||trace-*.hungrypanda.co^
 ||collector-*.perimeterx.net^
@@ -1659,9 +1662,9 @@
 !
 ! Title: hostsVN
 ! Description: The filter contains ad and tracking networks in Vietnam.
-! Last modified: 28 Dec 2025 16:22 UTC+7
-! Version: 2512281622
-! Blocked: 890 rules
+! Last modified: 07 Jan 2026 10:52 UTC+7
+! Version: 2601071052
+! Blocked: 892 rules
 ! Expires: 1 days (update frequency)
 ! Homepage: https://bigdargon.github.io/hostsVN/
 !
@@ -1678,9 +1681,9 @@
 !
 ! Title: hostsVN Threat
 ! Description: Only include threat domains
-! Last modified: 28 Dec 2025 16:22 UTC+7
-! Version: 2512281622
-! Blocked: 4.830 rules
+! Last modified: 07 Jan 2026 10:34 UTC+7
+! Version: 2601071034
+! Blocked: 4.831 rules
 ! Expires: 1 days (update frequency)
 ! Homepage: https://bigdargon.github.io/hostsVN/
 !
