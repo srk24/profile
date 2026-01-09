@@ -1015,6 +1015,7 @@ payload:
     - .aiganggu.com
     - .aigc-cloud.com
     - .aihst8.com
+    - .aihuishou.com
     - .aiketour.com
     - .aiops.com
     - .aipage.com
@@ -1181,6 +1182,7 @@ payload:
     - .anticheatexpert.com
     - .antpcdn.com
     - .antutu.com
+    - .antutu.net
     - .anxia.com
     - .anycross.com
     - .anywlan.com
@@ -2065,6 +2067,7 @@ payload:
     - .chuansongme.com
     - .chuapp.com
     - .chugou360.com
+    - .chuimg.com
     - .chujingapp.com
     - .chushou.tv
     - .chuyu.me
@@ -2731,6 +2734,7 @@ payload:
     - .eastmoneyfutures.com
     - .eastsoo.com
     - .easy-signing.com
+    - .easytomessage.com
     - .easytrip.com
     - .eayyou.com
     - .eb-ind.com
@@ -2960,6 +2964,9 @@ payload:
     - .fm365.com
     - .fm3838.com
     - .fnjiasu.com
+    - .fnnas.com
+    - .fnnas.net
+    - .fnos.net
     - .focus-img.cn
     - .focus.cn
     - .fofa.info
@@ -5448,6 +5455,7 @@ payload:
     - .scctyiptv.cn
     - .scdng.com
     - .scescdn.cn
+    - .schoopia.com
     - .scid.cn
     - .sciencechina.cn
     - .scm121.cn
@@ -5795,6 +5803,7 @@ payload:
     - .taomee.com
     - .taopiaopiao.com
     - .taou.com
+    - .tapapks.com
     - .tapd.cn
     - .tapimg.com
     - .tapimg.net
@@ -6040,6 +6049,7 @@ payload:
     - .tongfangpc.com
     - .tongtaiamc.com
     - .tongxianghuicn.com
+    - .tongxuepie.com
     - .tongyi.com
     - .tools.team
     - .toplife.com
