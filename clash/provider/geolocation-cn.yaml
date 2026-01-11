@@ -228,7 +228,6 @@ payload:
     - guzzoni-apple-com.v.aaplimg.com
     - guzzoni.apple.com
     - guzzoni.smoot.apple.com
-    - hs.wosms.cn
     - i.dell.com
     - i.pki.goog
     - icloud-cdn.icloud.com.akadns.net
@@ -1163,6 +1162,7 @@ payload:
     - .andfx.cn
     - .andfx.net
     - .anfensi.com
+    - .anhuinews.com
     - .animetamashi.cn
     - .animetamashi.com
     - .anitama.cn
@@ -1982,6 +1982,7 @@ payload:
     - .che168.com
     - .checkzeit.com
     - .chei.com.cn
+    - .chelaile.net.cn
     - .chememall.com
     - .cheng.xin
     - .chesicc.cn
@@ -2214,13 +2215,16 @@ payload:
     - .cmbt.cn
     - .cmbuat.com
     - .cmburl.cn
+    - .cmcc-cs.cn
     - .cmcm.com
     - .cmcmcdn.com
     - .cmf.biz
     - .cmf.ltd
     - .cmfchina.com
     - .cmfunds.cn
+    - .cmicapm.com
     - .cmicrwx.cn
+    - .cmicvip.cn
     - .cmpassport.com
     - .cmread.com
     - .cmvideo.cn
@@ -2409,6 +2413,7 @@ payload:
     - .cybtc.com
     - .cyol.com
     - .cyts.com
+    - .cytxl.com.cn
     - .cyzone.cn
     - .cza84.cn
     - .cztv.com
@@ -2687,6 +2692,7 @@ payload:
     - .duoshuo.com
     - .duote.com
     - .duowan.com
+    - .dutenews.com
     - .dutils.com
     - .duurl.cn
     - .duxiaoman-int.com
@@ -3400,6 +3406,7 @@ payload:
     - .hfzq.com.cn
     - .hhtravel.com
     - .hi-butterfly.cn
+    - .hiaiabc.com
     - .hiascend.cn
     - .hiascend.com
     - .hichina.com
@@ -4710,6 +4717,7 @@ payload:
     - .mob.com
     - .mobileinternational.com.cn
     - .mobmore.com
+    - .mobsdks.com
     - .modelarts-infer.cn
     - .modelarts-infer.com
     - .modelarts-maas.cn
@@ -4794,6 +4802,7 @@ payload:
     - .mydown.com
     - .mydrivers.com
     - .myelasticsearch.com
+    - .mygolbs.com
     - .myhuaweicloud-custom.cn
     - .myhuaweicloud-custom.com
     - .myhuaweicloud-koodrive.cn
@@ -4989,6 +4998,7 @@ payload:
     - .oneplusmobile.com
     - .onexmail.com
     - .oneyac.com
+    - .online-cmcc.cn
     - .onlinedown.net
     - .onlinesjtu.com
     - .onlylady.com
@@ -5519,6 +5529,7 @@ payload:
     - .shareintelli.com
     - .sharejs.com
     - .sharepoint.cn
+    - .sharesdk.cn
     - .shebiaotm.com
     - .shelter-china.com
     - .shelterdome.net
@@ -5768,6 +5779,8 @@ payload:
     - .szhk.com
     - .szjlc.cn
     - .szlcsc.com
+    - .sznews.com
+    - .szpgm.com
     - .szse.cn
     - .szzfgjj.com
     - .t.cn
@@ -6570,6 +6583,7 @@ payload:
     - .worldoftanks.cn
     - .worldoftanks.com.cn
     - .woshipm.com
+    - .wosms.cn
     - .wostatic.cn
     - .wotgame.cn
     - .wowsgame.cn
@@ -6869,6 +6883,7 @@ payload:
     - .yizhitou.com
     - .yjbys.com
     - .ykimg.com
+    - .yksdks.com
     - .ykzq.com
     - .yl-scm.com
     - .ylike.net
