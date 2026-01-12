@@ -52,6 +52,7 @@ payload:
     - .ad.api.mobile.youku.com
     - .ad.api.moji.com
     - .ad.browser.qq.com
+    - .ad.cctv.com
     - .ad.games.dmm.com
     - .ad.hpplay.cn
     - .ad.intl.xiaomi.com
@@ -61,6 +62,7 @@ payload:
     - .ad.qq.com
     - .ad.qun.qq.com
     - .ad.sina.com.cn
+    - .ad.toutiao.com
     - .ad.us.sinaimg.cn
     - .ad.wang502.com
     - .ad.weixin.qq.com
@@ -84,6 +86,7 @@ payload:
     - .adbkwai.com
     - .adbox.sina.com.cn
     - .adbutter.net
+    - .adc.hpplay.cn
     - .adcolony.com
     - .addthisedge.com
     - .adeng.hpplay.cn
@@ -134,6 +137,7 @@ payload:
     - .adsensecustomsearchads.com
     - .adsenseformobileapps.com
     - .adservice.google.com
+    - .adservice.sigmob.cn
     - .adserviceretry.kglink.cn
     - .adserviceretry.kugou.com
     - .adsfile.qq.com
@@ -164,7 +168,9 @@ payload:
     - .advertisercommunity.com
     - .advertiserscommunity.com
     - .advertising.adobe.com
+    - .advertising.apple.com
     - .advertserve.com
+    - .adview.cn
     - .adwords-community.com
     - .adwords.com
     - .adwordsexpress.com
@@ -181,6 +187,7 @@ payload:
     - .analytics-data.io
     - .analytics.163.com
     - .analytics.facebook.com
+    - .analytics.tiktok.com
     - .analytics.vpc.duolingo.com
     - .api-adservices.apple.com
     - .app-analytics-services-att.com
@@ -401,6 +408,7 @@ payload:
     - .log.tbs.qq.com
     - .log.umtrack.com
     - .log.v2.hunantv.com
+    - .log.zijieapi.com
     - .log2.sina.cn
     - .logs.amap.com
     - .logs.chelaile.net.cn
@@ -507,6 +515,7 @@ payload:
     - .qhupdate.com
     - .qpb.sohu.com
     - .qpb1.sohu.com
+    - .qqdata.ab.qq.com
     - .qwapi.com
     - .reachmax.cn
     - .realsrv.com
@@ -539,6 +548,7 @@ payload:
     - .shhs-ydd8x2.yjrmss.cn
     - .shoppingads.cn
     - .shuzilm.cn
+    - .sigmob.com
     - .slog.sina.cn
     - .slog.sina.com.cn
     - .snapads.com
@@ -569,6 +579,7 @@ payload:
     - .tcbox.baidu.com
     - .tce.alicdn.com
     - .tcss.qq.com
+    - .tdsdk.cpatrk.net
     - .telecome.cn
     - .testads.api.my7v.com
     - .theta.sogoucdn.com
@@ -578,6 +589,7 @@ payload:
     - .tmeadcomm.y.qq.com
     - .tns.simba.taobao.com
     - .toboads.com
+    - .tpstelemetry.tencent.com
     - .trace.qq.com
     - .track.lc.quark.cn
     - .track.sohu.com

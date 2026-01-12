@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-01-11T20:07:12.929Z
+! Last modified: 2026-01-12T20:08:12.638Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -862,6 +862,7 @@
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||agatha-log-service-*.a.run.app^
 ||me9ddf.moebelix.
 ||spa-tracker*.spapi.io^
 ||tracking.cds.dmm.
@@ -893,6 +894,7 @@
 ||clickstream-*.homedepot.com^
 ||acr-*-prd.samsungcloud.tv^
 ||trck.*.prod-na.turntable.sonic.advertising.amazon.dev^
+||cza*.crazygames.com^
 ||analytics.ahrefs.
 ||servo-report.keepstreams.*^
 ||sgtm.fairmont.
@@ -1042,6 +1044,7 @@
 !
 ! NOTE: Regular rules
 !
+||tracking.geo.*.amazonaws.com^
 ||logreport-global-dual.cool*cloud.com^
 ||wslog-global-dual.cool*cloud.com^
 ||weblogger-wss.cool*cloud.com^
