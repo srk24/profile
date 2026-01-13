@@ -4092,6 +4092,7 @@ payload:
     - .brourou.com
     - .browser.events.data.msn.cn
     - .browser.kagi.com
+    - .browser.run
     - .browserleaks.com
     - .brutalbdsmtube.com
     - .brutalfetish.com
@@ -4578,6 +4579,7 @@ payload:
     - .cfargotunnel.com
     - .cfblob.com
     - .cfd-tv.com
+    - .cfdata.org
     - .cfdesign.com
     - .cfl.re
     - .cfna.com
@@ -4865,26 +4867,34 @@ payload:
     - .cloudflare-gateway.com
     - .cloudflare-ipfs.com
     - .cloudflare-quic.com
+    - .cloudflare-terms-of-service-abuse.com
     - .cloudflare.com
+    - .cloudflare.dev
     - .cloudflare.net
     - .cloudflare.tv
     - .cloudflareaccess.com
     - .cloudflareapps.com
     - .cloudflarebolt.com
+    - .cloudflarebrowser.com
+    - .cloudflarechallenge.com
     - .cloudflareclient.com
+    - .cloudflarecp.com
     - .cloudflareinsights.com
     - .cloudflareok.com
     - .cloudflarepartners.com
     - .cloudflareportal.com
     - .cloudflarepreview.com
     - .cloudflareregistrar.com
+    - .cloudflareresearch.com
     - .cloudflareresolve.com
     - .cloudflaressl.com
     - .cloudflarestatus.com
     - .cloudflarestorage.com
     - .cloudflarestream.com
+    - .cloudflaresupport.com
     - .cloudflaretest.com
     - .cloudflarewarp.com
+    - .cloudflareworkers.com
     - .cloudfront.com
     - .cloudfront.net
     - .cloudfunctions.net
@@ -5264,6 +5274,7 @@ payload:
     - .cutt.ly
     - .cw.com.tw
     - .cwcams.com
+    - .cxacg.com
     - .cy22.tv
     - .cyber-bay.info
     - .cyber-bay.org
@@ -6682,6 +6693,7 @@ payload:
     - .enanyang.my
     - .enbank.ir
     - .encoretvb.com
+    - .encryptedsni.com
     - .encuentroscasualesoecuador.com
     - .enema-porn.com
     - .enema-videos.com
@@ -6895,6 +6907,7 @@ payload:
     - .espn.net
     - .espncdn.com
     - .espnqa.com
+    - .esports.gg
     - .esposasymaridos.com
     - .espressif.com
     - .esri.com
@@ -8136,10 +8149,12 @@ payload:
     - .gamcore.com
     - .game-platform.net
     - .game-repack.site
+    - .gameapps.hk
     - .gamebase.com.tw
     - .gamebeforethegame.com
     - .gamebiz.jp
     - .gamebusiness.jp
+    - .gamefocus.co.kr
     - .gamemeca.com
     - .gameon-masters.com
     - .gameover.com.hk
@@ -10057,6 +10072,7 @@ payload:
     - .ig.me
     - .igaychat.com
     - .igayporn.tv
+    - .igcc.jp
     - .igcdn.com
     - .igetnaughty.com
     - .igi-global.com
@@ -10324,6 +10340,7 @@ payload:
     - .innovations-i.com
     - .inoreader.com
     - .inporn.com
+    - .inquirer.net
     - .inshot.cc
     - .inshot.com
     - .inshotapp.com
@@ -12067,6 +12084,7 @@ payload:
     - .magicalmirai.com
     - .magicmovies.com
     - .mahajantech.com
+    - .maidonanews.jp
     - .mail.com
     - .mail.ru
     - .mailchimp.com
@@ -13027,6 +13045,7 @@ payload:
     - .modperl.pl
     - .modrinth.com
     - .modular.im
+    - .moedigi.com
     - .moeero-library.com
     - .moefuns.co
     - .moeimg.net
@@ -13444,6 +13463,7 @@ payload:
     - .myminiso.com
     - .mymmode.com
     - .mymusclevideo.com
+    - .mynavi.jp
     - .mynetname.net
     - .mynike.com
     - .myoctocat.com
@@ -14516,6 +14536,7 @@ payload:
     - .openapiplatform.com
     - .openapiservice.com
     - .openart.ai
+    - .openbook.org.tw
     - .opencas.io
     - .opencollective.com
     - .opencreate.org
@@ -16217,6 +16238,7 @@ payload:
     - .renzhe.cloud
     - .repe21.com
     - .repo.new
+    - .repotama.com
     - .repsils.no
     - .repsneakermall.com
     - .repswing.com
@@ -17498,6 +17520,7 @@ payload:
     - .spyjinx.com
     - .sqlite.org
     - .sqlserveronlinux.com
+    - .sqool.net
     - .squ1.com
     - .squadbusters.com
     - .squarecapital.com
@@ -17968,6 +17991,7 @@ payload:
     - .taleofthenight.com
     - .talksport.com
     - .tamilsexvideos.cc
+    - .tampermonkey.net
     - .tamtam.chat
     - .tandberg-china.com
     - .tandberg.com
@@ -18494,6 +18518,7 @@ payload:
     - .toxin-up.sbs
     - .toxinzoo.sbs
     - .toy-cadcam.com
+    - .toy-people.com
     - .toycadcam.com
     - .toyobank.co.jp
     - .tpornstars.com
