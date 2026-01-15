@@ -17101,6 +17101,8 @@ payload:
     - .signalusers.org
     - .sigops.org
     - .sigopt.com
+    - .sih-db.com
+    - .sih.app
     - .sikiswap.com
     - .silicon-mobility.com
     - .siliconmobility.com
@@ -17706,6 +17708,7 @@ payload:
     - .steamdb.info
     - .steamdeck.com
     - .steamgames.com
+    - .steaminventoryhelper.com
     - .steamofporn.com
     - .steampowered.com
     - .steamserver.net
@@ -18781,6 +18784,7 @@ payload:
     - .twnextdigital.com
     - .twoo.com
     - .twporn.net
+    - .twreporter.org
     - .twtrdns.net
     - .twttr.com
     - .twttr.net

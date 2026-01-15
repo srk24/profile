@@ -1124,6 +1124,7 @@ payload:
     - .allflow.cn
     - .alloyteam.com
     - .allyes.com
+    - .alookweb.com
     - .aloys233.top
     - .alphassl.com
     - .alyms.cn
@@ -2227,6 +2228,7 @@ payload:
     - .cmf.biz
     - .cmf.ltd
     - .cmfchina.com
+    - .cmft.com.cn
     - .cmfunds.cn
     - .cmicapm.com
     - .cmicrwx.cn
@@ -2473,6 +2475,8 @@ payload:
     - .dcdapp.com
     - .dcdkjx.com
     - .dcg.microsoft.com
+    - .dcloud.io
+    - .dcloud.net.cn
     - .dcloudlive.com
     - .dcloudlive.net
     - .dcloudsp.com
@@ -2685,6 +2689,8 @@ payload:
     - .duba.com
     - .duba.net
     - .dui.ai
+    - .dui88.com
+    - .duiba.com.cn
     - .duiopen.com
     - .duiou.com.cn
     - .duitang.com
@@ -3481,6 +3487,7 @@ payload:
     - .houyicaiji.com
     - .houyuantuan.com
     - .howbuy.com
+    - .hpplay.cn
     - .hpstore.cn
     - .hqchip.com
     - .hqdoc.com
@@ -4366,6 +4373,7 @@ payload:
     - .lawyee.org
     - .lazada.com
     - .lazycat.cloud
+    - .lbtp.com
     - .lceda.cn
     - .lckfb.com
     - .lczq.com
@@ -4379,6 +4387,9 @@ payload:
     - .learnywhere.cn
     - .learnywhere.com.cn
     - .leautolink.com
+    - .lebo.cn
+    - .lebo.com.cn
+    - .lebo.top
     - .lecloud.com
     - .lecloudapi.com
     - .ledu.com
@@ -4705,6 +4716,7 @@ payload:
     - .minsio.cn
     - .mipay.com
     - .mipcdn.com
+    - .mirrorcast.cn
     - .mirrors.yun-idc.com
     - .missjia.net
     - .mitvos.com
@@ -5146,6 +5158,7 @@ payload:
     - .pinyin.cn
     - .pipaw.com
     - .pipaw.net
+    - .pipi.cn
     - .pipix.com
     - .pipixiaha.com
     - .pishu.com.cn
@@ -6666,6 +6679,7 @@ payload:
     - .x9exk.cn
     - .xa-bank.com
     - .xafc.com
+    - .xbext.com
     - .xbiao.com
     - .xboxlive.cn
     - .xcsc.com
