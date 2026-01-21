@@ -190,7 +190,6 @@ payload:
     - g3.gstatic.com
     - gbxgateway-dev.dell.com
     - gbxgateway.dell.com
-    - geetest.datasink.sensorsdata.cn
     - go.corp.google.com
     - gog-cdn-fastly.gog.com
     - gog-cdn.akamaized.net
@@ -271,7 +270,6 @@ payload:
     - itunes.apple.com
     - itunesconnect.apple.com
     - js-cdn.music.apple.com
-    - kc.kexinshe.com
     - km.support.apple.com
     - ksn-cinfo-geo.kaspersky-labs.com
     - ksn-cinfo.geoksn.kaspersky.com
@@ -529,7 +527,6 @@ payload:
     - www.destinationurl.com
     - www.entrust.cn
     - www.gstatic.com
-    - www.libvideo.com
     - www.microsoft.com
     - www.pxcc.com
     - www.recaptcha.net
@@ -1250,6 +1247,7 @@ payload:
     - .appsimg.com
     - .appstoreapple.cn
     - .appvipshop.com
+    - .arcaea.cn
     - .arco.design
     - .arpun.com
     - .arrow.cn
@@ -1374,6 +1372,8 @@ payload:
     - .baijiayun.com
     - .baike.com
     - .baikevod.com
+    - .baimiao.tech
+    - .baimiaoapp.com
     - .baishinetwork.com
     - .baitiao.com
     - .baixing.com
@@ -4171,6 +4171,7 @@ payload:
     - .kekeniu.com
     - .kesong.co
     - .ketangpai.com
+    - .kexinshe.com
     - .kf5.com
     - .kfcbest.com
     - .kfomn.cn
@@ -4446,6 +4447,7 @@ payload:
     - .liba.com
     - .libaclub.com
     - .liblib.art
+    - .libvideo.com
     - .liebao.cn
     - .liepin.com
     - .lietou-static.com
@@ -4714,6 +4716,7 @@ payload:
     - .minisohome.cn
     - .minitiao.com
     - .minsio.cn
+    - .miot-spec.org
     - .mipay.com
     - .mipcdn.com
     - .mirrorcast.cn
@@ -5517,6 +5520,7 @@ payload:
     - .sencdn.com
     - .seniverse.com
     - .senlinjimore.com
+    - .sensorsdata.cn
     - .serverlesscloud.cn
     - .servicewechat.com
     - .sf-airlines.com
@@ -5571,6 +5575,7 @@ payload:
     - .shijiexia.com
     - .shimo.im
     - .shimonote.com
+    - .shinescan.tech
     - .shixiseng.com
     - .shizhuang-inc.com
     - .shizhuang-inc.net
@@ -6313,6 +6318,7 @@ payload:
     - .uwn.com
     - .uwtmy.cn
     - .uyunad.com
+    - .uzero.cn
     - .uzzf.com
     - .v5875.com
     - .value500.com

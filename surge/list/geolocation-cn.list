@@ -189,7 +189,6 @@ g2.gstatic.com
 g3.gstatic.com
 gbxgateway-dev.dell.com
 gbxgateway.dell.com
-geetest.datasink.sensorsdata.cn
 go.corp.google.com
 gog-cdn-fastly.gog.com
 gog-cdn.akamaized.net
@@ -270,7 +269,6 @@ itunes-apple.com.akadns.net
 itunes.apple.com
 itunesconnect.apple.com
 js-cdn.music.apple.com
-kc.kexinshe.com
 km.support.apple.com
 ksn-cinfo-geo.kaspersky-labs.com
 ksn-cinfo.geoksn.kaspersky.com
@@ -528,7 +526,6 @@ www.dell.com
 www.destinationurl.com
 www.entrust.cn
 www.gstatic.com
-www.libvideo.com
 www.microsoft.com
 www.pxcc.com
 www.recaptcha.net
@@ -1249,6 +1246,7 @@ api.github.com
 .appsimg.com
 .appstoreapple.cn
 .appvipshop.com
+.arcaea.cn
 .arco.design
 .arpun.com
 .arrow.cn
@@ -1373,6 +1371,8 @@ api.github.com
 .baijiayun.com
 .baike.com
 .baikevod.com
+.baimiao.tech
+.baimiaoapp.com
 .baishinetwork.com
 .baitiao.com
 .baixing.com
@@ -4170,6 +4170,7 @@ api.github.com
 .kekeniu.com
 .kesong.co
 .ketangpai.com
+.kexinshe.com
 .kf5.com
 .kfcbest.com
 .kfomn.cn
@@ -4445,6 +4446,7 @@ api.github.com
 .liba.com
 .libaclub.com
 .liblib.art
+.libvideo.com
 .liebao.cn
 .liepin.com
 .lietou-static.com
@@ -4713,6 +4715,7 @@ api.github.com
 .minisohome.cn
 .minitiao.com
 .minsio.cn
+.miot-spec.org
 .mipay.com
 .mipcdn.com
 .mirrorcast.cn
@@ -5516,6 +5519,7 @@ api.github.com
 .sencdn.com
 .seniverse.com
 .senlinjimore.com
+.sensorsdata.cn
 .serverlesscloud.cn
 .servicewechat.com
 .sf-airlines.com
@@ -5570,6 +5574,7 @@ api.github.com
 .shijiexia.com
 .shimo.im
 .shimonote.com
+.shinescan.tech
 .shixiseng.com
 .shizhuang-inc.com
 .shizhuang-inc.net
@@ -6312,6 +6317,7 @@ api.github.com
 .uwn.com
 .uwtmy.cn
 .uyunad.com
+.uzero.cn
 .uzzf.com
 .v5875.com
 .value500.com
