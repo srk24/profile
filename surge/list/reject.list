@@ -9,11 +9,15 @@ adstudio-assets.scdn.co
 analytics.google.com
 apilog-web.acfun.cn
 bloodhound.spotify.com
+browser-intake-datadoghq.com
+disney.my.sentry.io
 log-sdk.gifshow.com
 log3-applog-hl.fqnovel.com
 log3-applog.fqnovel.com
 log5-applog-hl.fqnovel.com
 log5-applog.fqnovel.com
+o33249.ingest.sentry.io
+o4504926511693824.ingest.sentry.io
 p3-ad-sign.byteimg.com
 p6-ad-sign.byteimg.com
 p9-ad-sign.byteimg.com
@@ -31,6 +35,7 @@ rtlog3-applog-hl.fqnovel.com
 rtlog3-applog.fqnovel.com
 rtlog5-applog-hl.fqnovel.com
 rtlog5-applog.fqnovel.com
+sentry.hetzner.company
 wlog.kuaishou.com
 .1rx.io
 .2mdn-cn.net
@@ -112,6 +117,8 @@ wlog.kuaishou.com
 .adpm.app.qq.com
 .adq.chinaso.com
 .ads-api.duolingo.com
+.ads-pixiv.net
+.ads-twitter.com
 .ads-union.jd.com
 .ads-uo.api.leiniao.com
 .ads-ut.api.leiniao.com
@@ -241,6 +248,7 @@ wlog.kuaishou.com
 .clearbitjs.com
 .clearbitscripts.com
 .click.ali213.net
+.click.gamersky.com
 .click.hunantv.com
 .click.uve.mobile.sina.cn
 .click.uve.weibo.com
@@ -392,6 +400,9 @@ wlog.kuaishou.com
 .ironbeast.io
 .isdspeed.qq.com
 .iwanad.baidu.com
+.ja.gamersky.com
+.ja1.gamersky.com
+.ja2.gamersky.com
 .jads.co
 .jl3.yjaxa.top
 .js-agent.newrelic.com
@@ -536,6 +547,7 @@ wlog.kuaishou.com
 .s4yxaqyq95.com
 .sa.sina.cn
 .sabavision.com
+.samsungads.com
 .sbeacon.sina.com.cn
 .sclick.baidu.com
 .sdkclick.mobile.sina.cn
@@ -628,6 +640,7 @@ wlog.kuaishou.com
 .wit.qq.com
 .wkctj.baidu.com
 .wm.baidu.com
+.wmbd.gamersky.com
 .wuliao.epro.sogou.com
 .wwads.cn
 .xy-log.tagtic.cn
