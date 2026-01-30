@@ -2186,9 +2186,11 @@ payload:
     - .atdmt2.com
     - .ateam-oracle.com
     - .atkgallery.com
+    - .atl-paas.net
     - .atlantaminidealers.com
     - .atlasdmt.com
     - .atlasonepoint.com
+    - .atlassian-dev.net
     - .atlassian.com
     - .atlassian.net
     - .atnext.com
@@ -7744,6 +7746,9 @@ payload:
     - .fotolja.com
     - .fotoscaserasx.com
     - .foundationdb.org
+    - .foundationdns.com
+    - .foundationdns.net
+    - .foundationdns.org
     - .fourthns.systems
     - .fout.jp
     - .fox-corporation.com
@@ -11140,6 +11145,7 @@ payload:
     - .jijiji.ca
     - .jilhub.com
     - .jimeng22.com
+    - .jira.com
     - .jitsi.org
     - .jiuse.ai
     - .jiuse.com.co
@@ -17574,6 +17580,7 @@ payload:
     - .srebrenica360.com
     - .srtcdn.net
     - .srttu.edu
+    - .ss-inf.net
     - .ss2.us
     - .ss7.app
     - .ssdevrd.com
