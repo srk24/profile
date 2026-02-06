@@ -2455,6 +2455,7 @@ payload:
     - .daovoice.io
     - .dataeye.com
     - .datasea.cn
+    - .datayi.cn
     - .daton.com.cn
     - .dayainfo.com
     - .dayin8.com
@@ -2535,6 +2536,7 @@ payload:
     - .dfcfw.com
     - .dfham.com
     - .dfkhgj.com
+    - .dfyun.com.cn
     - .dfzq.com.cn
     - .dginfo.com
     - .dgjy.net
@@ -2578,6 +2580,7 @@ payload:
     - .dji.ink
     - .dji.net
     - .djicdn.com
+    - .djigate.com
     - .djiits.com
     - .djiops.com
     - .djiservice.org
@@ -2877,6 +2880,7 @@ payload:
     - .falconsending.com
     - .faloo.com
     - .famulei.com
+    - .fanfou.com
     - .fang.com
     - .fangxiaoer.com
     - .fanli.com
@@ -3195,6 +3199,7 @@ payload:
     - .giftattoday.com
     - .gigabyte.cn
     - .gijsq.com
+    - .gio.ren
     - .giocdn.com
     - .gitbook.cn
     - .gitchat.cn
@@ -3270,6 +3275,8 @@ payload:
     - .gree.com.cn
     - .greenxiazai.com
     - .greeyun.com
+    - .growin.cn
+    - .growingio.cn
     - .growingio.com
     - .growthsharebounce.cn
     - .growthsharequestion.cn
@@ -5123,6 +5130,7 @@ payload:
     - .pc6.com
     - .pcbeta.com
     - .pchome.net
+    - .pchpic.net
     - .pconline.com.cn
     - .pcpop.com
     - .pddcdn.com
@@ -6700,6 +6708,7 @@ payload:
     - .xbext.com
     - .xbiao.com
     - .xboxlive.cn
+    - .xcc.cn
     - .xcsc.com
     - .xd.cn
     - .xd.com
@@ -6783,6 +6792,7 @@ payload:
     - .xiguavideo.net
     - .ximalaya.com
     - .xin.xin
+    - .xinchacha.com
     - .xinchong.com
     - .xindong.com
     - .xingjiesj.com
