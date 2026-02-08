@@ -87,6 +87,7 @@ payload:
     - vsmarketplacebadge.apphb.com
     - widgets.stripst.com
     - wrds-www.wharton.upenn.edu
+    - yandex-pogoda.static-storage.net
     - yangzhi.app
     - .2mdn-cn.net
     - .2mdn.net
@@ -4982,6 +4983,8 @@ payload:
     - .codei.sh
     - .codeish.co
     - .codeish.io
+    - .codeium.com
+    - .codeiumdata.com
     - .coderabbit.ai
     - .codespot.com
     - .codethemicrobit.com
@@ -20145,6 +20148,8 @@ payload:
     - .windowssearch.com
     - .windowsuem.com
     - .windowsupdate.com
+    - .windsurf.build
+    - .windsurf.com
     - .windy.com
     - .winhec.com
     - .winhec.net

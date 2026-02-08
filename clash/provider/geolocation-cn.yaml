@@ -551,6 +551,7 @@ payload:
     - .unicom
     - .xn--8y0a063a
     - .xn--fiq64b
+    - .0033.cn
     - .00cdn.com
     - .0123456789.com
     - .0379home.com
@@ -3419,6 +3420,8 @@ payload:
     - .herogame.com
     - .herostart.com
     - .heweather.net
+    - .hexin.cn
+    - .hexin.com.cn
     - .hexun.com
     - .heytap.com
     - .heytapcs.com
@@ -4006,6 +4009,7 @@ payload:
     - .jikeiot.cloud
     - .jikexueyuan.com
     - .jikipedia.com
+    - .jin10.com
     - .jindidata.com
     - .jingdong.com
     - .jingdongjinrong.com
