@@ -400,7 +400,10 @@ payload:
     - .2gayboys.com
     - .2k.com
     - .2kcoretech.online
+    - .2kct.onl
     - .2kgames.com
+    - .2ksports.com
+    - .2kweb.online
     - .2lib.org
     - .2o7.net
     - .30plusgirls.com
@@ -771,6 +774,7 @@ payload:
     - .acebook.com
     - .acer-group.com
     - .acer.com
+    - .acesofthunder.net
     - .acgcf.com
     - .acgdg.com
     - .acgdv.com
@@ -798,6 +802,7 @@ payload:
     - .actalis.it
     - .activelearnprimary.co.uk
     - .activelearnprimary.com.au
+    - .activematter.game
     - .activeteachonline.com
     - .ad69.com
     - .adanaatikhaber.com
@@ -2106,6 +2111,7 @@ payload:
     - .artstation.com
     - .artstationmedia.com
     - .artstor.org
+    - .artstorm.com
     - .arxiv.org
     - .arzon.jp
     - .as-hp.ca
@@ -5197,10 +5203,12 @@ payload:
     - .crossborderexpansion.com
     - .crossfitfirestone.com
     - .crossmediapanel.com
+    - .crossout.net
     - .crosswalk-project.com
     - .crosswalk-project.net
     - .crowdtangle.com
     - .crr.com
+    - .crsed.net
     - .crtsgfb1.top
     - .cruel-furies.com
     - .crunchyroll.com
@@ -5229,6 +5237,7 @@ payload:
     - .ctwant.com
     - .ctyun.online
     - .cubicmotion.com
+    - .cubicodyssey.game
     - .cuckfilmswifefuck.com
     - .cuckold69.com
     - .cuckoldfuck.com
@@ -6757,6 +6766,7 @@ payload:
     - .engineeringvillage.com
     - .enjoyasianporn.com
     - .enjoyfuck.com
+    - .enlisted.net
     - .enpass.io
     - .enpirion.com
     - .enspireformula.com
@@ -8161,6 +8171,8 @@ payload:
     - .g.page
     - .gab.com
     - .gacebook.com
+    - .gaijin.net
+    - .gaijinent.com
     - .gaito.xyz
     - .galaxyappstore.com
     - .galaxymobile.jp
@@ -13074,6 +13086,7 @@ payload:
     - .modeloswebcambogota.com
     - .modelsfreecams.com
     - .modeltv.com
+    - .modernwarships.com
     - .modoo.at
     - .modperl.pl
     - .modrinth.com
@@ -16401,6 +16414,7 @@ payload:
     - .rocksdb.org
     - .rocksextube.com
     - .rockstargames.com
+    - .rockstarnorth.com
     - .roku.com
     - .rokutime.com
     - .rolfoundation.org
@@ -17639,6 +17653,7 @@ payload:
     - .standardchartered.com
     - .standardsuniversity.org
     - .star-brasil.com
+    - .star-conflict.com
     - .star-latam.com
     - .starbucks-stars.com
     - .starbucks.ad
@@ -19896,6 +19911,7 @@ payload:
     - .warnerbrosgames.com
     - .warp.plus
     - .warroom.org
+    - .warthunder.com
     - .wasdj.com
     - .washa.tv
     - .washingtondcbmw.com
@@ -20267,6 +20283,7 @@ payload:
     - .wsjshop.com
     - .wsjwine.com
     - .wtfpeople.com
+    - .wtmobile.com
     - .wto.org
     - .wujieliulan.com
     - .wunvb.com
@@ -21467,6 +21484,9 @@ payload:
     - .zunked.com
     - .zweiporn.com
     - .zwtvusa.com
+    - .zynga.com
+    - .zyngaplayersupport.com
+    - .zyngapoker.com
     - .zzcartoon.com
     - .zzdh.biz
     - .zzdh.cc
