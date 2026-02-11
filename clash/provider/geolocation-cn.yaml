@@ -1058,7 +1058,6 @@ payload:
     - .alibaba.com
     - .alibabacapital.com
     - .alibabachengdun.com
-    - .alibabacloud.com
     - .alibabacorp.com
     - .alibabadns.com
     - .alibabadoctor.com
@@ -1068,7 +1067,6 @@ payload:
     - .alibabaued.com
     - .alibabausercontent.com
     - .alicdn.com
-    - .alicloud.com
     - .alicloudapi.com
     - .alicloudccp.com
     - .alidayu.com
@@ -1162,7 +1160,6 @@ payload:
     - .amzndns-cn.com
     - .amzndns-cn.net
     - .analog.com
-    - .analytics.tiktok.com
     - .anav.com
     - .ancientbooks.cn
     - .andfx.cn
@@ -3530,7 +3527,6 @@ payload:
     - .hteacher.net
     - .htjsq.com
     - .htjsq.mobi
-    - .htrace.wetvinfo.com
     - .htsc.com.cn
     - .htsec.com
     - .httpdns-api.aliyuncs.com
@@ -4857,6 +4853,7 @@ payload:
     - .mxhichina.com
     - .my-qcloud.com
     - .my4399.com
+    - .my7v.com
     - .myalicdn.com
     - .myapp.com
     - .mybank.cn
@@ -5463,6 +5460,7 @@ payload:
     - .realme.com
     - .realmebbs.com
     - .realmemobile.com
+    - .redelight.cn
     - .redmagic.com
     - .rednotecdn.com
     - .renren-inc.com
@@ -6752,6 +6750,7 @@ payload:
     - .xhscdn.com
     - .xhscdn.net
     - .xhslink.com
+    - .xhsrcdn.com
     - .xiachufang.com
     - .xiamai.net
     - .xiamenair.com
@@ -7120,6 +7119,7 @@ payload:
     - .yzcdn.cn
     - .yzyxgame.com
     - .z-bank.com
+    - .z.ai
     - .z.cn
     - .z28j.com
     - .z95rr.cn
@@ -7194,6 +7194,7 @@ payload:
     - .zhimg.com
     - .zhipin.com
     - .zhipuai.cn
+    - .zhipucn.com
     - .zhisheng.com
     - .zhixue.com
     - .zhiye.com
