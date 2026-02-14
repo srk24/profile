@@ -80,6 +80,7 @@ payload:
     - sni1dcb6gl.wpc.edgecastcdn.net
     - straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
     - tesla-cdn.thron.com
+    - ubisoft.siteintercept.qualtrics.com
     - ut1-time.colorado.edu
     - utcnist.colorado.edu
     - utcnist2.colorado.edu
@@ -1693,6 +1694,7 @@ payload:
     - .apkmirror.com
     - .apkpure.com
     - .apkpure.net
+    - .apkpures.xyz
     - .aple.com
     - .aplestore.com
     - .aplleipods.com
@@ -2222,6 +2224,7 @@ payload:
     - .attcollaborate.com
     - .attdns.com
     - .attdns.net
+    - .attestation.app
     - .attexperts.com
     - .attglobal.net
     - .attic.io
@@ -8907,6 +8910,19 @@ payload:
     - .grannytube.net
     - .granulate.io
     - .graph.org
+    - .grapheneos.app
+    - .grapheneos.ca
+    - .grapheneos.com
+    - .grapheneos.dev
+    - .grapheneos.foundation
+    - .grapheneos.info
+    - .grapheneos.net
+    - .grapheneos.network
+    - .grapheneos.online
+    - .grapheneos.org
+    - .grapheneos.ovh
+    - .grapheneos.page
+    - .grapheneos.social
     - .graphengine.io
     - .gravatar.com
     - .gravitytank.com
@@ -16719,6 +16735,7 @@ payload:
     - .sdnice.one
     - .sdnitube.buzz
     - .seagroup.com
+    - .seamlessupdate.app
     - .seamonkey-project.org
     - .seancody.com
     - .seaofsolitude.com
@@ -18518,6 +18535,7 @@ payload:
     - .tomibank.co.jp
     - .tomonews.net
     - .tomsguide.com
+    - .ton.org
     - .tonec.com
     - .tonicmovies.com
     - .toolforge.org
@@ -19047,6 +19065,7 @@ payload:
     - .valoryirene.com
     - .valuegb.com
     - .valvesoftware.com
+    - .vanadium.app
     - .vancouverbmwretailers.ca
     - .vanish.at
     - .vanish.be
