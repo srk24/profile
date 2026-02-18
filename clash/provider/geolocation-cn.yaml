@@ -1173,6 +1173,8 @@ payload:
     - .anitama.net
     - .anjuke.com
     - .anjukestatic.com
+    - .anker.com.cn
+    - .ankerwork.cn
     - .anlaiye.com
     - .anlaiye.com.cn
     - .anmo.com
@@ -2869,6 +2871,8 @@ payload:
     - .etnet.com.cn
     - .etnetchina.com.cn
     - .ets100.com
+    - .eufycn.com
+    - .eufymake.com.cn
     - .everbright.com
     - .ewww.com.cn
     - .excelhome.net
@@ -5730,6 +5734,7 @@ payload:
     - .sou.cn
     - .sou.com
     - .soufunimg.com
+    - .soundcore.com.cn
     - .souqian.com
     - .southcn.com
     - .southmoney.com
@@ -6992,6 +6997,7 @@ payload:
     - .yokaverse.com
     - .yoma.cn
     - .yoojia.com
+    - .yostar.cn
     - .youba.com
     - .youboy.com
     - .youdao.com
