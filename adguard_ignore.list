@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-02-18T20:15:43.703Z
+! Last modified: 2026-02-19T20:12:15.772Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -861,6 +861,9 @@
 ! This rule breaks Australian sites
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 !
+! countly.com
+||countly.
+||countly-
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/344
 ! Disabled in DNS filter
 !+ PLATFORM(windows, mac, android)
