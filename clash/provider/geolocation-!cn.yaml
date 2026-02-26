@@ -760,6 +760,7 @@ payload:
     - .aboutamazon.it
     - .aboutamazon.jp
     - .aboutamazon.pl
+    - .aboutamazon.sg
     - .aboutfacebook.com
     - .aboutmcdonalds.com
     - .aboutporno.net
@@ -1579,23 +1580,34 @@ payload:
     - .amazon-launchpad.com
     - .amazon.ae
     - .amazon.ca
+    - .amazon.cl
     - .amazon.co.jp
     - .amazon.co.uk
+    - .amazon.co.za
     - .amazon.com
     - .amazon.com.au
+    - .amazon.com.be
     - .amazon.com.br
+    - .amazon.com.co
     - .amazon.com.mx
+    - .amazon.com.ng
     - .amazon.com.tr
     - .amazon.de
     - .amazon.dev
+    - .amazon.eg
     - .amazon.es
     - .amazon.fr
+    - .amazon.ie
     - .amazon.in
     - .amazon.it
     - .amazon.jobs
     - .amazon.jp
+    - .amazon.lu
     - .amazon.nl
+    - .amazon.pl
     - .amazon.red
+    - .amazon.sa
+    - .amazon.se
     - .amazon.sg
     - .amazonalexavoxcon.com
     - .amazonauthorinsights.com
@@ -2632,6 +2644,7 @@ payload:
     - .awsthinkbox.com
     - .awstrack.me
     - .awstrust.com
+    - .awswaf.com
     - .awwcn.buzz
     - .awwcn.xyz
     - .awxcdn.com
@@ -16879,6 +16892,7 @@ payload:
     - .seaporn.org
     - .search.xxx
     - .seasidestory.tokyo
+    - .seattlespheres.com
     - .secom.co.jp
     - .secomtrust.net
     - .second-ns.com
