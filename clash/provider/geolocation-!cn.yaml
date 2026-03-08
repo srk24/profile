@@ -1818,6 +1818,7 @@ payload:
     - .apornvideo.com
     - .app-analytics-services-att.com
     - .app-dynamics.com
+    - .app-pay.jp
     - .app-store.wang
     - .app0le.com
     - .app756.com
@@ -16741,6 +16742,7 @@ payload:
     - .samsunggalaxyfriends.com
     - .samsunghealth.com
     - .samsungiotcloud.com
+    - .samsungiots.com
     - .samsungknox.com
     - .samsungosp.com
     - .samsungqbe.com
@@ -17496,6 +17498,7 @@ payload:
     - .smartonesolutions.com.hk
     - .smartonesolutions.hk
     - .smartstream.ne.jp
+    - .smartthings.com
     - .smashed.xxx
     - .smbc.co.jp
     - .smbctb.co.jp
