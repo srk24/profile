@@ -3,7 +3,7 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-03-08T20:08:00.098Z
+! Last modified: 2026-03-09T20:11:39.785Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.38
 !
@@ -139,6 +139,11 @@
 ! https://github.com/AdguardTeam/FiltersRegistry/pull/937
 ! To fix the issue with the CNAME trackers, add problematic domains here:
 ! https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/exclusions.txt
+!
+!
+! Dangerous sites in ads / Fake captcha
+! TODO: enable the directive when https://github.com/AdguardTeam/cname-trackers/issues/127 will be ready
+! include https://adguardteam.github.io/cname-trackers/data/ads/midnightlotusgrove.txt
 !
 ! Galaksion: beixisys.com disguised advertising networks
 !
@@ -555,6 +560,7 @@
 !
 !
 !
+||bapi-*.moengage.com^
 ||cdn-*.gravityfield.ai^
 ||powa-ingest-prod-*.video-player.arcpublishing.com^
 ||collector-*.pxchk.net^

@@ -657,6 +657,7 @@ payload:
     - .1hai.cn
     - .1huizhan.com
     - .1nongjing.com
+    - .1ppt.com
     - .1ting.com
     - .1tyy.cn
     - .1xhh.cn
@@ -829,6 +830,7 @@ payload:
     - .52miji.com
     - .52pk.com
     - .52pojie.cn
+    - .52ppt.com
     - .52z.com
     - .53kf.com
     - .55.com
@@ -1354,6 +1356,7 @@ payload:
     - .b3logfile.com
     - .babytree.com
     - .babytreeimg.com
+    - .badou.com
     - .baichuan-ai.com
     - .baicizhan.com
     - .baicizhan.org
@@ -1605,6 +1608,7 @@ payload:
     - .bojianger.com
     - .bokecc.com
     - .boohee.com
+    - .book118.com
     - .booking.cn
     - .boosj.com
     - .bootcdn.cn
@@ -3386,6 +3390,7 @@ payload:
     - .hao222.com
     - .haodf.com
     - .haofenshu.com
+    - .haohaodoc.com
     - .haohaowan.net
     - .haokan.com
     - .haolietou.com
@@ -4415,6 +4420,7 @@ payload:
     - .lawyee.org
     - .lazada.com
     - .lazycat.cloud
+    - .lazyer.net
     - .lbtp.com
     - .lceda.cn
     - .lckfb.com
@@ -5479,6 +5485,7 @@ payload:
     - .redmagic.com
     - .renren-inc.com
     - .renren.com
+    - .renrendoc.com
     - .researchkit.cn
     - .researchkit.com.cn
     - .resset.com
@@ -6613,6 +6620,7 @@ payload:
     - .weiyun.com
     - .welltrend-edu.com
     - .wenjuan.com
+    - .wenkeju.com
     - .wenmingban.com
     - .wenshushu.cn
     - .wenshushu.com
