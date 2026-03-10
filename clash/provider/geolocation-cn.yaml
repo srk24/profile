@@ -1495,6 +1495,8 @@ payload:
     - .bestincapp.cn
     - .bestincapp.com
     - .bestopview.com
+    - .bestpay.cn
+    - .bestpay.com.cn
     - .bestrhy.com
     - .bestv.com.cn
     - .bestvcdn.cn
@@ -1771,6 +1773,7 @@ payload:
     - .caiyun.com
     - .caiyunai.com
     - .caiyunapp.com
+    - .calorietech.com
     - .camcard.com
     - .camscanner.com
     - .cang.com
@@ -2249,6 +2252,7 @@ payload:
     - .cmicrwx.cn
     - .cmicvip.cn
     - .cmpassport.com
+    - .cmpay.com
     - .cmread.com
     - .cmvideo.cn
     - .cn-cdn1.skymansion.net
@@ -2682,6 +2686,7 @@ payload:
     - .douyinec.com
     - .douyinfe.com
     - .douyinliving.com
+    - .douyinpay.com
     - .douyinpic.com
     - .douyinstatic.com
     - .douyinvod.com
@@ -3428,6 +3433,7 @@ payload:
     - .heiyan.com
     - .heiyanimg.com
     - .heiyu.space
+    - .helipay.com
     - .hello-inc.com
     - .hellobike.com
     - .hellofont.cn
@@ -3831,6 +3837,7 @@ payload:
     - .ipchaxun.net
     - .iphone-8.com.cn
     - .ipip.net
+    - .iplark.com
     - .iplaysoft.com
     - .ipod.com.cn
     - .ipplus360.com
@@ -3839,6 +3846,7 @@ payload:
     - .ipshu.com
     - .ipshudi.com
     - .ipssh.net
+    - .ipw.cn
     - .iqiyi.com
     - .iqiyipic.com
     - .iqoo.com
@@ -4211,6 +4219,8 @@ payload:
     - .ke.com
     - .keboyunxiao.com
     - .kechuang.org
+    - .keep.com
+    - .keep.com.cn
     - .keepcdn.com
     - .kejet.net
     - .kekeniu.com
@@ -5626,6 +5636,7 @@ payload:
     - .shenjing.com
     - .shenmayouxi.com
     - .sheui.com
+    - .shfft.com
     - .shgsec.com
     - .shhxzq.com
     - .shidianbaike.com
@@ -6349,6 +6360,7 @@ payload:
     - .unaming.info
     - .unaming.net
     - .uncnn.cn
+    - .unicompayment.com
     - .unihan.com.cn
     - .unionpay.com
     - .unionpay.net
