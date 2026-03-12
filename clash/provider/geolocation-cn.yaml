@@ -839,6 +839,7 @@ payload:
     - .55bbs.com
     - .56.com
     - .56che.com
+    - .56img.com
     - .56laile.com
     - .576nt.cn
     - .58.com
@@ -1128,6 +1129,7 @@ payload:
     - .allawno.com
     - .allawntech.com
     - .allflow.cn
+    - .allhistory.com
     - .alloyteam.com
     - .allyes.com
     - .alookweb.com
@@ -2020,6 +2022,7 @@ payload:
     - .chicalot.cn
     - .china-chair.com
     - .china-nengyuan.com
+    - .china-sss.com
     - .china-tower.com
     - .china.com
     - .chinaaet.com
@@ -3554,7 +3557,6 @@ payload:
     - .httpdns-api.aliyuncs.com
     - .httpdns-sc.aliyuncs.com
     - .httpdns.pro
-    - .httpdns.yunxindns.com
     - .huaan.com.cn
     - .huaban.com
     - .huabanimg.com
@@ -4558,6 +4560,7 @@ payload:
     - .longre.com
     - .longtugame.com
     - .longzhu.com
+    - .loongair.cn
     - .lorhf.com
     - .lotpc.com
     - .louisvuitton.cn
@@ -4627,6 +4630,8 @@ payload:
     - .mahjongcup.net
     - .mail4399.com
     - .maimai.cn
+    - .maimemo.com
+    - .maimemostatus.com
     - .maindown4399.com
     - .maisanqi.com
     - .maitix.com
@@ -4649,6 +4654,7 @@ payload:
     - .mapbar.com
     - .mariokart.cn
     - .mariokart.com.cn
+    - .markji.com
     - .marscode.cn
     - .marscode.com.cn
     - .mashort.cn
@@ -5570,6 +5576,7 @@ payload:
     - .scsentry.cn
     - .scsjb.cn
     - .sczsxx.com
+    - .sda.cn
     - .sdgdwljt.com
     - .sdo.com
     - .searchstatic.com
@@ -5635,6 +5642,7 @@ payload:
     - .shengyizhuanjia.com
     - .shenjing.com
     - .shenmayouxi.com
+    - .shenzhenair.com
     - .sheui.com
     - .shfft.com
     - .shgsec.com
@@ -5779,6 +5787,7 @@ payload:
     - .speedws.info
     - .speedws.org
     - .speiyou.com
+    - .springairlines.com
     - .springtour.com
     - .sq.cc
     - .sqqnh.cn
@@ -7130,6 +7139,7 @@ payload:
     - .yunqishi.net
     - .yunshipei.com
     - .yunxiao.com
+    - .yunxindns.com
     - .yunxinfw.com
     - .yunzhijia.com
     - .yunzhuxue.com
@@ -7276,7 +7286,6 @@ payload:
     - .zijiewap.com
     - .zijiewap.net
     - .zilrms.com
-    - .zimuzu.io
     - .ziroom.com
     - .ziroomapartment.com
     - .zixiaomao.com
@@ -7305,7 +7314,6 @@ payload:
     - .zoomyou.cn
     - .zpb365.com
     - .zqrb.cn
-    - .zrblog.net
     - .zs-jlc.com
     - .zsxq.com
     - .zszq.com
