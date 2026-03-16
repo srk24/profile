@@ -311,7 +311,6 @@ mesu.apple.com
 misc-assets.itunes.apple.com
 ml.cdn-apple.com
 monitoring.qpdp1.net
-moocs.unipus.cn
 music.apple.com
 musicstatus.music.apple.com
 mvod.itunes.apple.com
@@ -1480,6 +1479,7 @@ api.github.com
 .beisenapp.com
 .beisencloud.com
 .beisenpaas.com
+.bemanicn.com
 .bendibao.com
 .benfuip.com
 .bengbeng.com
@@ -1819,6 +1819,7 @@ api.github.com
 .cczq.com
 .cczq.net
 .cd120.com
+.cdkeynogap.com
 .cdn-go.cn
 .cdn.jetbrains.com
 .cdn20.com
@@ -6377,6 +6378,7 @@ api.github.com
 .unionpaysecure.com
 .uniontech.cn
 .uniontech.com
+.unipus.cn
 .unity.cn
 .unity3dcloud.cn
 .unitychina.cn
@@ -6782,6 +6784,7 @@ api.github.com
 .xd.com
 .xdcdn.net
 .xdqtech.com
+.xdrtc.com
 .xdtool.com
 .xdwan.com
 .xedge.cc
@@ -7198,6 +7201,7 @@ api.github.com
 .zealer.com
 .zebracdn.com
 .zeekrlife.com
+.zgbk.com
 .zgcbank.com
 .zggbdszt.cn
 .zggbdszt.com.cn
@@ -7296,6 +7300,7 @@ api.github.com
 .zjcdn.com
 .zjfcdn.com
 .zjgslb.com
+.zjlib.cn
 .zjstv.com
 .zjytxd.cn
 .zjytxp.cn
